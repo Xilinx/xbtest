@@ -37,7 +37,7 @@ Get xbtest sources and packages (see :ref:`xbtest-sources`):
 
 .. code-block:: bash
 
-    git clone https://gitenterprise.xilinx.com/techdocs/xbtest <xbtest_local_repo>
+    git clone https://github.com/Xilinx/xbtest <xbtest_local_repo>
 
 ********************************************************
 Set up your environment
