@@ -1,0 +1,1466 @@
+
+
+
+<!DOCTYPE HTML>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description"/>
+		<meta name="keywords"/>
+		<meta property="og:title" content=""/>
+		<meta property="og:description"/>
+		<!-- favicon -->
+		<link rel="icon" type="image/vnd.microsoft.icon" href="../_static/favicon.ico"/>
+		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../_static/favicon.ico"/>
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"/>
+
+<!-- OneTrust Cookies Consent Notice start for xilinx.com -->
+	<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="db4fe3da-ef3c-4524-b938-84c8062bf167"></script>
+	<script type="text/javascript">
+	function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for xilinx.com -->
+	
+		<!-- Google Tag Manager -->
+	<script type="text/plain" class="optanon-category-C0002">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5RHQV7');</script>
+	<!-- End Google Tag Manager -->
+	
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5RHQV7" height="0" width="0" style="display:none;visibility:hidden" class="optanon-category-C0002"></iframe></noscript>
+        <!-- End Google Tag Manager -->	
+
+		
+  
+  
+  
+  
+
+  
+      <script type="text/javascript" src="../_static/js/jquery.min.js"></script>
+	  <script type="text/javascript" src="../_static/js/gtm.js"></script>
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+    <script type="text/javascript" src="../_static/js/d3dd8c60ed.js"></script>
+    <script type="text/javascript" src="../_static/js/common-ui-all.min.js"></script>
+	<script type="text/javascript" src="../_static/js/header-footer.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+    <script type="text/javascript" src="../_static/js/linkid.js"></script>
+    <script type="text/javascript" src="../_static/js/Searchbox.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/common-ui-all.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/header-footer.min.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/pro.min.css" media="all" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Define power CU floorplan" href="define-power-cu-floorplan.html" />
+    <link rel="prev" title="Architecture and workflows" href="architecture-and-workflows.html" /> 
+	</head>
+	<body>
+		<div class="xilinx-bs3"/>
+		<div class="root responsivegrid">
+			<div class="aem-Grid aem-Grid--16 aem-Grid--default--16 aem-Grid--large--16 aem-Grid--xlarge--16 aem-Grid--xxlarge--16 aem-Grid--xxxlarge--16 ">
+				<div class="xilinxExperienceFragments experiencefragment aem-GridColumn aem-GridColumn--default--12">
+					<div class="xf-content-height">
+						<div class="aem-Grid aem-Grid--16 aem-Grid--default--16 ">
+							<div class="header parbase aem-GridColumn aem-GridColumn--default--12">
+								<noindex>
+									<header data-component="header">
+										<nav class="navbar navbar-default aem-Grid aem-Grid--16">
+											<div class="aem-GridColumn aem-GridColumn--xxxlarge--none aem-GridColumn--xsmall--16 aem-GridColumn--offset--xsmall--0 aem-GridColumn--xlarge--none aem-GridColumn--xxlarge--none aem-GridColumn--default--none aem-GridColumn--offset--large--1 aem-GridColumn--xlarge--12 aem-GridColumn--offset--default--0 aem-GridColumn--xxlarge--10 aem-GridColumn--offset--xlarge--2 aem-GridColumn--offset--xxlarge--3 aem-GridColumn--offset--xxxlarge--4 aem-GridColumn--xsmall--none aem-GridColumn--large--none aem-GridColumn aem-GridColumn--large--14 aem-GridColumn--xxxlarge--8 aem-GridColumn--default--16">
+												<div class="container-fluid main-nav">
+													<div class="row">
+														<div class="col-xs-12">
+															<div class="logo-column">
+																<div class="logo">
+																	<a href="https://www.xilinx.com/">
+																	<img src="https://github.com/Xilinx/Image-Collateral/blob/main/xilinx-header-logo.svg?raw=true" title="Xilinx Inc"/>
+																	</a>
+																</div>
+															</div>
+															<div class="navbar-column">
+																<div class="navbar navbar-collapse collapse" id="xilinx-main-menu">
+																	<div class="mobile-search-container">
+																		<div id="headerSearchBox" class="headerSearch"
+																			data-component="header-search"
+																			data-redirect-if-empty="false"
+																			data-coveo-access-token="xxa237d4dd-f0aa-47fc-9baa-af9121851b33"
+																			data-coveo-organization-id="xilinxcomprode2rjoqok">
+																			<div class='coveo-search-section'>
+																				<div class="CoveoAnalytics" data-search-hub="Site"></div>
+																				<ul class="dropdown-menu options">
+																					<li class="option" data-label="All" data-action-link="https://www.xilinx.com/search/site-keyword-search.html" data-search-hub="Site">
+																						<a href="#">
+																						All</a>
+																					</li>
+																					<li data-label="Silicon Devices" data-action-link="https://www.xilinx.com//products/silicon-devices/si-keyword-search.html" data-search-hub="Product">
+																						<a href="#">
+																						Silicon Devices</a>
+																					</li>
+																					<li data-label="Boards and Kits" data-action-link="https://www.xilinx.com//products/boards-and-kits/bk-keyword-search.html" data-search-hub="Product">
+																						<a href="#">
+																						Boards and Kits</a>
+																					</li>
+																					<li data-label="Intellectual Property" data-action-link="https://www.xilinx.com//products/intellectual-property/ip-keyword-search.html" data-search-hub="Product">
+																						<a href="#">
+																						Intellectual Property</a>
+																					</li>
+																					<li data-label="Support" class="option" data-action-link="https://www.xilinx.com/search/support-keyword-search.html" data-search-hub="Support">
+																						<a href="#">
+																						Support</a>
+																						<ul>
+																							<li data-label="Documentation" data-action-link="https://www.xilinx.com//support/documentation-navigation/documentation-keyword-search.html" data-search-hub="Document">
+																								<a href="#">
+																								Documentation</a>
+																							</li>
+																							<li data-label="Knowledge Base" data-action-link="https://www.xilinx.com//support/answer-navigation/answer-keyword-search.html" data-search-hub="AnswerRecord">
+																								<a href="#">
+																								Knowledge Base</a>
+																							</li>
+																							<li data-label="Community Forums" data-action-link="https://www.xilinx.com/search/forums-keyword-search.html" data-search-hub="Forums">
+																								<a href="#">
+																								Community Forums</a>
+																							</li>
+																						</ul>
+																					</li>
+																					<li data-label="Partners" data-action-link="https://www.xilinx.com//alliance/member-keyword-search.html" data-search-hub="Partner">
+																						<a href="#">
+																						Partners</a>
+																					</li>
+																					<li data-label="Videos" data-action-link="https://www.xilinx.com/video/video-keyword-search.html" data-search-hub="Video">
+																						<a href="#">
+																						Videos</a>
+																					</li>
+																					<li data-label="Press" data-action-link="https://www.xilinx.com/search/press-keyword-search.html" data-search-hub="Press">
+																						<a href="#">
+																						Press</a>
+																					</li>
+																				</ul>
+																				<a href="#" class="btn dropdown-toggle value" data-toggle="dropdown"></a>
+																				<div class="CoveoSearchbox" data-id="coveosearchbox" data-action-link="https://www.xilinx.com/search/site-keyword-search.html" data-placeholder="Search Xilinx"></div>
+																			</div>
+																		</div>
+																	</div>
+																	<ul class="nav navbar-nav nav-justified">
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://www.xilinx.com/applications.html">
+																			Applications</a>
+																		</li>
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://www.xilinx.com/products/silicon-devices.html">
+																			Products</a>
+																		</li>
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://developer.xilinx.com/">
+																			Developers</a>
+																		</li>
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://www.xilinx.com/support.html">
+																			Support</a>
+																		</li>
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://www.xilinx.com/about/company-overview.html">
+																			About</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<script type="text/javascript" src="../_static/js/gtm.js"></script>
+															<!--<div class="mini-nav">
+																<button type="button" data-function="xilinx-mobile-menu" id="nav-toggle" class="navbar-toggle collapsed visible-xs-block" aria-expanded="false">
+																<span></span>
+																<span></span>
+																<span></span>
+																<span></span>
+																</button>
+																<ul class="list-inline">
+																	<li class="dropdown user-menu">
+																		<button data-toggle="dropdown">
+																		<span class="sr-only">Account</span>
+																		<span class="fas fa-user"></span>
+																		</button>
+																		<ul class="dropdown-menu">
+																			<li>
+																				<a href="https://www.xilinx.com/myprofile/subscriptions.html">
+																				My Account</a>
+																			</li>
+																			<li>
+																				<a href="https://www.xilinx.com/registration/create-account.html">
+																				Create Account</a>
+																			</li>
+																			<li>
+																				<a href="https://www.xilinx.com/bin/protected/en/signout">
+																				Sign Out</a>
+																			</li>
+																		</ul>
+																	</li>
+																	<li class="hidden-xs">
+																		<button data-function="search-toggle">
+																		<span class="sr-only">Search</span>
+																		<span class="far fa-search"></span>
+																		</button>
+																	</li>
+																</ul>
+															</div>
+															-->
+															<div class="search-container">
+																<div id="headerSearchBox" class="headerSearch"
+																	data-component="header-search"
+																	data-redirect-if-empty="false"
+																	data-coveo-access-token="xxa237d4dd-f0aa-47fc-9baa-af9121851b33"
+																	data-coveo-organization-id="xilinxcomprode2rjoqok">
+																	<div class='coveo-search-section'>
+																		<div class="CoveoAnalytics" data-search-hub="Site"></div>
+																		<ul class="dropdown-menu options">
+																			<li class="option" data-label="All" data-action-link="https://www.xilinx.com/search/site-keyword-search.html" data-search-hub="Site">
+																				<a href="#">
+																				All</a>
+																			</li>
+																			<li data-label="Silicon Devices" data-action-link="https://www.xilinx.com/products/silicon-devices/si-keyword-search.html" data-search-hub="Product">
+																				<a href="#">
+																				Silicon Devices</a>
+																			</li>
+																			<li data-label="Boards and Kits" data-action-link="https://www.xilinx.com/products/boards-and-kits/bk-keyword-search.html" data-search-hub="Product">
+																				<a href="#">
+																				Boards and Kits</a>
+																			</li>
+																			<li data-label="Intellectual Property" data-action-link="https://www.xilinx.com/products/intellectual-property/ip-keyword-search.html" data-search-hub="Product">
+																				<a href="#">
+																				Intellectual Property</a>
+																			</li>
+																			<li data-label="Support" class="option" data-action-link="https://www.xilinx.com/search/support-keyword-search.html" data-search-hub="Support">
+																				<a href="#">
+																				Support</a>
+																				<ul>
+																					<li data-label="Documentation" data-action-link="https://www.xilinx.com/support/documentation-navigation/documentation-keyword-search.html" data-search-hub="Document">
+																						<a href="#">
+																						Documentation</a>
+																					</li>
+																					<li data-label="Knowledge Base" data-action-link="https://www.xilinx.com/support/answer-navigation/answer-keyword-search.html" data-search-hub="AnswerRecord">
+																						<a href="#">
+																						Knowledge Base</a>
+																					</li>
+																					<li data-label="Community Forums" data-action-link="https://www.xilinx.com/search/forums-keyword-search.html" data-search-hub="Forums">
+																						<a href="#">
+																						Community Forums</a>
+																					</li>
+																				</ul>
+																			</li>
+																			<li data-label="Partners" data-action-link="https://www.xilinx.com/alliance/member-keyword-search.html" data-search-hub="Partner">
+																				<a href="#">
+																				Partners</a>
+																			</li>
+																			<li data-label="Videos" data-action-link="https://www.xilinx.com/video/video-keyword-search.html" data-search-hub="Video">
+																				<a href="#">
+																				Videos</a>
+																			</li>
+																			<li data-label="Press" data-action-link="https://www.xilinx.com/search/press-keyword-search.html" data-search-hub="Press">
+																				<a href="#">
+																				Press</a>
+																			</li>
+																		</ul>
+																		<a href="#" class="btn dropdown-toggle value" data-toggle="dropdown"></a>
+																		<div class="CoveoSearchbox" data-id="coveosearchbox" data-action-link="https://www.xilinx.com/search/site-keyword-search.html" data-placeholder="Search Xilinx"></div>
+																	</div>
+																</div>
+																<button data-function="search-toggle">
+																<span class="sr-only">Search</span>
+																<span class="far fa-times"></span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</nav>
+									</header>
+								</noindex>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="parsys aem-GridColumn--xxxlarge--none aem-GridColumn--xlarge--none aem-GridColumn--xxlarge--none aem-GridColumn--default--none aem-GridColumn--offset--large--1 aem-GridColumn--xlarge--12 aem-GridColumn--offset--default--0 aem-GridColumn--xxlarge--10 aem-GridColumn--offset--xlarge--2 aem-GridColumn--offset--xxlarge--3 aem-GridColumn--offset--xxxlarge--4 aem-GridColumn--large--none aem-GridColumn aem-GridColumn--large--14 aem-GridColumn--xxxlarge--8 aem-GridColumn--default--16">
+						<div class="container-fluid">
+							<div class="row">
+							<div class="col-xs-12">
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> xbtest - Developer guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+      
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/home/build/html/index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Content</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="expected-tasks.html">Expected tasks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="expected-tasks.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="expected-tasks.html#description">Description</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quick-guide.html">Quick guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#definition">Definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#get-xbtest-sources-and-packages">Get xbtest sources and packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#set-up-your-environment">Set up your environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#move-to-the-xclbin-generate-directory">Move to the <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#initialize-xclbin-generate-input-products">Initialize <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> input products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#get-xclbin-generate-input-products-templates">Get <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> input products templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#generate-power-floorplan-templates">Generate power floorplan templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#customize-xclbin-generate-input-products">Customize <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> input products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#generate-xclbin">Generate xclbin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#move-to-the-rpm-generate-directory">Move to the <code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#initialize-rpm-generate-input-products">Initialize <code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> input products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#customize-platform-definition-json-file">Customize platform definition JSON file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quick-guide.html#generate-rpm-deb-packages">Generate RPM/DEB packages</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="architecture-and-workflows.html">Architecture and workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="architecture-and-workflows.html#xbtest-compute-units-architecture">xbtest compute units architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture-and-workflows.html#hw-sources-overview">HW sources overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture-and-workflows.html#hw-build-workflows-overview">HW build workflows overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="architecture-and-workflows.html#xclbin-generate-workflow-overview"><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow overview</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Environment setup and workflows initialization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#xbtest-sources">xbtest sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#platform">Platform</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-setup">Environment setup</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#vitis-tools">Vitis tools</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#dependencies-script">Dependencies script</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#workflows-initialization">Workflows initialization</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#goal">Goal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#templates-description">Templates description</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#power-floorplan-templates-pwr-cfg">Power floorplan templates: <code class="docutils literal notranslate"><span class="pre">pwr_cfg</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#vitis-configuration-templates-vpp-cfg">Vitis configuration templates: <code class="docutils literal notranslate"><span class="pre">vpp_cfg</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wizard-configuration-json-file-template-wizard-cfg-json">Wizard configuration JSON file template: <code class="docutils literal notranslate"><span class="pre">wizard_cfg.json</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#initialize-using-xclbin-generate">Initialize using <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#initialize-power-floorplan-sources">Initialize power floorplan sources</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#inputs">Inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#batch-mode">Batch mode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interactive-mode">Interactive mode</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="define-power-cu-floorplan.html">Define power CU floorplan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="define-power-cu-floorplan.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define-power-cu-floorplan.html#general-step">General step</a></li>
+<li class="toctree-l2"><a class="reference internal" href="define-power-cu-floorplan.html#detailed-steps">Detailed steps</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="define-power-cu-floorplan.html#automatic-generation-of-templates">Automatic generation of templates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="define-power-cu-floorplan.html#power-floorplan-sources-definition">Power floorplan sources definition</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#utilization-json"><code class="docutils literal notranslate"><span class="pre">utilization.json</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#invalid-json"><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#dynamic-geometry-json"><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="define-power-cu-floorplan.html#power-cu-floorplanning-tips">Power CU floorplanning tips</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#general">General</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#power-estimation">Power estimation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#power-limitations-considerations-and-general-advises">Power limitations/considerations and general advises</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="define-power-cu-floorplan.html#visualize-power-cu-floorplan">Visualize power CU floorplan</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#visualization-overview">Visualization overview</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#pre-requisites">Pre-requisites</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#setup">Setup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#visualize-floorplan">Visualize floorplan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#fpga-part">FPGA part</a></li>
+<li class="toctree-l4"><a class="reference internal" href="define-power-cu-floorplan.html#other-outputs">Other outputs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configure-xclbin.html">Configure xclbin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configure-xclbin.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure-xclbin.html#platform-metadata">Platform metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file-wizard-cfg-json">Wizard configuration JSON file: <code class="docutils literal notranslate"><span class="pre">wizard_cfg.json</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configure-xclbin.html#default-section"><code class="docutils literal notranslate"><span class="pre">default</span></code> section</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configure-xclbin.html#platform-parameters-of-wizard-configuration-json-file"><code class="docutils literal notranslate"><span class="pre">platform</span></code> parameters of wizard configuration JSON file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#mac-addresses-available-available-board-mac-addresses"><code class="docutils literal notranslate"><span class="pre">mac_addresses_available</span></code>: Available board MAC addresses</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#interface-uuid-platform-interface-uuid-dependency"><code class="docutils literal notranslate"><span class="pre">interface_uuid</span></code>: Platform interface UUID dependency</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#gt-gt-platform-definition"><code class="docutils literal notranslate"><span class="pre">gt</span></code>: GT platform definition</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="configure-xclbin.html#build-parameters-of-wizard-configuration-json-file"><code class="docutils literal notranslate"><span class="pre">build</span></code> Parameters of wizard configuration JSON file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#vpp-link-output-vitis-linker-output"><code class="docutils literal notranslate"><span class="pre">vpp_link_output</span></code>: Vitis linker output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="configure-xclbin.html#cu-configuration-parameters-of-wizard-configuration-json-file"><code class="docutils literal notranslate"><span class="pre">cu_configuration</span></code> parameters of wizard configuration JSON file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#power-power-cu-configuration"><code class="docutils literal notranslate"><span class="pre">power</span></code>: Power CU configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#gt-configure-gt-cus-gt-mac-gt-lpbk-gt-prbs"><code class="docutils literal notranslate"><span class="pre">gt</span></code>: Configure GT CUs (GT_MAC, GT_LPBK &amp; GT_PRBS)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#gt-configure-gt-mac-cu"><code class="docutils literal notranslate"><span class="pre">gt</span></code>: Configure GT MAC CU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#memory-configure-memory-cu"><code class="docutils literal notranslate"><span class="pre">memory</span></code>: Configure memory CU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#verify-configure-verify-cu"><code class="docutils literal notranslate"><span class="pre">verify</span></code>: Configure verify CU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#clock-clock-speed"><code class="docutils literal notranslate"><span class="pre">clock</span></code>: Clock speed</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#plram-selection-plram-connections"><code class="docutils literal notranslate"><span class="pre">plram_selection</span></code>: PLRAM connections</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="configure-xclbin.html#cu-selection-parameters-of-wizard-configuration-json-file"><code class="docutils literal notranslate"><span class="pre">cu_selection</span></code> Parameters of wizard configuration JSON file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configure-xclbin.html#auto-configuration-examples">Auto-configuration examples</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#override-gt-definition">Override GT definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#define-new-memory-type">Define new memory type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-xclbin.html#override-existing-memory-type">Override existing memory type</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="configure-xclbin.html#wizard-configuration-examples">Wizard configuration examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file-template">Wizard configuration JSON file template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configure-vitis.html">Configure Vitis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configure-vitis.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure-vitis.html#required-vitis-tcl-hooks">Required Vitis TCL hooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configure-vitis.html#post-system-linker-tcl-hook-postsys-link-tcl">Post system linker TCL hook: <code class="docutils literal notranslate"><span class="pre">postsys_link.tcl</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configure-vitis.html#connect-continuous-clock">Connect continuous clock</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configure-vitis.html#overwrite-cascaded-power-cu-connectivity">Overwrite cascaded power CU connectivity</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configure-vitis.html#optional-tcl-hooks">Optional TCL hooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configure-vitis.html#pre-placer-tcl-hook-place-design-pre-tcl">Pre-placer TCL hook: <code class="docutils literal notranslate"><span class="pre">place_design_pre.tcl</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configure-vitis.html#noc-constraints-versal">NOC Constraints (Versal)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="configure-vitis.html#pre-router-tcl-hook-route-design-pre-tcl">Pre-router TCL hook: <code class="docutils literal notranslate"><span class="pre">route_design_pre.tcl</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configure-vitis.html#generated-vitis-options-file-vpp-link-ini">Generated Vitis options file: <code class="docutils literal notranslate"><span class="pre">vpp_link.ini</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="configure-vitis.html#vitis-options-file-vpp-ini">Vitis options file: <code class="docutils literal notranslate"><span class="pre">vpp.ini</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="configure-vitis.html#remote-ip-cache"><code class="docutils literal notranslate"><span class="pre">remote_ip_cache</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="configure-vitis.html#relative-paths">Relative Paths</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configure-vitis.html#vitis-configuration-examples">Vitis configuration examples</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="build-xclbin.html">Build xclbin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="build-xclbin.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-xclbin.html#xclbin-generate-input-and-output-products"><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> input and output products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-xclbin.html#xclbin-generate-workflow-command-line-options"><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> Workflow Command Line Options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#h-help-display-help">-h, –help: Display help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#c-ip-catalog-provide-ip-catalog">-c, –ip_catalog: Provide IP catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#x-xpfm-select-platform-xpfm">-x, –xpfm: Select Platform XPFM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#i-init-enable-initialization">-I, –init: Enable initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#d-config-dir-provide-configuration-directory">-d, –config_dir: Provide configuration directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#p-project-name-set-project-name">-p, –project_name: Set project name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#l-use-lsf-enable-lsf">-l, –use_lsf: Enable LSF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#l-lsf-cmd-provide-lsf-command">-L, –lsf_cmd: Provide LSF command</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#n-wizard-config-name-set-wizard-configuration-name">-n, –wizard_config_name: Set wizard configuration name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#o-output-dir-provide-output-directory">-o, –output_dir: Provide output directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#v-verbose-enable-verbosity">-V, –verbose: Enable verbosity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#f-force-force-an-operation">-f, –force: Force an operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#q-skip-xclbin-gen-skip-xclbin-generation">-q, –skip_xclbin_gen: Skip xclbin generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#q-skip-xo-gen-skip-xo-generation">-Q, –skip_xo_gen: Skip XO generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#r-skip-dcp-gen-skip-dcp-generation">-r, –skip_dcp_gen: Skip DCP generation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-xclbin.html#v-version-display-version">-v, –version: Display version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="build-xclbin.html#run-xclbin-generate-workflow">Run <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="xclbin-timing-closure-tips.html">xclbin timing closure tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="xclbin-timing-closure-tips.html#overview">Overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="xclbin-timing-closure-tips.html#run-multi-strategy-on-lsf">Run multi-strategy on LSF</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="xclbin-timing-closure-tips.html#power-cu">Power CU</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xclbin-timing-closure-tips.html#gt-mac-cu">GT_MAC CU</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="xclbin-timing-closure-tips.html#pblock-usage">Pblock usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="xclbin-timing-closure-tips.html#force-loc-of-bram">Force LOC of BRAM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="xclbin-timing-closure-tips.html#only-gt-brams">Only GT BRAMs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="xclbin-timing-closure-tips.html#all-ulp-brams">All ULP BRAMs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="xclbin-timing-closure-tips.html#frequency-override">Frequency override</a></li>
+<li class="toctree-l2"><a class="reference internal" href="xclbin-timing-closure-tips.html#enable-clock-scaling">Enable clock scaling</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="select-pre-canned-tests.html">Select pre-canned tests</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="select-pre-canned-tests.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="select-pre-canned-tests.html#overwrite">Overwrite</a></li>
+<li class="toctree-l2"><a class="reference internal" href="select-pre-canned-tests.html#pre-canned-test-description">Pre-canned test description</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#verify-json"><code class="docutils literal notranslate"><span class="pre">verify.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#dma-json"><code class="docutils literal notranslate"><span class="pre">dma.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#p2p-nvme-json"><code class="docutils literal notranslate"><span class="pre">p2p_nvme.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#p2p-card-json"><code class="docutils literal notranslate"><span class="pre">p2p_card.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#memory-json"><code class="docutils literal notranslate"><span class="pre">memory.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#memory-host-json"><code class="docutils literal notranslate"><span class="pre">memory_host.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#power-json"><code class="docutils literal notranslate"><span class="pre">power.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#gt-mac-json"><code class="docutils literal notranslate"><span class="pre">gt_mac.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#switch-10gbe-json"><code class="docutils literal notranslate"><span class="pre">switch_10gbe.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#switch-25gbe-json"><code class="docutils literal notranslate"><span class="pre">switch_25gbe.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#gt-mac-lpbk-json"><code class="docutils literal notranslate"><span class="pre">gt_mac_lpbk.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#gt-mac-port-to-port-json"><code class="docutils literal notranslate"><span class="pre">gt_mac_port_to_port.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#gt-prbs-json"><code class="docutils literal notranslate"><span class="pre">gt_prbs.json</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="select-pre-canned-tests.html#stress-json"><code class="docutils literal notranslate"><span class="pre">stress.json</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="fill-platform-definition-json.html">Fill platform definition JSON</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="fill-platform-definition-json.html#platform-definition-json-file-xbtest-pfm-def-json">Platform definition JSON file: <code class="docutils literal notranslate"><span class="pre">xbtest_pfm_def.json</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fill-platform-definition-json.html#platform-definition-json-file-template-xbtest-pfm-def-template-json">Platform definition JSON file template: <code class="docutils literal notranslate"><span class="pre">xbtest_pfm_def_template.json</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="fill-platform-definition-json.html#steps-to-fill-platform-definition-json-file">Steps to fill platform definition JSON file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fill-platform-definition-json.html#step-1-generate-rpm-deb-package-with-xbtest-platform-definition-json-file-template">Step 1: Generate RPM/DEB package with xbtest platform definition JSON file template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill-platform-definition-json.html#step-2-complete-checklist-and-update-xbtest-platform-definition-json-file">Step 2: Complete checklist and update xbtest platform definition JSON file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill-platform-definition-json.html#step-3-generate-rpm-deb-package-with-updated-xbtest-platform-definition-json-file">Step 3: Generate RPM/DEB package with updated xbtest platform definition JSON file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fill-platform-definition-json.html#platform-definition-json-file-examples">Platform definition JSON file examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fill-platform-definition-json.html#all-platform-definition-json-file-parameters">All platform definition JSON file parameters</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="fill-platform-definition-json.html#runtime-parameters-of-platform-definition-json-file"><code class="docutils literal notranslate"><span class="pre">runtime</span></code> parameters of platform definition JSON file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill-platform-definition-json.html#sensor-parameters-of-platform-definition-json-file"><code class="docutils literal notranslate"><span class="pre">sensor</span></code> parameters of platform definition JSON file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fill-platform-definition-json.html#add-sensor-to-monitor">Add sensor to monitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fill-platform-definition-json.html#gt-parameters-of-platform-definition-json-file"><code class="docutils literal notranslate"><span class="pre">gt</span></code> parameters of platform definition JSON file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="fill-platform-definition-json.html#memory-parameters-of-platform-definition-json-file"><code class="docutils literal notranslate"><span class="pre">memory</span></code> parameters of platform definition JSON file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="fill-platform-definition-json.html#dma-parameters-of-platform-definition-json-file">DMA parameters of platform definition JSON file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fill-platform-definition-json.html#p2p-card-parameters-of-platform-definition-json-file">P2P CARD parameters of platform definition JSON file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fill-platform-definition-json.html#p2p-nvme-parameters-of-platform-definition-json-file">P2P NVME parameters of platform definition JSON file</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fill-platform-definition-json.html#cu-parameters-of-platform-definition-json-file">CU parameters of platform definition JSON file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="fill-platform-definition-json.html#id5">Platform definition JSON file template</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="build-rpm-and-deb-packages.html">Build RPM and DEB packages</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="build-rpm-and-deb-packages.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-rpm-and-deb-packages.html#pre-requisites">Pre-requisites</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#copy-xclbin-and-xbtest-pfm-def-json">Copy xclbin and <code class="docutils literal notranslate"><span class="pre">xbtest_pfm_def.json</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="build-rpm-and-deb-packages.html#rpm-generate-workflow-input-and-output-products"><code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> workflow input and output products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="build-rpm-and-deb-packages.html#rpm-generate-workflow-command-line-options"><code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> workflow command line options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#h-help-display-help">-h, –help: Display help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#v-verbose-enable-verbosity">-V, –verbose: Enable verbosity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#n-deploy-name-define-deployment-platform-name">-n, –deploy_name: Define deployment platform name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#m-deploy-version-define-deployment-platform-version">-m, –deploy_version: Define deployment platform version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#i-include-dir-select-include-directory">-i, –include_dir: Select include directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#r-pkg-release-provide-package-release">-r, –pkg_release: Provide package release</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#d-dependency-provide-dependency">-D / –-dependency: Provide dependency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#o-output-dir-provide-output-directory">-o, –output_dir: Provide output directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#f-force-force-an-operation">-f, –force: Force an operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-rpm-and-deb-packages.html#v-version-display-version">-v, –version: Display version</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="build-rpm-and-deb-packages.html#run-rpm-generate-workflow">Run <code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="complete-checklist.html">Complete checklist</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="complete-checklist.html#overview">Overview</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Other versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
+</ul>
+
+            
+			
+			<p class="caption"><span class="caption-text">This Page</span></p>
+				<ul class="current">
+				  <li class="toctree-l1"><a href="../_sources/docs/environment-setup-and-workflows-initialization.rst.txt"
+						rel="nofollow">Show Source</a></li>
+				</ul>
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">xbtest - Developer guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Environment setup and workflows initialization</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/docs/environment-setup-and-workflows-initialization.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="environment-setup-and-workflows-initialization">
+<span id="id1"></span><h1>Environment setup and workflows initialization<a class="headerlink" href="#environment-setup-and-workflows-initialization" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This page describes the setup of working environment required to build xbtest packages:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Tools dependencies…</p></li>
+</ul>
+</div></blockquote>
+<p>It also describes a simple procedure to create templates and placeholders that you’ll need for:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Creating the power CU.</p></li>
+<li><p>Adding configuration and constraint to <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="xbtest-sources">
+<span id="id2"></span><h2>xbtest sources<a class="headerlink" href="#xbtest-sources" title="Permalink to this headline">¶</a></h2>
+<p>Get xbtest sources and packages using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://gitenterprise.xilinx.com/techdocs/xbtest &lt;xbtest_local_repo&gt;
+</pre></div>
+</div>
+<p>The HW sources are located in <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_local_repo&gt;/src/hw</span></code>.</p>
+<p>The host application packages are located in <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_local_repo&gt;/pkg/sw</span></code>.</p>
+</div>
+<div class="section" id="platform">
+<h2>Platform<a class="headerlink" href="#platform" title="Permalink to this headline">¶</a></h2>
+<p>A <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> development platform XPFM (or HW XSA) is required (see <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>).</p>
+<p>Make sure your platform is supported by xbtest and contains the required metadata (see <a class="reference internal" href="../index.html#developer-guide-prerequisite"><span class="std std-ref">Prerequisites</span></a>).</p>
+</div>
+<div class="section" id="environment-setup">
+<span id="id3"></span><h2>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="vitis-tools">
+<h3>Vitis tools<a class="headerlink" href="#vitis-tools" title="Permalink to this headline">¶</a></h3>
+<p>You need a standard Unix environment with <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> tools installed.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Execute the following commands to set up the Vitis environment for building xbtest:</p>
+<blockquote>
+<div><ul>
+<li><p>For bash:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> &lt;Vitis_Installation_Path&gt;/Vitis/&lt;Vitis_Version&gt;/settings64.sh
+</pre></div>
+</div>
+</li>
+<li><p>For CSH:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> &lt;Vitis_Installation_Path&gt;/Vitis/&lt;Vitis_Version&gt;/settings64.csh
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Check Vitis tools are loaded:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ which vitis
+$ which v++
+$ which aiecompiler
+$ which xclbinutil
+$ which platforminfo
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="dependencies-script">
+<h3>Dependencies script<a class="headerlink" href="#dependencies-script" title="Permalink to this headline">¶</a></h3>
+<p>Download and install all xbtest workflows dependencies:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Run xbtest dependencies script as super user:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo &lt;xbtest_build&gt;/rpm_generate/xbtest_deps.sh
+</pre></div>
+</div>
+</li>
+<li><p>Check tools are loaded:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ which python3
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>Where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;</span></code> represents the xbtest build source directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/build_source/xbtest_wizard_v6_0/</span></code>).</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="workflows-initialization">
+<span id="id4"></span><h2>Workflows initialization<a class="headerlink" href="#workflows-initialization" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="goal">
+<h3>Goal<a class="headerlink" href="#goal" title="Permalink to this headline">¶</a></h3>
+<p>The goal of this initialization is to generate, based on your platform, templates required in <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p><a class="reference internal" href="#initialize-using-xclbin-generate"><span class="std std-ref">Initialize using xclbin_generate</span></a> to generate the following templates:</p>
+<blockquote>
+<div><ul>
+<li><p><a class="reference internal" href="#wizard-configuration-json-file-template"><span class="std std-ref">Wizard configuration JSON file template: wizard_cfg.json</span></a>.</p></li>
+<li><p><a class="reference internal" href="#vitis-configuration-templates"><span class="std std-ref">Vitis configuration templates: vpp_cfg</span></a> which includes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#vpp-options-file-template"><span class="std std-ref">Vitis options file template: vpp.ini</span></a>.</p></li>
+<li><p><a class="reference internal" href="#postsys-link-tcl-template"><span class="std std-ref">Post system linker TCL hook template: postsys_link.tcl</span></a>.</p></li>
+<li><p><a class="reference internal" href="#place-design-pre-tcl-template"><span class="std std-ref">Pre-placer TCL hook template: place_design_pre.tcl</span></a>.</p></li>
+<li><p><a class="reference internal" href="#route-design-pre-tcl-template"><span class="std std-ref">Pre-router TCL hook template: route_design_pre.tcl</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><a class="reference internal" href="#initialize-power-floorplan-sources"><span class="std std-ref">Initialize power floorplan sources</span></a> to generate the following templates:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Initialize <a class="reference internal" href="#power-floorplan-templates"><span class="std std-ref">Power floorplan templates: pwr_cfg</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+<p>Once the initialization is completed, you’ll be able to use and customize generated templates as explained in later in this documentation.</p>
+<p>If the platform metadata is not defined as expected, the content of the templates may be wrong but this documentation explain how to overwrite them if needed.</p>
+</div>
+<div class="section" id="templates-description">
+<span id="id5"></span><h3>Templates description<a class="headerlink" href="#templates-description" title="Permalink to this headline">¶</a></h3>
+<p>In the initialization, the following templates will be generated.</p>
+<div class="section" id="power-floorplan-templates-pwr-cfg">
+<span id="power-floorplan-templates"></span><h4>Power floorplan templates: <code class="docutils literal notranslate"><span class="pre">pwr_cfg</span></code><a class="headerlink" href="#power-floorplan-templates-pwr-cfg" title="Permalink to this headline">¶</a></h4>
+<p>The following power floorplan templates are generated:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code>: Required <a class="reference internal" href="define-power-cu-floorplan.html#dynamic-geometry-json"><span class="std std-ref">dynamic_geometry.json</span></a> defining available primitives in platform dynamic region: <strong>do not edit</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">utilization_template.json</span></code>: Templates of required <a class="reference internal" href="define-power-cu-floorplan.html#utilization-json"><span class="std std-ref">utilization.json</span></a> defining power CUs sites utilization: 0% set for all site types.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invalid_template.json</span></code>: Templates of optional <a class="reference internal" href="define-power-cu-floorplan.html#invalid-json"><span class="std std-ref">invalid.json</span></a> defining invalid primitives to be excluded: a few sites invalidated as example.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="vitis-configuration-templates-vpp-cfg">
+<span id="vitis-configuration-templates"></span><h4>Vitis configuration templates: <code class="docutils literal notranslate"><span class="pre">vpp_cfg</span></code><a class="headerlink" href="#vitis-configuration-templates-vpp-cfg" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="vitis-options-file-template-vpp-ini">
+<span id="vpp-options-file-template"></span><h5>Vitis options file template: <code class="docutils literal notranslate"><span class="pre">vpp.ini</span></code><a class="headerlink" href="#vitis-options-file-template-vpp-ini" title="Permalink to this headline">¶</a></h5>
+<p>The template of required <a class="reference internal" href="configure-vitis.html#vpp-options-file"><span class="std std-ref">Vitis options file: vpp.ini</span></a>:</p>
+<blockquote>
+<div><ul>
+<li><p>References:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="configure-vitis.html#postsys-link-tcl"><span class="std std-ref">Post system linker TCL hook: postsys_link.tcl</span></a>.</p></li>
+<li><p><a class="reference internal" href="configure-vitis.html#place-design-pre-tcl"><span class="std std-ref">Pre-placer TCL hook: place_design_pre.tcl</span></a>.</p></li>
+<li><p><a class="reference internal" href="configure-vitis.html#route-design-pre-tcl"><span class="std std-ref">Pre-router TCL hook: route_design_pre.tcl</span></a>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Sets <code class="docutils literal notranslate"><span class="pre">remote_ip_cache</span></code> option.</p></li>
+<li><p>Provide example of build strategy/directives.</p></li>
+</ul>
+</div></blockquote>
+<p>Example/possible content of this template:</p>
+<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="na">remote_ip_cache</span><span class="o">=</span><span class="s">../../../remote_ip_cache</span>
+
+<span class="c1"># TCL hooks</span>
+<span class="k">[advanced]</span>
+<span class="na">param</span><span class="o">=</span><span class="s">compiler.userPostSysLinkOverlayTcl=../../vpp_cfg/postsys_link.tcl</span>
+
+<span class="k">[vivado]</span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=../../vpp_cfg/place_design_pre.tcl</span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.ROUTE_DESIGN.TCL.PRE=../../vpp_cfg/route_design_pre.tcl</span>
+
+<span class="c1"># Build strategy/directives</span>
+<span class="k">[vivado]</span>
+<span class="c1"># prop=run.impl_1.strategy=Performance_EarlyBlockPlacement</span>
+<span class="c1"># prop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true</span>
+<span class="c1"># prop=run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore</span>
+<span class="c1"># prop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span>
+<span class="c1"># prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span>
+<span class="c1"># prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="post-system-linker-tcl-hook-template-postsys-link-tcl">
+<span id="postsys-link-tcl-template"></span><h5>Post system linker TCL hook template: <code class="docutils literal notranslate"><span class="pre">postsys_link.tcl</span></code><a class="headerlink" href="#post-system-linker-tcl-hook-template-postsys-link-tcl" title="Permalink to this headline">¶</a></h5>
+<p>This template of required <a class="reference internal" href="configure-vitis.html#postsys-link-tcl"><span class="std std-ref">Post system linker TCL hook: postsys_link.tcl</span></a> includes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Continuous clocks connectivity (by default set for UCS subsystem <strong>v3.0</strong> called <code class="docutils literal notranslate"><span class="pre">ulp_ucs</span></code>).</p></li>
+<li><p>Example of power CU external throttle mode connectivity (by default 4 power CUs with throttle source in SLR0).</p></li>
+</ul>
+</div></blockquote>
+<p>Example/possible content:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#########################################################################################
+# Post system linker TCL hook
+# This is a generated template file
+# How to use. In procedure postsys_link_body:
+# 1) Update continuous clocks connectivity: UCS name and version
+# =&gt; Select one call of procedure connect_continuous_clocks
+# 2) Update power CU connectivity for external throttle mode depending on the CU
+# configuration in wizard configuration JSON file
+# =&gt; Update/add/remove source/destination power CUs in calls of procedure connect_power_cu_throttle
+#########################################################################################
+###################################### Update here ######################################
+proc postsys_link_body {} {
+  #### Continuous clocks connectivity
+  # connect_continuous_clocks ulp_ucs 0; # No UCS present, continuous clock is not supported
+  # connect_continuous_clocks ulp_ucs 2; # UCS subsystem version v2
+  connect_continuous_clocks ulp_ucs 3; # UCS subsystem version v3
+
+  #### Power CU connectivity for external throttle mode
+  # For example:
+  # - source power CU in SLR0 (krnl_powertest_slr0_1)
+  # - destination power CUs in SLR1/SLR2/SLR3 (krnl_powertest_slr1_1/krnl_powertest_slr2_1krnl_powertest_slr3_1)
+  connect_power_cu_throttle krnl_powertest_slr0_1 krnl_powertest_slr1_1
+  connect_power_cu_throttle krnl_powertest_slr0_1 krnl_powertest_slr2_1
+  connect_power_cu_throttle krnl_powertest_slr0_1 krnl_powertest_slr3_1
+}
+
+################################### DO NOT EDIT #####################################
+proc connect_continuous_clocks { ucs_name ucs_version} {
+  # Set names depending on UCS version
+  if {$ucs_version == 0} {
+    connect_bd_net [get_bd_pins krnl_*/ap_clk]   [get_bd_pins krnl_*/ap_clk_cont]
+    connect_bd_net [get_bd_pins krnl_*/ap_clk_2] [get_bd_pins krnl_*/ap_clk_2_cont]
+    return
+  } elseif {$ucs_version == 2} {
+    set clk_prop_name_0 ENABLE_KERNEL_CONT_CLOCK
+    set clk_prop_val_0 true
+    set clk_port_0 clk_kernel_cont
+    set clk_prop_name_1 ENABLE_KERNEL2_CONT_CLOCK
+    set clk_prop_val_1 true
+    set clk_port_1 clk_kernel2_cont
+  } elseif {$ucs_version == 3} {
+    set clk_prop_name_0 ENABLE_CONT_KERNEL_CLOCK_00
+    set clk_prop_val_0 true
+    set clk_port_0 aclk_kernel_00_cont
+    set clk_prop_name_1 ENABLE_CONT_KERNEL_CLOCK_01
+    set clk_prop_val_1 true
+    set clk_port_1 aclk_kernel_01_cont
+  } else {
+    common::send_msg_id {XBTEST_POSTSYS_LINK-1} {ERROR} &quot;Failed to connect continuous clocks. UCSversion   ($ucs_version) not defined in connect_continuous_clocks in your postsys_link.tcl&quot;
+  }
+  # Check the UCS cell exists
+  if {[get_bd_cells $ucs_name] == {}} {
+    common::send_msg_id {XBTEST_POSTSYS_LINK-2} {ERROR} &quot;Failed to connect continuous clocks. UCS cell($ucs_name)   not found. Check cell name in BD&quot;
+  }
+  # Enable UCS kernel continuous clocks outputs
+  foreach {prop val} [dict create $clk_prop_name_0 $clk_prop_val_0 $clk_prop_name_1 $clk_prop_val_0] {
+    # Check property exists
+    if {![regexp -nocase -- &quot;.*CONFIG.${prop}.*&quot; [list_property [get_bd_cells $ucs_name]]]} {
+      common::send_msg_id {XBTEST_POSTSYS_LINK-3} {ERROR} &quot;Failed to connect continuous clocks. UCScell property   (CONFIG.$prop) does not exists. Check UCS susbsystem ($ucs_name) version&quot;
+    }
+    set_property CONFIG.$prop $val [get_bd_cells $ucs_name]
+  }
+  # Connect UCS continuous clocks outputs to clock inputs of all xbtest compute units continuous
+  foreach {src dst} [dict create $clk_port_0 ap_clk_cont $clk_port_1 ap_clk_2_cont] {
+    if {[get_bd_pins $ucs_name/$src] == {}} {
+      common::send_msg_id {XBTEST_POSTSYS_LINK-4} {ERROR} &quot;Failed to connect continuous clocks. UCScell pin   ($ucs_name/$src) not found. Check cell pin name in BD&quot;
+    }
+    connect_bd_net [get_bd_pins $ucs_name/$src] [get_bd_pins krnl_*/$dst]
+  }
+}
+proc connect_power_cu_throttle { src_pwr_cu_name dst_pwr_cu_name } {
+  # Only connect if both source and destination power CU are present in the BD
+  foreach pwr_cu_name [list $src_pwr_cu_name $dst_pwr_cu_name] {
+    if {[get_bd_cells $pwr_cu_name] == {}} {
+      common::send_msg_id {XBTEST_POSTSYS_LINK-5} {WARNING} &quot;Cannot connect $src_pwr_cu_name to$dst_pwr_cu_name.   Power CU cell ($pwr_cu_name) not found&quot;
+      return
+    }
+  }
+  # Connect outputs of source power CU to inputs of destination power CU
+  connect_bd_net [get_bd_pins $src_pwr_cu_name/pwr_clk_out]     [get_bd_pins $dst_pwr_cu_namepwr_clk_in]
+  connect_bd_net [get_bd_pins $src_pwr_cu_name/pwr_FF_en_out]   [get_bd_pins $dst_pwr_cu_namepwr_FF_en_in]
+  connect_bd_net [get_bd_pins $src_pwr_cu_name/pwr_DSP_en_out]  [get_bd_pins $dst_pwr_cu_namepwr_DSP_en_in]
+  connect_bd_net [get_bd_pins $src_pwr_cu_name/pwr_BRAM_en_out] [get_bd_pins $dst_pwr_cu_namepwr_BRAM_en_in]
+  connect_bd_net [get_bd_pins $src_pwr_cu_name/pwr_URAM_en_out] [get_bd_pins $dst_pwr_cu_namepwr_URAM_en_in]
+}
+# Execute body
+postsys_link_body
+</pre></div>
+</div>
+</div>
+<div class="section" id="pre-placer-tcl-hook-template-place-design-pre-tcl">
+<span id="place-design-pre-tcl-template"></span><h5>Pre-placer TCL hook template: <code class="docutils literal notranslate"><span class="pre">place_design_pre.tcl</span></code><a class="headerlink" href="#pre-placer-tcl-hook-template-place-design-pre-tcl" title="Permalink to this headline">¶</a></h5>
+<p>The generated template of optional <a class="reference internal" href="configure-vitis.html#place-design-pre-tcl"><span class="std std-ref">Pre-placer TCL hook: place_design_pre.tcl</span></a> is empty. It is given as place holder.</p>
+</div>
+<div class="section" id="pre-router-tcl-hook-template-route-design-pre-tcl">
+<span id="route-design-pre-tcl-template"></span><h5>Pre-router TCL hook template: <code class="docutils literal notranslate"><span class="pre">route_design_pre.tcl</span></code><a class="headerlink" href="#pre-router-tcl-hook-template-route-design-pre-tcl" title="Permalink to this headline">¶</a></h5>
+<p>The generated template of optional <a class="reference internal" href="configure-vitis.html#route-design-pre-tcl"><span class="std std-ref">Pre-router TCL hook: route_design_pre.tcl</span></a> is empty. It is given as place holder.</p>
+</div>
+</div>
+<div class="section" id="wizard-configuration-json-file-template-wizard-cfg-json">
+<span id="wizard-configuration-json-file-template"></span><h4>Wizard configuration JSON file template: <code class="docutils literal notranslate"><span class="pre">wizard_cfg.json</span></code><a class="headerlink" href="#wizard-configuration-json-file-template-wizard-cfg-json" title="Permalink to this headline">¶</a></h4>
+<p>The template of required <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a> contains</p>
+<blockquote>
+<div><ul>
+<li><p>Mandatory <code class="docutils literal notranslate"><span class="pre">default</span></code> build parameters.</p></li>
+<li><p>CU selection based on platform metadata and example of configuration:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">xbtest_stress</span></code>: Default.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">xbtest_power_fp</span></code>: Display power floorplan.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Example/possible content:</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;default&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;build&quot;</span> <span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;pwr_floorplan_dir&quot;</span> <span class="p">:</span> <span class="s2">&quot;../pwr_cfg&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;vpp_options_dir&quot;</span> <span class="p">:</span> <span class="s2">&quot;../vpp_cfg&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;xbtest_stress&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;cu_selection&quot;</span> <span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;power&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+      <span class="nt">&quot;gt_mac&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
+      <span class="nt">&quot;memory&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;HBM&quot;</span><span class="p">,</span><span class="s2">&quot;HOST&quot;</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;xbtest_power_fp&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;build&quot;</span> <span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;display_pwr_floorplan&quot;</span> <span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;cu_selection&quot;</span> <span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;power&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="initialize-using-xclbin-generate">
+<span id="id6"></span><h3>Initialize using <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code><a class="headerlink" href="#initialize-using-xclbin-generate" title="Permalink to this headline">¶</a></h3>
+<p>In this step, run the <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow as detailed below with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-I"><code class="xref std std-option docutils literal notranslate"><span class="pre">--init</span></code></a>, and save the generated templates in <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/cfg/&lt;dev_platform&gt;</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_catalog&gt;</span></code> represents the xbtest IP catalog directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/xbtest_catalog/</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;</span></code> represents the xbtest build source directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/build_source/xbtest_wizard_v6_0/</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>. For example: If <code class="docutils literal notranslate"><span class="pre">path/to/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx_u55c_gen3x16_xdma_3_202210_1</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/hw.xsa</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">hw</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/your/xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch.rpm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All command line options are described in another section of this documentation.
+Only <a class="reference internal" href="build-xclbin.html#cmdoption-I"><code class="xref std std-option docutils literal notranslate"><span class="pre">--init</span></code></a> and command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a> are used at this stage.</p>
+</div>
+<p>A DCP is required to create the power CU templates.
+By default, a DCP will be created.
+A post PhysOpt DCP is enough, there is no need to be able to place and route (nor close timing).</p>
+<p>You can skip the DCP generation phase if you already have one.
+Any DCP suits (after physOpt, place or route phases).</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Move to <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> sources directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> &lt;xbtest_build&gt;/xclbin_generate
+</pre></div>
+</div>
+</li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow with <a class="reference internal" href="build-xclbin.html#cmdoption-I"><code class="xref std std-option docutils literal notranslate"><span class="pre">--init</span></code></a> mode enabled and either:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Generate DCP:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3 gen_xclbin.py --ip_catalog &lt;xbtest_catalog&gt; --xpfm path/to/your/platform.xpfm --init
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Or, if you already have a DCP, then use the <a class="reference internal" href="build-xclbin.html#cmdoption-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">--skip_dcp_gen</span></code></a> option:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3 gen_xclbin.py --ip_catalog &lt;xbtest_catalog&gt; --xpfm path/to/your/platform.xpfm --init --skip_dcp_gen
+</pre></div>
+</div>
+<ul>
+<li><p>If a required platform metadata is missing or not defined as expected, the initialization may fail.
+In that case, you can define this metadata in your a <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a>
+This will allow the initialization to proceed and the other templates to be generated.</p>
+<p>Define the <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a> in your configuration directory: <code class="docutils literal notranslate"><span class="pre">path/to/your/config_dir/wizard_cfg.json</span></code></p>
+<p>Run the workflow with option <a class="reference internal" href="build-xclbin.html#cmdoption-d"><code class="xref std std-option docutils literal notranslate"><span class="pre">--config_dir</span></code></a>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3 gen_xclbin.py --ip_catalog &lt;xbtest_catalog&gt; --xpfm path/to/your/platform.xpfm --init --config_dir path/to/your/config_dir
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>At the end of the initialization, <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow output contains <code class="docutils literal notranslate"><span class="pre">[GEN_XCLBIN-53]</span></code>, <code class="docutils literal notranslate"><span class="pre">[GEN_XCLBIN-54]</span></code> and <code class="docutils literal notranslate"><span class="pre">[GEN_XCLBIN-55]</span></code> messages, like the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>STATUS: <span class="o">[</span>GEN_XCLBIN-41<span class="o">]</span> -- Executing command: bash ./build_xclbin.sh
+INFO: <span class="o">[</span>GEN_XCLBIN-41<span class="o">]</span> Command finished. Duration: <span class="m">0</span>:48:54
+STATUS: <span class="o">[</span>GEN_XCLBIN-42<span class="o">]</span> **** End of step: run Vitis to generate a DCP. Elapsed time: <span class="m">0</span>:51:32
+<span class="hll">INFO: <span class="o">[</span>GEN_XCLBIN-53<span class="o">]</span> Workflow templates were generated <span class="k">in</span> &lt;xbtest_build&gt;/xclbin_generate/output/xilinx_u55c_gen3x16_xdma_3_202210_1/init/u_ex/run/cfg_template
+</span><span class="hll">INFO: <span class="o">[</span>GEN_XCLBIN-54<span class="o">]</span> A DCP was generated <span class="k">in</span> output directory
+</span><span class="hll">INFO: <span class="o">[</span>GEN_XCLBIN-55<span class="o">]</span> Initialization successful
+</span>INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> --------------------------------------------------------------------------------------
+INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> <span class="o">[</span><span class="m">2021</span>-11-09, <span class="m">19</span>:47:59<span class="o">]</span> gen_xclbin.py END
+INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> --------------------------------------------------------------------------------------
+</pre></div>
+</div>
+<p>If option was used <a class="reference internal" href="build-xclbin.html#cmdoption-r"><code class="xref std std-option docutils literal notranslate"><span class="pre">--skip_dcp_gen</span></code></a>, no DCP is generated
+and <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow output contains <code class="docutils literal notranslate"><span class="pre">[GEN_XCLBIN-53]</span></code>, <code class="docutils literal notranslate"><span class="pre">[GEN_XCLBIN-55]</span></code> and <code class="docutils literal notranslate"><span class="pre">[GEN_XCLBIN-38]</span></code> messages, like the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>STATUS: <span class="o">[</span>GEN_XCLBIN-36<span class="o">]</span> -- Executing command: vivado -mode batch -verbose -journal &lt;xbtest_build&gt;/xclbin_generate/output/xilinx_u55c_gen3x16_xdma_3_202210_1/init/tmp/tmp_wizard_vivado.jou -log &lt;xbtest_build&gt;/xclbin_generate/output/xilinx_u55c_gen3x16_xdma_3_202210_1/init/tmp/tmp_wizard_vivado.log -source &lt;xbtest_build&gt;/xclbin_generate/output/xilinx_u55c_gen3x16_xdma_3_202210_1/init/wizard.tcl
+INFO: <span class="o">[</span>GEN_XCLBIN-36<span class="o">]</span> Command finished. Duration: <span class="m">0</span>:01:37
+STATUS: <span class="o">[</span>GEN_XCLBIN-37<span class="o">]</span> **** End of step: run Vivado to create XOs and Vitis run script. Elapsed time: <span class="m">0</span>:02:37
+<span class="hll">INFO: <span class="o">[</span>GEN_XCLBIN-53<span class="o">]</span> Workflow templates were generated <span class="k">in</span> &lt;xbtest_build&gt;/xclbin_generate/output/xilinx_u55c_gen3x16_xdma_3_202210_1/init/u_ex/run/cfg_template
+</span><span class="hll">INFO: <span class="o">[</span>GEN_XCLBIN-55<span class="o">]</span> Initialization successful
+</span><span class="hll">INFO: <span class="o">[</span>GEN_XCLBIN-38<span class="o">]</span> Script terminating as DCP generation is skipped
+</span>INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> --------------------------------------------------------------------------------------
+INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> <span class="o">[</span><span class="m">2021</span>-11-10, <span class="m">10</span>:40:23<span class="o">]</span> gen_xclbin.py END
+INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> --------------------------------------------------------------------------------------
+</pre></div>
+</div>
+</li>
+<li><p>Finally, copy the generated templates:</p>
+<blockquote>
+<div><ol class="loweralpha">
+<li><p>Create the destination directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mkdir -p &lt;xbtest_build&gt;/xclbin_generate/cfg/&lt;dev_platform&gt;
+</pre></div>
+</div>
+</li>
+<li><p>Copy the generated templates</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cp -r &lt;xbtest_build&gt;/xclbin_generate/output/&lt;dev_platform&gt;/init/u_ex/run/cfg_template/* &lt;xbtest_build&gt;/xclbin_generate/cfg/&lt;dev_platform&gt;
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="initialize-power-floorplan-sources">
+<span id="id7"></span><h3>Initialize power floorplan sources<a class="headerlink" href="#initialize-power-floorplan-sources" title="Permalink to this headline">¶</a></h3>
+<p>The power CU configuration requires 3 files (see <a class="reference internal" href="define-power-cu-floorplan.html#define-power-cu-floorplan"><span class="std std-ref">Define power CU floorplan</span></a>).
+The section explains how to create the templates which you will edit later according to your card power requirements.</p>
+<p>Run provided TCL script <code class="docutils literal notranslate"><span class="pre">gen_dynamic_geometry.tcl</span></code> as detailed below.
+The generated templates will be saved in <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/cfg/&lt;dev_platform&gt;/pwr_cfg</span></code>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;</span></code> represents the xbtest build source directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/build_source/xbtest_wizard_v6_0/</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>. For example: If <code class="docutils literal notranslate"><span class="pre">path/to/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx_u55c_gen3x16_xdma_3_202210_1</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/hw.xsa</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">hw</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/your/xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch.rpm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<p>You need a DCP generated with your platform:</p>
+<blockquote>
+<div><ul>
+<li><p>If you don’t have one already, it can be generated in previous steps (<a class="reference internal" href="#initialize-using-xclbin-generate"><span class="std std-ref">Initialize using xclbin_generate</span></a>) with <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow using command line option <a class="reference internal" href="build-xclbin.html#cmdoption-I"><code class="xref std std-option docutils literal notranslate"><span class="pre">--init</span></code></a>.</p></li>
+<li><p>If you’ve got one, there are 2 ways of generating templates depending if you’ve opened the DCP with Vivado or not:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#batch-mode"><span class="std std-ref">Batch mode</span></a>: You don’t open the DCP.</p></li>
+<li><p><a class="reference internal" href="#interactive-mode"><span class="std std-ref">Interactive mode</span></a>: You’ve already opened the DCP in Vivado.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<div class="section" id="inputs">
+<h4>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h4>
+<p>The following table describes the script inputs, where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;</span></code> represents the xbtest build source directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/build_source/xbtest_wizard_v6_0/</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>. For example: If <code class="docutils literal notranslate"><span class="pre">path/to/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx_u55c_gen3x16_xdma_3_202210_1</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/hw.xsa</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">hw</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/your/xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch.rpm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">Power floorplan initialization inputs</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 33%" />
+<col style="width: 57%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Input</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;dcp_name&gt;</span></code></p></td>
+<td><p>Path to DCP</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/output/&lt;dev_platform&gt;/init/u_ex/run/vpp_link/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper_opt.dcp</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;pwr_floorplan_dir&gt;</span></code></p></td>
+<td><p>Path to output directory where <a class="reference internal" href="#power-floorplan-templates"><span class="std std-ref">Power floorplan templates: pwr_cfg</span></a> will be generated.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/cfg/&lt;dev_platform&gt;/pwr_cfg</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;dynamic_pblocks&gt;</span></code>
+<code class="docutils literal notranslate"><span class="pre">&lt;dynamic_pblocks&gt;</span></code></p></td>
+<td><p>List the names of each pblock of dynamic region (usually one pblock per SLR).
+Pblock names depend on your platform.</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">pblock_dynamic_SLR0</span> <span class="pre">pblock_dynamic_SLR1</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="batch-mode">
+<span id="id8"></span><h4>Batch mode<a class="headerlink" href="#batch-mode" title="Permalink to this headline">¶</a></h4>
+<p>In this mode, you don’t need to open manually the DCP, the script will do all the steps for you.</p>
+<p>Use the following commands:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Move to <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> sources directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> &lt;xbtest_build&gt;/xclbin_generate
+</pre></div>
+</div>
+</li>
+<li><p>Opens Vivado in batch mode and run script which reads the DCP and generates the templates:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vivado -mode tcl -source &lt;xbtest_catalog&gt;/xbtest_wizard_v6_0/tcl/power/gen_dynamic_geometry.tcl -tclargs &lt;dcp_name&gt; &lt;pwr_floorplan_dir&gt; &lt;dynamic_pblocks&gt;
+</pre></div>
+</div>
+<p>Example command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ vivado -mode tcl <span class="se">\</span>
+         -source  &lt;xbtest_catalog&gt;/xbtest_wizard_v6_0/tcl/power/gen_dynamic_geometry.tcl <span class="se">\</span>
+         -tclargs &lt;xbtest_build&gt;/xclbin_generate/output/&lt;dev_platform&gt;/init/u_ex/run/vpp_link/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper_opt.dcp <span class="se">\</span>
+                  &lt;xbtest_build&gt;/xclbin_generate/cfg/&lt;dev_platform&gt;/pwr_cfg <span class="se">\</span>
+                  pblock_dynamic_SLR0 pblock_dynamic_SLR1 pblock_dynamic_SLR2
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>Where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_catalog&gt;</span></code> represents the xbtest IP catalog directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/xbtest_catalog/</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;</span></code> represents the xbtest build source directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/build_source/xbtest_wizard_v6_0/</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>. For example: If <code class="docutils literal notranslate"><span class="pre">path/to/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx_u55c_gen3x16_xdma_3_202210_1</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/hw.xsa</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">hw</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/your/xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch.rpm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="interactive-mode">
+<span id="id9"></span><h4>Interactive mode<a class="headerlink" href="#interactive-mode" title="Permalink to this headline">¶</a></h4>
+<p>If your DCP is already opened, you can use the following commands.</p>
+<p>In the Vivado TCL console:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Open a DCP of the platform:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">open_checkpoint</span> <span class="o">&lt;</span><span class="n">xbtest_build</span><span class="o">&gt;/</span><span class="n">xclbin_generate</span><span class="o">/</span><span class="n">output</span><span class="o">/&lt;</span><span class="n">dev_platform</span><span class="o">&gt;/</span><span class="n">init</span><span class="o">/</span><span class="n">u_ex</span><span class="o">/</span><span class="n">run</span><span class="o">/</span><span class="n">vpp_link</span><span class="o">/</span><span class="n">link</span><span class="o">/</span><span class="n">vivado</span><span class="o">/</span><span class="n">vpl</span><span class="o">/</span><span class="n">prj</span><span class="o">/</span><span class="n">prj</span><span class="o">.</span><span class="n">runs</span><span class="o">/</span><span class="n">impl_1</span><span class="o">/</span><span class="n">level0_wrapper_opt</span><span class="o">.</span><span class="n">dcp</span>
+</pre></div>
+</div>
+</li>
+<li><p>Set script inputs:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>set argv [list &lt;xbtest_build&gt;/xclbin_generate/output/&lt;dev_platform&gt;/init/u_ex/run/vpp_link/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper_opt.dcp \
+               &lt;xbtest_build&gt;/xclbin_generate/cfg/&lt;dev_platform&gt;/pwr_cfg \
+               pblock_dynamic_SLR0 pblock_dynamic_SLR1 pblock_dynamic_SLR2 ]
+set argc [llength $argv]
+set DCP_OPENED true
+</pre></div>
+</div>
+</li>
+<li><p>Source provided TCL script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">&lt;</span><span class="n">xbtest_catalog</span><span class="o">&gt;/</span><span class="n">xbtest_wizard_v6_0</span><span class="o">/</span><span class="n">tcl</span><span class="o">/</span><span class="n">power</span><span class="o">/</span><span class="n">gen_dynamic_geometry</span><span class="o">.</span><span class="n">tcl</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div></blockquote>
+<p>Where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_catalog&gt;</span></code> represents the xbtest IP catalog directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/xbtest_catalog/</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;</span></code> represents the xbtest build source directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/build_source/xbtest_wizard_v6_0/</span></code>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>. For example: If <code class="docutils literal notranslate"><span class="pre">path/to/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx_u55c_gen3x16_xdma_3_202210_1</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/hw.xsa</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">hw</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/your/xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch.rpm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch</span></code>.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+<!-- Atalwar: Moved the footer code to layout.html to resolve conflict with the Xilinx template -->
+</footer>
+
+        </div>
+      </div>
+
+
+	  <!-- Sphinx Page Footer block -->
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="define-power-cu-floorplan.html" class="btn btn-neutral float-right" title="Define power CU floorplan" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="architecture-and-workflows.html" class="btn btn-neutral float-left" title="Architecture and workflows" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo" class="copyright">
+    <p class="footerinfo">
+      <span class="lastupdated">
+        Last updated on May 05, 2022.
+      </span>
+
+    </p>
+	<br>
+  </div>
+      </div>
+    </section>
+
+
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+   <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+
+  <script type="text/javascript" id="searchindexloader"></script>
+
+
+  
+  
+    
+  
+
+
+
+  <!--  Xilinx template footer block -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="xilinxExperienceFragments experiencefragment aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--16">
+					<div class="xf-content-height">
+						<div class="aem-Grid aem-Grid--16 aem-Grid--default--16 ">
+							<div class="footer parbase aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--16">
+								<noindex>
+                  <!-- make footer fixed - NileshP -->
+                  <style>
+                        .footer {
+                        position: fixed;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        }
+                  </style>
+                  <!-- make footer fixed NileshP-->
+									<footer>
+										<div class="aem-Grid aem-Grid--16">
+											<div class="aem-GridColumn aem-GridColumn--xxxlarge--none aem-GridColumn--xsmall--16 aem-GridColumn--offset--xsmall--0 aem-GridColumn--xlarge--none aem-GridColumn--xxlarge--none aem-GridColumn--default--none aem-GridColumn--offset--large--1 aem-GridColumn--xlarge--12 aem-GridColumn--offset--default--0 aem-GridColumn--xxlarge--10 aem-GridColumn--offset--xlarge--2 aem-GridColumn--offset--xxlarge--3 aem-GridColumn--offset--xxxlarge--4 aem-GridColumn--xsmall--none aem-GridColumn--large--none aem-GridColumn aem-GridColumn--large--14 aem-GridColumn--xxxlarge--8 aem-GridColumn--default--16">
+												<div class="container-fluid sub-footer">
+													<div class="row">
+														<div class="footerSocial parbase">
+															<div class="col-md-push-6 col-lg-push-6 col-md-6 col-lg-6">
+																<ul class="list-inline pull-right social-menu">
+																	<li>
+																		<a href="https://www.linkedin.com/company/xilinx">
+																		<span class="linkedin icon"></span>
+																		<span class="sr-only">Connect on LinkedIn</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="https://www.twitter.com/XilinxInc">
+																		<span class="twitter icon"></span>
+																		<span class="sr-only">Follow us on Twitter</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="https://www.facebook.com/XilinxInc">
+																		<span class="facebook icon"></span>
+																		<span class="sr-only">Connect on Facebook</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="https://www.youtube.com/XilinxInc">
+																		<span class="youtube icon"></span>
+																		<span class="sr-only">Watch us on YouTube</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="https://www.xilinx.com/registration/subscriber-signup.html">
+																		<span class="newsletter icon"></span>
+																		<span class="sr-only">Subscribe to Newsletter</span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+														<div class="col-md-pull-6 col-lg-pull-6 col-md-6 col-lg-6">
+															<span class="copyright">
+                                  
+                                  &copy; 2018-2022, Xilinx, Inc.
+                              </span>
+															<ul class="list-inline sub-menu">
+																<li>
+																	<a href="https://www.xilinx.com/about/privacy-policy.html">Privacy</a>
+																</li>
+																<li>
+																	<a href="https://www.xilinx.com/about/legal.html">Legal</a>
+																</li>
+																<li>
+																	<a href="https://www.xilinx.com/about/contact.html">Contact</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</footer>
+								</noindex>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="quicklinks parbase aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--16">
+					<noindex>
+						<span class="quickLinks">
+							<ul>
+								<li>
+									<a href="#top" class="btn backToTop">
+									<span class="fas fa-angle-up" aria-hidden="true"></span>
+									</a>
+								</li>
+							</ul>
+						</span>
+					</noindex>
+				</div>
+			</div>
+		</div>
+		<script>window.CQ = window.CQ || {}</script>
+		<script src="https://static.cloud.coveo.com/searchui/v2.4382/js/CoveoJsSearch.Lazy.min.js"></script>
+		<script>
+			var underscoreSetup = function () {
+			  _.templateSettings.interpolate = /\{\{=([^-][\S\s]+?)\}\}/g;
+			  _.templateSettings.evaluate = /\{\{([^-=][\S\s]+?)\}\}/g;
+			  _.templateSettings.escape = /\{\{-([^=][\S\s]+?)\}\}/g;
+			}
+
+			underscoreSetup();
+		</script>
+	</body>
+</html>

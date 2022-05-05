@@ -12,6 +12,34 @@ The xbtest application is designed to perform a set of stress tests on <a class=
 
 Validate the Alveo card hardware is operating correctly within the host server environment under a variety of stress conditions.
 
+<table border="1">
+  <thead>
+    <tr>
+      <th>Document</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/">Home</a></th>
+      <td>Documentation hub home page.</td>
+    </tr>
+    <tr>
+      <th><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></th>
+      <td>Describes how to run xbtest</td>
+    </tr>
+    <tr>
+      <th><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></th>
+      <td>Describes how to build xbtest.</td>
+    </tr>
+    <tr>
+      <th><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></th>
+      <td>Describes instructions to verify your xbtest build works on your platform.</td>
+    </tr>
+  </tbody>
+</table>
+
 <hr/>
 
 <p align="center" class="sphinxhide"><sup>Copyright&copy; 2022 Xilinx</sup></p>
+

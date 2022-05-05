@@ -1,0 +1,45 @@
+{
+    "default": {
+        "build": {
+            "pwr_floorplan_dir": "../pwr_cfg",
+            "vpp_options_dir"  : "../vpp_cfg"
+        },
+        "platform" : {
+            "mac_addresses_available": 2
+        },
+        "cu_configuration" : {
+            "gt" : {
+                "0" : {
+                    "diff_clocks"   : ["io_clk_qsfp_refclkb_00"]
+                },
+                "1" : {
+                    "diff_clocks"   : ["io_clk_qsfp_refclkb_01"]
+                }
+            }
+        }
+    },
+    "xbtest_stress": {
+        "cu_selection" : {
+            "power"     : [0, 1, 2, 3],
+            "gt_mac"    : [0],
+            "gt_prbs"   : [1],
+            "memory"    : ["DDR", "HOST"]
+        }
+    },
+    "xbtest_power": {
+        "cu_selection" : {
+            "power"     : [0, 1, 2, 3]
+        }
+    },
+    "xbtest_gt": {
+        "cu_selection" : {
+            "gt_mac"    : [0],
+            "gt_prbs"   : [1]
+        }
+    },
+    "xbtest_2gt_mac": {
+        "cu_selection" : {
+            "gt_mac"    : [0, 1]
+        }
+    }
+}

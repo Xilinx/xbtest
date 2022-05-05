@@ -1,0 +1,2454 @@
+
+
+
+<!DOCTYPE HTML>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta name="description"/>
+		<meta name="keywords"/>
+		<meta property="og:title" content=""/>
+		<meta property="og:description"/>
+		<!-- favicon -->
+		<link rel="icon" type="image/vnd.microsoft.icon" href="../../_static/favicon.ico"/>
+		<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="../../_static/favicon.ico"/>
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css"/>
+
+<!-- OneTrust Cookies Consent Notice start for xilinx.com -->
+	<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-document-language="true" type="text/javascript" charset="UTF-8" data-domain-script="db4fe3da-ef3c-4524-b938-84c8062bf167"></script>
+	<script type="text/javascript">
+	function OptanonWrapper() { }
+	</script>
+	<!-- OneTrust Cookies Consent Notice end for xilinx.com -->
+	
+		<!-- Google Tag Manager -->
+	<script type="text/plain" class="optanon-category-C0002">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-5RHQV7');</script>
+	<!-- End Google Tag Manager -->
+	
+        <!-- Google Tag Manager -->
+        <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5RHQV7" height="0" width="0" style="display:none;visibility:hidden" class="optanon-category-C0002"></iframe></noscript>
+        <!-- End Google Tag Manager -->	
+
+		
+  
+  
+  
+  
+
+  
+      <script type="text/javascript" src="../../_static/js/jquery.min.js"></script>
+	  <script type="text/javascript" src="../../_static/js/gtm.js"></script>
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/d3dd8c60ed.js"></script>
+    <script type="text/javascript" src="../../_static/js/common-ui-all.min.js"></script>
+	<script type="text/javascript" src="../../_static/js/header-footer.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/CoveoJsSearch.Lazy.min.js"></script>
+    <script type="text/javascript" src="../../_static/js/linkid.js"></script>
+    <script type="text/javascript" src="../../_static/js/Searchbox.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/common-ui-all.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/header-footer.min.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/pro.min.css" media="all" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="GT PRBS test case description" href="gt-prbs-test-case-description.html" />
+    <link rel="prev" title="GT test cases description" href="gt-test-case-description.html" /> 
+	</head>
+	<body>
+		<div class="xilinx-bs3"/>
+		<div class="root responsivegrid">
+			<div class="aem-Grid aem-Grid--16 aem-Grid--default--16 aem-Grid--large--16 aem-Grid--xlarge--16 aem-Grid--xxlarge--16 aem-Grid--xxxlarge--16 ">
+				<div class="xilinxExperienceFragments experiencefragment aem-GridColumn aem-GridColumn--default--12">
+					<div class="xf-content-height">
+						<div class="aem-Grid aem-Grid--16 aem-Grid--default--16 ">
+							<div class="header parbase aem-GridColumn aem-GridColumn--default--12">
+								<noindex>
+									<header data-component="header">
+										<nav class="navbar navbar-default aem-Grid aem-Grid--16">
+											<div class="aem-GridColumn aem-GridColumn--xxxlarge--none aem-GridColumn--xsmall--16 aem-GridColumn--offset--xsmall--0 aem-GridColumn--xlarge--none aem-GridColumn--xxlarge--none aem-GridColumn--default--none aem-GridColumn--offset--large--1 aem-GridColumn--xlarge--12 aem-GridColumn--offset--default--0 aem-GridColumn--xxlarge--10 aem-GridColumn--offset--xlarge--2 aem-GridColumn--offset--xxlarge--3 aem-GridColumn--offset--xxxlarge--4 aem-GridColumn--xsmall--none aem-GridColumn--large--none aem-GridColumn aem-GridColumn--large--14 aem-GridColumn--xxxlarge--8 aem-GridColumn--default--16">
+												<div class="container-fluid main-nav">
+													<div class="row">
+														<div class="col-xs-12">
+															<div class="logo-column">
+																<div class="logo">
+																	<a href="https://www.xilinx.com/">
+																	<img src="https://github.com/Xilinx/Image-Collateral/blob/main/xilinx-header-logo.svg?raw=true" title="Xilinx Inc"/>
+																	</a>
+																</div>
+															</div>
+															<div class="navbar-column">
+																<div class="navbar navbar-collapse collapse" id="xilinx-main-menu">
+																	<div class="mobile-search-container">
+																		<div id="headerSearchBox" class="headerSearch"
+																			data-component="header-search"
+																			data-redirect-if-empty="false"
+																			data-coveo-access-token="xxa237d4dd-f0aa-47fc-9baa-af9121851b33"
+																			data-coveo-organization-id="xilinxcomprode2rjoqok">
+																			<div class='coveo-search-section'>
+																				<div class="CoveoAnalytics" data-search-hub="Site"></div>
+																				<ul class="dropdown-menu options">
+																					<li class="option" data-label="All" data-action-link="https://www.xilinx.com/search/site-keyword-search.html" data-search-hub="Site">
+																						<a href="#">
+																						All</a>
+																					</li>
+																					<li data-label="Silicon Devices" data-action-link="https://www.xilinx.com//products/silicon-devices/si-keyword-search.html" data-search-hub="Product">
+																						<a href="#">
+																						Silicon Devices</a>
+																					</li>
+																					<li data-label="Boards and Kits" data-action-link="https://www.xilinx.com//products/boards-and-kits/bk-keyword-search.html" data-search-hub="Product">
+																						<a href="#">
+																						Boards and Kits</a>
+																					</li>
+																					<li data-label="Intellectual Property" data-action-link="https://www.xilinx.com//products/intellectual-property/ip-keyword-search.html" data-search-hub="Product">
+																						<a href="#">
+																						Intellectual Property</a>
+																					</li>
+																					<li data-label="Support" class="option" data-action-link="https://www.xilinx.com/search/support-keyword-search.html" data-search-hub="Support">
+																						<a href="#">
+																						Support</a>
+																						<ul>
+																							<li data-label="Documentation" data-action-link="https://www.xilinx.com//support/documentation-navigation/documentation-keyword-search.html" data-search-hub="Document">
+																								<a href="#">
+																								Documentation</a>
+																							</li>
+																							<li data-label="Knowledge Base" data-action-link="https://www.xilinx.com//support/answer-navigation/answer-keyword-search.html" data-search-hub="AnswerRecord">
+																								<a href="#">
+																								Knowledge Base</a>
+																							</li>
+																							<li data-label="Community Forums" data-action-link="https://www.xilinx.com/search/forums-keyword-search.html" data-search-hub="Forums">
+																								<a href="#">
+																								Community Forums</a>
+																							</li>
+																						</ul>
+																					</li>
+																					<li data-label="Partners" data-action-link="https://www.xilinx.com//alliance/member-keyword-search.html" data-search-hub="Partner">
+																						<a href="#">
+																						Partners</a>
+																					</li>
+																					<li data-label="Videos" data-action-link="https://www.xilinx.com/video/video-keyword-search.html" data-search-hub="Video">
+																						<a href="#">
+																						Videos</a>
+																					</li>
+																					<li data-label="Press" data-action-link="https://www.xilinx.com/search/press-keyword-search.html" data-search-hub="Press">
+																						<a href="#">
+																						Press</a>
+																					</li>
+																				</ul>
+																				<a href="#" class="btn dropdown-toggle value" data-toggle="dropdown"></a>
+																				<div class="CoveoSearchbox" data-id="coveosearchbox" data-action-link="https://www.xilinx.com/search/site-keyword-search.html" data-placeholder="Search Xilinx"></div>
+																			</div>
+																		</div>
+																	</div>
+																	<ul class="nav navbar-nav nav-justified">
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://www.xilinx.com/applications.html">
+																			Applications</a>
+																		</li>
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://www.xilinx.com/products/silicon-devices.html">
+																			Products</a>
+																		</li>
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://developer.xilinx.com/">
+																			Developers</a>
+																		</li>
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://www.xilinx.com/support.html">
+																			Support</a>
+																		</li>
+																		<li class="accordion-toggle-icons" data-component="toggle-dropdown">
+																			<a href="https://www.xilinx.com/about/company-overview.html">
+																			About</a>
+																		</li>
+																	</ul>
+																</div>
+															</div>
+															<script type="text/javascript" src="../../_static/js/gtm.js"></script>
+															<!--<div class="mini-nav">
+																<button type="button" data-function="xilinx-mobile-menu" id="nav-toggle" class="navbar-toggle collapsed visible-xs-block" aria-expanded="false">
+																<span></span>
+																<span></span>
+																<span></span>
+																<span></span>
+																</button>
+																<ul class="list-inline">
+																	<li class="dropdown user-menu">
+																		<button data-toggle="dropdown">
+																		<span class="sr-only">Account</span>
+																		<span class="fas fa-user"></span>
+																		</button>
+																		<ul class="dropdown-menu">
+																			<li>
+																				<a href="https://www.xilinx.com/myprofile/subscriptions.html">
+																				My Account</a>
+																			</li>
+																			<li>
+																				<a href="https://www.xilinx.com/registration/create-account.html">
+																				Create Account</a>
+																			</li>
+																			<li>
+																				<a href="https://www.xilinx.com/bin/protected/en/signout">
+																				Sign Out</a>
+																			</li>
+																		</ul>
+																	</li>
+																	<li class="hidden-xs">
+																		<button data-function="search-toggle">
+																		<span class="sr-only">Search</span>
+																		<span class="far fa-search"></span>
+																		</button>
+																	</li>
+																</ul>
+															</div>
+															-->
+															<div class="search-container">
+																<div id="headerSearchBox" class="headerSearch"
+																	data-component="header-search"
+																	data-redirect-if-empty="false"
+																	data-coveo-access-token="xxa237d4dd-f0aa-47fc-9baa-af9121851b33"
+																	data-coveo-organization-id="xilinxcomprode2rjoqok">
+																	<div class='coveo-search-section'>
+																		<div class="CoveoAnalytics" data-search-hub="Site"></div>
+																		<ul class="dropdown-menu options">
+																			<li class="option" data-label="All" data-action-link="https://www.xilinx.com/search/site-keyword-search.html" data-search-hub="Site">
+																				<a href="#">
+																				All</a>
+																			</li>
+																			<li data-label="Silicon Devices" data-action-link="https://www.xilinx.com/products/silicon-devices/si-keyword-search.html" data-search-hub="Product">
+																				<a href="#">
+																				Silicon Devices</a>
+																			</li>
+																			<li data-label="Boards and Kits" data-action-link="https://www.xilinx.com/products/boards-and-kits/bk-keyword-search.html" data-search-hub="Product">
+																				<a href="#">
+																				Boards and Kits</a>
+																			</li>
+																			<li data-label="Intellectual Property" data-action-link="https://www.xilinx.com/products/intellectual-property/ip-keyword-search.html" data-search-hub="Product">
+																				<a href="#">
+																				Intellectual Property</a>
+																			</li>
+																			<li data-label="Support" class="option" data-action-link="https://www.xilinx.com/search/support-keyword-search.html" data-search-hub="Support">
+																				<a href="#">
+																				Support</a>
+																				<ul>
+																					<li data-label="Documentation" data-action-link="https://www.xilinx.com/support/documentation-navigation/documentation-keyword-search.html" data-search-hub="Document">
+																						<a href="#">
+																						Documentation</a>
+																					</li>
+																					<li data-label="Knowledge Base" data-action-link="https://www.xilinx.com/support/answer-navigation/answer-keyword-search.html" data-search-hub="AnswerRecord">
+																						<a href="#">
+																						Knowledge Base</a>
+																					</li>
+																					<li data-label="Community Forums" data-action-link="https://www.xilinx.com/search/forums-keyword-search.html" data-search-hub="Forums">
+																						<a href="#">
+																						Community Forums</a>
+																					</li>
+																				</ul>
+																			</li>
+																			<li data-label="Partners" data-action-link="https://www.xilinx.com/alliance/member-keyword-search.html" data-search-hub="Partner">
+																				<a href="#">
+																				Partners</a>
+																			</li>
+																			<li data-label="Videos" data-action-link="https://www.xilinx.com/video/video-keyword-search.html" data-search-hub="Video">
+																				<a href="#">
+																				Videos</a>
+																			</li>
+																			<li data-label="Press" data-action-link="https://www.xilinx.com/search/press-keyword-search.html" data-search-hub="Press">
+																				<a href="#">
+																				Press</a>
+																			</li>
+																		</ul>
+																		<a href="#" class="btn dropdown-toggle value" data-toggle="dropdown"></a>
+																		<div class="CoveoSearchbox" data-id="coveosearchbox" data-action-link="https://www.xilinx.com/search/site-keyword-search.html" data-placeholder="Search Xilinx"></div>
+																	</div>
+																</div>
+																<button data-function="search-toggle">
+																<span class="sr-only">Search</span>
+																<span class="far fa-times"></span>
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</nav>
+									</header>
+								</noindex>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="parsys aem-GridColumn--xxxlarge--none aem-GridColumn--xlarge--none aem-GridColumn--xxlarge--none aem-GridColumn--default--none aem-GridColumn--offset--large--1 aem-GridColumn--xlarge--12 aem-GridColumn--offset--default--0 aem-GridColumn--xxlarge--10 aem-GridColumn--offset--xlarge--2 aem-GridColumn--offset--xxlarge--3 aem-GridColumn--offset--xxxlarge--4 aem-GridColumn--large--none aem-GridColumn aem-GridColumn--large--14 aem-GridColumn--xxxlarge--8 aem-GridColumn--default--16">
+						<div class="container-fluid">
+							<div class="row">
+							<div class="col-xs-12">
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> xbtest - User guide
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+      
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+            
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/home/build/html/index.html">Home</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://pages.gitenterprise.xilinx.com/techdocs/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Introduction</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/overview.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/overview.html#architecture-overview">Architecture overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/overview.html#hardware-overview">Hardware overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/overview.html#platform-specific-libraries-overview">Platform specific libraries overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/overview.html#software-overview">Software overview</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../introduction/installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/installation.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/installation.html#install-xbtest">Install xbtest</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/installation.html#step-1-identify-your-os-and-deployment-platform">Step 1: Identify your OS and deployment platform</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../introduction/installation.html#step-1-1-identify-your-system-architecture">Step 1.1: Identify your system architecture</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction/installation.html#step-1-2-identify-your-os-release">Step 1.2: Identify your OS release</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../introduction/installation.html#step-1-3-identify-your-deployment-platform">Step 1.3: Identify your deployment platform</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/installation.html#step-2-get-compatible-archives">Step 2: Get compatible archives</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/installation.html#step-3-install-software-packages">Step 3: Install software packages</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../introduction/installation.html#step-4-install-platform-specific-library-package">Step 4: Install platform specific library package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/installation.html#installed-content">Installed content</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/installation.html#removal">Removal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../introduction/installation.html#install-xbtest-to-another-location">Install xbtest to another location</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://www.xilinx.com/products/acceleration-solutions/xbtest.html">Download</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../usage/setup-xbtest.html">Set up xbtest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/use-cases.html">Use cases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage/use-cases.html#multiple-tests-cards">Multiple tests / cards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/use-cases.html#single-test">Single test</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/identifying-a-deployment-platform.html">Identifying a deployment platform</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/test-specific-setup.html">Test specific set up</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage/test-specific-setup.html#host-memory-set-up">Host memory set up</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/test-specific-setup.html#p2p-tests-set-up">P2P tests set up</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/command-line-options.html">Command line options</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage/command-line-options.html#command-line-options-definition">Command line options definition</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#v-display-version">-v: Display version</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#h-display-help">-h: Display help</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#d-select-card">-d: Select card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#g-display-guide">-g: Display guide</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#j-select-test-json">-j: Select test JSON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#c-select-pre-canned-test">-c: Select pre-canned test</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#t-select-p2p-target-card">-T: Select P2P target card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#n-select-p2p-nvme-path">-N: Select P2P NVMe path</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#d-select-card-configuration-json">-D: Select card configuration JSON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#l-select-logging-directory">-l: Select logging directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#l-disable-logging-directory">-L: Disable logging directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#m-display-message-information">-m: Display message information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#f-disable-dynamic-display">-F: Disable dynamic display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#f-force-an-operation">-f: Force an operation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#b-select-verbosity">-b: Select verbosity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#t-select-timestamp">-t: Select timestamp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#x-e-select-xclbin-and-platform-definition-json">-x &amp; -e: Select xclbin and platform definition JSON</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#x-e-select-p2p-target-xclbin-and-platform-definition-json">-X &amp; -E: Select P2P target xclbin and platform definition JSON</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/command-line-options.html#command-line-options-examples">Command line options examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#running-single-test-on-a-single-card">Running single test on a single card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#running-multiple-tests-on-a-single-card">Running multiple tests on a single card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#same-tests-on-multiple-cards">Same tests on multiple cards</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#running-different-tests-on-different-cards">Running different tests on different cards</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/command-line-options.html#card-configuration-json-file">Card configuration JSON file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#card-configuration-json-definition">Card configuration JSON definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/command-line-options.html#card-configuration-json-examples">Card configuration JSON examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/result.html">Result</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage/display-modes.html">Display modes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/display-modes.html#multi-tests-display">Multi tests display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/display-modes.html#single-test-display">Single test display</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/display-modes.html#disable-dynamic-display">Disable dynamic display</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/understanding-xbtest-messages.html">Understanding xbtest messages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/result-directory.html">Result directory</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/result-directory.html#multi-tests-result-directory">Multi tests result directory</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../usage/result-directory.html#card-status-csv-output-file">Card status CSV output file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../usage/result-directory.html#single-test-result-directory">Single test result directory</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/result-visualisation.html">Result visualisation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../usage/result-visualisation.html#vitis-analyzer">Vitis analyzer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../usage/result-visualisation.html#profile-summary">Profile summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../usage/test-json-file-structure.html">Test JSON file structure</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../usage/test-json-file-structure.html#test-environment-members">Test environment members</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../usage/test-json-file-structure.html#test-json-file-example">Test JSON file example</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Pre-canned tests</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html">Pre-canned tests description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#overview">Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#verify"><code class="docutils literal notranslate"><span class="pre">verify</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#dma"><code class="docutils literal notranslate"><span class="pre">dma</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#p2p-card"><code class="docutils literal notranslate"><span class="pre">p2p_card</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#p2p-nvme"><code class="docutils literal notranslate"><span class="pre">p2p_nvme</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#memory"><code class="docutils literal notranslate"><span class="pre">memory</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#memory-host-slave-bridge"><code class="docutils literal notranslate"><span class="pre">memory_host</span></code> (Slave bridge)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#power"><code class="docutils literal notranslate"><span class="pre">power</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#gt">GT</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#gt-mac"><code class="docutils literal notranslate"><span class="pre">gt_mac</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#switch"><code class="docutils literal notranslate"><span class="pre">switch</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#gt-mac-lpbk"><code class="docutils literal notranslate"><span class="pre">gt_mac_lpbk</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#gt-mac-port-to-port"><code class="docutils literal notranslate"><span class="pre">gt_mac_port_to_port</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#gt-prbs"><code class="docutils literal notranslate"><span class="pre">gt_prbs</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#stress"><code class="docutils literal notranslate"><span class="pre">stress</span></code></a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Test cases</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="test-cases-overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verify-test-case-description.html">Verify</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="verify-test-case-description.html#compute-units-verification">Compute units verification</a></li>
+<li class="toctree-l2"><a class="reference internal" href="verify-test-case-description.html#test-json-file-verification">Test JSON file verification</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dma-test-case-description.html">DMA</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dma-test-case-description.html#test-parameters">Test parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dma-test-case-description.html#main-test-steps">Main test steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dma-test-case-description.html#low-dma-bandwidth-troubleshooting">Low DMA bandwidth troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dma-test-case-description.html#dma-test-json-members">DMA test JSON members</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#definition">Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#basic-examples">Basic examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#test-sequence"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#check-bw"><code class="docutils literal notranslate"><span class="pre">check_bw</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#stop-on-error"><code class="docutils literal notranslate"><span class="pre">stop_on_error</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#hi-thresh-wr-hi-thresh-rd"><code class="docutils literal notranslate"><span class="pre">hi_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_rd</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#lo-thresh-wr-lo-thresh-rd"><code class="docutils literal notranslate"><span class="pre">lo_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_rd</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#total-size"><code class="docutils literal notranslate"><span class="pre">total_size</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="dma-test-case-description.html#output-files">Output files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#dma-detail-csv-output-file"><code class="docutils literal notranslate"><span class="pre">dma_detail.csv</span></code> output file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="dma-test-case-description.html#dma-result-csv-output-file"><code class="docutils literal notranslate"><span class="pre">dma_result.csv</span></code> output file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="p2p-card-test-case-description.html">P2P CARD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="p2p-card-test-case-description.html#test-parameters">Test parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2p-card-test-case-description.html#main-test-steps">Main test steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2p-card-test-case-description.html#p2p-card-test-json-members">P2P CARD test JSON members</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#definition">Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#basic-examples">Basic examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#test-sequence"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#check-bw"><code class="docutils literal notranslate"><span class="pre">check_bw</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#stop-on-error"><code class="docutils literal notranslate"><span class="pre">stop_on_error</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#hi-thresh-wr-hi-thresh-rd"><code class="docutils literal notranslate"><span class="pre">hi_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_rd</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#lo-thresh-wr-lo-thresh-rd"><code class="docutils literal notranslate"><span class="pre">lo_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_rd</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#total-size"><code class="docutils literal notranslate"><span class="pre">total_size</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="p2p-card-test-case-description.html#output-files">Output files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#p2p-card-detail-csv-output-file"><code class="docutils literal notranslate"><span class="pre">p2p_card_detail.csv</span></code> output file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-card-test-case-description.html#p2p-card-result-csv-output-file"><code class="docutils literal notranslate"><span class="pre">p2p_card_result.csv</span></code> output file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="p2p-nvme-test-case-description.html">P2P NVME</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="p2p-nvme-test-case-description.html#test-parameters">Test parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2p-nvme-test-case-description.html#main-test-steps">Main test steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p2p-nvme-test-case-description.html#p2p-nvme-test-json-members">P2P NVME test JSON members</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#definition">Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#basic-examples">Basic Examples</a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#test-sequence"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#check-bw"><code class="docutils literal notranslate"><span class="pre">check_bw</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#stop-on-error"><code class="docutils literal notranslate"><span class="pre">stop_on_error</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#hi-thresh-wr-hi-thresh-rd"><code class="docutils literal notranslate"><span class="pre">hi_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_rd</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#lo-thresh-wr-lo-thresh-rd"><code class="docutils literal notranslate"><span class="pre">lo_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_rd</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#total-size"><code class="docutils literal notranslate"><span class="pre">total_size</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="p2p-nvme-test-case-description.html#output-files">Output files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#p2p-nvme-detail-csv-output-file"><code class="docutils literal notranslate"><span class="pre">p2p_nvme_detail.csv</span></code> output file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="p2p-nvme-test-case-description.html#p2p-nvme-result-csv-output-file"><code class="docutils literal notranslate"><span class="pre">p2p_nvme_result.csv</span></code> output file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="memory-test-case-description.html">Memory</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#test-parameters">Test parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#main-test-steps">Main test steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#measurements">Measurements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#burst-time">Burst time</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#bandwidth">Bandwidth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#latency">Latency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#bandwidth-and-latency-check-conditions">Bandwidth and latency check conditions</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#memory-cu-types">Memory CU types</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#write-and-read-ranges-blocks">Write and read ranges/blocks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#test-modes">Test modes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#axi-bursts">AXI bursts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#maximum-number-of-outstanding-transactions">Maximum number of outstanding transactions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#maximum-number-of-outstanding-writes">Maximum number of outstanding writes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#maximum-number-of-outstanding-reads">Maximum number of outstanding reads</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#axi-id-threads">AXI ID threads</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#quality-of-service-qos-rate-control">Quality of Service (QoS) - Rate control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#memory-test-json-members">Memory Test JSON Members</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#target-memories-on-the-card">Target memories on the card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#target-memory-on-the-host">Target memory on the host</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#single-channel-override">Single-channel override</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#multi-channel-override">Multi-channel override</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#definition">Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#test-sequence"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="memory-test-case-description.html#override-test-sequence">Override <code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#check-bw"><code class="docutils literal notranslate"><span class="pre">check_bw</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#hi-thresh-alt-wr-bw-hi-thresh-alt-rd-bw-hi-thresh-only-wr-bw-hi-thresh-only-rd-bw-hi-thresh-simul-wr-bw-hi-thresh-simul-rd-bw"><code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_rd_bw</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#lo-thresh-alt-wr-bw-lo-thresh-alt-rd-bw-lo-thresh-only-wr-bw-lo-thresh-only-rd-bw-lo-thresh-simul-wr-bw-lo-thresh-simul-rd-bw"><code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_rd_bw</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#check-latency"><code class="docutils literal notranslate"><span class="pre">check_latency</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#hi-thresh-alt-wr-lat-hi-thresh-alt-rd-lat-hi-thresh-only-wr-lat-hi-thresh-only-rd-lat-hi-thresh-simul-wr-lat-hi-thresh-simul-rd-lat"><code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_rd_lat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#lo-thresh-alt-wr-lat-lo-thresh-alt-rd-lat-lo-thresh-only-wr-lat-lo-thresh-only-rd-lat-lo-thresh-simul-wr-lat-lo-thresh-simul-rd-lat"><code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_rd_lat</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#disable-prewrite"><code class="docutils literal notranslate"><span class="pre">disable_prewrite</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#disable-memory"><code class="docutils literal notranslate"><span class="pre">disable_memory</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#single-axi-thread"><code class="docutils literal notranslate"><span class="pre">single_axi_thread</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="memory-test-case-description.html#output-files">Output files</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#results-csv-output-files">Results CSV output files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#detail-csv-output-files">Detail CSV output files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#multi-channel-summary-csv-output-files">Multi-channel Summary CSV output files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="memory-test-case-description.html#power-csv-output-files">Power CSV output files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="power-test-case-description.html">Power</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="power-test-case-description.html#test-parameters">Test parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power-test-case-description.html#main-test-steps">Main test steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power-test-case-description.html#power-and-temperature-limits">Power and temperature limits</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power-test-case-description.html#power-budget-and-calibration">Power budget and calibration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="power-test-case-description.html#toggle-rate-step-requirement">Toggle rate step requirement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-test-case-description.html#actual-power-available">Actual power available</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-test-case-description.html#components-present-on-the-card">Components present on the card</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-test-case-description.html#tests-running">Tests running</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="power-test-case-description.html#power-test-json-members">Power test JSON members</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="power-test-case-description.html#example">Example</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-test-case-description.html#definition">Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-test-case-description.html#test-sequence"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-test-case-description.html#disable-reg-disable-dsp-disable-bram-disable-uram-disable-aie"><code class="docutils literal notranslate"><span class="pre">disable_reg</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_dsp</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_bram</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_uram</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_aie</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="power-test-case-description.html#disable-toggle-ramp"><code class="docutils literal notranslate"><span class="pre">disable_toggle_ramp</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="power-test-case-description.html#output-files">Output files</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="gt-test-case-description.html">GT</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">GT MAC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#gt-test-set-up">GT test set up</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#switch-set-up">Switch set up</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source-mac-address">Source MAC address</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#destination-mac-address-lane-mapping">Destination MAC address - Lane mapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#lane-enabling">Lane enabling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gt-mac-cu-to-gt-mac-cu-connection">GT MAC CU to GT MAC CU connection</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gt-settings">GT settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#main-test-steps">Main test steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#test-parameters">Test parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#status">Status</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#matching-tx-rx">Matching TX RX</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mac-stat-status-registers-description">MAC_STAT status registers description</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gt-mac-test-json-members">GT MAC test JSON members</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#electrical-optical-loopback-example">Electrical/optical loopback example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#switch-example">Switch example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gt-mac-to-gt-mac-connection-example">GT MAC to GT MAC connection example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#definition">Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#test-sequence"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tx-mapping"><code class="docutils literal notranslate"><span class="pre">tx_mapping</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#disable-lane"><code class="docutils literal notranslate"><span class="pre">disable_lane</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source-addr"><code class="docutils literal notranslate"><span class="pre">source_addr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dest-addr"><code class="docutils literal notranslate"><span class="pre">dest_addr</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#utilisation"><code class="docutils literal notranslate"><span class="pre">utilisation</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#traffic-type"><code class="docutils literal notranslate"><span class="pre">traffic_type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#packet-cfg"><code class="docutils literal notranslate"><span class="pre">packet_cfg</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#match-tx-rx"><code class="docutils literal notranslate"><span class="pre">match_tx_rx</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mac-to-mac-connection"><code class="docutils literal notranslate"><span class="pre">mac_to_mac_connection</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gt-settings-test-json-members">GT settings test JSON members</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#output-files">Output files</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gt-prbs-test-case-description.html">GT PRBS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#gt-test-set-up">GT test set up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#gt-settings">GT settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#main-test-steps">Main test steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gt-prbs-test-case-description.html#test-parameters">Test parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#status">Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#gt-prbs-test-json-members">GT PRBS test JSON members</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gt-prbs-test-case-description.html#electrical-optical-loopback-example">Electrical/optical loopback example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gt-prbs-test-case-description.html#definition">Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gt-prbs-test-case-description.html#test-sequence"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gt-prbs-test-case-description.html#disable-ref-prbs"><code class="docutils literal notranslate"><span class="pre">disable_ref_prbs</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gt-prbs-test-case-description.html#gt-settings-test-json-members">GT settings test JSON members</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#output-file">Output file</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gt-lpbk-test-case-description.html#test-parameters">Test parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#status">Status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-lpbk-test-json-members">GT LPBK test JSON members</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="gt-lpbk-test-case-description.html#example">Example</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gt-lpbk-test-case-description.html#definition">Definition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gt-lpbk-test-case-description.html#test-sequence"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-settings-test-json-members">GT settings test JSON members</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#output-file">Output file</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Tasks</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/tasks-overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tasks/device-management-task-description.html">Device management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tasks/device-management-task-description.html#sensor-source-definition">Sensor source definition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tasks/device-management-task-description.html#device-management-test-json-members">Device management test JSON members</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tasks/device-management-task-description.html#definition">Definition</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tasks/device-management-task-description.html#sensor"><code class="docutils literal notranslate"><span class="pre">sensor</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tasks/device-management-task-description.html#type"><code class="docutils literal notranslate"><span class="pre">type</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tasks/device-management-task-description.html#device-management-parameter-sensor-id"><code class="docutils literal notranslate"><span class="pre">id</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tasks/device-management-task-description.html#warning-threshold"><code class="docutils literal notranslate"><span class="pre">warning_threshold</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tasks/device-management-task-description.html#error-threshold"><code class="docutils literal notranslate"><span class="pre">error_threshold</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tasks/device-management-task-description.html#abort-threshold"><code class="docutils literal notranslate"><span class="pre">abort_threshold</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tasks/device-management-task-description.html#use-output-file"><code class="docutils literal notranslate"><span class="pre">use_output_file</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tasks/device-management-task-description.html#watchdog-duration"><code class="docutils literal notranslate"><span class="pre">watchdog_duration</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tasks/device-management-task-description.html#output-files">Output files</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Platform definition</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../platform-definition/platform-definition.html">Platform definition</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../platform-definition/platform-definition.html#platform-definition-json-file">Platform definition JSON file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform-definition/platform-definition.html#xclbin-metadata">xclbin metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../platform-definition/platform-definition.html#xrt-device-apis-metadata">XRT device APIs metadata</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Other versions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
+</ul>
+
+            
+			
+			<p class="caption"><span class="caption-text">This Page</span></p>
+				<ul class="current">
+				  <li class="toctree-l1"><a href="../../_sources/docs/test-cases/gt-mac-test-case-description.rst.txt"
+						rel="nofollow">Show Source</a></li>
+				</ul>
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">xbtest - User guide</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="gt-test-case-description.html">GT test cases description</a> &raquo;</li>
+        
+      <li>GT MAC test case description</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/docs/test-cases/gt-mac-test-case-description.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="gt-mac-test-case-description">
+<span id="id1"></span><h1>GT MAC test case description<a class="headerlink" href="#gt-mac-test-case-description" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="table-of-contents">
+<p class="topic-title">Table of contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#gt-test-set-up" id="id13">GT test set up</a></p>
+<ul>
+<li><p><a class="reference internal" href="#switch-set-up" id="id14">Switch set up</a></p></li>
+<li><p><a class="reference internal" href="#source-mac-address" id="id15">Source MAC address</a></p></li>
+<li><p><a class="reference internal" href="#destination-mac-address-lane-mapping" id="id16">Destination MAC address - Lane mapping</a></p></li>
+<li><p><a class="reference internal" href="#lane-enabling" id="id17">Lane enabling</a></p></li>
+<li><p><a class="reference internal" href="#gt-mac-cu-to-gt-mac-cu-connection" id="id18">GT MAC CU to GT MAC CU connection</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#gt-settings" id="id19">GT settings</a></p></li>
+<li><p><a class="reference internal" href="#main-test-steps" id="id20">Main test steps</a></p>
+<ul>
+<li><p><a class="reference internal" href="#test-parameters" id="id21">Test parameters</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#status" id="id22">Status</a></p>
+<ul>
+<li><p><a class="reference internal" href="#matching-tx-rx" id="id23">Matching TX RX</a></p></li>
+<li><p><a class="reference internal" href="#mac-stat-status-registers-description" id="id24">MAC_STAT status registers description</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#gt-mac-test-json-members" id="id25">GT MAC test JSON members</a></p>
+<ul>
+<li><p><a class="reference internal" href="#electrical-optical-loopback-example" id="id26">Electrical/optical loopback example</a></p></li>
+<li><p><a class="reference internal" href="#switch-example" id="id27">Switch example</a></p></li>
+<li><p><a class="reference internal" href="#gt-mac-to-gt-mac-connection-example" id="id28">GT MAC to GT MAC connection example</a></p></li>
+<li><p><a class="reference internal" href="#definition" id="id29">Definition</a></p></li>
+<li><p><a class="reference internal" href="#test-sequence" id="id30"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a></p></li>
+<li><p><a class="reference internal" href="#tx-mapping" id="id31"><code class="docutils literal notranslate"><span class="pre">tx_mapping</span></code></a></p></li>
+<li><p><a class="reference internal" href="#disable-lane" id="id32"><code class="docutils literal notranslate"><span class="pre">disable_lane</span></code></a></p></li>
+<li><p><a class="reference internal" href="#source-addr" id="id33"><code class="docutils literal notranslate"><span class="pre">source_addr</span></code></a></p></li>
+<li><p><a class="reference internal" href="#dest-addr" id="id34"><code class="docutils literal notranslate"><span class="pre">dest_addr</span></code></a></p></li>
+<li><p><a class="reference internal" href="#utilisation" id="id35"><code class="docutils literal notranslate"><span class="pre">utilisation</span></code></a></p></li>
+<li><p><a class="reference internal" href="#traffic-type" id="id36"><code class="docutils literal notranslate"><span class="pre">traffic_type</span></code></a></p></li>
+<li><p><a class="reference internal" href="#packet-cfg" id="id37"><code class="docutils literal notranslate"><span class="pre">packet_cfg</span></code></a></p></li>
+<li><p><a class="reference internal" href="#match-tx-rx" id="id38"><code class="docutils literal notranslate"><span class="pre">match_tx_rx</span></code></a></p></li>
+<li><p><a class="reference internal" href="#mac-to-mac-connection" id="id39"><code class="docutils literal notranslate"><span class="pre">mac_to_mac_connection</span></code></a></p></li>
+<li><p><a class="reference internal" href="#gt-settings-test-json-members" id="id40">GT settings test JSON members</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#output-files" id="id41">Output files</a></p></li>
+</ul>
+</div>
+<p>The goal of this test case is to allow verification of GT transceivers on <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html">Alveo™</a> cards at 10GbE and 25GbE lane rates.
+Each GT transceiver supports 4 lanes.</p>
+<p>This compute unit (CU) instantiates the 10G/25G High Speed Ethernet Subsystem IP core and allows the core to be configured from a Test JSON file
+(see <a class="reference external" href="https://www.xilinx.com/support/documentation/ip_documentation/xxv_ethernet/v4_0/pg210-25g-ethernet.pdf">10G/25G High speed ethernet subsystem product guide (PG210)</a>).
+GT MAC traffic is layer 2 type traffic:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Ethertype: 0x88b5, local traffic only.</p></li>
+<li><p>Source and Destination MAC addresses are inserted.</p></li>
+<li><p>No IP address is present as there is no layer 3.</p></li>
+</ul>
+</div></blockquote>
+<p>In case of multiple CUs, the rate can be select individually per CU, but the selected rate applies to the 4 lanes of the CU.</p>
+<p>The CU includes a packet generator, which allows a card with simple electrical or optical loopback cables to generate packets.
+The CU also verify that the generated packets have been received back, error free. The packet generator can be configured for each lane individually.</p>
+<p>The CU also includes a sets of packet counters, which counts, per lane, the quantity of packets and bytes transmitted and received with the expected source and destination MAC addresses.</p>
+<div class="figure align-center" id="id5">
+<img alt="../../_images/gt_mac-block_diagram.svg" src="../../_images/gt_mac-block_diagram.svg" /><p class="caption"><span class="caption-text">GT MAC CU block diagram</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="gt-test-set-up">
+<span id="gt-mac-test-set-up"></span><h2><a class="toc-backref" href="#id13">GT test set up</a><a class="headerlink" href="#gt-test-set-up" title="Permalink to this headline">¶</a></h2>
+<p>GT testing can be achieved by using one of the following methods.</p>
+<blockquote>
+<div><ul>
+<li><p>Loopback electrical or optical:</p>
+<blockquote>
+<div><ul>
+<li><p>The use of a QSFP passive electrical loopback module. The module must be compliant to 100GbE (25GbE per lane) and have 0 dB insertion loss.
+This is the preferred method, the GTs having been validated using a QSFP28 module provided by MultiLane (<a class="reference external" href="https://multilaneinc.com/product/ml4002-28-8w/">ML4002-28-C5</a>).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This module also has the capability of providing a QSFP temperature reading and a programmable power dissipation up to 5W. However, these are not required to pass the GT tests.</p>
+</div>
+</li>
+<li><p>The use of a QSFP optical module with suitably connected fiber loopback. The module must be compatible with the traffic rate being tested.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is an active component the electrical interface between the GTs and the module will need to be validated to ensure optimum performance.</p>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Connected to a switch</p></li>
+<li><p>Connected to another GT MAC CU present on the same board</p></li>
+<li><p>Connected to GT LPBK CU (see <a class="reference internal" href="gt-lpbk-test-case-description.html#gt-lpbk-test-case-description"><span class="std std-ref">GT LPBK test case description</span></a>).</p></li>
+<li><p>The use of a protocol analyzer with a compatible electrical or optical interface.
+This is the most complex method of connection as not only will the interfaces require validation with the GTs, the RX and TX paths will be independent.
+The test JSON file needs to be modified to reflect that the RX and TX packet/byte counts might not be the same.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The configuration of the <a class="reference internal" href="#gt-mac-test-case-description"><span class="std std-ref">GT MAC</span></a> test case depends on the set up (see <a class="reference internal" href="#gt-mac-test-json-members"><span class="std std-ref">GT MAC test JSON members</span></a>).</p>
+</div>
+<div class="section" id="switch-set-up">
+<h3><a class="toc-backref" href="#id14">Switch set up</a><a class="headerlink" href="#switch-set-up" title="Permalink to this headline">¶</a></h3>
+<p>xbtest has been validated with the following Cisco hardware:</p>
+<blockquote>
+<div><ul>
+<li><p><a class="reference external" href="https://www.cisco.com/c/en/us/products/switches/nexus-3232c-switch/index.html">Switch Nexus 3232c, 32 port 100G</a></p></li>
+<li><p><a class="reference external" href="https://www.cisco.com/c/en/us/products/collateral/interfaces-modules/transceiver-modules/datasheet-c78-736282.html">Cables</a></p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>10/25GbE</strong>: QSFP-100G-CU3M - 100GBASE-CR4 Passive Copper Cable, 3m.</p></li>
+<li><p><strong>25GbE</strong>: QSFP-100G-AOC3M - 100GBASE QSFP Active Optical Cable, 3m.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>The following is the switch configuration:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>port 1 - 16</strong>: 10GbE; no FEC.</p></li>
+<li><p><strong>port 17 - 32</strong>: 25GbE; clause 74 FEC.</p></li>
+</ul>
+</div></blockquote>
+<p>The configuration can be obtained via the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ interface breakout module <span class="m">1</span> port <span class="m">1</span>-16 map 10g-4x
+$ interface breakout module <span class="m">1</span> port <span class="m">17</span>-32 map 25g-4x
+</pre></div>
+</div>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">Example of switch port configuration</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>10GbE Port 1</p></th>
+<th class="head"><p>25GbE Port 17</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><ul class="simple">
+<li><p><strong>Interface Ethernet1/1/1</strong>:</p>
+<ul>
+<li><p>Switchport.</p></li>
+<li><p>Switchport access VLAN 3000.</p></li>
+<li><p>Spanning-tree port type edge.</p></li>
+<li><p>Spanning-tree bpduguard enable.</p></li>
+<li><p>MTU 9216.</p></li>
+<li><p>Speed 10000.</p></li>
+<li><p>Duplex full.</p></li>
+<li><p>No shutdown.</p></li>
+</ul>
+</li>
+<li><p><strong>Interface Ethernet1/1/2</strong>: Identical to <strong>Ethernet1/1/1</strong>.</p></li>
+<li><p><strong>Interface Ethernet1/1/3</strong>: Identical to <strong>Ethernet1/1/1</strong>.</p></li>
+<li><p><strong>Interface Ethernet1/1/4</strong>: Identical to <strong>Ethernet1/1/1</strong>.</p></li>
+</ul>
+</td>
+<td><ul class="simple">
+<li><p><strong>Interface Ethernet1/17/1</strong>:</p>
+<ul>
+<li><p>Switchport.</p></li>
+<li><p>Switchport access VLAN 3000.</p></li>
+<li><p>Spanning-tree port type edge.</p></li>
+<li><p>Spanning-tree bpduguard enable.</p></li>
+<li><p>MTU 9216.</p></li>
+<li><p>Speed 25000.</p></li>
+<li><p>FEC FC-FEC</p></li>
+<li><p>No shutdown.</p></li>
+</ul>
+</li>
+<li><p><strong>Interface Ethernet1/17/2</strong>: Identical to <strong>Ethernet1/17/1</strong>.</p></li>
+<li><p><strong>Interface Ethernet1/17/3</strong>: Identical to <strong>Ethernet1/17/1</strong>.</p></li>
+<li><p><strong>Interface Ethernet1/17/4</strong>: Identical to <strong>Ethernet1/17/1</strong>.</p></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The switch port should be on their own VLAN to avoid traffic leak/broadcast.</p>
+</div>
+</div>
+<div class="section" id="source-mac-address">
+<h3><a class="toc-backref" href="#id15">Source MAC address</a><a class="headerlink" href="#source-mac-address" title="Permalink to this headline">¶</a></h3>
+<p>The source MAC addresses of the card can be obtained via the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>xbutil examine --device &lt;BDF&gt; --report platform
+</pre></div>
+</div>
+<p>The GT MAC CU uses all valid source MAC addresses (one per lane).
+If multiple GT MAC CUs are present in the <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a>, they’ll split all valid MAC addresses in a round robin manner over all lanes of all GT MAC CU’s.</p>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">Source MAC address round robin selection</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 56%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>MAC address index</p></th>
+<th class="head"><p>GT/lane index</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>GT[0] Lane 0</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>GT[1] Lane 0</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>GT[0] Lane 1</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>GT[1] Lane 1</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>GT[0] Lane 2</p></td>
+</tr>
+<tr class="row-odd"><td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+</tbody>
+</table>
+<p>If there are not enough valid MAC addresses, lanes will be disabled following the same round robin manner.
+In the table above, if MAC address index 4 is the last one available, GT[0] lane 3 and GT[1] lanes 2/3 will be disabled.
+It’s possible to re-organize the MAC address distribution of the GT via the <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a> option.
+Source MAC addresses are displayed with message ID <code class="docutils literal notranslate"><span class="pre">ETH_031</span></code>.</p>
+</div>
+<div class="section" id="destination-mac-address-lane-mapping">
+<h3><a class="toc-backref" href="#id16">Destination MAC address - Lane mapping</a><a class="headerlink" href="#destination-mac-address-lane-mapping" title="Permalink to this headline">¶</a></h3>
+<p>The destination MAC addresses are defined via the lane mapping.
+By default, each lane is configured loop back to itself.
+So, per lane, the destination MAC address is identical to the Source MAC address.
+This default mapping is the one to use with loopback module as each lane is physically loopbacked to itself.
+Destination MAC addresses are displayed with message ID <code class="docutils literal notranslate"><span class="pre">ETH_031</span></code>.</p>
+<p>When using a switch, lane traffic can’t be loopback to itself, source and destination MAC addresses must be different.
+xbtest only supports paired mapping lanes in order to compare RX status with TX status.</p>
+<table class="docutils align-default" id="id8">
+<caption><span class="caption-text">Supported lane mapping</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 29%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+<col style="width: 19%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" rowspan="2"><p>Source</p></th>
+<th class="head"><p>Loopback module</p></th>
+<th class="head" colspan="3"><p>Switch</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Default pairing</p></th>
+<th class="head"><p>Pairing A</p></th>
+<th class="head"><p>Pairing B</p></th>
+<th class="head"><p>Pairing C</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>Lane[0]</p></td>
+<td><p>Lane[0]</p></td>
+<td><p>Lane[1]</p></td>
+<td><p>Lane[2]</p></td>
+<td><p>Lane[3]</p></td>
+</tr>
+<tr class="row-even"><td><p>Lane[1]</p></td>
+<td><p>Lane[1]</p></td>
+<td><p>Lane[0]</p></td>
+<td><p>Lane[3]</p></td>
+<td><p>Lane[2]</p></td>
+</tr>
+<tr class="row-odd"><td><p>Lane[2]</p></td>
+<td><p>Lane[2]</p></td>
+<td><p>Lane[3]</p></td>
+<td><p>Lane[0]</p></td>
+<td><p>Lane[1]</p></td>
+</tr>
+<tr class="row-even"><td><p>Lane[3]</p></td>
+<td><p>Lane[3]</p></td>
+<td><p>Lane[2]</p></td>
+<td><p>Lane[1]</p></td>
+<td><p>Lane[0]</p></td>
+</tr>
+</tbody>
+</table>
+<p>The mapping is defined using <a class="reference internal" href="#gt-mac-parameter-tx-mapping"><span class="std std-ref">tx_mapping</span></a> option. Here is how the switch pairing A is configured in the test JSON file:</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">1</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">0</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">3</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">2</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>When connected to switch, the lane mapping must be defined in pair in order to be able to cross check RX and TX status counters.</p>
+</div>
+<p>Although destination addresses are automatically selected based on <a class="reference internal" href="#gt-mac-parameter-tx-mapping"><span class="std std-ref">tx_mapping</span></a>, it’s possible to overwrite it with <a class="reference internal" href="#gt-mac-parameter-dest-addr"><span class="std std-ref">dest_addr</span></a> member.</p>
+</div>
+<div class="section" id="lane-enabling">
+<h3><a class="toc-backref" href="#id17">Lane enabling</a><a class="headerlink" href="#lane-enabling" title="Permalink to this headline">¶</a></h3>
+<p>For a lane to be used/enabled, it must have valid source and destination addresses:</p>
+<ul class="simple">
+<li><p>When the lane is looped back to itself, this means that only one valid address is required.</p></li>
+<li><p>When lanes are paired, both need to have a valid MAC Address, otherwise both will be disabled.
+So, if e.g. Lane[0] and Lane[3] are paired but only 1 lane gets a valid address, both lanes will be disabled.</p></li>
+</ul>
+<p>You can overwrite lane MAC address via <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a> and <a class="reference internal" href="#gt-mac-parameter-dest-addr"><span class="std std-ref">dest_addr</span></a>.</p>
+<p>You can also disable a lane via <a class="reference internal" href="#gt-mac-parameter-disable-lane"><span class="std std-ref">disable_lane</span></a>. If the disabled lane is paired, both lanes will be disabled.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When you get un-expected disabled lanes, check MAC address reported by xbtest and their lane attribution (alongside the lane pairing).</p>
+</div>
+</div>
+<div class="section" id="gt-mac-cu-to-gt-mac-cu-connection">
+<h3><a class="toc-backref" href="#id18">GT MAC CU to GT MAC CU connection</a><a class="headerlink" href="#gt-mac-cu-to-gt-mac-cu-connection" title="Permalink to this headline">¶</a></h3>
+<p>When the same <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> contains 2 GT MAC CUs, they can be connected via cable (or optical fibre).
+In this case, only one GT MAC CU must have its <a class="reference internal" href="#gt-mac-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a> defined, while the other one must use <a class="reference internal" href="#gt-mac-parameter-mac-to-mac-connection"><span class="std std-ref">mac_to_mac_connection</span></a> and point it to other one index.</p>
+<p>See <a class="reference internal" href="#gt-mac-gt-mac-interconnections"><span class="std std-ref">GT MAC to GT MAC connection example</span></a> for usage example.</p>
+<span class="target" id="gt-mac-gt-settings"></span></div>
+</div>
+<div class="section" id="gt-settings">
+<h2><a class="toc-backref" href="#id19">GT settings</a><a class="headerlink" href="#gt-settings" title="Permalink to this headline">¶</a></h2>
+<p>As there are multiple ways to connect to the GTs, two default configurations have been defined:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">module</span></code>: For loopback module and active optical cable.
+Loopback module is an electrical track from TX to RX. It’s the shortest path you can get between Tx and Rx (and still going out of the FPGA).
+An active optical cable terminates the electrical TX track at the optic module input.
+It also has the electric RX track from the optic module output.
+Resulting in electrical track length twice the size compared to the loopback module. From experience, it has no major impact and GT settings can be common for these 2 types (loopback module or active optical cable).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cable</span></code>: For copper cable.</p></li>
+</ul>
+</div></blockquote>
+<p>The selection is made using the <code class="docutils literal notranslate"><span class="pre">gt_settings</span></code> member, by default <code class="docutils literal notranslate"><span class="pre">module</span></code> settings are selected.</p>
+<p>Each mode defines values for the following GT transceiver settings (see <a class="reference external" href="https://www.xilinx.com/support/documentation/user_guides/ug578-ultrascale-gty-transceivers.pdf">UltraScale Architecture GTY Transceivers User Guide (UG578)</a>):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tx_differential_swing_control</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tx_pre_emphasis</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tx_post_emphasis</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gt_tx_polarity</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gt_loopback</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rx_equaliser</span></code></p></li>
+</ul>
+</div></blockquote>
+<p>The actual values are defined in the platform definition JSON file and are also displayed in the <code class="docutils literal notranslate"><span class="pre">xbtest.log</span></code> file with message ID <code class="docutils literal notranslate"><span class="pre">CMN_021</span></code>.
+It’s possible to overwrite these settings for all lanes (included into <code class="docutils literal notranslate"><span class="pre">global_config</span></code>) or selectively for some lanes (part of <code class="docutils literal notranslate"><span class="pre">lane_config</span></code>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When connected to switch, using a wrong setting for one single lane might result in traffic interruption on all lanes.
+The switch might try to reset its whole module because it sees that a link is down.</p>
+</div>
+</div>
+<div class="section" id="main-test-steps">
+<h2><a class="toc-backref" href="#id20">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this headline">¶</a></h2>
+<p>A test is generally composed of four steps and a definition of the hardware environment (see <a class="reference internal" href="#gt-mac-test-json-members"><span class="std std-ref">GT MAC test JSON members</span></a>). The following are typical test steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Configuration.</p></li>
+<li><p>Clear status.</p></li>
+<li><p>Run.</p></li>
+<li><p>Report/check status.</p></li>
+</ol>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Under some circumstances the packet generator might not be able to send packets at the requested rate. This is most likely to occur when operating at 25GbE and with small packets (for example &lt; 128-bytes packet). Reducing the number of active MACs and/or increasing the packet size should allow the maximum rate to be achieved (see <a class="reference internal" href="#gt-mac-test-json-members"><span class="std std-ref">GT MAC test JSON members</span></a>).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>By default, after <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> downloads, the GT MAC CU generates IDLE packets at 25GbE rate.</p></li>
+<li><p>When the test sequence is over, the GT MAC CU continues to send traffic as per its last configuration.</p></li>
+</ul>
+</div>
+<div class="section" id="test-parameters">
+<h3><a class="toc-backref" href="#id21">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this headline">¶</a></h3>
+<p>The mandatory test configuration parameters are listed below.
+For more information, see <a class="reference internal" href="#gt-mac-test-json-members"><span class="std std-ref">GT MAC test JSON members</span></a>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#gt-mac-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a>: The duration of the test, measured in seconds.</p></li>
+<li><p><a class="reference internal" href="#gt-mac-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>: Mode of the compute unit.</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="status">
+<span id="id2"></span><h2><a class="toc-backref" href="#id22">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+<p>GT MAC CU provides 3 kind of status/counters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>A subset of the status registers from the 10G/25G High Speed Ethernet Subsystem IP core (see <a class="reference external" href="https://www.xilinx.com/support/documentation/ip_documentation/xxv_ethernet/v4_0/pg210-25g-ethernet.pdf">10G/25G High speed ethernet subsystem product guide (PG210)</a>). Some status are reported as information (counter registers), others are checked against a null value (error register).</p></li>
+<li><p>An indication that the quantity of bytes and packets transmitted is within a range based on the test <a class="reference internal" href="#gt-mac-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> and <a class="reference internal" href="#gt-mac-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a> (lane rate), <a class="reference internal" href="#gt-mac-parameter-utilisation"><span class="std std-ref">utilisation</span></a>, and <a class="reference internal" href="#gt-mac-parameter-packet-cfg"><span class="std std-ref">packet_cfg</span></a> configurations.</p></li>
+<li><p>A comparison between the quantity of packets and bytes sent by a lane and received by its destination lane. Per lane, the packet receiver checks the source and destination MAC address for each packet received. This is only enabled when <a class="reference internal" href="#gt-mac-parameter-match-tx-rx"><span class="std std-ref">match_tx_rx</span></a> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="matching-tx-rx">
+<h3><a class="toc-backref" href="#id23">Matching TX RX</a><a class="headerlink" href="#matching-tx-rx" title="Permalink to this headline">¶</a></h3>
+<p>The optional parameter <a class="reference internal" href="#gt-mac-parameter-match-tx-rx"><span class="std std-ref">match_tx_rx</span></a> causes comparison between some registers of the 10G/25G High Speed Ethernet Subsystem IP core:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">RX_TOTAL_GOOD_PACKETS</span></code> with <code class="docutils literal notranslate"><span class="pre">TX_TOTAL_PACKETS</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">RX_TOTAL_GOOD_BYTES</span></code> with <code class="docutils literal notranslate"><span class="pre">TX_TOTAL_BYTES</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<p>The packet receiver also compares the quantity of packets and bytes sent (<code class="docutils literal notranslate"><span class="pre">TX_TOTAL_PACKETS</span></code>, <code class="docutils literal notranslate"><span class="pre">TX_TOTAL_BYTES</span></code>) with their respective received quantities when source and destination MAC addresses are matching. <a class="reference internal" href="#gt-mac-parameter-tx-mapping"><span class="std std-ref">tx_mapping</span></a> option defines which lane values are compared together.</p>
+<p>In addition, if the <code class="docutils literal notranslate"><span class="pre">RX_TOTAL_GOOD_PACKETS</span></code> count is equal to 0, then an error message ID <code class="docutils literal notranslate"><span class="pre">ETH_007</span></code> is reported to inform that no good packets were received, and the test will fail.</p>
+</div>
+<div class="section" id="mac-stat-status-registers-description">
+<h3><a class="toc-backref" href="#id24">MAC_STAT status registers description</a><a class="headerlink" href="#mac-stat-status-registers-description" title="Permalink to this headline">¶</a></h3>
+<p>Each time the <code class="docutils literal notranslate"><span class="pre">check_status</span></code> command is executed, the following registers are read from the MAC hardware for each active MAC lane.
+All registers are stored in hardware using 48 bits and extended to 64 bits when read by software.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The 48-bit counters <code class="docutils literal notranslate"><span class="pre">RX_TOTAL_BYTES</span></code>, <code class="docutils literal notranslate"><span class="pre">RX_TOTAL_GOOD_BYTES</span></code> and <code class="docutils literal notranslate"><span class="pre">TX_TOTAL_BYTES</span></code> could saturate after approximately 25 hours of maximum rate operation at 25GbE.</p>
+</div>
+<p>It is therefore recommended that the test <a class="reference internal" href="#gt-mac-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> does not exceed 24 hours between two <code class="docutils literal notranslate"><span class="pre">check_status</span></code> test <a class="reference internal" href="#gt-mac-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>.</p>
+<p>In the table following table, the register type column represents how the register is verified:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Check</strong>: The content of the register must be null. Any other value will generate an error (message ID <code class="docutils literal notranslate"><span class="pre">ETH_004</span></code>).</p></li>
+<li><p><strong>Info</strong>: The content of the register is displayed as information (no verification performed).</p></li>
+</ul>
+</div></blockquote>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">MAC_STAT</span></code> status description</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 19%" />
+<col style="width: 9%" />
+<col style="width: 72%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Register name</p></th>
+<th class="head"><p>Register type</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">CYCLE_COUNT</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Number of transceiver clock domain cycles (approximately 1.5625e8 / sec at 10GbE and 3.90612e8 / sec at 25GbE).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A value of 0 means that clocks were not active during the test and other registers should be ignored.
+Any non-zero result indicates the clocks were active.</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">FEC_INC_CANT_CORRECT_COUNT</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>This count indicates how many uncorrected bit errors in the corresponding Clause 74 FEC Frame.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">FEC_INC_CORRECT_COUNT</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>This count indicates how many corrected bit errors in the corresponding Clause 74 FEC Frame.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_BAD_CODE</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>This count indicates how many cycles the RX PCS receive state machine is in the RX_E state as defined by IEEE Std. 802.3.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_BAD_FCS</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>The value of this count indicates packets received with a bad FCS, but not a stomped FCS.
+A stomped FCS is defined as the bitwise inverse of the expected good FCS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_BROADCAST</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good broadcast packets.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_ERROR</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>This count indicates a mismatch occurred for the test pattern in the RX core.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_FRAGMENT</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>Increment for packets shorter than <code class="docutils literal notranslate"><span class="pre">stat_rx_min_packet_len</span></code> with bad FCS.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_FRAMING_ERR</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>This count is used to keep track of sync header errors.
+The <code class="docutils literal notranslate"><span class="pre">stat_rx_framing_err</span></code> output indicates how many sync header errors were received.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_INRANGEERR</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>Increment for packets with Length field error but with good FCS.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_JABBER</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>Increment for packets longer than <code class="docutils literal notranslate"><span class="pre">ctl_rx_max_packet_len</span></code> with bad FCS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_MULTICAST</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good multicast packets.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_OVERSIZE</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>Increment for packets longer than <code class="docutils literal notranslate"><span class="pre">ctl_rx_max_packet_len</span></code> with good FCS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_64_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 64 bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_65_127_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 65 to 127 bytes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_128_255_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 128 to 255 bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_256_511_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 256 to 511 bytes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_512_1023_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 512 to 1,023 bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_1024_1518_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 1,024 to 1,518 bytes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_1519_1522_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 1,519 to 1,522 bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_1523_1548_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 1,523 to 1,548 bytes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_1549_2047_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 1,549 to 2,047 bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_2048_4095_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 2,048 to 4,095 bytes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_4096_8191_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 4,096 to 8,191 bytes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_8192_9215_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good and bad packets received that contain 8,192 to 9,215 bytes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_BAD_FCS</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>Increment for packets between 64 and <code class="docutils literal notranslate"><span class="pre">ctl_rx_max_packet_len</span></code> bytes that have FCS errors.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_LARGE</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for all packets that are more than 9,215 bytes long.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PACKET_SMALL</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>Increment for all packets that are less than 64 bytes long.
+Packets that are less than 4 bytes are dropped.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_PAUSE</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for 802.3x Ethernet MAC Pause packet with good FCS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_RSFEC_CORRECTED_CW_INC</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>This count will increment if the RS-FEC decoder detected and corrected a bit errors in the corresponding frame.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_RSFEC_ERR_COUNT0_INC</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>Increment for RS-FEC detected errors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_RSFEC_UNCORRECTED_CW_INC</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>This count will increment if the RS-FEC decoder detected uncorrectable bit errors in the corresponding frame.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_STOMPED_FCS</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>The value of this count indicates packets were received with a stomped FCS.
+A stomped FCS is defined as the bitwise inverse of the expected good FCS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_TEST_PATTERN_MISMATCH</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>This count indicates how many mismatches occurred for the test pattern in the RX core.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_TOOLONG</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>Increment for packets longer than <code class="docutils literal notranslate"><span class="pre">ctl_rx_max_packet_len</span></code> with good and bad FCS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_TOTAL_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for the total number of bytes received.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_TOTAL_GOOD_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for the total number of good bytes received.
+This value is only non-zero when a packet is received completely and contains no errors.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_TOTAL_GOOD_PACKETS</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for the total number of good packets received.
+This value is only non-zero when a packet is received completely and contains no errors.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_TOTAL_PACKETS</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for the total number of packets received.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_TRUNCATED</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>This count indicates that the number of packets truncated due to their length exceeding <code class="docutils literal notranslate"><span class="pre">ctl_rx_max_packet_len[14:0]</span></code>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_UNDERSIZE</span></code></p></td>
+<td><p>Check</p></td>
+<td><p>Increment for packets shorter than <code class="docutils literal notranslate"><span class="pre">stat_rx_min_packet_len</span></code> with good FCS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_UNICAST</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good unicast packets.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">RX_USER_PAUSE</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for priority-based pause packets with good FCS.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">RX_VLAN</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for good 802.1Q tagged VLAN packets.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">TX_TOTAL_BYTES</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for the total number of bytes transmitted by the packet generator.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">TX_TOTAL_PACKETS</span></code></p></td>
+<td><p>Info</p></td>
+<td><p>Increment for the total number of packets transmitted by the packet generator.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="gt-mac-test-json-members">
+<span id="id3"></span><h2><a class="toc-backref" href="#id25">GT MAC test JSON members</a><a class="headerlink" href="#gt-mac-test-json-members" title="Permalink to this headline">¶</a></h2>
+<p>Following are examples of <a class="reference internal" href="#gt-mac-test-case-description"><span class="std std-ref">GT MAC</span></a> test cases.
+Some test JSON members can be overwritten for each lane using the test JSON member <code class="docutils literal notranslate"><span class="pre">lane_config</span></code> which child members are lane indexes.</p>
+<hr class="docutils" />
+<div class="section" id="electrical-optical-loopback-example">
+<h3><a class="toc-backref" href="#id26">Electrical/optical loopback example</a><a class="headerlink" href="#electrical-optical-loopback-example" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The default TX/RX lane mapping is used with loopback module.</p>
+</div>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_no_fec&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>      <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>               <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>      <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="switch-example">
+<h3><a class="toc-backref" href="#id27">Switch example</a><a class="headerlink" href="#switch-example" title="Permalink to this headline">¶</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Lane pairing must be used when connected to a switch.</p>
+</div>
+<p>Here is an example of 2 GT CUs:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>GT[0] is connected to a 10GbE port with a fixed packet size of 1024 bytes.</p></li>
+<li><p>GT[1] is a 25GbE with the default <code class="docutils literal notranslate"><span class="pre">sweep</span></code> packet size.</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;packet_cfg&quot;</span><span class="p">:</span> <span class="s2">&quot;1024&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;test_sequence&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_10gbe_no_fec&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>      <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>               <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>      <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_c74_fec&quot;</span> <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>       <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>                <span class="p">},</span>
+        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>       <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">1</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">0</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">3</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">2</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="gt-mac-to-gt-mac-connection-example">
+<span id="gt-mac-gt-mac-interconnections"></span><h3><a class="toc-backref" href="#id28">GT MAC to GT MAC connection example</a><a class="headerlink" href="#gt-mac-to-gt-mac-connection-example" title="Permalink to this headline">¶</a></h3>
+<p>Here is an example of GT MAC interconnection. Both CU must be in the same <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a>. gt_mac[1] is connected linked to gt_mac[0] via <a class="reference internal" href="#gt-mac-parameter-mac-to-mac-connection"><span class="std std-ref">mac_to_mac_connection</span></a>.</p>
+<p>In this example:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>To avoid some lanes being automatically disabled by the SW (as there are not enough MAC address available), <a class="reference internal" href="#gt-mac-parameter-source-addr-test-address"><span class="std std-ref">test_address</span></a> is used for <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a>.</p></li>
+<li><p><a class="reference internal" href="#gt-mac-parameter-match-tx-rx"><span class="std std-ref">match_tx_rx</span></a> is used, meaning that at the top of checking that sending and receiving traffic is errorless, each GT MAC CU lane will also verify that it receives the expected quantity of packets and bytes based on the traffic definition and lane mapping of the other GT MAC CU lane.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>only one test_sequence is defined</p>
+</div>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;test_sequence&quot;</span> <span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_c74_fec&quot;</span> <span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>       <span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>               <span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>       <span class="p">},</span>
+
+        <span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_10gbe_no_fec&quot;</span>  <span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>       <span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>               <span class="p">},</span>
+        <span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>       <span class="p">}</span>
+      <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span> <span class="p">:</span> <span class="mi">0</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;source_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;test_address&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span> <span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;source_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;test_address&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span> <span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="nt">&quot;source_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;test_address&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;mac_to_mac_connection&quot;</span><span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;source_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;test_address&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;source_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;test_address&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;source_addr&quot;</span><span class="p">:</span> <span class="s2">&quot;test_address&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Cross connection even works through a switch. The traffic is sent to a different GT (thus different mac address), so even with default tx_mapping (lane 0 to lane 0, as per example above), the traffic will be flow (as the switch will see different source and destination addresses).</p>
+<p>You can still change the default lane pairing configuration. Compared to pre-canned switch test, you’re not limited to the 3 pairing A/B/C. As you target another GT, you can freely pair lanes.</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span> <span class="p">:</span> <span class="mi">1</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span> <span class="p">:</span> <span class="mi">3</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span> <span class="p">:</span> <span class="mi">0</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;tx_mapping&quot;</span> <span class="p">:</span> <span class="mi">2</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="definition">
+<h3><a class="toc-backref" href="#id29">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<p>The following table shows all members available for this test case.
+More details are provided for each member in the subsequent sections.</p>
+<table class="docutils align-default" id="id10">
+<caption><span class="caption-text">GT MAC Test JSON members</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 34%" />
+<col style="width: 10%" />
+<col style="width: 15%" />
+<col style="width: 42%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Member</p></th>
+<th class="head"><p>Lane override</p></th>
+<th class="head"><p>Mandatory / optional</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#gt-mac-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a></p></td>
+<td><p>No</p></td>
+<td><p>Mandatory</p></td>
+<td><p>Describes the sequence of tests to perform.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gt-mac-parameter-tx-mapping"><span class="std std-ref">tx_mapping</span></a></p></td>
+<td><p>Only</p></td>
+<td><p>Optional</p></td>
+<td><p>Specify lane mapping. It defines:</p>
+<ul class="simple">
+<li><p>Destination MAC address.</p></li>
+<li><p>TX lane index which will be checked against RX status.</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gt-mac-parameter-disable-lane"><span class="std std-ref">disable_lane</span></a></p></td>
+<td><p>Only</p></td>
+<td><p>Optional</p></td>
+<td><p>Disable a lane.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a></p></td>
+<td><p>Only</p></td>
+<td><p>Optional</p></td>
+<td><p>Overwrite default source MAC address - lane mapping.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gt-mac-parameter-dest-addr"><span class="std std-ref">dest_addr</span></a></p></td>
+<td><p>Only</p></td>
+<td><p>Optional</p></td>
+<td><p>Overwrite default destination MAC address.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gt-mac-parameter-utilisation"><span class="std std-ref">utilisation</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Transmit utilisation.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gt-mac-parameter-traffic-type"><span class="std std-ref">traffic_type</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Define the content of the payload area of the packets.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gt-mac-parameter-packet-cfg"><span class="std std-ref">packet_cfg</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Define the packet length.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gt-mac-parameter-match-tx-rx"><span class="std std-ref">match_tx_rx</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Enable RX and TX packet count match when loopback is present.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gt-mac-parameter-mac-to-mac-connection"><span class="std std-ref">mac_to_mac_connection</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Enable GT MAC CUs connections.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gt-mac-parameter-gt-settings"><span class="std std-ref">gt_settings</span></a></p></td>
+<td><p>No</p></td>
+<td><p>Optional</p></td>
+<td><p>Selects the GT default configuration.
+See <a class="reference internal" href="#gt-mac-parameter-gt-settings-json-members"><span class="std std-ref">GT JSON Member</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gt-mac-parameter-gt-tx-diffctrl"><span class="std std-ref">gt_tx_diffctrl</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Select the Driver Swing Control.
+See <a class="reference internal" href="#gt-mac-parameter-gt-settings-json-members"><span class="std std-ref">GT JSON Member</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gt-mac-parameter-gt-tx-pre-emph"><span class="std std-ref">gt_tx_pre_emph</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Select Transmitter pre-cursor TX pre-emphasis control.
+See <a class="reference internal" href="#gt-mac-parameter-gt-settings-json-members"><span class="std std-ref">GT JSON Member</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gt-mac-parameter-gt-tx-post-emph"><span class="std std-ref">gt_tx_post_emph</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Select Transmitter post-cursor TX pre-emphasis control.
+See <a class="reference internal" href="#gt-mac-parameter-gt-settings-json-members"><span class="std std-ref">GT JSON Member</span></a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#gt-mac-parameter-gt-tx-polarity"><span class="std std-ref">gt_tx_polarity</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Select TX Polarity.
+See <a class="reference internal" href="#gt-mac-parameter-gt-settings-json-members"><span class="std std-ref">GT JSON Member</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#gt-mac-parameter-gt-rx-use-lpm"><span class="std std-ref">gt_rx_use_lpm</span></a></p></td>
+<td><p>Yes</p></td>
+<td><p>Optional</p></td>
+<td><p>Select RX Equalizer.
+See <a class="reference internal" href="#gt-mac-parameter-gt-settings-json-members"><span class="std std-ref">GT JSON Member</span></a>.</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+</div>
+<div class="section" id="test-sequence">
+<span id="gt-mac-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id30"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this headline">¶</a></h3>
+<p>Mandatory. Describes the sequence of tests to perform.
+Tests are performed serially, and a failure in one test does not stop the sequence (the next test will be launched).
+There is no limitation to the length of the test sequence.</p>
+<p>This field contains a list of tests, each test being defined by an object of key–value parameters pairs: <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">{},</span> <span class="pre">{},</span> <span class="pre">{}</span> <span class="pre">]</span></code>.</p>
+<p>The following table defines the parameters supported in the GT MAC test sequence:</p>
+<span id="gt-mac-parameter-test-sequence-mode"></span><span id="gt-mac-parameter-test-sequence-duration"></span><table class="docutils align-default" id="id11">
+<caption><span class="caption-text">GT MAC test sequence parameters</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 21%" />
+<col style="width: 62%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Member</p></th>
+<th class="head"><p>Mandatory / optional</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">duration</span></code></p></td>
+<td><p>Mandatory</p></td>
+<td><p>The duration of the test in seconds; Range [1, 2<sup>32</sup>-1].</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">mode</span></code></p></td>
+<td><p>Mandatory</p></td>
+<td><p>Mode of the compute unit. See the following table.</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">mode</span></code> possible values</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Possible value</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">conf_&lt;mode&gt;</span></code></p></td>
+<td><p>Apply the settings specified in the configuration parameters to the MAC hardware.
+Part of the configuration process is to issue a reset to the MAC hardware,
+so the <code class="docutils literal notranslate"><span class="pre">conf_&lt;mode&gt;</span></code> operation will always result in the Ethernet link dropping and restarting,
+even if the configuration is identical to the previous test.</p>
+<p>Configurations are available for various lane rates and Forward Error Correction (FEC) modes:</p>
+<blockquote>
+<div><ul>
+<li><p><strong>Lane rates</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>10GbE</strong>: 10.3125 Gb/s.</p></li>
+<li><p><strong>25GbE</strong>: 25.78125 Gb/s.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>FEC modes</strong>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>none</strong>: Disables FEC and uses 66-b words with 2-bit sync headers.</p></li>
+<li><p><strong>clause_74</strong>: Enables the FEC specified in IEEE 802.3 Clause 74.
+It can be used for both 10GbE and 25GbE lane rates.</p></li>
+<li><p><strong>rs_fec</strong>: Enables the FEC specified in IEEE 802.3by Clause 91.
+It can only be used in 25GbE mode.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+<p>Possible values of <code class="docutils literal notranslate"><span class="pre">conf_&lt;mode&gt;</span></code> are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">conf_10gbe_no_fec</span></code>: Lane rate: <strong>10GbE</strong>, FEC mode: <strong>none</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conf_10gbe_c74_fec</span></code>: Lane rate: <strong>10GbE</strong>, FEC mode: <strong>clause_74</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conf_25gbe_no_fec</span></code> : Lane rate: <strong>25GbE</strong>, FEC mode: <strong>none</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conf_25gbe_c74_fec</span></code>: Lane rate: <strong>25GbE</strong>, FEC mode: <strong>clause_74</strong>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">conf_25gbe_rs_fec</span></code>: Lane rate: <strong>25GbE</strong>, FEC mode: <strong>rs_fec</strong>.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Most of the <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> don’t include the <strong>rs_fec</strong>, as it takes a lot of resources.
+The SW detects the presence of the <strong>rs_fec</strong> and will let you aware if it’s not supported.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The switch only supports <code class="docutils literal notranslate"><span class="pre">conf_10gbe_no_fec</span></code> or <code class="docutils literal notranslate"><span class="pre">conf_25gbe_c74_fec</span></code>
+(see <a class="reference internal" href="#gt-mac-test-set-up"><span class="std std-ref">GT test set up</span></a>)</p>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">clear_status</span></code></p></td>
+<td><p>Read and clear the MAC status registers, but ignore the values returned in the counters.
+It is intended to be used after a <code class="docutils literal notranslate"><span class="pre">conf_&lt;mode&gt;</span></code> operation to clear the status errors caused by the link dropping and restarting.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">run</span></code></p></td>
+<td><p>Enable the packet generator.
+Any test sequence entry without a run will disable the packet generator.
+If the final <a class="reference internal" href="#gt-mac-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a> entry contains a <code class="docutils literal notranslate"><span class="pre">run</span></code> then packet generation will continue after execution of xbtest has terminated.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">check_status</span></code></p></td>
+<td><p>Read the MAC status registers, and for any MAC instances that have not been disabled (<a class="reference internal" href="#gt-mac-parameter-disable-lane"><span class="std std-ref">disable_lane</span></a>)
+Check for any counter values that indicate an error has occurred, or the received number of packets indicates a fault on the link.
+If an error is detected the overall test will be flagged as a fail.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">&lt;dir&gt;_rst</span></code></p></td>
+<td><p>Initiate a reset of the MAC TX and/or RX path.
+Possible values of <code class="docutils literal notranslate"><span class="pre">&lt;dir&gt;_rst</span></code> are:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tx_rst</span></code>: MAC TX reset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rx_rst</span></code>: MAC RX reset.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tx_rx_rst</span></code>: MAC TX followed by MAC RX reset 10ms after.</p></li>
+</ul>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+<p>An example of a <a class="reference internal" href="#gt-mac-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a> is:</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_10gbe_no_fec&quot;</span> <span class="p">},</span>
+  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>      <span class="p">},</span>
+  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>               <span class="p">},</span>
+  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span>  <span class="mi">1</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>      <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>This will:</p>
+<ul class="simple">
+<li><p>Apply the configuration to the MACs, reset them and wait for 1 second.</p></li>
+<li><p>Wait for 1 second then clear the status registers.</p></li>
+<li><p>Start the packet generators for any active MACs and wait for 60 seconds.</p></li>
+<li><p>Wait for 1 second before reading the status registers and check the results. Then, clear the status registers, stop the packet generator and exit.</p></li>
+</ul>
+<hr class="docutils" />
+</div>
+<div class="section" id="tx-mapping">
+<span id="gt-mac-parameter-tx-mapping"></span><h3><a class="toc-backref" href="#id31"><code class="docutils literal notranslate"><span class="pre">tx_mapping</span></code></a><a class="headerlink" href="#tx-mapping" title="Permalink to this headline">¶</a></h3>
+<p>Optional;
+Type           : integer;
+Possible values: 0 to 3;
+Default        : <code class="docutils literal notranslate"><span class="pre">n</span></code> where <code class="docutils literal notranslate"><span class="pre">n</span></code> represents the lane index within the <code class="docutils literal notranslate"><span class="pre">lane_config</span></code> (so the default is equivalent to a lane loopback to itself).</p>
+<p>Specifies the lane index of the <code class="docutils literal notranslate"><span class="pre">n</span></code><sup>th</sup> TX which will be checked against RX status.</p>
+<p>This configuration can only be applied individually to one or more of the four lanes connected to the individual transceivers at the <code class="docutils literal notranslate"><span class="pre">lane_config</span></code> level.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="disable-lane">
+<span id="gt-mac-parameter-disable-lane"></span><h3><a class="toc-backref" href="#id32"><code class="docutils literal notranslate"><span class="pre">disable_lane</span></code></a><a class="headerlink" href="#disable-lane" title="Permalink to this headline">¶</a></h3>
+<p>Optional;
+Type           : boolean;
+Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
+Default        : <code class="docutils literal notranslate"><span class="pre">false</span></code></p>
+<p>This configuration can only be applied individually to one or more of the four lanes connected to the individual transceivers at the <code class="docutils literal notranslate"><span class="pre">lane_config</span></code> level.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When <code class="docutils literal notranslate"><span class="pre">false</span></code>, the packet generator of the selected lane will be enabled, and receiver statistics will be gathered and used to determine the overall pass/fail result of the test.</p></li>
+<li><p>When <code class="docutils literal notranslate"><span class="pre">true</span></code>, no packets are generated by the selected lane, and receiver statistics from that instance are ignored.</p></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="section" id="source-addr">
+<span id="gt-mac-parameter-source-addr"></span><h3><a class="toc-backref" href="#id33"><code class="docutils literal notranslate"><span class="pre">source_addr</span></code></a><a class="headerlink" href="#source-addr" title="Permalink to this headline">¶</a></h3>
+<p>Optional;
+Type           : string;
+Possible values: <code class="docutils literal notranslate"><span class="pre">board_mac_addr_&lt;i&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">&lt;i&gt;</span></code> represents the index of an available board MAC address.</p>
+<p>This configuration can only be applied individually to one or more of the four lanes connected to the individual transceivers at the <code class="docutils literal notranslate"><span class="pre">lane_config</span></code> level.</p>
+<p>This option allows the overwrite of the default round robin MAC address vs. lane mapping.</p>
+<p>All available MAC addresses are listed in <code class="docutils literal notranslate"><span class="pre">summary.log</span></code> (or in <code class="docutils literal notranslate"><span class="pre">xbtest.log</span></code>) file via the message ID <code class="docutils literal notranslate"><span class="pre">ETH_036</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO :: ETH_030 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: Board MAC address list:
+INFO :: ETH_036 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: -board_mac_addr_0: <span class="m">00</span>:0A:35:06:9F:D2
+INFO :: ETH_036 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: -board_mac_addr_1: <span class="m">00</span>:0A:35:06:9F:D3
+INFO :: ETH_036 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: -board_mac_addr_2: <span class="m">00</span>:0A:35:06:9F:D4
+INFO :: ETH_036 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: -board_mac_addr_3: <span class="m">00</span>:0A:35:06:9F:D5
+</pre></div>
+</div>
+<p>In this case, there are 4 addresses listed, so the possible values for <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a> are <code class="docutils literal notranslate"><span class="pre">board_mac_addr_0/1/2/3</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">board_mac_addr_&lt;i&gt;</span></code> addresses keeps the test generic across different cards as the actual value of the address is not used in the test JSON file.</p>
+</div>
+<p>Other values of <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a> are supported:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#gt-mac-parameter-source-addr-test-address"><span class="std std-ref">test_address</span></a>: Source MAC address set to a test address.</p></li>
+<li><p><a class="reference internal" href="#gt-mac-parameter-source-addr-alveo-random-address"><span class="std std-ref">alveo_random_address</span></a>: Randomly generated Alveo compatible source MAC address.</p></li>
+</ul>
+</div></blockquote>
+<p>There is no mechanism to insert any MAC address (spoofing protection).
+These modes allow to re-enable a lane normally disabled to due missing or invalid MAC addresses.</p>
+<hr class="docutils" />
+<div class="section" id="test-address">
+<span id="gt-mac-parameter-source-addr-test-address"></span><h4><code class="docutils literal notranslate"><span class="pre">test_address</span></code><a class="headerlink" href="#test-address" title="Permalink to this headline">¶</a></h4>
+<p>When setting <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a> to <code class="docutils literal notranslate"><span class="pre">test_address</span></code>, the source MAC address is always <code class="docutils literal notranslate"><span class="pre">06-bbcc-dd-ee-&lt;X&gt;&lt;Y&gt;</span></code> where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> represents the index of the GT. Possible values: from 0 to <code class="docutils literal notranslate"><span class="pre">n</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span></code> is the number of GT defined in the <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Y&gt;</span></code> represents the index of the lane. Possible values: from 0 to 3.</p></li>
+</ul>
+</div></blockquote>
+<p>In the <code class="docutils literal notranslate"><span class="pre">test_address</span></code> mode, the MAC addresses are fixed whatever the card is.
+The address only depends on the GT and the lane used.
+If multiple instances of xbtest are running simultaneously with <code class="docutils literal notranslate"><span class="pre">test_address</span></code>, the switch will detect multiple lanes with identical MAC addresses and won’t be able to route the traffic correctly.</p>
+<p>As the addresses are predictable, it may help to debug traffic issues at the switch.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MAC addresses beginning with <code class="docutils literal notranslate"><span class="pre">02</span></code>, <code class="docutils literal notranslate"><span class="pre">06</span></code>, <code class="docutils literal notranslate"><span class="pre">0A</span></code> or <code class="docutils literal notranslate"><span class="pre">0E</span></code> are locally administered.</p>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="alveo-random-address">
+<span id="gt-mac-parameter-source-addr-alveo-random-address"></span><h4><code class="docutils literal notranslate"><span class="pre">alveo_random_address</span></code><a class="headerlink" href="#alveo-random-address" title="Permalink to this headline">¶</a></h4>
+<p>Alveo cards MAC addresses are taken from 2 pools of addresses when setting <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a> to <code class="docutils literal notranslate"><span class="pre">alveo_random_address</span></code>:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">00-0A-35-xx-xx-xx</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">00-5d-03-xx-xx-xx</span></code></p></li>
+</ol>
+</div></blockquote>
+<p>In this mode, xbtest creates randomly, at runtime, an address from the first pool (<code class="docutils literal notranslate"><span class="pre">00-0A-35-xx-xx-xx</span></code>).
+Each xbtest run will result in different addresses.
+This mode allows to run multiple cards/lanes without having to worry about conflicting MAC addresses.
+This overcomes the limitation of the <a class="reference internal" href="#gt-mac-parameter-source-addr-test-address"><span class="std std-ref">test_address</span></a> mode.</p>
+<hr class="docutils" />
+</div>
+</div>
+<div class="section" id="dest-addr">
+<span id="gt-mac-parameter-dest-addr"></span><h3><a class="toc-backref" href="#id34"><code class="docutils literal notranslate"><span class="pre">dest_addr</span></code></a><a class="headerlink" href="#dest-addr" title="Permalink to this headline">¶</a></h3>
+<p>Optional;
+Type           : string;
+Possible values: <code class="docutils literal notranslate"><span class="pre">board_mac_addr_&lt;i&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">&lt;i&gt;</span></code> represents the index of an available board MAC address, or any valid six-octet value (for example: <code class="docutils literal notranslate"><span class="pre">01:0A:BC:DE:F0:20</span></code>).</p>
+<p>This configuration can only be applied individually to one or more of the four lanes connected to the individual transceivers at the <code class="docutils literal notranslate"><span class="pre">lane_config</span></code> level.</p>
+<p>Although the destination address is automatically selected defining <a class="reference internal" href="#gt-mac-parameter-tx-mapping"><span class="std std-ref">tx_mapping</span></a>,
+it is possible to overwrite the selection and use another board address or any valid MAC address.</p>
+<p>All available MAC addresses are listed in <code class="docutils literal notranslate"><span class="pre">summary.log</span></code> (or in <code class="docutils literal notranslate"><span class="pre">xbtest.log</span></code>) file via the message ID <code class="docutils literal notranslate"><span class="pre">ETH_036</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>INFO :: ETH_030 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: Board MAC address list:
+INFO :: ETH_036 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: -board_mac_addr_0: <span class="m">00</span>:0A:35:06:9F:D2
+INFO :: ETH_036 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: -board_mac_addr_1: <span class="m">00</span>:0A:35:06:9F:D3
+INFO :: ETH_036 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: -board_mac_addr_2: <span class="m">00</span>:0A:35:06:9F:D4
+INFO :: ETH_036 :: GT_MAC<span class="o">[</span><span class="m">0</span><span class="o">]</span> :: -board_mac_addr_3: <span class="m">00</span>:0A:35:06:9F:D5
+</pre></div>
+</div>
+<p>In this case, there are 4 addresses listed, so the possible values for <a class="reference internal" href="#gt-mac-parameter-dest-addr"><span class="std std-ref">dest_addr</span></a> are <code class="docutils literal notranslate"><span class="pre">board_mac_addr_0/1/2/3</span></code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Using <code class="docutils literal notranslate"><span class="pre">board_mac_addr_&lt;i&gt;</span></code> addresses keeps the test generic across different cards as the actual value of the address is not used in the test JSON file.</p>
+</div>
+<p>The <a class="reference internal" href="#gt-mac-parameter-dest-addr"><span class="std std-ref">dest_addr</span></a> overwrite also supports any valid MAC address.
+The address must be composed of 6 octets separated by columns “:”.
+Only hexadecimal characters are supported. For example: <code class="docutils literal notranslate"><span class="pre">01:0A:BC:DE:F0:20</span></code>.</p>
+<p>When setting <a class="reference internal" href="#gt-mac-parameter-dest-addr"><span class="std std-ref">dest_addr</span></a> to <a class="reference internal" href="#gt-mac-parameter-source-addr-test-address"><span class="std std-ref">test_address</span></a>, the destination MAC address is always <code class="docutils literal notranslate"><span class="pre">06-bbcc-dd-ee-&lt;X&gt;&lt;Y&gt;</span></code> where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;X&gt;</span></code> represents the index of the GT. Possible values: from 0 to 1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;Y&gt;</span></code> represents the index of the lane. Possible values: from 0 to 3.</p></li>
+</ul>
+</div></blockquote>
+<p>In this mode, the MAC addresses are fixed whatever the card is.
+The address only depends on the GT and the lane used. If multiple instances of xbtest are running simultaneously with <a class="reference internal" href="#gt-mac-parameter-source-addr-test-address"><span class="std std-ref">test_address</span></a>,
+the switch will detect multiple lanes with identical MAC addresses and it won’t be able to route the traffic correctly.</p>
+<p>As the addresses are predictable, it may help to debug traffic issues at the switch.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="utilisation">
+<span id="gt-mac-parameter-utilisation"></span><h3><a class="toc-backref" href="#id35"><code class="docutils literal notranslate"><span class="pre">utilisation</span></code></a><a class="headerlink" href="#utilisation" title="Permalink to this headline">¶</a></h3>
+<p>Optional;
+Type           : integer;
+Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code>;
+Default        : <code class="docutils literal notranslate"><span class="pre">50</span></code>.</p>
+<p>This sets the transmit utilisation of the link in the range <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code> (percent).
+The parameter is used to set the approximate link utilisation for the packet generator, by adjusting the delay between packets.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Setting the utilisation to <code class="docutils literal notranslate"><span class="pre">100</span></code> causes packets to be generated at the maximum achievable rate.</p></li>
+<li><p>Setting the utilisation to <code class="docutils literal notranslate"><span class="pre">0</span></code> disables the packet generator completely.</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>Never use a <a class="reference internal" href="#gt-mac-parameter-utilisation"><span class="std std-ref">utilisation</span></a> of <code class="docutils literal notranslate"><span class="pre">100</span></code> when connected to the switch.
+The switch also sends some maintenance packets which will take priority over any traffic, resulting in lost packets.</p>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="traffic-type">
+<span id="gt-mac-parameter-traffic-type"></span><h3><a class="toc-backref" href="#id36"><code class="docutils literal notranslate"><span class="pre">traffic_type</span></code></a><a class="headerlink" href="#traffic-type" title="Permalink to this headline">¶</a></h3>
+<p>Optional;
+Type           : string;
+Possible values: <code class="docutils literal notranslate"><span class="pre">0x00</span></code>, <code class="docutils literal notranslate"><span class="pre">0xff</span></code>, <code class="docutils literal notranslate"><span class="pre">count</span></code> or <code class="docutils literal notranslate"><span class="pre">pattern</span></code>;
+Default        : <code class="docutils literal notranslate"><span class="pre">count</span></code>.</p>
+<p>The test packets produced by the traffic generator consist of a statically configured destination address (48 bits), source address (48 bits) and ethertype (16 bits) followed by a payload area and a CRC (32 bits).</p>
+<p>The content of the payload area is controlled by this parameter:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">0x00</span></code>: The whole payload area will be filled with bytes of value <code class="docutils literal notranslate"><span class="pre">0x00</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count</span></code>: The payload area will be filled with a byte count sequence.
+The byte following Ethertype will be <code class="docutils literal notranslate"><span class="pre">0x00</span></code>, the next <code class="docutils literal notranslate"><span class="pre">0x01</span></code>, with each successive byte incrementing to <code class="docutils literal notranslate"><span class="pre">0xff</span></code> and rolling over to <code class="docutils literal notranslate"><span class="pre">0x00</span></code> and repeating to the end of the payload area.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pattern</span></code>: The payload area will be filled with the pattern (<code class="docutils literal notranslate"><span class="pre">0x00</span></code>, <code class="docutils literal notranslate"><span class="pre">0x55</span></code>, <code class="docutils literal notranslate"><span class="pre">0xaa</span></code>, <code class="docutils literal notranslate"><span class="pre">0xff</span></code>) repeating for the number of bytes in the payload area.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">0xff</span></code>: The whole payload area will be filled with bytes of value <code class="docutils literal notranslate"><span class="pre">0xff</span></code>.</p></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+</div>
+<div class="section" id="packet-cfg">
+<span id="gt-mac-parameter-packet-cfg"></span><h3><a class="toc-backref" href="#id37"><code class="docutils literal notranslate"><span class="pre">packet_cfg</span></code></a><a class="headerlink" href="#packet-cfg" title="Permalink to this headline">¶</a></h3>
+<p>Optional;
+Type           : string;
+Possible values: <code class="docutils literal notranslate"><span class="pre">sweep</span></code> or value from <code class="docutils literal notranslate"><span class="pre">64</span></code> to <code class="docutils literal notranslate"><span class="pre">1535</span></code> or from <code class="docutils literal notranslate"><span class="pre">9000</span></code> to <code class="docutils literal notranslate"><span class="pre">10000</span></code>;
+Default        : <code class="docutils literal notranslate"><span class="pre">sweep</span></code>.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>When <code class="docutils literal notranslate"><span class="pre">sweep</span></code> is used, a sequence of 1455 packets will be generated continuously with sizes between 64 and 1518 bytes.</p></li>
+</ul>
+</div></blockquote>
+<p>If a single numeric value is used (in the range 64 to 1535 or in the range 9000 to 10000) is supplied, then all generated packets shall be this size.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>Only even values are supported for packet sizes between 9000 and 10000 (jumbo frame).</p></li>
+<li><p>The switch only supports jumbo frames up to 9216 bytes (see <a class="reference internal" href="#gt-mac-test-set-up"><span class="std std-ref">GT test set up</span></a>).</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note that the receive MTU is adjusted to match the configured transmit packet size.</p>
+<p>If the transmit size is:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Lower than or equal to 1518, then the receive MTU is set to 1518.</p></li>
+<li><p>Greater than 1518 but lower than or equal to 9600, then the receive MTU is set to 9600.</p></li>
+<li><p>Greater than 9600, then the receive MTU is set to 10000.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+</div>
+<div class="section" id="match-tx-rx">
+<span id="gt-mac-parameter-match-tx-rx"></span><h3><a class="toc-backref" href="#id38"><code class="docutils literal notranslate"><span class="pre">match_tx_rx</span></code></a><a class="headerlink" href="#match-tx-rx" title="Permalink to this headline">¶</a></h3>
+<p>Optional;
+Type           : boolean;
+Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
+Default        : <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
+<p>Specifies if RX is checked against TX.</p>
+<p>If the transmit and receive interfaces of each active MAC instance are is looped back,
+then the transmitted packet and byte counts are expected to exactly match the equivalent received good packet and byte counters.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Setting this parameter to <code class="docutils literal notranslate"><span class="pre">true</span></code> enables this comparison to be made and included in the overall pass/fail assessment of the link.</p></li>
+</ul>
+</div></blockquote>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the comparison of TX and RX counters is not included in the overall pass/fail assessment of the link.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="mac-to-mac-connection">
+<span id="gt-mac-parameter-mac-to-mac-connection"></span><h3><a class="toc-backref" href="#id39"><code class="docutils literal notranslate"><span class="pre">mac_to_mac_connection</span></code></a><a class="headerlink" href="#mac-to-mac-connection" title="Permalink to this headline">¶</a></h3>
+<p>Optional;
+Type: integer;
+Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;</p>
+<p>Enable GT MAC cross connections. Contains the index of the GT MAC CU to which is connected the CU.</p>
+<p>See <a class="reference internal" href="#gt-mac-gt-mac-interconnections"><span class="std std-ref">GT MAC to GT MAC connection example</span></a> for syntax example.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="gt-settings-test-json-members">
+<span id="gt-mac-parameter-gt-settings-json-members"></span><h3><a class="toc-backref" href="#id40">GT settings test JSON members</a><a class="headerlink" href="#gt-settings-test-json-members" title="Permalink to this headline">¶</a></h3>
+<p>For the 3 types of GT test cases, the GT settings can be defined in a similar manner</p>
+<ul>
+<li><p>For the 4 lanes simultaneously: part of the <code class="docutils literal notranslate"><span class="pre">global_config</span></code></p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Select one of the pre-defined configurations (<code class="docutils literal notranslate"><span class="pre">gt_settings</span></code>).
+The various configurations are stored in the platform definition file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p></li>
+<li><p>Overwrite any settings of the selected configuration.</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>For each lane individually: overwrite any settings of the selected configuration. Part of the <code class="docutils literal notranslate"><span class="pre">lane_config</span></code></p></li>
+</ul>
+<p>If required, these settings are simply added to your test JSON file within your test case definition.
+Here is an example with global selection, but it also includes global and per-lane specific overwrites.</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;gt_mac / gt_prbs / gt_lpbk&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;gt_settings&quot;</span><span class="p">:</span> <span class="s2">&quot;module&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;gt_rx_use_lpm&quot;</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;gt_rx_use_lpm&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nt">&quot;gt_tx_diffctrl&quot;</span><span class="p">:</span> <span class="mi">11</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;gt_tx_main_cursor&quot;</span><span class="p">:</span> <span class="mi">80</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;gt_tx_pre_emph&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;gt_tx_post_emph&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More info can be found here: <a class="reference internal" href="#gt-mac-gt-settings"><span class="std std-ref">GT Settings</span></a>.
+Further details on each of settings can be found in <a class="reference external" href="https://www.xilinx.com/support/documentation/user_guides/ug578-ultrascale-gty-transceivers.pdf">UltraScale architecture GTY transceivers user guide (UG578)</a>.</p>
+<hr class="docutils" />
+<div class="section" id="gt-mac-parameter-gt-settings">
+<span id="id4"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_settings</span></code><a class="headerlink" href="#gt-mac-parameter-gt-settings" title="Permalink to this headline">¶</a></h4>
+<p>Optional;
+Type           : string;
+Possible values: <code class="docutils literal notranslate"><span class="pre">module</span></code> or <code class="docutils literal notranslate"><span class="pre">cable</span></code>;
+Default        : <code class="docutils literal notranslate"><span class="pre">module</span></code>.</p>
+<p>It selects the GT configuration from the platform definition file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).
+This configuration applies to all lanes of the GT.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="gt-tx-diffctrl">
+<span id="gt-mac-parameter-gt-tx-diffctrl"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_diffctrl</span></code><a class="headerlink" href="#gt-tx-diffctrl" title="Permalink to this headline">¶</a></h4>
+<p>Optional;
+Type           : integer;
+Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;
+Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
+<p>This parameter sets the <code class="docutils literal notranslate"><span class="pre">TXDIFFCTRL</span></code> input to transmitter.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="gt-tx-pre-emph">
+<span id="gt-mac-parameter-gt-tx-pre-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_pre_emph</span></code><a class="headerlink" href="#gt-tx-pre-emph" title="Permalink to this headline">¶</a></h4>
+<p>Optional;
+Type           : integer;
+Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;
+Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
+<p>This parameter sets the <code class="docutils literal notranslate"><span class="pre">TXPRECURSOR</span></code> input to transmitter.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="gt-tx-post-emph">
+<span id="gt-mac-parameter-gt-tx-post-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_post_emph</span></code><a class="headerlink" href="#gt-tx-post-emph" title="Permalink to this headline">¶</a></h4>
+<p>Optional;
+Type           : integer;
+Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;
+Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
+<p>This parameter sets the <code class="docutils literal notranslate"><span class="pre">TXPOSTCURSOR</span></code> input to transmitter.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="gt-tx-polarity">
+<span id="gt-mac-parameter-gt-tx-polarity"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_polarity</span></code><a class="headerlink" href="#gt-tx-polarity" title="Permalink to this headline">¶</a></h4>
+<p>Optional;
+Type           : string;
+Possible values: <code class="docutils literal notranslate"><span class="pre">normal</span></code> or <code class="docutils literal notranslate"><span class="pre">inverted</span></code>;
+Default        : <code class="docutils literal notranslate"><span class="pre">normal</span></code>.</p>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">normal</span></code>, TXP is positive, and TXN is negative.</p>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">inverted</span></code>, TXP is negative, and TXN is positive.</p>
+<hr class="docutils" />
+</div>
+<div class="section" id="gt-rx-use-lpm">
+<span id="gt-mac-parameter-gt-rx-use-lpm"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_rx_use_lpm</span></code><a class="headerlink" href="#gt-rx-use-lpm" title="Permalink to this headline">¶</a></h4>
+<p>Optional;
+Type           : boolean;
+Possible values: <code class="docutils literal notranslate"><span class="pre">false</span></code> or <code class="docutils literal notranslate"><span class="pre">true</span></code>;
+Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the GTY transceiver to use the DFE receive equalizer.</p>
+<p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the GTY transceiver to use the LPM receive equalizer.</p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="output-files">
+<h2><a class="toc-backref" href="#id41">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
+<p>All GT measurements are stored in an output CSV file generated in xbtest logging directory.
+The values are stored in CSV type format with one column for each information type.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>If the command line option <a class="reference internal" href="../usage/command-line-options.html#cmdoption-L"><code class="xref std std-option docutils literal notranslate"><span class="pre">-L</span></code></a> is used while calling the <a class="reference internal" href="../introduction/overview.html#application-software"><span class="std std-ref">Application software</span></a>, no output file is generated.</p>
+</div>
+<p>For each GT MAC CU, one file is generated per lane with the suffix/extension <code class="docutils literal notranslate"><span class="pre">_gt&lt;gt_cu_index&gt;_&lt;lane_index&gt;.csv</span></code> where:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;gt_cu_index&gt;</span></code> is the index of the GT MAC CU.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;lane_index&gt;</span></code> is the index of the lane.</p></li>
+</ul>
+</div></blockquote>
+<p>For each test of the <a class="reference internal" href="#gt-mac-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a>, a new row containing the test results and status is present in this file.
+All columns present in the file are defined as:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Overall result</strong>: Set to <code class="docutils literal notranslate"><span class="pre">FAIL</span></code> as soon as one test fails, otherwise set to <code class="docutils literal notranslate"><span class="pre">PASS</span></code>.</p></li>
+<li><p><strong>Test result</strong>: Set to <code class="docutils literal notranslate"><span class="pre">FAIL</span></code> if the current test fails, otherwise set to <code class="docutils literal notranslate"><span class="pre">PASS</span></code>.</p></li>
+<li><p><strong>Status</strong>: This group of columns is composed of one column for each status registers (see <a class="reference internal" href="#status"><span class="std std-ref">Status</span></a>).</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+<!-- Atalwar: Moved the footer code to layout.html to resolve conflict with the Xilinx template -->
+</footer>
+
+        </div>
+      </div>
+
+
+	  <!-- Sphinx Page Footer block -->
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="gt-prbs-test-case-description.html" class="btn btn-neutral float-right" title="GT PRBS test case description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="gt-test-case-description.html" class="btn btn-neutral float-left" title="GT test cases description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo" class="copyright">
+    <p class="footerinfo">
+      <span class="lastupdated">
+        Last updated on May 05, 2022.
+      </span>
+
+    </p>
+	<br>
+  </div>
+      </div>
+    </section>
+
+
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+   <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+
+  <script type="text/javascript" id="searchindexloader"></script>
+
+
+  
+  
+    
+  
+
+
+
+  <!--  Xilinx template footer block -->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="xilinxExperienceFragments experiencefragment aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--16">
+					<div class="xf-content-height">
+						<div class="aem-Grid aem-Grid--16 aem-Grid--default--16 ">
+							<div class="footer parbase aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--16">
+								<noindex>
+                  <!-- make footer fixed - NileshP -->
+                  <style>
+                        .footer {
+                        position: fixed;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        }
+                  </style>
+                  <!-- make footer fixed NileshP-->
+									<footer>
+										<div class="aem-Grid aem-Grid--16">
+											<div class="aem-GridColumn aem-GridColumn--xxxlarge--none aem-GridColumn--xsmall--16 aem-GridColumn--offset--xsmall--0 aem-GridColumn--xlarge--none aem-GridColumn--xxlarge--none aem-GridColumn--default--none aem-GridColumn--offset--large--1 aem-GridColumn--xlarge--12 aem-GridColumn--offset--default--0 aem-GridColumn--xxlarge--10 aem-GridColumn--offset--xlarge--2 aem-GridColumn--offset--xxlarge--3 aem-GridColumn--offset--xxxlarge--4 aem-GridColumn--xsmall--none aem-GridColumn--large--none aem-GridColumn aem-GridColumn--large--14 aem-GridColumn--xxxlarge--8 aem-GridColumn--default--16">
+												<div class="container-fluid sub-footer">
+													<div class="row">
+														<div class="footerSocial parbase">
+															<div class="col-md-push-6 col-lg-push-6 col-md-6 col-lg-6">
+																<ul class="list-inline pull-right social-menu">
+																	<li>
+																		<a href="https://www.linkedin.com/company/xilinx">
+																		<span class="linkedin icon"></span>
+																		<span class="sr-only">Connect on LinkedIn</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="https://www.twitter.com/XilinxInc">
+																		<span class="twitter icon"></span>
+																		<span class="sr-only">Follow us on Twitter</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="https://www.facebook.com/XilinxInc">
+																		<span class="facebook icon"></span>
+																		<span class="sr-only">Connect on Facebook</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="https://www.youtube.com/XilinxInc">
+																		<span class="youtube icon"></span>
+																		<span class="sr-only">Watch us on YouTube</span>
+																		</a>
+																	</li>
+																	<li>
+																		<a href="https://www.xilinx.com/registration/subscriber-signup.html">
+																		<span class="newsletter icon"></span>
+																		<span class="sr-only">Subscribe to Newsletter</span>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+														<div class="col-md-pull-6 col-lg-pull-6 col-md-6 col-lg-6">
+															<span class="copyright">
+                                  
+                                  &copy; 2018-2022, Xilinx, Inc.
+                              </span>
+															<ul class="list-inline sub-menu">
+																<li>
+																	<a href="https://www.xilinx.com/about/privacy-policy.html">Privacy</a>
+																</li>
+																<li>
+																	<a href="https://www.xilinx.com/about/legal.html">Legal</a>
+																</li>
+																<li>
+																	<a href="https://www.xilinx.com/about/contact.html">Contact</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</footer>
+								</noindex>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="quicklinks parbase aem-GridColumn--default--none aem-GridColumn aem-GridColumn--offset--default--0 aem-GridColumn--default--16">
+					<noindex>
+						<span class="quickLinks">
+							<ul>
+								<li>
+									<a href="#top" class="btn backToTop">
+									<span class="fas fa-angle-up" aria-hidden="true"></span>
+									</a>
+								</li>
+							</ul>
+						</span>
+					</noindex>
+				</div>
+			</div>
+		</div>
+		<script>window.CQ = window.CQ || {}</script>
+		<script src="https://static.cloud.coveo.com/searchui/v2.4382/js/CoveoJsSearch.Lazy.min.js"></script>
+		<script>
+			var underscoreSetup = function () {
+			  _.templateSettings.interpolate = /\{\{=([^-][\S\s]+?)\}\}/g;
+			  _.templateSettings.evaluate = /\{\{([^-=][\S\s]+?)\}\}/g;
+			  _.templateSettings.escape = /\{\{-([^=][\S\s]+?)\}\}/g;
+			}
+
+			underscoreSetup();
+		</script>
+	</body>
+</html>

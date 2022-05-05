@@ -1,0 +1,59 @@
+{
+  "comment" : "#########################################################################################",
+  "comment" : "xbtest optional invalid sites definition",
+  "comment" : "This is a generated template file",
+  "comment" : "How to use:",
+  "comment" : "    1. Rename to invalid.json",
+  "comment" : "    2. Modify according to your requirements",
+  "comment" : "#########################################################################################",
+  "comment" : "Locations of sites not used in power CU floorplan (PL_INVALID) are defined per site type and per SLR.",
+  "comment" : "Provide a single site (<x0>,<y0>) or a site rectangle defined by bottom left (<x1>,<y1>) and top right (<x2>,<y2>) corners:",
+  "comment" : "See dynamic_geometry for supported <site type>",
+  "comment" : "SLR_<SLR idx> : [",
+  "comment" : "  { location: <site type>_X<x0>Y<y0> }",
+  "comment" : "  { location: <site type>_X<x1>Y<y1>:<site type>_X<x2>Y<y2> }",
+  "comment" : "]",
+  "comment" : "Here is an example of one single site and one rectangle per site type per available SLR",
+  "PL_INVALID" : {
+    "SLR_0" : [
+      { "location" : "SLICE_X0Y0" },
+      { "location" : "SLICE_X0Y1:SLICE_X0Y2" },
+      { "location" : "DSP48E2_X0Y0" },
+      { "location" : "DSP48E2_X0Y1:DSP48E2_X0Y2" },
+      { "location" : "RAMB36_X0Y0" },
+      { "location" : "RAMB36_X0Y1:RAMB36_X0Y2" },
+      { "location" : "URAM288_X0Y0" },
+      { "location" : "URAM288_X0Y1:URAM288_X0Y2" }
+    ],
+    "SLR_1" : [
+      { "location" : "SLICE_X0Y240" },
+      { "location" : "SLICE_X0Y241:SLICE_X0Y242" },
+      { "location" : "DSP48E2_X0Y96" },
+      { "location" : "DSP48E2_X0Y97:DSP48E2_X0Y98" },
+      { "location" : "RAMB36_X0Y48" },
+      { "location" : "RAMB36_X0Y49:RAMB36_X0Y50" },
+      { "location" : "URAM288_X0Y64" },
+      { "location" : "URAM288_X0Y65:URAM288_X0Y66" }
+    ],
+    "SLR_2" : [
+      { "location" : "SLICE_X0Y480" },
+      { "location" : "SLICE_X0Y481:SLICE_X0Y482" },
+      { "location" : "DSP48E2_X0Y192" },
+      { "location" : "DSP48E2_X0Y193:DSP48E2_X0Y194" },
+      { "location" : "RAMB36_X0Y96" },
+      { "location" : "RAMB36_X0Y97:RAMB36_X0Y98" },
+      { "location" : "URAM288_X0Y128" },
+      { "location" : "URAM288_X0Y129:URAM288_X0Y130" }
+    ],
+    "SLR_3" : [
+      { "location" : "SLICE_X0Y720" },
+      { "location" : "SLICE_X0Y721:SLICE_X0Y722" },
+      { "location" : "DSP48E2_X0Y288" },
+      { "location" : "DSP48E2_X0Y289:DSP48E2_X0Y290" },
+      { "location" : "RAMB36_X0Y144" },
+      { "location" : "RAMB36_X0Y145:RAMB36_X0Y146" },
+      { "location" : "URAM288_X0Y192" },
+      { "location" : "URAM288_X0Y193:URAM288_X0Y194" }
+    ]
+  }
+}

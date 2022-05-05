@@ -1,0 +1,186 @@
+{
+    "comment": [
+        "xbtest platform definition JSON file for: xilinx:u250:gen3x16_xdma_4_1:202210.1"
+    ],
+    "device": {
+        "runtime": {
+            "download_time": 20
+        },
+        "gt": {
+            "0": {
+                "name": "top",
+                "transceiver_settings": {
+                    "module": {
+                        "tx_differential_swing_control": 0,
+                        "tx_pre_emphasis": 0,
+                        "tx_post_emphasis": 0,
+                        "rx_equaliser": "DFE"
+                    },
+                    "cable": {
+                        "tx_differential_swing_control": 0,
+                        "tx_pre_emphasis": 0,
+                        "tx_post_emphasis": 0,
+                        "rx_equaliser": "DFE"
+                    }
+                }
+            },
+            "1": {
+                "name": "top",
+                "transceiver_settings": {
+                    "module": {
+                        "tx_differential_swing_control": 0,
+                        "tx_pre_emphasis": 0,
+                        "tx_post_emphasis": 0,
+                        "rx_equaliser": "DFE"
+                    },
+                    "cable": {
+                        "tx_differential_swing_control": 0,
+                        "tx_pre_emphasis": 0,
+                        "tx_post_emphasis": 0,
+                        "rx_equaliser": "DFE"
+                    }
+                }
+            }
+        },
+        "memory": {
+            "0": {
+                "name": "DDR",
+                "dma_bw": {
+                    "write": {
+                        "low": 7500
+                    }
+                },
+                "cu_outstanding": {
+                    "only_wr": {
+                        "write": {
+                            "nominal": 4
+                        }
+                    },
+                    "only_rd": {
+                        "read": {
+                            "nominal": 3
+                        }
+                    },
+                    "simul_wr_rd": {
+                        "write": {
+                            "nominal": 4
+                        },
+                        "read": {
+                            "nominal": 4
+                        }
+                    }
+                },
+                "cu_bw": {
+                    "only_wr": {
+                        "write": {
+                            "average": 15182
+                        }
+                    },
+                    "only_rd": {
+                        "read": {
+                            "average": 17178
+                        }
+                    },
+                    "alt_wr_rd": {
+                        "write": {
+                            "average": 8500
+                        },
+                        "read": {
+                            "average": 8500
+                        }
+                    },
+                    "simul_wr_rd": {
+                        "write": {
+                            "average": 8487
+                        },
+                        "read": {
+                            "average": 8487
+                        }
+                    }
+                },
+                "cu_latency": {
+                    "only_rd": {
+                        "read": {
+                            "high": 586,
+                            "low": 315
+                        }
+                    },
+                    "simul_wr_rd": {
+                        "write": {
+                            "high": 2098,
+                            "low": 1129
+                        },
+                        "read": {
+                            "high": 2098,
+                            "low": 1129
+                        }
+                    },
+                    "only_wr": {
+                        "write": {
+                            "high": 1042,
+                            "low": 561
+                        }
+                    }
+                }
+            },
+            "1": {
+                "name": "HOST",
+                "cu_rate": {
+                    "only_wr": {
+                        "write": {
+                            "nominal": 50
+                        }
+                    }
+                },
+                "cu_bw": {
+                    "only_wr": {
+                        "write": {
+                            "high": 16000,
+                            "low": 4000
+                        }
+                    },
+                    "only_rd": {
+                        "read": {
+                            "high": 16000,
+                            "low": 4000
+                        }
+                    },
+                    "simul_wr_rd": {
+                        "write": {
+                            "high": 16000,
+                            "low": 4000
+                        },
+                        "read": {
+                            "high": 16000,
+                            "low": 4000
+                        }
+                    }
+                },
+                "cu_latency": {
+                    "only_wr": {
+                        "write": {
+                            "low": 1,
+                            "high": 6000
+                        }
+                    },
+                    "only_rd": {
+                        "read": {
+                            "low": 1,
+                            "high": 6000
+                        }
+                    },
+                    "simul_wr_rd": {
+                        "write": {
+                            "low": 1,
+                            "high": 6000
+                        },
+                        "read": {
+                            "low": 1,
+                            "high": 6000
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

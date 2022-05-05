@@ -1,0 +1,23 @@
+{
+  "default" : {
+    "build" : {
+      "pwr_floorplan_dir" : "../pwr_cfg",
+      "vpp_options_dir" : "../vpp_cfg"
+    }
+  },
+  "xbtest_stress" : {
+    "cu_selection" : {
+      "power"     : [0, 2],
+      "gt_mac"    : [0, 1],
+      "memory"    : ["HBM", "HOST"]
+    }
+  },
+  "xbtest_power_fp" : {
+    "build" : {
+      "display_pwr_floorplan" : true
+    },
+    "cu_selection" : {
+      "power" : [0, 2]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "comment" : "#########################################################################################",
+  "comment" : "xbtest optional invalid sites definition",
+  "comment" : "#########################################################################################",
+  "comment" : "Locations of sites not used in power CU floorplan (PL_INVALID) are defined per site type and per SLR.",
+  "comment" : "Provide a single site (<x0>,<y0>) or a site rectangle defined by bottom left (<x1>,<y1>) and top right (<x2>,<y2>) corners:",
+  "comment" : "See dynamic_geometry for supported <site type>",
+  "comment" : "SLR_<SLR idx> : [",
+  "comment" : "  { location: <site type>_X<x0>Y<y0> }",
+  "comment" : "  { location: <site type>_X<x1>Y<y1>:<site type>_X<x2>Y<y2> }",
+  "comment" : "]",
+  "comment" : "Here is an example of one single site and one rectangle per site type per available SLR",
+  "PL_INVALID" : {
+    "SLR_1" : [
+      { "location": "SLICE_X202Y240:SLICE_X205Y364", "comment" : "Leave some room for the BLD routing to bleed into ULP" },
+      { "location": "SLICE_X206Y360:SLICE_X232Y364", "comment" : "Leave some room for the BLD routing to bleed into ULP" }
+    ]
+  }
+}

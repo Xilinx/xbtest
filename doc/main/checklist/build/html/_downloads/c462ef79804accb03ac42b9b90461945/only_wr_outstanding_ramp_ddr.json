@@ -1,0 +1,49 @@
+{
+    "testcases": {
+        "memory": {
+            "DDR": {
+                "global_config": {
+                    "disable_prewrite": true,
+                    "test_sequence": [
+
+
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 1   },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 2   },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 3   },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 4   },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 5   },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 6   },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 7   },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 8   },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 9   },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 10  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 11  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 12  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 13  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 14  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 15  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 16  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 17  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 18  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 19  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 20  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 21  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 22  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 23  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 24  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 25  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 26  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 27  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 28  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 29  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 30  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 31  },
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 32  },
+
+                        { "duration": 20, "mode": "only_wr", "wr_outstanding": 0   }
+                   ]
+                }
+            }
+        }
+    }
+}

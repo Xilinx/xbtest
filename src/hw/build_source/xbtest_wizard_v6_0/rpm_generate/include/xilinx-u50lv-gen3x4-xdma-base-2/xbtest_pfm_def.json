@@ -1,0 +1,121 @@
+{
+    "comment": [
+        "xbtest platform definition JSON file for: xilinx:u50lv:gen3x4_xdma_2:202010.1"
+    ],
+    "device": {
+        "runtime": {
+            "download_time": 20
+        },
+        "gt": {
+            "0": {
+                "name": "top",
+                "transceiver_settings": {
+                    "module": {
+                        "tx_differential_swing_control": 11,
+                        "tx_pre_emphasis": 0,
+                        "tx_post_emphasis": 0,
+                        "rx_equaliser": "DFE"
+                    },
+                    "cable": {
+                        "tx_differential_swing_control": 11,
+                        "tx_pre_emphasis": 0,
+                        "tx_post_emphasis": 0,
+                        "rx_equaliser": "DFE"
+                    }
+                }
+            }
+        },
+        "memory": {
+            "0": {
+                "name": "HBM",
+                "dma_config": {
+                    "buffer_size": 128
+                },
+                "cu_rate": {
+                    "only_wr": {
+                        "write": {
+                            "nominal": 57
+                        }
+                    },
+                    "only_rd": {
+                        "read": {
+                            "nominal": 50
+                        }
+                    },
+                    "simul_wr_rd": {
+                        "write": {
+                            "nominal": 26
+                        },
+                        "read": {
+                            "nominal": 26
+                        }
+                    }
+                },
+                "cu_bw": {
+                    "only_wr": {
+                        "write": {
+                            "average": 4410
+                        }
+                    },
+                    "only_rd": {
+                        "read": {
+                            "average": 3814
+                        }
+                    },
+                    "simul_wr_rd": {
+                        "write": {
+                            "average": 2026
+                        },
+                        "read": {
+                            "average": 2026
+                        }
+                    }
+                },
+                "cu_latency": {
+                    "only_wr": {
+                        "write": {
+                            "high": 156,
+                            "low": 56
+                        }
+                    },
+                    "only_rd": {
+                        "read": {
+                            "high": 319,
+                            "low": 138
+                        }
+                    },
+                    "simul_wr_rd": {
+                        "write": {
+                            "high": 156,
+                            "low": 56
+                        },
+                        "read": {
+                            "high": 342,
+                            "low": 138
+                        }
+                    }
+                },
+                "cu_outstanding": {
+                    "only_wr": {
+                        "write": {
+                            "nominal": 2
+                        }
+                    },
+                    "only_rd": {
+                        "read": {
+                            "nominal": 2
+                        }
+                    },
+                    "simul_wr_rd": {
+                        "write": {
+                            "nominal": 2
+                        },
+                        "read": {
+                            "nominal": 4
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

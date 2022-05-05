@@ -1,0 +1,49 @@
+{
+    "testcases": {
+        "memory": {
+            "HBM": {
+                "global_config": {
+                    "disable_prewrite": true,
+                    "test_sequence": [
+                        { "duration":  1, "mode": "only_wr", "wr_outstanding": 0 },
+
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 1  , "rd_outstanding": 1   },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 2  , "rd_outstanding": 2   },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 3  , "rd_outstanding": 3   },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 4  , "rd_outstanding": 4   },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 5  , "rd_outstanding": 5   },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 6  , "rd_outstanding": 6   },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 7  , "rd_outstanding": 7   },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 8  , "rd_outstanding": 8   },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 9  , "rd_outstanding": 9   },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 10 , "rd_outstanding": 10  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 11 , "rd_outstanding": 11  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 12 , "rd_outstanding": 12  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 13 , "rd_outstanding": 13  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 14 , "rd_outstanding": 14  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 15 , "rd_outstanding": 15  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 16 , "rd_outstanding": 16  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 17 , "rd_outstanding": 17  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 18 , "rd_outstanding": 18  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 19 , "rd_outstanding": 19  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 20 , "rd_outstanding": 20  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 21 , "rd_outstanding": 21  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 22 , "rd_outstanding": 22  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 23 , "rd_outstanding": 23  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 24 , "rd_outstanding": 24  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 25 , "rd_outstanding": 25  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 26 , "rd_outstanding": 26  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 27 , "rd_outstanding": 27  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 28 , "rd_outstanding": 28  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 29 , "rd_outstanding": 29  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 30 , "rd_outstanding": 30  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 31 , "rd_outstanding": 31  },
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding": 32 , "rd_outstanding": 32  },
+
+                        { "duration": 20, "mode": "simultaneous_wr_rd", "wr_outstanding":   0, "rd_outstanding": 0   }
+                   ]
+                }
+            }
+        }
+    }
+}

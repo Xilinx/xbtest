@@ -1,0 +1,79 @@
+{
+    "default": {
+        "build": {
+            "pwr_floorplan_dir": "../pwr_cfg",
+            "vpp_options_dir"  : "../vpp_cfg"
+        },
+        "platform": {
+            "p2p_support": false,
+            "gt" : {
+                "0" : {
+                    "slr"           : "SLR1",
+                    "type"          : "GTY",
+                    "group_select"  : ["Quad_X0Y7"]
+                }
+            }
+        },
+        "cu_configuration" : {
+            "clock" : {
+                "0" : {
+                    "freq": 250
+                }
+            },
+            "gt" : {
+                "0" : {
+                    "diff_clocks"   : ["io_clk_qsfp_refclka_00"],
+                    "serial_port"   : ["io_gt_qsfp_00"]
+                }
+            },
+            "gt_mac" : {
+                "0" : {
+                    "ip_sel": "xxv",
+                    "enable_rsfec": false
+                }
+            },
+            "memory" : {
+                "HBM" : {
+                    "global" : {
+                        "axi_data_size": 256
+                    }
+                }
+            }
+        }
+    },
+    "xbtest_stress": {
+        "cu_selection" : {
+            "power"     : [0, 1],
+            "gt_mac"    : [0],
+            "memory"    : ["HBM"]
+        }
+    },
+    "xbtest_power": {
+        "cu_selection" : {
+            "power"     : [0, 1]
+        }
+    },
+    "xbtest_gt": {
+        "cu_selection" : {
+            "gt_mac"    : [0]
+        }
+    },
+    "xbtest_gt_prbs": {
+        "build": {
+            "pwr_floorplan_dir": ""
+        },
+        "cu_selection" : {
+            "gt_prbs"    : [0]
+        }
+    },
+    "xbtest_memory": {
+        "cu_selection" : {
+            "memory"    : ["HBM"]
+        }
+    },
+    "xbtest_verify": {
+        "build": {
+            "pwr_floorplan_dir": ""
+        }
+    }
+}

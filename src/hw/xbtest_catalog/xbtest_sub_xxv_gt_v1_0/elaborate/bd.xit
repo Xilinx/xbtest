@@ -1,0 +1,103 @@
+proc update_bd {} {
+
+    set xbtest_subsystem      [::ipxit::current_inst]
+    set c_board               [get_property CONFIG.C_BOARD  $xbtest_subsystem]
+    set ENABLE_RSFEC          [get_property CONFIG.ENABLE_RSFEC  $xbtest_subsystem]
+
+    # originally tested with following version "gt_quad_base:1.1" "xxv_ethernet:3.3" "util_ds_buf:2.1" "bufg_gt:1.0"
+
+    set vlnv_gt_quad_base                   "xilinx.com:ip:gt_quad_base"
+    set vlnv_xxv_ethernet                   "xilinx.com:ip:xxv_ethernet"
+    set vlnv_gt_refclk_buf                  "xilinx.com:ip:util_ds_buf"
+    set vlnv_gt_clk_buf                     "xilinx.com:ip:bufg_gt"
+
+    ## GT_Quad
+    # from pg331-versal-transceivers.pdf:
+    #   GT Quad parameters are propagated from its connected IPs when the design is validated. Hence all GT Quad parameters are marked Auto in the Transceiver Wizard GUI.
+    # so no property to set
+    set quad [create_bd_cell -type ip -vlnv $vlnv_gt_quad_base gt_quad_base_0]
+    set quad_params []
+    # CR-1089634: add the second GT ref clk. Versal quad is actually 2 duals
+    lappend quad_params CONFIG.REFCLK_STRING "HSCLK0_LCPLLGTREFCLK0 refclk_PROT0_R0_PROT1_R0_161.1328125_MHz_unique1 HSCLK1_LCPLLGTREFCLK0 refclk_PROT2_R0_PROT3_R0_161.1328125_MHz_unique1"
+    set_property -dict $quad_params $quad
+
+    connect_bd_intf_net [get_bd_intf_ports GT_Serial_0] [get_bd_intf_pins gt_quad_base_0/GT_Serial]
+    connect_bd_net [get_bd_ports gt_txn_out_0] [get_bd_pins gt_quad_base_0/txn]
+    connect_bd_net [get_bd_ports gt_txp_out_0] [get_bd_pins gt_quad_base_0/txp]
+    connect_bd_net [get_bd_ports gt_rxn_in_0] [get_bd_pins gt_quad_base_0/rxn]
+    connect_bd_net [get_bd_ports gt_rxp_in_0] [get_bd_pins gt_quad_base_0/rxp]
+    connect_bd_net [get_bd_ports apb3clk_quad] [get_bd_pins gt_quad_base_0/apb3clk]
+
+    # GT Ref Clock. connect both clock for versal as versal is actually 2 duals inside the quad
+    create_bd_cell -type ip -vlnv $vlnv_gt_refclk_buf util_ds_buf_0
+    set_property -dict [list CONFIG.C_BUF_TYPE {IBUFDSGTE}] [get_bd_cells util_ds_buf_0]
+    connect_bd_net [get_bd_pins util_ds_buf_0/IBUF_OUT] [get_bd_pins gt_quad_base_0/GT_REFCLK0] [get_bd_pins gt_quad_base_0/GT_REFCLK1]
+    connect_bd_intf_net [get_bd_intf_ports gt_refclk] [get_bd_intf_pins util_ds_buf_0/CLK_IN_D]
+
+    for {set i 0} {$i < 4} {incr i} {
+        ## XXV lane
+        create_bd_cell -type ip -vlnv $vlnv_xxv_ethernet xxv_ethernet_0
+        set_property -dict [list CONFIG.GT_DRP_CLK.VALUE_SRC USER] [get_bd_cells xxv_ethernet_0]
+        set_property -dict [list CONFIG.INCLUDE_FEC_LOGIC {1} CONFIG.GT_DRP_CLK {75.00}] [get_bd_cells xxv_ethernet_0]
+        if {$ENABLE_RSFEC == 1} {
+            set_property -dict [list CONFIG.INCLUDE_RSFEC_LOGIC {1}] [get_bd_cells xxv_ethernet_0]
+        }
+        set_property name mac_lane_${i} [get_bd_cells xxv_ethernet_0]
+
+        ## interface conected
+        connect_bd_intf_net [get_bd_intf_ports s_axi_0_${i}]            [get_bd_intf_pins mac_lane_${i}/s_axi_0]
+        connect_bd_intf_net [get_bd_intf_ports axis_tx_0_${i}]          [get_bd_intf_pins mac_lane_${i}/axis_tx_0]
+        connect_bd_intf_net [get_bd_intf_ports ctl_tx_0_${i}]           [get_bd_intf_pins mac_lane_${i}/ctl_tx_0]
+        connect_bd_net [get_bd_ports rx_core_clk_0_${i}]                [get_bd_pins mac_lane_${i}/rx_core_clk_0]
+        connect_bd_net [get_bd_ports rx_serdes_clk_0_${i}]              [get_bd_pins mac_lane_${i}/rx_serdes_clk_0]
+        connect_bd_net [get_bd_ports rx_serdes_reset_0_${i}]            [get_bd_pins mac_lane_${i}/rx_serdes_reset_0]
+        connect_bd_net [get_bd_ports tx_core_clk_0_${i}]                [get_bd_pins mac_lane_${i}/tx_core_clk_0]
+        connect_bd_net [get_bd_ports s_axi_aclk_0_${i}]                 [get_bd_pins mac_lane_${i}/s_axi_aclk_0]
+        connect_bd_net [get_bd_ports s_axi_aresetn_0_${i}]              [get_bd_pins mac_lane_${i}/s_axi_aresetn_0]
+        connect_bd_net [get_bd_ports pm_tick_0_${i}]                    [get_bd_pins mac_lane_${i}/pm_tick_0]
+        connect_bd_net [get_bd_ports rx_reset_0_${i}]                   [get_bd_pins mac_lane_${i}/rx_reset_0]
+        connect_bd_net [get_bd_ports tx_reset_0_${i}]                   [get_bd_pins mac_lane_${i}/tx_reset_0]
+        connect_bd_net [get_bd_ports tx_preamblein_0_${i}]              [get_bd_pins mac_lane_${i}/tx_preamblein_0]
+        connect_bd_net [get_bd_ports gtwiz_reset_clk_freerun_in_0_${i}] [get_bd_pins mac_lane_${i}/gtwiz_reset_clk_freerun_in_0]
+
+        connect_bd_intf_net [get_bd_intf_ports axis_rx_0_${i}]      [get_bd_intf_pins mac_lane_${i}/axis_rx_0]
+        connect_bd_intf_net [get_bd_intf_ports stat_tx_0_${i}]      [get_bd_intf_pins mac_lane_${i}/stat_tx_0]
+        connect_bd_intf_net [get_bd_intf_ports stat_rx_0_${i}]      [get_bd_intf_pins mac_lane_${i}/stat_rx_0]
+        connect_bd_intf_net [get_bd_intf_ports FEC_stat_0_${i}]     [get_bd_intf_pins mac_lane_${i}/FEC_stat_0]
+        if {$ENABLE_RSFEC == 1} {
+            connect_bd_intf_net [get_bd_intf_ports RS_FEC_stat_0_${i}]  [get_bd_intf_pins mac_lane_${i}/RS_FEC_stat_0]
+        }
+        connect_bd_net [get_bd_ports stat_rx_status_0_${i}]         [get_bd_pins mac_lane_${i}/stat_rx_status_0]
+        connect_bd_net [get_bd_ports tx_unfout_0_${i}]              [get_bd_pins mac_lane_${i}/tx_unfout_0]
+        connect_bd_net [get_bd_ports user_reg0_0_${i}]              [get_bd_pins mac_lane_${i}/user_reg0_0]
+        connect_bd_net [get_bd_ports rx_preambleout_0_${i}]         [get_bd_pins mac_lane_${i}/rx_preambleout_0]
+        connect_bd_net [get_bd_ports rx_resetdone_out_0_${i}]       [get_bd_pins mac_lane_${i}/rx_resetdone_out_0]
+        connect_bd_net [get_bd_ports tx_resetdone_out_0_${i}]       [get_bd_pins mac_lane_${i}/tx_resetdone_out_0]
+
+        connect_bd_intf_net [get_bd_intf_pins mac_lane_${i}/gt_tx_serdes_interface_0] [get_bd_intf_pins gt_quad_base_0/TX${i}_GT_IP_Interface]
+        connect_bd_intf_net [get_bd_intf_pins mac_lane_${i}/gt_rx_serdes_interface_0] [get_bd_intf_pins gt_quad_base_0/RX${i}_GT_IP_Interface]
+
+        connect_bd_net [get_bd_pins gt_quad_base_0/ch${i}_loopback] [get_bd_pins mac_lane_${i}/gtwiz_loopback_0]
+        connect_bd_net [get_bd_pins gt_quad_base_0/gtpowergood] [get_bd_pins mac_lane_${i}/gtpowergood_in_0]
+
+        ## user clk buf
+        create_bd_cell -type ip -vlnv $vlnv_gt_clk_buf bufg_gt_0
+        set_property name bufg_gt_tx_${i} [get_bd_cells bufg_gt_0]
+        set_property -dict [list CONFIG.FREQ_HZ {390625000.0}] [get_bd_cells bufg_gt_tx_${i}]
+        create_bd_cell -type ip -vlnv $vlnv_gt_clk_buf bufg_gt_0
+        set_property name bufg_gt_rx_${i} [get_bd_cells bufg_gt_0]
+        set_property -dict [list CONFIG.FREQ_HZ {390625000.0}] [get_bd_cells bufg_gt_rx_${i}]
+        # Tx usrclk
+        connect_bd_net [get_bd_pins gt_quad_base_0/ch${i}_txoutclk] [get_bd_pins bufg_gt_tx_${i}/outclk]
+        connect_bd_net [get_bd_pins bufg_gt_tx_${i}/usrclk] [get_bd_pins gt_quad_base_0/ch${i}_txusrclk]
+        connect_bd_net [get_bd_ports tx_usrclk_${i}] [get_bd_pins bufg_gt_tx_${i}/usrclk]
+
+        # Rx usrclk
+        connect_bd_net [get_bd_pins gt_quad_base_0/ch${i}_rxoutclk] [get_bd_pins bufg_gt_rx_${i}/outclk]
+        connect_bd_net [get_bd_pins bufg_gt_rx_${i}/usrclk] [get_bd_pins gt_quad_base_0/ch${i}_rxusrclk]
+        connect_bd_net [get_bd_ports rx_usrclk_${i}] [get_bd_pins bufg_gt_rx_${i}/usrclk]
+    }
+
+}
+
+update_bd
