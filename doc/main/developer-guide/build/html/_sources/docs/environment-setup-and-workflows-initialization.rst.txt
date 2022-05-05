@@ -32,7 +32,7 @@ Get xbtest sources and packages using the following command:
 
 .. code-block:: bash
 
-    git clone https://gitenterprise.xilinx.com/techdocs/xbtest <xbtest_local_repo>
+    git clone https://github.com/Xilinx/xbtest <xbtest_local_repo>
 
 The HW sources are located in ``<xbtest_local_repo>/src/hw``.
 
