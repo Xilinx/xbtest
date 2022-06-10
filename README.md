@@ -21,19 +21,19 @@ Validate the Alveo card hardware is operating correctly within the host server e
   </thead>
   <tbody>
     <tr>
-      <th><a class="reference external" href="https://fuzzy-waddle-0c9a8469.pages.github.io/">Home</a></th>
+      <th><a class="reference external" href="https://xilinx.github.io/xbtest/">Home</a></th>
       <td>Documentation hub home page.</td>
     </tr>
     <tr>
-      <th><a class="reference external" href="https://fuzzy-waddle-0c9a8469.pages.github.io/doc/main/user-guide/build/html/index.html">User guide</a></th>
+      <th><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></th>
       <td>Describes how to run xbtest</td>
     </tr>
     <tr>
-      <th><a class="reference external" href="https://fuzzy-waddle-0c9a8469.pages.github.io/doc/main/developer-guide/build/html/index.html">Developer guide</a></th>
+      <th><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></th>
       <td>Describes how to build xbtest.</td>
     </tr>
     <tr>
-      <th><a class="reference external" href="https://fuzzy-waddle-0c9a8469.pages.github.io/doc/main/checklist/build/html/index.html">Checklist</a></th>
+      <th><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></th>
       <td>Describes instructions to verify your xbtest build works on your platform.</td>
     </tr>
   </tbody>
