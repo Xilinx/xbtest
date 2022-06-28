@@ -6,8 +6,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+		
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -64,7 +63,6 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -715,10 +713,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="select-pre-canned-tests">
-<span id="id1"></span><h1>Select pre-canned tests<a class="headerlink" href="#select-pre-canned-tests" title="Permalink to this heading">¶</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
+  <div class="section" id="select-pre-canned-tests">
+<span id="id1"></span><h1>Select pre-canned tests<a class="headerlink" href="#select-pre-canned-tests" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <p>Pre-canned test JSON files are various example of test JSON files provided to xbtest users in the xclbin RPM/DEB packages.</p>
 <p>The content of pre-canned test JSON files depends on the features supported in the xclbin. Their definition is provided in the following section. Note:</p>
 <blockquote>
@@ -746,9 +744,9 @@
 <li><p>Test conditions.</p></li>
 </ul>
 </div></blockquote>
-</section>
-<section id="overwrite">
-<h2>Overwrite<a class="headerlink" href="#overwrite" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="overwrite">
+<h2>Overwrite<a class="headerlink" href="#overwrite" title="Permalink to this headline">¶</a></h2>
 <p>Default pre-canned test JSON files are automatically generated based on the compute units selected in <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a> (via <code class="docutils literal notranslate"><span class="pre">cu_selection</span></code> node) when generating an xclbin using <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow.</p>
 <p>They are automatically passed to the <a class="reference internal" href="architecture-and-workflows.html#rpm-generate"><span class="std std-ref">rpm_generate</span></a> workflow using xclbin file as carrying vector (they are embedded in xclbin section <code class="docutils literal notranslate"><span class="pre">USER_METADATA</span></code>).</p>
 <p>If needed, you can overwrite the content and the quantity of pre-canned test JSON files packaged with you xclbin.</p>
@@ -791,12 +789,12 @@
 </ul>
 </div></blockquote>
 </div>
-</section>
-<section id="pre-canned-test-description">
-<h2>Pre-canned test description<a class="headerlink" href="#pre-canned-test-description" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="pre-canned-test-description">
+<h2>Pre-canned test description<a class="headerlink" href="#pre-canned-test-description" title="Permalink to this headline">¶</a></h2>
 <p>Here is a description of all automatically generated pre-canned tests.</p>
-<section id="verify-json">
-<h3><code class="docutils literal notranslate"><span class="pre">verify.json</span></code><a class="headerlink" href="#verify-json" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="verify-json">
+<h3><code class="docutils literal notranslate"><span class="pre">verify.json</span></code><a class="headerlink" href="#verify-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test is used to run only a verify testcase.</p>
 <p>File is always included for any xclbin.</p>
 <p>Do not edit.</p>
@@ -810,9 +808,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="dma-json">
-<h3><code class="docutils literal notranslate"><span class="pre">dma.json</span></code><a class="headerlink" href="#dma-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="dma-json">
+<h3><code class="docutils literal notranslate"><span class="pre">dma.json</span></code><a class="headerlink" href="#dma-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test only includes a DMA testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -865,9 +863,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="p2p-nvme-json">
-<h3><code class="docutils literal notranslate"><span class="pre">p2p_nvme.json</span></code><a class="headerlink" href="#p2p-nvme-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="p2p-nvme-json">
+<h3><code class="docutils literal notranslate"><span class="pre">p2p_nvme.json</span></code><a class="headerlink" href="#p2p-nvme-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test only includes a P2P_NVME testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -932,9 +930,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="p2p-card-json">
-<h3><code class="docutils literal notranslate"><span class="pre">p2p_card.json</span></code><a class="headerlink" href="#p2p-card-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="p2p-card-json">
+<h3><code class="docutils literal notranslate"><span class="pre">p2p_card.json</span></code><a class="headerlink" href="#p2p-card-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test only includes a P2P_CARD testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -988,9 +986,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="memory-json">
-<h3><code class="docutils literal notranslate"><span class="pre">memory.json</span></code><a class="headerlink" href="#memory-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="memory-json">
+<h3><code class="docutils literal notranslate"><span class="pre">memory.json</span></code><a class="headerlink" href="#memory-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test only includes a memory testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1074,9 +1072,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="memory-host-json">
-<h3><code class="docutils literal notranslate"><span class="pre">memory_host.json</span></code><a class="headerlink" href="#memory-host-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="memory-host-json">
+<h3><code class="docutils literal notranslate"><span class="pre">memory_host.json</span></code><a class="headerlink" href="#memory-host-json" title="Permalink to this headline">¶</a></h3>
 <p>Same as memory pre-canned test but for <strong>host</strong> memory instead of <strong>on-board</strong> memory.</p>
 <p>File not included if:</p>
 <blockquote>
@@ -1122,9 +1120,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="power-json">
-<h3><code class="docutils literal notranslate"><span class="pre">power.json</span></code><a class="headerlink" href="#power-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="power-json">
+<h3><code class="docutils literal notranslate"><span class="pre">power.json</span></code><a class="headerlink" href="#power-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test only includes a power testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1174,9 +1172,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="gt-mac-json">
-<h3><code class="docutils literal notranslate"><span class="pre">gt_mac.json</span></code><a class="headerlink" href="#gt-mac-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="gt-mac-json">
+<h3><code class="docutils literal notranslate"><span class="pre">gt_mac.json</span></code><a class="headerlink" href="#gt-mac-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test only includes a GT_MAC testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1292,9 +1290,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="switch-10gbe-json">
-<h3><code class="docutils literal notranslate"><span class="pre">switch_10gbe.json</span></code><a class="headerlink" href="#switch-10gbe-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="switch-10gbe-json">
+<h3><code class="docutils literal notranslate"><span class="pre">switch_10gbe.json</span></code><a class="headerlink" href="#switch-10gbe-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test only includes a GT_MAC testcase:</p>
 <blockquote>
 <div><ul>
@@ -1427,9 +1425,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="switch-25gbe-json">
-<h3><code class="docutils literal notranslate"><span class="pre">switch_25gbe.json</span></code><a class="headerlink" href="#switch-25gbe-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="switch-25gbe-json">
+<h3><code class="docutils literal notranslate"><span class="pre">switch_25gbe.json</span></code><a class="headerlink" href="#switch-25gbe-json" title="Permalink to this headline">¶</a></h3>
 <p>Same as switch_10gbe pre-canned test but for 25gbe instead of 10gbe.</p>
 <p>GT_MAC CU configured with <code class="docutils literal notranslate"><span class="pre">conf_25gbe_c74_fec</span></code> instead of <code class="docutils literal notranslate"><span class="pre">conf_10gbe_no_fec</span></code>.</p>
 <p>File not included if:</p>
@@ -1528,9 +1526,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="gt-mac-lpbk-json">
-<h3><code class="docutils literal notranslate"><span class="pre">gt_mac_lpbk.json</span></code><a class="headerlink" href="#gt-mac-lpbk-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="gt-mac-lpbk-json">
+<h3><code class="docutils literal notranslate"><span class="pre">gt_mac_lpbk.json</span></code><a class="headerlink" href="#gt-mac-lpbk-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test only includes GT_MAC and GT_LPBK testcases:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1618,9 +1616,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="gt-mac-port-to-port-json">
-<h3><code class="docutils literal notranslate"><span class="pre">gt_mac_port_to_port.json</span></code><a class="headerlink" href="#gt-mac-port-to-port-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="gt-mac-port-to-port-json">
+<h3><code class="docutils literal notranslate"><span class="pre">gt_mac_port_to_port.json</span></code><a class="headerlink" href="#gt-mac-port-to-port-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test only includes GT_MAC testcases:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1731,9 +1729,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="gt-prbs-json">
-<h3><code class="docutils literal notranslate"><span class="pre">gt_prbs.json</span></code><a class="headerlink" href="#gt-prbs-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="gt-prbs-json">
+<h3><code class="docutils literal notranslate"><span class="pre">gt_prbs.json</span></code><a class="headerlink" href="#gt-prbs-json" title="Permalink to this headline">¶</a></h3>
 <p>If 1 GT_PRBS CU present in xclbin:</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
@@ -1772,9 +1770,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-<section id="stress-json">
-<h3><code class="docutils literal notranslate"><span class="pre">stress.json</span></code><a class="headerlink" href="#stress-json" title="Permalink to this heading">¶</a></h3>
+</div>
+<div class="section" id="stress-json">
+<h3><code class="docutils literal notranslate"><span class="pre">stress.json</span></code><a class="headerlink" href="#stress-json" title="Permalink to this headline">¶</a></h3>
 <p>This pre-canned test combines memory, power, GT_MAC and GT_PRBS testcases:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1914,9 +1912,9 @@
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
 
            </div>

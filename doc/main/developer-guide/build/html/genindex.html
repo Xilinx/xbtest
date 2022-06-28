@@ -63,7 +63,6 @@
         <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
@@ -717,28 +716,28 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li>
-    --config_dir
+    --config_dir path/to/your/config_dir
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-d">command line option</a>
 </li>
       </ul></li>
       <li>
-    --dependency
+    --dependency &lt;dep&gt;
 
       <ul>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-D">command line option</a>
 </li>
       </ul></li>
       <li>
-    --deploy_name
+    --deploy_name &lt;name&gt;
 
       <ul>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-n">command line option</a>
 </li>
       </ul></li>
       <li>
-    --deploy_version
+    --deploy_version &lt;version&gt;
 
       <ul>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-m">command line option</a>
@@ -759,7 +758,7 @@
 </li>
       </ul></li>
       <li>
-    --include_dir
+    --include_dir &lt;dir&gt;
 
       <ul>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-i">command line option</a>
@@ -773,35 +772,42 @@
 </li>
       </ul></li>
       <li>
-    --ip_catalog
+    --ip_catalog &lt;xbtest_catalog&gt;
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-c">command line option</a>
 </li>
       </ul></li>
       <li>
-    --lsf_cmd
+    --lsf_cmd &lt;cmd&gt;
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-L">command line option</a>
 </li>
       </ul></li>
       <li>
-    --output_dir
+    --output_dir &lt;dir&gt;
 
       <ul>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-o">command line option</a>, <a href="docs/build-xclbin.html#cmdoption-o">[1]</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-o">command line option</a>
 </li>
       </ul></li>
       <li>
-    --pkg_release
+    --output_dir path/to/your/output_dir
+
+      <ul>
+        <li><a href="docs/build-xclbin.html#cmdoption-o">command line option</a>
+</li>
+      </ul></li>
+      <li>
+    --pkg_release &lt;rel&gt;
 
       <ul>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-r">command line option</a>
 </li>
       </ul></li>
       <li>
-    --project_name
+    --project_name &lt;name&gt;
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-p">command line option</a>
@@ -850,37 +856,37 @@
 </li>
       </ul></li>
       <li>
-    --wizard_config_name
+    --wizard_config_name &lt;name&gt;
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-n">command line option</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
-    --xpfm
+    --xpfm path/to/platform.xpfm
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-x">command line option</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
-    -c
+    -c &lt;xbtest_catalog&gt;
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-c">command line option</a>
 </li>
       </ul></li>
       <li>
-    -D
+    -D &lt;dep&gt;
 
       <ul>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-D">command line option</a>
 </li>
       </ul></li>
       <li>
-    -d
+    -d path/to/your/config_dir
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-d">command line option</a>
@@ -908,17 +914,10 @@
 </li>
       </ul></li>
       <li>
-    -i
+    -i &lt;dir&gt;
 
       <ul>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-i">command line option</a>
-</li>
-      </ul></li>
-      <li>
-    -L
-
-      <ul>
-        <li><a href="docs/build-xclbin.html#cmdoption-L">command line option</a>
 </li>
       </ul></li>
       <li>
@@ -929,28 +928,42 @@
 </li>
       </ul></li>
       <li>
-    -m
+    -L &lt;cmd&gt;
+
+      <ul>
+        <li><a href="docs/build-xclbin.html#cmdoption-L">command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -m &lt;version&gt;
 
       <ul>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-m">command line option</a>
 </li>
       </ul></li>
       <li>
-    -n
+    -n &lt;name&gt;
 
       <ul>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-n">command line option</a>, <a href="docs/build-xclbin.html#cmdoption-n">[1]</a>
 </li>
       </ul></li>
       <li>
-    -o
+    -o &lt;dir&gt;
 
       <ul>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-o">command line option</a>, <a href="docs/build-xclbin.html#cmdoption-o">[1]</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-o">command line option</a>
 </li>
       </ul></li>
       <li>
-    -p
+    -o path/to/your/output_dir
+
+      <ul>
+        <li><a href="docs/build-xclbin.html#cmdoption-o">command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -p &lt;name&gt;
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-p">command line option</a>
@@ -974,7 +987,14 @@
     -r
 
       <ul>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-r">command line option</a>, <a href="docs/build-xclbin.html#cmdoption-r">[1]</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-r">command line option</a>
+</li>
+      </ul></li>
+      <li>
+    -r &lt;rel&gt;
+
+      <ul>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-r">command line option</a>
 </li>
       </ul></li>
       <li>
@@ -992,7 +1012,7 @@
 </li>
       </ul></li>
       <li>
-    -x
+    -x path/to/platform.xpfm
 
       <ul>
         <li><a href="docs/build-xclbin.html#cmdoption-x">command line option</a>
@@ -1008,31 +1028,33 @@
     command line option
 
       <ul>
-        <li><a href="docs/build-xclbin.html#cmdoption-d">--config_dir</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-d">--config_dir path/to/your/config_dir</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-D">--dependency</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-D">--dependency &lt;dep&gt;</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-n">--deploy_name</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-n">--deploy_name &lt;name&gt;</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-m">--deploy_version</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-m">--deploy_version &lt;version&gt;</a>
 </li>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-f">--force</a>, <a href="docs/build-xclbin.html#cmdoption-f">[1]</a>
 </li>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-h">--help</a>, <a href="docs/build-xclbin.html#cmdoption-h">[1]</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-i">--include_dir</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-i">--include_dir &lt;dir&gt;</a>
 </li>
         <li><a href="docs/build-xclbin.html#cmdoption-I">--init</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-c">--ip_catalog</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-c">--ip_catalog &lt;xbtest_catalog&gt;</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-L">--lsf_cmd</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-L">--lsf_cmd &lt;cmd&gt;</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-o">--output_dir</a>, <a href="docs/build-xclbin.html#cmdoption-o">[1]</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-o">--output_dir &lt;dir&gt;</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-r">--pkg_release</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-o">--output_dir path/to/your/output_dir</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-p">--project_name</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-r">--pkg_release &lt;rel&gt;</a>
+</li>
+        <li><a href="docs/build-xclbin.html#cmdoption-p">--project_name &lt;name&gt;</a>
 </li>
         <li><a href="docs/build-xclbin.html#cmdoption-r">--skip_dcp_gen</a>
 </li>
@@ -1046,47 +1068,51 @@
 </li>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-0">--version</a>, <a href="docs/build-xclbin.html#cmdoption-0">[1]</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-n">--wizard_config_name</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-n">--wizard_config_name &lt;name&gt;</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-x">--xpfm</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-x">--xpfm path/to/platform.xpfm</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-c">-c</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-c">-c &lt;xbtest_catalog&gt;</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-D">-D</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-D">-D &lt;dep&gt;</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-d">-d</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-d">-d path/to/your/config_dir</a>
 </li>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-f">-f</a>, <a href="docs/build-xclbin.html#cmdoption-f">[1]</a>
 </li>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-h">-h</a>, <a href="docs/build-xclbin.html#cmdoption-h">[1]</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-i">-i</a>
-</li>
         <li><a href="docs/build-xclbin.html#cmdoption-I">-I</a>
+</li>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-i">-i &lt;dir&gt;</a>
 </li>
         <li><a href="docs/build-xclbin.html#cmdoption-l">-l</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-L">-L</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-L">-L &lt;cmd&gt;</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-m">-m</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-m">-m &lt;version&gt;</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-n">-n</a>, <a href="docs/build-xclbin.html#cmdoption-n">[1]</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-n">-n &lt;name&gt;</a>, <a href="docs/build-xclbin.html#cmdoption-n">[1]</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-o">-o</a>, <a href="docs/build-xclbin.html#cmdoption-o">[1]</a>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-o">-o &lt;dir&gt;</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-p">-p</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-o">-o path/to/your/output_dir</a>
+</li>
+        <li><a href="docs/build-xclbin.html#cmdoption-p">-p &lt;name&gt;</a>
 </li>
         <li><a href="docs/build-xclbin.html#cmdoption-q">-q</a>
 </li>
         <li><a href="docs/build-xclbin.html#cmdoption-Q">-Q</a>
 </li>
-        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-r">-r</a>, <a href="docs/build-xclbin.html#cmdoption-r">[1]</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-r">-r</a>
+</li>
+        <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-r">-r &lt;rel&gt;</a>
 </li>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-V">-V</a>, <a href="docs/build-xclbin.html#cmdoption-V">[1]</a>
 </li>
         <li><a href="docs/build-rpm-and-deb-packages.html#cmdoption-0">-v</a>, <a href="docs/build-xclbin.html#cmdoption-0">[1]</a>
 </li>
-        <li><a href="docs/build-xclbin.html#cmdoption-x">-x</a>
+        <li><a href="docs/build-xclbin.html#cmdoption-x">-x path/to/platform.xpfm</a>
 </li>
       </ul></li>
   </ul></td>

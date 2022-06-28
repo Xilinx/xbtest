@@ -6,8 +6,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+		
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -64,7 +63,6 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -715,11 +713,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="architecture-and-workflows">
-<span id="architecture-and-workflow"></span><h1>Architecture and workflows<a class="headerlink" href="#architecture-and-workflows" title="Permalink to this heading">¶</a></h1>
+  <div class="section" id="architecture-and-workflows">
+<span id="architecture-and-workflow"></span><h1>Architecture and workflows<a class="headerlink" href="#architecture-and-workflows" title="Permalink to this headline">¶</a></h1>
 <p>xbtest sources and workflows will allow you to build and packages an xclbin compatible with the performances and capabilities of your platform.</p>
-<section id="xbtest-compute-units-architecture">
-<h2>xbtest compute units architecture<a class="headerlink" href="#xbtest-compute-units-architecture" title="Permalink to this heading">¶</a></h2>
+<div class="section" id="xbtest-compute-units-architecture">
+<h2>xbtest compute units architecture<a class="headerlink" href="#xbtest-compute-units-architecture" title="Permalink to this headline">¶</a></h2>
 <p>Depending on resources of your platform, here is a view of the various xbtest compute units (CUs) available (along with some of their connectivity).
 These CUs contain the resources to test your platform (GT and memories) but also to consume a programmable amount of power.</p>
 <div class="admonition important">
@@ -727,13 +725,15 @@ These CUs contain the resources to test your platform (GT and memories) but also
 <p>xbtest requires at least 1 PLRAM is present in your platform.
 If your <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html">Alveo™</a> card is fitted with a multi SLR FPGA type, ideally there should be 1 PLRAM per SLR.</p>
 </div>
-<figure class="align-center" id="id2">
-<img alt="../_images/alveo-card-block-diagram.svg" src="../_images/alveo-card-block-diagram.svg" /><figcaption>
-<p><span class="caption-text">Alveo card block diagram</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<div class="figure align-center" id="id2">
+<img alt="../_images/alveo-card-block-diagram.svg" src="../_images/alveo-card-block-diagram.svg" /><p class="caption"><span class="caption-text">Alveo card block diagram</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
 <span id="xbtest-cu-list"></span><table class="docutils align-default" id="id3">
 <caption><span class="caption-text">Compute units high level overview</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>CU type</p></th>
 <th class="head"><p>Description</p></th>
@@ -802,9 +802,9 @@ If your <a class="reference external" href="https://www.xilinx.com/products/boar
 </tr>
 </tbody>
 </table>
-</section>
-<section id="hw-sources-overview">
-<span id="id1"></span><h2>HW sources overview<a class="headerlink" href="#hw-sources-overview" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="hw-sources-overview">
+<span id="id1"></span><h2>HW sources overview<a class="headerlink" href="#hw-sources-overview" title="Permalink to this headline">¶</a></h2>
 <p>The HW sources used to create and package your xclbin are located in <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_local_repo&gt;/src/hw</span></code> directory (see <a class="reference internal" href="environment-setup-and-workflows-initialization.html#xbtest-sources"><span class="std std-ref">xbtest sources</span></a>):</p>
 <blockquote>
 <div><ul>
@@ -863,9 +863,9 @@ If your <a class="reference external" href="https://www.xilinx.com/products/boar
     └── xbtest_wizard_v6_0/
 </pre></div>
 </div>
-</section>
-<section id="hw-build-workflows-overview">
-<span id="hw-build-workflows"></span><h2>HW build workflows overview<a class="headerlink" href="#hw-build-workflows-overview" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="hw-build-workflows-overview">
+<span id="hw-build-workflows"></span><h2>HW build workflows overview<a class="headerlink" href="#hw-build-workflows-overview" title="Permalink to this headline">¶</a></h2>
 <p>xbtest HW packages are built with following workflows:</p>
 <blockquote>
 <div><ul class="simple">
@@ -876,6 +876,13 @@ If your <a class="reference external" href="https://www.xilinx.com/products/boar
 </div></blockquote>
 <span id="rpm-generate"></span><span id="xclbin-generate"></span><table class="docutils align-default" id="id4">
 <caption><span class="caption-text">HW build workflows</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 9%" />
+<col style="width: 8%" />
+<col style="width: 36%" />
+<col style="width: 22%" />
+<col style="width: 25%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Workflow</p></th>
 <th class="head"><p>Component</p></th>
@@ -959,14 +966,16 @@ If your <a class="reference external" href="https://www.xilinx.com/products/boar
 </tbody>
 </table>
 <p>The following figures represents the different HW build workflows and their inputs/outputs:</p>
-<figure class="align-center" id="id5">
-<img alt="../_images/hw-build-workflows.svg" src="../_images/hw-build-workflows.svg" /><figcaption>
-<p><span class="caption-text">HW build workflows</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
+<div class="figure align-center" id="id5">
+<img alt="../_images/hw-build-workflows.svg" src="../_images/hw-build-workflows.svg" /><p class="caption"><span class="caption-text">HW build workflows</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
 <p>Here is the default location of the various files present in the diagram:</p>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> file locations</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>File</p></th>
 <th class="head"><p>Description / location</p></th>
@@ -1134,6 +1143,10 @@ If your <a class="reference external" href="https://www.xilinx.com/products/boar
 </table>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> file locations</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 15%" />
+<col style="width: 85%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>File</p></th>
 <th class="head"><p>Description / location</p></th>
@@ -1229,17 +1242,15 @@ If your <a class="reference external" href="https://www.xilinx.com/products/boar
         └── xbtest-&lt;...&gt;.deb
 </pre></div>
 </div>
-<section id="xclbin-generate-workflow-overview">
-<h3><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow overview<a class="headerlink" href="#xclbin-generate-workflow-overview" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="xclbin-generate-workflow-overview">
+<h3><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow overview<a class="headerlink" href="#xclbin-generate-workflow-overview" title="Permalink to this headline">¶</a></h3>
 <p>This diagram shows the major steps of the workflow with its input and output products:</p>
-<figure class="align-center" id="id8">
-<img alt="../_images/xclbin-generate-workflow.svg" src="../_images/xclbin-generate-workflow.svg" /><figcaption>
-<p><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow overview</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
-</figcaption>
-</figure>
-</section>
-</section>
-</section>
+<div class="figure align-center" id="id8">
+<img alt="../_images/xclbin-generate-workflow.svg" src="../_images/xclbin-generate-workflow.svg" /><p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow overview</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
 
 
            </div>

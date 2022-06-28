@@ -6,8 +6,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
+		
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -64,7 +63,6 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -715,10 +713,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="build-rpm-and-deb-packages">
-<span id="id1"></span><h1>Build RPM and DEB packages<a class="headerlink" href="#build-rpm-and-deb-packages" title="Permalink to this heading">¶</a></h1>
-<section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
+  <div class="section" id="build-rpm-and-deb-packages">
+<span id="id1"></span><h1>Build RPM and DEB packages<a class="headerlink" href="#build-rpm-and-deb-packages" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The steps <a class="reference internal" href="fill-platform-definition-json.html#fill-platform-definition-json"><span class="std std-ref">Fill platform definition JSON</span></a>, <a class="reference internal" href="#build-rpm-and-deb-packages"><span class="std std-ref">Build RPM and DEB packages</span></a> and <a class="reference internal" href="complete-checklist.html#complete-checklist"><span class="std std-ref">Complete checklist</span></a> are part of an iterative process and are inter-linked.</p>
@@ -774,9 +772,9 @@ It also includes limits and settings to show case the highest performances of th
 <li><p>Create dependencies toward specific deployment platform (name &amp; version).</p></li>
 </ul>
 </div></blockquote>
-</section>
-<section id="pre-requisites">
-<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="pre-requisites">
+<h2>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h2>
 <p>You need to:</p>
 <blockquote>
 <div><ul class="simple">
@@ -789,8 +787,8 @@ It also includes limits and settings to show case the highest performances of th
 <p class="admonition-title">Note</p>
 <p>The instructions below are valid if you follow the default directory structure.</p>
 </div>
-<section id="copy-xclbin-and-xbtest-pfm-def-json">
-<h3>Copy xclbin and <code class="docutils literal notranslate"><span class="pre">xbtest_pfm_def.json</span></code><a class="headerlink" href="#copy-xclbin-and-xbtest-pfm-def-json" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="copy-xclbin-and-xbtest-pfm-def-json">
+<h3>Copy xclbin and <code class="docutils literal notranslate"><span class="pre">xbtest_pfm_def.json</span></code><a class="headerlink" href="#copy-xclbin-and-xbtest-pfm-def-json" title="Permalink to this headline">¶</a></h3>
 <p>Once the xclbin is successfully generated, copy the xclbin from the <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow (see <a class="reference internal" href="build-xclbin.html#build-xclbin"><span class="std std-ref">Build xclbin</span></a>).</p>
 <blockquote>
 <div><ul class="simple">
@@ -834,10 +832,10 @@ $ mkdir -p &lt;xbtest_build&gt;/rpm_generate/include/&lt;deploy_platform&gt;/dcp
 <p>Copying DCP is optional but it is recommended to save it somewhere (as it may useful for any analysis of the xclbin).</p>
 <p>The DCP won’t be included in the package.</p>
 </div>
-</section>
-</section>
-<section id="rpm-generate-workflow-input-and-output-products">
-<h2><code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> workflow input and output products<a class="headerlink" href="#rpm-generate-workflow-input-and-output-products" title="Permalink to this heading">¶</a></h2>
+</div>
+</div>
+<div class="section" id="rpm-generate-workflow-input-and-output-products">
+<h2><code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> workflow input and output products<a class="headerlink" href="#rpm-generate-workflow-input-and-output-products" title="Permalink to this headline">¶</a></h2>
 <p>The required structure and file naming of the <a class="reference internal" href="architecture-and-workflows.html#rpm-generate"><span class="std std-ref">rpm_generate</span></a> workflow input products and location of output products is detailed in following table:</p>
 <blockquote>
 <div><ul class="simple">
@@ -850,6 +848,13 @@ $ mkdir -p &lt;xbtest_build&gt;/rpm_generate/include/&lt;deploy_platform&gt;/dcp
 </div></blockquote>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> workflow input and output products</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 23%" />
+<col style="width: 28%" />
+<col style="width: 11%" />
+<col style="width: 8%" />
+<col style="width: 30%" />
+</colgroup>
 <thead>
 <tr class="row-odd"><th class="head" colspan="3"><p>File/directory name</p></th>
 <th class="head" rowspan="2"><p>Required/optional</p></th>
@@ -967,13 +972,13 @@ $ mkdir -p &lt;xbtest_build&gt;/rpm_generate/include/&lt;deploy_platform&gt;/dcp
 </div>
 <p>The supported values returned by this command are <code class="docutils literal notranslate"><span class="pre">CentOS</span></code>, <code class="docutils literal notranslate"><span class="pre">RedHatEnterprise</span></code>, <code class="docutils literal notranslate"><span class="pre">SUSE</span></code> and <code class="docutils literal notranslate"><span class="pre">Ubuntu</span></code>.</p>
 </div>
-</section>
-<section id="rpm-generate-workflow-command-line-options">
-<h2><code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> workflow command line options<a class="headerlink" href="#rpm-generate-workflow-command-line-options" title="Permalink to this heading">¶</a></h2>
+</div>
+<div class="section" id="rpm-generate-workflow-command-line-options">
+<h2><code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> workflow command line options<a class="headerlink" href="#rpm-generate-workflow-command-line-options" title="Permalink to this headline">¶</a></h2>
 <p>The <a class="reference internal" href="architecture-and-workflows.html#rpm-generate"><span class="std std-ref">rpm_generate</span></a> workflow supports the following command line options described in next sections.
 You can always refer to the help of the workflow for a quick summary of the various options.
 Each option can be specified fully or in short manner.</p>
-<nav class="contents local" id="contents">
+<div class="contents local topic" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#h-help-display-help" id="id3">-h, –help: Display help</a></p></li>
 <li><p><a class="reference internal" href="#v-verbose-enable-verbosity" id="id4">-V, –verbose: Enable verbosity</a></p></li>
@@ -986,30 +991,30 @@ Each option can be specified fully or in short manner.</p>
 <li><p><a class="reference internal" href="#f-force-force-an-operation" id="id11">-f, –force: Force an operation</a></p></li>
 <li><p><a class="reference internal" href="#v-version-display-version" id="id12">-v, –version: Display version</a></p></li>
 </ul>
-</nav>
+</div>
 <hr class="docutils" />
-<section id="h-help-display-help">
-<h3><a class="toc-backref" href="#id3" role="doc-backlink">-h, –help: Display help</a><a class="headerlink" href="#h-help-display-help" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="h-help-display-help">
+<h3><a class="toc-backref" href="#id3">-h, –help: Display help</a><a class="headerlink" href="#h-help-display-help" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-h">
 <span id="cmdoption-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display <a class="reference internal" href="architecture-and-workflows.html#rpm-generate"><span class="std std-ref">rpm_generate</span></a> workflow help message.</p>
 </dd></dl>
 
-</section>
+</div>
 <hr class="docutils" />
-<section id="v-verbose-enable-verbosity">
-<h3><a class="toc-backref" href="#id4" role="doc-backlink">-V, –verbose: Enable verbosity</a><a class="headerlink" href="#v-verbose-enable-verbosity" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="v-verbose-enable-verbosity">
+<h3><a class="toc-backref" href="#id4">-V, –verbose: Enable verbosity</a><a class="headerlink" href="#v-verbose-enable-verbosity" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-V">
 <span id="cmdoption-v"></span><span id="cmdoption-verbose"></span><span class="sig-name descname"><span class="pre">-V</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-V" title="Permalink to this definition">¶</a></dt>
 <dd><p>Turn on verbosity.</p>
 </dd></dl>
 
-</section>
+</div>
 <hr class="docutils" />
-<section id="n-deploy-name-define-deployment-platform-name">
-<h3><a class="toc-backref" href="#id5" role="doc-backlink">-n, –deploy_name: Define deployment platform name</a><a class="headerlink" href="#n-deploy-name-define-deployment-platform-name" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="n-deploy-name-define-deployment-platform-name">
+<h3><a class="toc-backref" href="#id5">-n, –deploy_name: Define deployment platform name</a><a class="headerlink" href="#n-deploy-name-define-deployment-platform-name" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-n">
 <span id="cmdoption-deploy_name"></span><span id="cmdoption-deploy-name"></span><span class="sig-name descname"><span class="pre">-n</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--deploy_name</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></span><a class="headerlink" href="#cmdoption-n" title="Permalink to this definition">¶</a></dt>
@@ -1017,10 +1022,10 @@ Each option can be specified fully or in short manner.</p>
 Deployment platform name, e.g. <code class="docutils literal notranslate"><span class="pre">xilinx-u50-gen3x4-xdma-base</span></code>.</p>
 </dd></dl>
 
-</section>
+</div>
 <hr class="docutils" />
-<section id="m-deploy-version-define-deployment-platform-version">
-<h3><a class="toc-backref" href="#id6" role="doc-backlink">-m, –deploy_version: Define deployment platform version</a><a class="headerlink" href="#m-deploy-version-define-deployment-platform-version" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="m-deploy-version-define-deployment-platform-version">
+<h3><a class="toc-backref" href="#id6">-m, –deploy_version: Define deployment platform version</a><a class="headerlink" href="#m-deploy-version-define-deployment-platform-version" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-m">
 <span id="cmdoption-deploy_version"></span><span id="cmdoption-deploy-version"></span><span class="sig-name descname"><span class="pre">-m</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;version&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--deploy_version</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;version&gt;</span></span><a class="headerlink" href="#cmdoption-m" title="Permalink to this definition">¶</a></dt>
@@ -1028,10 +1033,10 @@ Deployment platform name, e.g. <code class="docutils literal notranslate"><span 
 Deployment platform version, e.g. <code class="docutils literal notranslate"><span class="pre">2</span></code>.</p>
 </dd></dl>
 
-</section>
+</div>
 <hr class="docutils" />
-<section id="i-include-dir-select-include-directory">
-<h3><a class="toc-backref" href="#id7" role="doc-backlink">-i, –include_dir: Select include directory</a><a class="headerlink" href="#i-include-dir-select-include-directory" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="i-include-dir-select-include-directory">
+<h3><a class="toc-backref" href="#id7">-i, –include_dir: Select include directory</a><a class="headerlink" href="#i-include-dir-select-include-directory" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-i">
 <span id="cmdoption-include_dir"></span><span id="cmdoption-include-dir"></span><span class="sig-name descname"><span class="pre">-i</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;dir&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--include_dir</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;dir&gt;</span></span><a class="headerlink" href="#cmdoption-i" title="Permalink to this definition">¶</a></dt>
@@ -1043,20 +1048,20 @@ Deployment platform version, e.g. <code class="docutils literal notranslate"><sp
 </div>
 </dd></dl>
 
-</section>
+</div>
 <hr class="docutils" />
-<section id="r-pkg-release-provide-package-release">
-<h3><a class="toc-backref" href="#id8" role="doc-backlink">-r, –pkg_release: Provide package release</a><a class="headerlink" href="#r-pkg-release-provide-package-release" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="r-pkg-release-provide-package-release">
+<h3><a class="toc-backref" href="#id8">-r, –pkg_release: Provide package release</a><a class="headerlink" href="#r-pkg-release-provide-package-release" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-r">
 <span id="cmdoption-pkg_release"></span><span id="cmdoption-pkg-release"></span><span class="sig-name descname"><span class="pre">-r</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;rel&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--pkg_release</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;rel&gt;</span></span><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
 <dd><p>Package release. Default <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
 </dd></dl>
 
-</section>
+</div>
 <hr class="docutils" />
-<section id="d-dependency-provide-dependency">
-<h3><a class="toc-backref" href="#id9" role="doc-backlink">-D / –-dependency: Provide dependency</a><a class="headerlink" href="#d-dependency-provide-dependency" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="d-dependency-provide-dependency">
+<h3><a class="toc-backref" href="#id9">-D / –-dependency: Provide dependency</a><a class="headerlink" href="#d-dependency-provide-dependency" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-D">
 <span id="cmdoption-d"></span><span id="cmdoption-dependency"></span><span class="sig-name descname"><span class="pre">-D</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;dep&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--dependency</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;dep&gt;</span></span><a class="headerlink" href="#cmdoption-D" title="Permalink to this definition">¶</a></dt>
@@ -1086,40 +1091,40 @@ Deployment platform version, e.g. <code class="docutils literal notranslate"><sp
 <p>This option can be provided multiple times in the command line.</p>
 </dd></dl>
 
-</section>
+</div>
 <hr class="docutils" />
-<section id="o-output-dir-provide-output-directory">
-<h3><a class="toc-backref" href="#id10" role="doc-backlink">-o, –output_dir: Provide output directory</a><a class="headerlink" href="#o-output-dir-provide-output-directory" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="o-output-dir-provide-output-directory">
+<h3><a class="toc-backref" href="#id10">-o, –output_dir: Provide output directory</a><a class="headerlink" href="#o-output-dir-provide-output-directory" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-o">
 <span id="cmdoption-output_dir"></span><span id="cmdoption-output-dir"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;dir&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output_dir</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;dir&gt;</span></span><a class="headerlink" href="#cmdoption-o" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to the output directory. Default: <code class="docutils literal notranslate"><span class="pre">./output/&lt;date&gt;_&lt;time&gt;/</span></code>.</p>
 </dd></dl>
 
-</section>
+</div>
 <hr class="docutils" />
-<section id="f-force-force-an-operation">
-<h3><a class="toc-backref" href="#id11" role="doc-backlink">-f, –force: Force an operation</a><a class="headerlink" href="#f-force-force-an-operation" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="f-force-force-an-operation">
+<h3><a class="toc-backref" href="#id11">-f, –force: Force an operation</a><a class="headerlink" href="#f-force-force-an-operation" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-f">
 <span id="cmdoption-force"></span><span class="sig-name descname"><span class="pre">-f</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-f" title="Permalink to this definition">¶</a></dt>
 <dd><p>Override output directory if already existing.</p>
 </dd></dl>
 
-</section>
+</div>
 <hr class="docutils" />
-<section id="v-version-display-version">
-<h3><a class="toc-backref" href="#id12" role="doc-backlink">-v, –version: Display version</a><a class="headerlink" href="#v-version-display-version" title="Permalink to this heading">¶</a></h3>
+<div class="section" id="v-version-display-version">
+<h3><a class="toc-backref" href="#id12">-v, –version: Display version</a><a class="headerlink" href="#v-version-display-version" title="Permalink to this headline">¶</a></h3>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-0">
 <span id="cmdoption-version"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display <a class="reference internal" href="architecture-and-workflows.html#rpm-generate"><span class="std std-ref">rpm_generate</span></a> workflow version.</p>
 </dd></dl>
 
-</section>
-</section>
-<section id="run-rpm-generate-workflow">
-<h2>Run <code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> Workflow<a class="headerlink" href="#run-rpm-generate-workflow" title="Permalink to this heading">¶</a></h2>
+</div>
+</div>
+<div class="section" id="run-rpm-generate-workflow">
+<h2>Run <code class="docutils literal notranslate"><span class="pre">rpm_generate</span></code> Workflow<a class="headerlink" href="#run-rpm-generate-workflow" title="Permalink to this headline">¶</a></h2>
 <p><a class="reference internal" href="architecture-and-workflows.html#rpm-generate"><span class="std std-ref">rpm_generate</span></a> is a python workflow to run with python3.</p>
 <p>You must run this workflow per OS you want to release an HW package for:</p>
 <blockquote>
@@ -1196,8 +1201,8 @@ INFO: <span class="o">[</span>GEN_RPM-8<span class="o">]</span> <span class="o">
 INFO: <span class="o">[</span>GEN_RPM-8<span class="o">]</span> ------------------------------------------------------------------------------------
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
