@@ -547,6 +547,12 @@ def main(args):
 
             end_step('GEN_XCLBIN-26', start_time)
 
+        for root, dirs, files in os.walk(setup_cfg[IP_CATALOG]):
+            for d in dirs:
+                os.chmod(os.path.join(root, d), 511); # octal 0777
+            for f in files:
+                os.chmod(os.path.join(root, f), 511); # octal 0777
+
         # Initialize IP info
         setup_cfg[IP_INFO] = {}
         wizard_name_v = os.path.split(os.path.split(SCRIPT_DIR)[0])[1]; # TODO: should get this from xbtest_ip_config.yml
