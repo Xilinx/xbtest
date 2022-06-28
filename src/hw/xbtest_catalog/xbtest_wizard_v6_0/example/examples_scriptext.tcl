@@ -46,21 +46,9 @@ dict set config kernel_xo_dir       [file join [dict get $config run_dir]  kerne
 #############################################################################################################
 gen_wizard_config config
 
-#############################################################################################################
-# Make a local copy of xbtest IP catalog
-#############################################################################################################
 set local_xbtest_catalog    [file join [dict get $config run_dir] xbtest_catalog]
 set ip_name_v               [dict get $config ip_name_v]
-file mkdir $local_xbtest_catalog
-file copy -force [unlink [file join [dict get $config ip_catalog] $ip_name_v]] [file join $local_xbtest_catalog $ip_name_v]
-log_message $config {XBTEST_WIZARD-17} [list {u+w} [file join $local_xbtest_catalog $ip_name_v]]
-chmod_recursive [file join $local_xbtest_catalog $ip_name_v] {u+w}
 
-# copy xbtest subsystems (could be defined as a list for supporting multiple subsystems)
-set ip_sub_name_v xbtest_sub_xxv_gt_v1_0
-dict set config ip_sub_name_v $ip_sub_name_v
-file copy -force [unlink [file join [dict get $config ip_catalog] $ip_sub_name_v]] [file join $local_xbtest_catalog $ip_sub_name_v]
-dict set config ip_catalog $local_xbtest_catalog; # point to the local copy
 set ip_catalog      [dict get $config ip_catalog]
 set ipdef           [file join $ip_catalog $ip_name_v]
 set ipdef_ex_src    [file join $ipdef example]

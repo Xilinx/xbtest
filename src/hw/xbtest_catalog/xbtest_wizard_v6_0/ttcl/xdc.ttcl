@@ -95,6 +95,7 @@ set_false_path -to [get_pins -hierarchical -filter {NAME =~ *u_timer/timer_user.
 <: if {$c_krnl_mode == 6} { :>
     set_property CLOCK_LOW_FANOUT TRUE [get_nets -of [get_pins {*inst_krnl_core/u_gt_prbs_25_top/gt_prbs_25_core/*Rx_BUFG_i/O}]]
     set_property CLOCK_LOW_FANOUT TRUE [get_nets -of [get_pins {*inst_krnl_core/u_gt_prbs_25_top/gt_prbs_25_core/Tx_BUFG_i/O}]]
+    create_clock -period 6.206 [get_pins {*inst_krnl_core/u_gt_prbs_25_top/gt_prbs_25_core/GTC/I}]
 <: } :>
 
 <: if {$c_krnl_mode == 4} { :>

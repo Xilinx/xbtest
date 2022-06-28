@@ -382,7 +382,7 @@ def main(args):
         start_time = start_step('GEN_XCLBIN-66', step)
 
         setup_cfg[XPFM] = None
-        xpfm_dir        = None
+        xpfm_ext = None
 
         if os.path.isdir(opt.xpfm):
             xpfm_dir = opt.xpfm
@@ -390,14 +390,14 @@ def main(args):
             #######################################################################################################
             # Get file extension
             #######################################################################################################
-            xpfm_name = os.path.splitext(os.path.basename(opt.xpfm))[0]
-            xpfm_ext  = os.path.splitext(os.path.basename(opt.xpfm))[1].lower()
+            xpfm_ext = os.path.splitext(os.path.basename(opt.xpfm))[1].lower()
 
             # Check extension of provided xpfm file
             if xpfm_ext not in SUPPORTED_XPFM_EXT:
                 exit_error('GEN_XCLBIN-67', 'Unsupported ' + XPFM + ' file extension ' + xpfm_ext + ' (supported: ' + str(SUPPORTED_XPFM_EXT) + '): ' + opt.xpfm)
 
             if xpfm_ext in ['.xpfm', '.xsa']:
+                xpfm_dir = os.path.dirname(opt.xpfm)
                 setup_cfg[XPFM] = opt.xpfm
             else:
                 #######################################################################################################
@@ -424,8 +424,8 @@ def main(args):
                 # Extract development package
                 #######################################################################################################
                 log_debug('GEN_XCLBIN-71', 'Extract provided ' + XPFM + ' package: ' + opt.xpfm)
-                xpfm_dir = os.path.abspath(os.path.join(setup_cfg[OUTPUT_DIR], 'xpfm_extracted'))
 
+                xpfm_dir = os.path.abspath(os.path.join(setup_cfg[OUTPUT_DIR], 'xsa'))
                 if xpfm_ext == '.rpm':
                     os.makedirs(xpfm_dir)
                     os.chdir(xpfm_dir)
@@ -437,13 +437,14 @@ def main(args):
                     log_file_name = os.path.abspath(os.path.join(setup_cfg[OUTPUT_DIR], 'dpkg_deb_X.log'))
                     exec_step_cmd('GEN_XCLBIN-73', step, cmd, log_file_name=log_file_name)
 
-        if xpfm_dir is not None:
+        if setup_cfg[XPFM] is None:
             #######################################################################################################
             # Find .xpfm in directory
             #######################################################################################################
             xpfm_files = []
+            xpfm_ext = '.xpfm'
             for dir,_,_ in os.walk(xpfm_dir):
-                xpfm_files = glob.glob(os.path.join(dir,'*.xpfm'))
+                xpfm_files = glob.glob(os.path.join(dir,'*'+xpfm_ext))
                 if (len(xpfm_files) > 0):
                     break
 
@@ -456,6 +457,7 @@ def main(args):
         log_debug('GEN_XCLBIN-76', 'Found ' + XPFM + ': ' + setup_cfg[XPFM])
         end_step('GEN_XCLBIN-77', start_time)
 
+        config_dir = None
         if opt.config_dir is not None:
             #######################################################################################################
             # Load wizard configuration JSON file
@@ -493,6 +495,11 @@ def main(args):
                 exit_error('GEN_XCLBIN-20', 'Provided xbtest IP catalog does not exist: ' + setup_cfg[IP_CATALOG])
 
             log_debug('GEN_XCLBIN-21', 'Using provided xbtest IP catalog: ' + setup_cfg[IP_CATALOG])
+
+            setup_cfg[IP_CATALOG] = os.path.abspath(os.path.join(setup_cfg[OUTPUT_DIR], 'xbtest_catalog'))
+
+            copy_source_dir('GEN_XCLBIN-19', opt.ip_catalog, setup_cfg[IP_CATALOG])
+
         else:
             setup_cfg[IP_CATALOG] = os.path.abspath(os.path.join(setup_cfg[OUTPUT_DIR], 'xbtest_catalog'))
 
@@ -503,9 +510,10 @@ def main(args):
                 #######################################################################################################
                 # Check xbtest_catalog not in user configuration directory
                 #######################################################################################################
-                ip_catalog_chk = os.path.abspath(os.path.join(config_dir, 'xbtest_catalog'))
-                if os.path.isdir(ip_catalog_chk):
-                    exit_error('GEN_XCLBIN-64', 'xbtest IP catalog was found in config_dir. It should not be saved there: ' + ip_catalog_chk)
+                if config_dir is not None:
+                    ip_catalog_chk = os.path.abspath(os.path.join(config_dir, 'xbtest_catalog'))
+                    if os.path.isdir(ip_catalog_chk):
+                        exit_error('GEN_XCLBIN-64', 'xbtest IP catalog was found in provided config directory. It should not be saved there: ' + ip_catalog_chk)
 
                 if not opt.force:
                     exit_error('GEN_XCLBIN-65', 'xbtest IP catalog already exists in output directory (see --force to override): ' + setup_cfg[IP_CATALOG])
@@ -571,7 +579,6 @@ def main(args):
         platform_info_json = os.path.join(setup_cfg[OUTPUT_DIR], 'platforminfo.json')
         cmd = ['platforminfo', '-p', setup_cfg[XPFM], '-o', platform_info_json]
 
-        xpfm_ext  = os.path.splitext(os.path.basename(setup_cfg[XPFM]))[1].lower()
         if xpfm_ext == '.xsa':
             # For XSA, the platforminfo returned = value of hardwarePlatform node
             log_info('GEN_XCLBIN-48', 'Loading platform metadata from provided XSA')
@@ -602,11 +609,89 @@ def main(args):
         if not opt.init:
             ip_prop[C_INIT] = False
             ip_prop[WIZARD_CONFIG_NAME] = opt.wizard_config_name
-        if opt.config_dir is not None:
+        if config_dir is not None:
             ip_prop[WIZARD_CONFIG_JSON] = os.path.abspath(os.path.join(setup_cfg[OUTPUT_DIR], 'wizard_cfg.json'))
         wizard_tcl = gen_wizard_tcl(setup_cfg, ip_prop)
 
         end_step('GEN_XCLBIN-33', start_time)
+
+        #######################################################################################################
+        # Write the export script
+        #######################################################################################################
+        EXPORT_SCRIPT = []
+        EXPORT_SCRIPT += ['#!/bin/bash']
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['SCRIPT_FILE="' + os.path.abspath(os.path.join(SCRIPT_DIR, SCRIPT_FILE)) + '"']
+        EXPORT_SCRIPT += ['BUILD_DIR="' + BUILD_DIR + '"']
+        EXPORT_SCRIPT += ['PROJECT_NAME="' + setup_cfg[PROJECT_NAME] + '"']
+        EXPORT_SCRIPT += ['PLATFORM="' + platform + '"']
+        EXPORT_SCRIPT += ['EXPORT="export_${PLATFORM}_${PROJECT_NAME}"']
+        EXPORT_SCRIPT += ['BUILD_SOURCES="./${EXPORT}/build_sources/' + wizard_name_v + '/xclbin_generate"']
+        EXPORT_SCRIPT += ['IP_CATALOG_SRC="' + setup_cfg[IP_CATALOG] + '"']
+        EXPORT_SCRIPT += ['IP_CATALOG_DST="./${EXPORT}/ip_catalog"']
+        EXPORT_SCRIPT += ['XSA_DIR_SRC="' + xpfm_dir + '"']
+        EXPORT_SCRIPT += ['XSA_DIR_DST="./${EXPORT}/xsa/' + os.path.basename(xpfm_dir) + '"']
+        if config_dir is not None:
+            EXPORT_SCRIPT += ['CONFIG_DIR_SRC="' + config_dir + '"']
+            EXPORT_SCRIPT += ['CONFIG_DIR_DST="./${EXPORT}/cfg"']
+
+        EXPORT_SCRIPT += ['OUTPUT_DIR_SRC="' + setup_cfg[OUTPUT_DIR] + '"']
+        EXPORT_SCRIPT += ['OUTPUT_DIR_DST="${BUILD_SOURCES}/output/${PLATFORM}/' + os.path.basename(setup_cfg[OUTPUT_DIR]) + '"']
+
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['mkdir -p ${BUILD_SOURCES}  && cp -rL ${SCRIPT_FILE}      $_']
+        EXPORT_SCRIPT += ['mkdir -p ${BUILD_SOURCES}  && cp -rL ${BUILD_DIR}        $_']
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['mkdir -p ${OUTPUT_DIR_DST} && cp -rL ${OUTPUT_DIR_SRC}/*   $_']
+        EXPORT_SCRIPT += ['mkdir -p ${IP_CATALOG_DST} && cp -rL ${IP_CATALOG_SRC}/*   $_']
+        EXPORT_SCRIPT += ['mkdir -p ${XSA_DIR_DST}    && cp -rL ${XSA_DIR_SRC}/*      $_']
+
+        if config_dir is not None:
+            EXPORT_SCRIPT += ['mkdir -p ${BUILD_SOURCES}/cfg && cp -rL ${CONFIG_DIR_SRC}/*   $_']
+
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['cat <<EOF > ./${BUILD_SOURCES}/rerun.sh']
+        EXPORT_SCRIPT += ['#\!/bin/bash']
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['# Rerun xclbin_generate workflow']
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['python3 gen_xclbin.py \\']
+        EXPORT_SCRIPT += ['    --ip_catalog         ../../../ip_catalog \\']
+        EXPORT_SCRIPT += ['    --xpfm               ../../../xsa/' + os.path.basename(xpfm_dir) + ' \\']
+        EXPORT_SCRIPT += ['    --project_name       ' + setup_cfg[PROJECT_NAME] + '_rerun \\']
+        if config_dir is not None:
+            EXPORT_SCRIPT += ['    --config_dir         ./cfg \\']
+        if opt.init:
+            EXPORT_SCRIPT += ['    --init \\']
+        if not opt.init:
+            EXPORT_SCRIPT += ['    --wizard_config_name ' + opt.wizard_config_name + ' \\']
+        if opt.verbose:
+            EXPORT_SCRIPT += ['    --verbose \\']
+        if opt.skip_xo_gen:
+            EXPORT_SCRIPT += ['    --skip_xo_gen \\']
+        if opt.skip_xclbin_gen:
+            EXPORT_SCRIPT += ['    --skip_xclbin_gen \\']
+        if opt.skip_dcp_gen:
+            EXPORT_SCRIPT += ['    --skip_dcp_gen \\']
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['EOF']
+        EXPORT_SCRIPT += ['chmod a+x ${BUILD_SOURCES}/rerun.sh']
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['tar -czvf ${EXPORT}.tar.gz ./${EXPORT}']
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['echo "Successfully exported: ./${EXPORT}.tar.gz"']
+        EXPORT_SCRIPT += ['']
+        EXPORT_SCRIPT += ['echo "Re-run using following commands:"']
+        EXPORT_SCRIPT += ['echo "\t tar -xf ./${EXPORT}.tar.gz"']
+        EXPORT_SCRIPT += ['echo "\t cd ${BUILD_SOURCES}"']
+        EXPORT_SCRIPT += ['echo "\t ./rerun.sh"']
+
+        export_sh = os.path.abspath(os.path.join(setup_cfg[OUTPUT_DIR], 'export.sh'))
+        log_info('GEN_XCLBIN-94', 'Writing: ' + export_sh)
+        with open(export_sh, mode='w') as outfile:
+            outfile.write('\n'.join(EXPORT_SCRIPT))
+
+        os.chmod(export_sh, 493); # octal 0755
 
         #######################################################################################################
         # Terminates if not generating the XO

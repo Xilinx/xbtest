@@ -25,7 +25,7 @@ proc gen_wizard_config { config_ref } {
 
     dict set config build_date [exec date]
     dict set config tool_version_long [join [split [version -verbose] "\n"] ". "]
-    dict set config tool_version [version -short]
+    dict set config tool_version [version_short_to_num [version -short]]
 
     # Get IP user parameter values
     load_user_parameters config
@@ -81,6 +81,31 @@ proc gen_wizard_config { config_ref } {
     # Configure the verify compute unit
     setup_verify_cu             config
 }
+############################################################################################################
+# Support when vivado version is not numerical value
+############################################################################################################
+proc version_short_to_num { ver } {
+	set res ""
+	foreach c [split $ver ""] {
+		if {[regexp -all {[0-9.]} $c]} {
+			append res $c 
+		}
+	}
+	if {$res == {}} {
+		set res "0"
+	}
+	if {[lindex $res 0] == "."} {
+		set res "0"
+	}
+	set res_split [split $res "."]
+	if {[llength $res_split] == 1} {
+		append res ".0"
+	} elseif {[llength $res_split] > 2} {
+		set res_split	[lrange $res_split 0 1]
+		set res 		[join $res_split "."]
+	} 
+	return $res
+} 
 ############################################################################################################
 # Set user wizard configuration for init mode
 ############################################################################################################
