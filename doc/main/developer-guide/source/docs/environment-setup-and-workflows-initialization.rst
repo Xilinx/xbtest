@@ -32,7 +32,7 @@ Get xbtest sources and packages using the following command:
 
 .. code-block:: bash
 
-    git clone https://github.com/Xilinx/xbtest <xbtest_local_repo>
+    $ git clone https://github.com/Xilinx/xbtest --branch 6.0 <xbtest_local_repo>
 
 The HW sources are located in ``<xbtest_local_repo>/src/hw``.
 
@@ -378,11 +378,11 @@ In this step, run the |xclbin_generate| workflow as detailed below with command 
     All command line options are described in another section of this documentation.
     Only :option:`--init` and command line option :option:`--xpfm` are used at this stage.
 
-A DCP is required to create the power CU templates. 
-By default, a DCP will be created. 
+A DCP is required to create the power CU templates.
+By default, a DCP will be created.
 A post PhysOpt DCP is enough, there is no need to be able to place and route (nor close timing).
 
-You can skip the DCP generation phase if you already have one. 
+You can skip the DCP generation phase if you already have one.
 Any DCP suits (after physOpt, place or route phases).
 
   1. Move to ``xclbin_generate`` sources directory:

@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -60,10 +61,12 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -75,6 +78,8 @@
   <link rel="stylesheet" href="../_static/css/common-ui-all.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/header-footer.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/pro.min.css" media="all" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Configure xclbin" href="configure-xclbin.html" />
@@ -351,14 +356,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation hub</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/home/build/html/index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Content</span></p>
+<p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="expected-tasks.html">Expected tasks</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="expected-tasks.html#overview">Overview</a></li>
@@ -636,7 +641,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Other versions</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other versions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
@@ -711,10 +716,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="define-power-cu-floorplan">
-<span id="id1"></span><h1>Define power CU floorplan<a class="headerlink" href="#define-power-cu-floorplan" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="define-power-cu-floorplan">
+<span id="id1"></span><h1>Define power CU floorplan<a class="headerlink" href="#define-power-cu-floorplan" title="Permalink to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>This page describes required input files for the power CU and provides some guidelines on how to define them.
 The power CU will run typically at 500MHz and should reach the power target of your card.</p>
 <p>The power CU is flexible enough to adapt to any FPGA and dynamic region shape but you must still define how much resources you want according to your power target.
@@ -737,9 +742,9 @@ The excess of power allows the check of the safety features of the card (clock t
 </ul>
 </div></blockquote>
 </div>
-</div>
-<div class="section" id="general-step">
-<h2>General step<a class="headerlink" href="#general-step" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="general-step">
+<h2>General step<a class="headerlink" href="#general-step" title="Permalink to this heading">¶</a></h2>
 <p>This chapter gives you a view of the required tasks and why:</p>
 <blockquote>
 <div><ol class="arabic">
@@ -788,9 +793,9 @@ Each platform is different so its dynamic region too.</p>
 <p class="admonition-title">Note</p>
 <p>To ease the definition of the utilization &amp; invalid, it’s possible to <a class="reference internal" href="#visualize-power-cu-floorplan"><span class="std std-ref">Visualize power CU floorplan</span></a> without doing any synthesis or implementation.</p>
 </div>
-</div>
-<div class="section" id="detailed-steps">
-<h2>Detailed steps<a class="headerlink" href="#detailed-steps" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="detailed-steps">
+<h2>Detailed steps<a class="headerlink" href="#detailed-steps" title="Permalink to this heading">¶</a></h2>
 <p>Three JSON files are used to define the entire floorplan of the power CU.
 The following files should be defined in <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/cfg/&lt;dev_platform&gt;/pwr_cfg</span></code>, where:</p>
 <blockquote>
@@ -801,12 +806,6 @@ The following files should be defined in <code class="docutils literal notransla
 </div></blockquote>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Power floorplan JSON files</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 10%" />
-<col style="width: 43%" />
-<col style="width: 34%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>File name</p></th>
 <th class="head"><p>Required/optional</p></th>
@@ -847,12 +846,12 @@ For each power CU, the workflow generates:</p>
 </li>
 </ul>
 </div></blockquote>
-<div class="section" id="automatic-generation-of-templates">
-<h3>Automatic generation of templates<a class="headerlink" href="#automatic-generation-of-templates" title="Permalink to this headline">¶</a></h3>
+<section id="automatic-generation-of-templates">
+<h3>Automatic generation of templates<a class="headerlink" href="#automatic-generation-of-templates" title="Permalink to this heading">¶</a></h3>
 <p>See <a class="reference internal" href="environment-setup-and-workflows-initialization.html#initialize-power-floorplan-sources"><span class="std std-ref">Initialize power floorplan sources</span></a></p>
-</div>
-<div class="section" id="power-floorplan-sources-definition">
-<span id="id2"></span><h3>Power floorplan sources definition<a class="headerlink" href="#power-floorplan-sources-definition" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="power-floorplan-sources-definition">
+<span id="id2"></span><h3>Power floorplan sources definition<a class="headerlink" href="#power-floorplan-sources-definition" title="Permalink to this heading">¶</a></h3>
 <p>When a required power floorplan source file is not found at expected location, each selected power CU will be configured with a single SLICE and the workflow will stop <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> after the OPT design phase and a DCP will be available in
 <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/output/&lt;dev_platform&gt;/&lt;project</span> <span class="pre">name&gt;/u_ex/run/vpp_link/link/vivado/vpl/prj/prj.runs/impl_1/level0_wrapper_opt.dcp</span></code></p>
 <p>Where:</p>
@@ -863,22 +862,17 @@ For each power CU, the workflow generates:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;project_name&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-p"><code class="xref std std-option docutils literal notranslate"><span class="pre">--project_name</span></code></a>.</p></li>
 </ul>
 </div></blockquote>
-<div class="section" id="utilization-json">
-<span id="id3"></span><h4><code class="docutils literal notranslate"><span class="pre">utilization.json</span></code><a class="headerlink" href="#utilization-json" title="Permalink to this headline">¶</a></h4>
+<section id="utilization-json">
+<span id="id3"></span><h4><code class="docutils literal notranslate"><span class="pre">utilization.json</span></code><a class="headerlink" href="#utilization-json" title="Permalink to this heading">¶</a></h4>
 <p>The site utilization of the power CUs must be defined.
 The utilization is the percentage of valid sites: available sites in dynamic region after invalid site exclusion.
 A utilization is defined for each site type and for each clock region.</p>
 <p>Utilization guidelines are provided further down this page.</p>
-<div class="section" id="utilization-json-definition">
-<h5><code class="docutils literal notranslate"><span class="pre">utilization.json</span></code> - Definition<a class="headerlink" href="#utilization-json-definition" title="Permalink to this headline">¶</a></h5>
+<section id="utilization-json-definition">
+<h5><code class="docutils literal notranslate"><span class="pre">utilization.json</span></code> - Definition<a class="headerlink" href="#utilization-json-definition" title="Permalink to this heading">¶</a></h5>
 <p><a class="reference internal" href="#utilization-json"><span class="std std-ref">utilization.json</span></a> contains the following nodes:</p>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">utilization.json</span></code> definition</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 12%" />
-<col style="width: 46%" />
-<col style="width: 42%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Node</p></th>
 <th class="head"><p>Description</p></th>
@@ -920,17 +914,12 @@ number of valid locations in dynamic geometry</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="utilization-json-examples">
-<h5><code class="docutils literal notranslate"><span class="pre">utilization.json</span></code> - Examples<a class="headerlink" href="#utilization-json-examples" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="utilization-json-examples">
+<h5><code class="docutils literal notranslate"><span class="pre">utilization.json</span></code> - Examples<a class="headerlink" href="#utilization-json-examples" title="Permalink to this heading">¶</a></h5>
 <p>The following table provides example of <a class="reference internal" href="#utilization-json"><span class="std std-ref">utilization.json</span></a> for some platforms:</p>
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">utilization.json</span></code> example</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 39%" />
-<col style="width: 35%" />
-<col style="width: 27%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Platform</p></th>
 <th class="head"><p>utilization_template.json</p></th>
@@ -952,10 +941,10 @@ number of valid locations in dynamic geometry</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="invalid-json">
-<span id="id4"></span><h4><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code><a class="headerlink" href="#invalid-json" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="invalid-json">
+<span id="id4"></span><h4><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code><a class="headerlink" href="#invalid-json" title="Permalink to this heading">¶</a></h4>
 <p>Invalid sites are the primitives to be excluded from the power CUs.</p>
 <p>Depending on the settings during the platform generation, routing of the static region is allowed bleed into the dynamic region.
 Placing power CU logic next to the static region may impeach of both routing (congestion reported by Vivado).</p>
@@ -964,16 +953,11 @@ Placing power CU logic next to the static region may impeach of both routing (co
 <p class="admonition-title">Tip</p>
 <p>If there is no invalid site, do not create <a class="reference internal" href="#invalid-json"><span class="std std-ref">invalid.json</span></a> file.</p>
 </div>
-<div class="section" id="invalid-json-definition">
-<h5><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code> - Definition<a class="headerlink" href="#invalid-json-definition" title="Permalink to this headline">¶</a></h5>
+<section id="invalid-json-definition">
+<h5><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code> - Definition<a class="headerlink" href="#invalid-json-definition" title="Permalink to this heading">¶</a></h5>
 <p><a class="reference internal" href="#invalid-json"><span class="std std-ref">invalid.json</span></a> contains the following nodes:</p>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code> definition</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 7%" />
-<col style="width: 64%" />
-<col style="width: 29%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Node</p></th>
 <th class="head"><p>Description</p></th>
@@ -997,17 +981,12 @@ Placing power CU logic next to the static region may impeach of both routing (co
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="invalid-json-examples">
-<h5><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code> - Examples<a class="headerlink" href="#invalid-json-examples" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="invalid-json-examples">
+<h5><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code> - Examples<a class="headerlink" href="#invalid-json-examples" title="Permalink to this heading">¶</a></h5>
 <p>The following table provides example of <a class="reference internal" href="#invalid-json"><span class="std std-ref">invalid.json</span></a> for some platforms:</p>
 <table class="docutils align-default" id="id11">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code> example</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 41%" />
-<col style="width: 34%" />
-<col style="width: 24%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Platform</p></th>
 <th class="head"><p>invalid_template.json</p></th>
@@ -1029,13 +1008,13 @@ Placing power CU logic next to the static region may impeach of both routing (co
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="dynamic-geometry-json">
-<span id="id5"></span><h4><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code><a class="headerlink" href="#dynamic-geometry-json" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="dynamic-geometry-json">
+<span id="id5"></span><h4><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code><a class="headerlink" href="#dynamic-geometry-json" title="Permalink to this heading">¶</a></h4>
 <p>The valid sites (available primitives in platform dynamic region) which can be selected by xbtest to be used by the power CU must be contained in the dynamic region pblocks.</p>
-<div class="section" id="dynamic-geometry-json-definition">
-<h5><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code> - Definition<a class="headerlink" href="#dynamic-geometry-json-definition" title="Permalink to this headline">¶</a></h5>
+<section id="dynamic-geometry-json-definition">
+<h5><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code> - Definition<a class="headerlink" href="#dynamic-geometry-json-definition" title="Permalink to this heading">¶</a></h5>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Do not edit this file.</p>
@@ -1043,11 +1022,6 @@ Placing power CU logic next to the static region may impeach of both routing (co
 <p><a class="reference internal" href="#dynamic-geometry-json"><span class="std std-ref">dynamic_geometry.json</span></a> contains the following nodes:</p>
 <table class="docutils align-default" id="id12">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code> definition</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 62%" />
-<col style="width: 23%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Node</p></th>
 <th class="head"><p>Description</p></th>
@@ -1140,16 +1114,12 @@ found per <code class="docutils literal notranslate"><span class="pre">&lt;SLR</
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="dynamic-geometry-json-examples">
-<h5><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code> - Examples<a class="headerlink" href="#dynamic-geometry-json-examples" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="dynamic-geometry-json-examples">
+<h5><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code> - Examples<a class="headerlink" href="#dynamic-geometry-json-examples" title="Permalink to this heading">¶</a></h5>
 <p>The following table provides example of <a class="reference internal" href="#dynamic-geometry-json"><span class="std std-ref">dynamic_geometry.json</span></a> for some platforms:</p>
 <table class="docutils align-default" id="id13">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">dynamic_geometry.json</span></code> example</span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 55%" />
-<col style="width: 45%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Platform</p></th>
 <th class="head"><p>dynamic_geometry.json</p></th>
@@ -1167,13 +1137,13 @@ found per <code class="docutils literal notranslate"><span class="pre">&lt;SLR</
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-<div class="section" id="power-cu-floorplanning-tips">
-<h3>Power CU floorplanning tips<a class="headerlink" href="#power-cu-floorplanning-tips" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="general">
-<h4>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+</section>
+<section id="power-cu-floorplanning-tips">
+<h3>Power CU floorplanning tips<a class="headerlink" href="#power-cu-floorplanning-tips" title="Permalink to this heading">¶</a></h3>
+<section id="general">
+<h4>General<a class="headerlink" href="#general" title="Permalink to this heading">¶</a></h4>
 <p>The power CU requires special attention when it comes to create its floorplan and how to use the available resources.</p>
 <p>The actual resources of the power CU are the result of the following equation:</p>
 <div class="math notranslate nohighlight">
@@ -1192,10 +1162,6 @@ found per <code class="docutils literal notranslate"><span class="pre">&lt;SLR</
 <p>In a nutshell, here is the procedure to get a quick rough initial floorplan:</p>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-text">Get initial power floorplan</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 73%" />
-<col style="width: 27%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Step</p></th>
 <th class="head"><p>Example</p></th>
@@ -1239,26 +1205,28 @@ found per <code class="docutils literal notranslate"><span class="pre">&lt;SLR</
 </ul>
 </div></blockquote>
 </td>
-<td><div class="figure align-center" id="id15">
+<td><figure class="align-center" id="id15">
 <img alt="../_images/dsp-mem-ss-search.png" src="../_images/dsp-mem-ss-search.png" />
-<p class="caption"><span class="caption-text">Find mem-SS DSP</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Find mem-SS DSP</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-even"><td><p>If a column of macro (DSP, BRAM or URAM) is located next to the static region, mark it as invalid in <a class="reference internal" href="#invalid-json"><span class="std std-ref">invalid.json</span></a>.</p></td>
 <td><p>For example, invalid a column of DSP (X=29) across all SLRs:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;PL_INVALID&quot;</span> <span class="p">:</span>
-    <span class="nt">&quot;SLR_0&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span> <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;DSP48E2_X29Y0:DSP48E2_X29Y89&quot;</span> <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;SLR_1&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span> <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;DSP48E2_X29Y90:DSP48E2_X29Y185&quot;</span> <span class="p">}</span>
-    <span class="p">],</span>
-    <span class="nt">&quot;SLR_2&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span> <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;DSP48E2_X29Y186:DSP48E2_X29Y281&quot;</span> <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;PL_INVALID&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;SLR_0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DSP48E2_X29Y0:DSP48E2_X29Y89&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;SLR_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DSP48E2_X29Y90:DSP48E2_X29Y185&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">],</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;SLR_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DSP48E2_X29Y186:DSP48E2_X29Y281&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </td>
@@ -1371,16 +1339,14 @@ some logic of SLR1 ends being put in SLR2 but the SLR crossing logic is not upda
 </table>
 <p>Try the display_pwr_fp mode (see <a class="reference internal" href="#visualize-power-cu-floorplan"><span class="std std-ref">Visualize power CU floorplan</span></a>) to easily visualize the actual location of the power CU across all SLR based on you power floorplan JSON files.</p>
 <p>Here is an example of <code class="docutils literal notranslate"><span class="pre">xilinx_u280_xdma_201910_1</span></code> floorplan:</p>
-<div class="figure align-center" id="id16">
+<figure class="align-center" id="id16">
 <img alt="../_images/xilinx-u280-xdma-201910-1-floorplan.png" src="../_images/xilinx-u280-xdma-201910-1-floorplan.png" />
-<p class="caption"><span class="caption-text">xilinx_u280_xdma_201910_1 Floorplan</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">xilinx_u280_xdma_201910_1 Floorplan</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <table class="docutils align-default" id="id17">
 <caption><span class="caption-text">xilinx_u280_xdma_201910_1 floorplan legend</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 81%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Colour</p></th>
 <th class="head"><p>Description</p></th>
@@ -1428,9 +1394,9 @@ some logic of SLR1 ends being put in SLR2 but the SLR crossing logic is not upda
 <li><p>The top SLR doesn’t contain any power CU FF or BRAM, so GT CUs could be added.</p></li>
 </ul>
 </div>
-</div>
-<div class="section" id="power-estimation">
-<h4>Power estimation<a class="headerlink" href="#power-estimation" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="power-estimation">
+<h4>Power estimation<a class="headerlink" href="#power-estimation" title="Permalink to this heading">¶</a></h4>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The power estimation described in this section is only valid for Virtex Ultrascale+ type of <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html">Alveo™</a> card.</p>
@@ -1445,10 +1411,6 @@ some logic of SLR1 ends being put in SLR2 but the SLR crossing logic is not upda
 <li><p>The site power is an estimation of power consumption for 1 site.</p>
 <table class="docutils align-default" id="id18">
 <caption><span class="caption-text">Site power estimation</span><a class="headerlink" href="#id18" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 39%" />
-<col style="width: 61%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Site type</p></th>
 <th class="head"><p>Site power (mW)</p></th>
@@ -1518,9 +1480,9 @@ INFO: <span class="o">[</span>GEN_POWER_FLOORPLAN-18<span class="o">]</span>    
 INFO: <span class="o">[</span>GEN_POWER_FLOORPLAN-18<span class="o">]</span>  Total estimated power: <span class="m">251</span>.65 W
 </pre></div>
 </div>
-</div>
-<div class="section" id="power-limitations-considerations-and-general-advises">
-<h4>Power limitations/considerations and general advises<a class="headerlink" href="#power-limitations-considerations-and-general-advises" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="power-limitations-considerations-and-general-advises">
+<h4>Power limitations/considerations and general advises<a class="headerlink" href="#power-limitations-considerations-and-general-advises" title="Permalink to this heading">¶</a></h4>
 <p>Make sure you power CU is designed according to the maximum power you want to achieve (not too big, not too small).</p>
 <blockquote>
 <div><ul class="simple">
@@ -1536,17 +1498,17 @@ INFO: <span class="o">[</span>GEN_POWER_FLOORPLAN-18<span class="o">]</span>  To
 <li><p><a class="reference external" href="https://www.xilinx.com/products/technology/power/xpe.html">Xilinx Power Estimator (XPE)</a></p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="visualize-power-cu-floorplan">
-<span id="id6"></span><h3>Visualize power CU floorplan<a class="headerlink" href="#visualize-power-cu-floorplan" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="visualization-overview">
-<h4>Visualization overview<a class="headerlink" href="#visualization-overview" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="visualize-power-cu-floorplan">
+<span id="id6"></span><h3>Visualize power CU floorplan<a class="headerlink" href="#visualize-power-cu-floorplan" title="Permalink to this heading">¶</a></h3>
+<section id="visualization-overview">
+<h4>Visualization overview<a class="headerlink" href="#visualization-overview" title="Permalink to this heading">¶</a></h4>
 <p><code class="docutils literal notranslate"><span class="pre">xbtest_wizard</span></code> allows the power CU floorplan visualization without synthesis and implementation.
 It generates the power CU floorplan the same way as it is done during the power CU output products generation (during Vitis execution) and a Vivado project is generated, which allow to mark the site of the power CU floorplan with simple commands.</p>
-</div>
-<div class="section" id="pre-requisites">
-<h4>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="pre-requisites">
+<h4>Pre-requisites<a class="headerlink" href="#pre-requisites" title="Permalink to this heading">¶</a></h4>
 <p>The following steps need to be completed before visualizing the power CU floorplan:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1554,9 +1516,9 @@ It generates the power CU floorplan the same way as it is done during the power 
 <li><p><a class="reference internal" href="#power-floorplan-sources-definition"><span class="std std-ref">Power floorplan sources definition</span></a></p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="setup">
-<span id="define-power-cu-floorplan-setup"></span><h4>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="setup">
+<span id="define-power-cu-floorplan-setup"></span><h4>Setup<a class="headerlink" href="#setup" title="Permalink to this heading">¶</a></h4>
 <p>The following parameters need to be set to in <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a>:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1566,17 +1528,17 @@ It generates the power CU floorplan the same way as it is done during the power 
 </ul>
 </div></blockquote>
 <p>The following example shows the minimal required parameters:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;xbtest_power_fp&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;pwr_floorplan_dir&quot;</span> <span class="p">:</span> <span class="s2">&quot;../pwr_cfg&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;display_pwr_floorplan&quot;</span> <span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;cu_selection&quot;</span> <span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;power&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;xbtest_power_fp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;pwr_floorplan_dir&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;../pwr_cfg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;display_pwr_floorplan&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cu_selection&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;power&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Run <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow using command line option <a class="reference internal" href="build-xclbin.html#cmdoption-q"><code class="xref std std-option docutils literal notranslate"><span class="pre">--skip_xclbin_gen</span></code></a> to skip xclbin generation.
@@ -1608,16 +1570,12 @@ A Vivado project will be generated and then opened running a generated <code cla
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>. For example: If <code class="docutils literal notranslate"><span class="pre">path/to/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx_u55c_gen3x16_xdma_3_202210_1</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/hw.xsa</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">hw</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/your/xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch.rpm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch</span></code>.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="visualize-floorplan">
-<h4>Visualize floorplan<a class="headerlink" href="#visualize-floorplan" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="visualize-floorplan">
+<h4>Visualize floorplan<a class="headerlink" href="#visualize-floorplan" title="Permalink to this heading">¶</a></h4>
 <p>Display the power CU resources in different colour depending on the type:</p>
 <table class="docutils align-default" id="id19">
 <caption><span class="caption-text">Power CU visualization legend</span><a class="headerlink" href="#id19" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 58%" />
-<col style="width: 42%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Site type</p></th>
 <th class="head"><p>Colour</p></th>
@@ -1640,12 +1598,6 @@ A Vivado project will be generated and then opened running a generated <code cla
 </table>
 <table class="docutils align-default" id="id20">
 <caption><span class="caption-text">Power CU visualization commands</span><a class="headerlink" href="#id20" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 17%" />
-<col style="width: 42%" />
-<col style="width: 24%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
 <th class="head"><p>Syntax</p></th>
@@ -1699,11 +1651,6 @@ A Vivado project will be generated and then opened running a generated <code cla
 </table>
 <table class="docutils align-default" id="id21">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">display_pwr_fp</span></code> output examples</span><a class="headerlink" href="#id21" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 32%" />
-<col style="width: 31%" />
-<col style="width: 37%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Command</p></th>
 <th class="head"><p>Description</p></th>
@@ -1716,10 +1663,12 @@ A Vivado project will be generated and then opened running a generated <code cla
 </div>
 </td>
 <td><p>Display all sites types</p></td>
-<td><div class="figure align-center" id="id22">
+<td><figure class="align-center" id="id22">
 <img alt="../_images/display-pwr-fp-all.png" src="../_images/display-pwr-fp-all.png" />
-<p class="caption"><span class="caption-text">display_pwr_fp all</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">display_pwr_fp all</span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">display_pwr_fp</span> <span class="n">SLICE</span>
@@ -1727,10 +1676,12 @@ A Vivado project will be generated and then opened running a generated <code cla
 </div>
 </td>
 <td><p>Display SLICE sites</p></td>
-<td><div class="figure align-center" id="id23">
+<td><figure class="align-center" id="id23">
 <img alt="../_images/display-pwr-fp-slice.png" src="../_images/display-pwr-fp-slice.png" />
-<p class="caption"><span class="caption-text">display_pwr_fp SLICE</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">display_pwr_fp SLICE</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-even"><td><div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">display_pwr_fp</span> <span class="n">DSP</span>
@@ -1738,17 +1689,19 @@ A Vivado project will be generated and then opened running a generated <code cla
 </div>
 </td>
 <td><p>Display DSP sites</p></td>
-<td><div class="figure align-center" id="id24">
+<td><figure class="align-center" id="id24">
 <img alt="../_images/display-pwr-fp-dsp.png" src="../_images/display-pwr-fp-dsp.png" />
-<p class="caption"><span class="caption-text">display_pwr_fp DSP</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">display_pwr_fp DSP</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="fpga-part">
-<h4>FPGA part<a class="headerlink" href="#fpga-part" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="fpga-part">
+<h4>FPGA part<a class="headerlink" href="#fpga-part" title="Permalink to this heading">¶</a></h4>
 <p>The FPGA part must be set in the platform XPFM file (provided via command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a> to <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow).</p>
 <p><a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow expects the value of the FPGA part to be defined in:</p>
 <blockquote>
@@ -1758,25 +1711,25 @@ A Vivado project will be generated and then opened running a generated <code cla
 </div></blockquote>
 <p>Alternatively, the FPGA part can be overwritten using <code class="docutils literal notranslate"><span class="pre">fpga_part</span></code> parameter in <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a>.
 For example, set u50 board part:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;xbtest_power_fp&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;fpga_part&quot;</span> <span class="p">:</span> <span class="s2">&quot;xcu50-fsvh2104-2L-e&quot;</span>
-    <span class="p">}</span>
-    <span class="nt">&quot;build&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;pwr_floorplan_dir&quot;</span> <span class="p">:</span> <span class="s2">&quot;../pwr_cfg&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;display_pwr_floorplan&quot;</span> <span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;cu_selection&quot;</span> <span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;power&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;xbtest_power_fp&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;platform&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;fpga_part&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;xcu50-fsvh2104-2L-e&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;build&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;pwr_floorplan_dir&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;../pwr_cfg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;display_pwr_floorplan&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cu_selection&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;power&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="other-outputs">
-<h4>Other outputs<a class="headerlink" href="#other-outputs" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="other-outputs">
+<h4>Other outputs<a class="headerlink" href="#other-outputs" title="Permalink to this heading">¶</a></h4>
 <p>In the build directory, the following other outputs can be found, relatively to the directory <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/output/&lt;dev_platform&gt;/prj_power_fp/u_ex/run/display_pwr_fp</span></code>.</p>
 <p>Where:</p>
 <blockquote>
@@ -1787,10 +1740,6 @@ For example, set u50 board part:</p>
 </div></blockquote>
 <table class="docutils align-default" id="id25">
 <caption><span class="caption-text">Other outputs</span><a class="headerlink" href="#id25" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 52%" />
-<col style="width: 48%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Description</p></th>
 <th class="head"><p>File location</p></th>
@@ -1811,10 +1760,10 @@ For example, set u50 board part:</p>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -1845,7 +1794,7 @@ For example, set u50 board part:</p>
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on May 05, 2022.
+        Last updated on June 28, 2022.
       </span>
 
     </p>

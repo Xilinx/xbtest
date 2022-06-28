@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -60,8 +61,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -74,6 +77,8 @@
   <link rel="stylesheet" href="../_static/css/common-ui-all.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/header-footer.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/pro.min.css" media="all" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Fill platform definition JSON" href="fill-platform-definition-json.html" />
@@ -350,14 +355,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation hub</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/home/build/html/index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Content</span></p>
+<p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="expected-tasks.html">Expected tasks</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="expected-tasks.html#overview">Overview</a></li>
@@ -635,7 +640,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Other versions</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other versions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
@@ -710,10 +715,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="select-pre-canned-tests">
-<span id="id1"></span><h1>Select pre-canned tests<a class="headerlink" href="#select-pre-canned-tests" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="select-pre-canned-tests">
+<span id="id1"></span><h1>Select pre-canned tests<a class="headerlink" href="#select-pre-canned-tests" title="Permalink to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>Pre-canned test JSON files are various example of test JSON files provided to xbtest users in the xclbin RPM/DEB packages.</p>
 <p>The content of pre-canned test JSON files depends on the features supported in the xclbin. Their definition is provided in the following section. Note:</p>
 <blockquote>
@@ -741,9 +746,9 @@
 <li><p>Test conditions.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="overwrite">
-<h2>Overwrite<a class="headerlink" href="#overwrite" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="overwrite">
+<h2>Overwrite<a class="headerlink" href="#overwrite" title="Permalink to this heading">¶</a></h2>
 <p>Default pre-canned test JSON files are automatically generated based on the compute units selected in <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a> (via <code class="docutils literal notranslate"><span class="pre">cu_selection</span></code> node) when generating an xclbin using <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow.</p>
 <p>They are automatically passed to the <a class="reference internal" href="architecture-and-workflows.html#rpm-generate"><span class="std std-ref">rpm_generate</span></a> workflow using xclbin file as carrying vector (they are embedded in xclbin section <code class="docutils literal notranslate"><span class="pre">USER_METADATA</span></code>).</p>
 <p>If needed, you can overwrite the content and the quantity of pre-canned test JSON files packaged with you xclbin.</p>
@@ -786,28 +791,28 @@
 </ul>
 </div></blockquote>
 </div>
-</div>
-<div class="section" id="pre-canned-test-description">
-<h2>Pre-canned test description<a class="headerlink" href="#pre-canned-test-description" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="pre-canned-test-description">
+<h2>Pre-canned test description<a class="headerlink" href="#pre-canned-test-description" title="Permalink to this heading">¶</a></h2>
 <p>Here is a description of all automatically generated pre-canned tests.</p>
-<div class="section" id="verify-json">
-<h3><code class="docutils literal notranslate"><span class="pre">verify.json</span></code><a class="headerlink" href="#verify-json" title="Permalink to this headline">¶</a></h3>
+<section id="verify-json">
+<h3><code class="docutils literal notranslate"><span class="pre">verify.json</span></code><a class="headerlink" href="#verify-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test is used to run only a verify testcase.</p>
 <p>File is always included for any xclbin.</p>
 <p>Do not edit.</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">]</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">]</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="dma-json">
-<h3><code class="docutils literal notranslate"><span class="pre">dma.json</span></code><a class="headerlink" href="#dma-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="dma-json">
+<h3><code class="docutils literal notranslate"><span class="pre">dma.json</span></code><a class="headerlink" href="#dma-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test only includes a DMA testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -824,45 +829,45 @@
 </ul>
 </div></blockquote>
 <p>Add/remove test iteration in <code class="docutils literal notranslate"><span class="pre">test_sequence</span></code>:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>For example, if HBM and DDR are supported, define:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span><span class="p">},</span>
-<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span><span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>If memory CUs connected to HBM and DDR present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;dma&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span>
-          <span class="p">}</span>
-        <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;dma&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="p2p-nvme-json">
-<h3><code class="docutils literal notranslate"><span class="pre">p2p_nvme.json</span></code><a class="headerlink" href="#p2p-nvme-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="p2p-nvme-json">
+<h3><code class="docutils literal notranslate"><span class="pre">p2p_nvme.json</span></code><a class="headerlink" href="#p2p-nvme-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test only includes a P2P_NVME testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -880,56 +885,56 @@
 </ul>
 </div></blockquote>
 <p>Add/remove test iteration in <code class="docutils literal notranslate"><span class="pre">test_sequence</span></code>:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">},</span>
-<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>For example, if HBM and DDR are supported and if the platform is not NoDMA, define:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span><span class="p">},</span>
-<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span><span class="p">},</span>
-<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span><span class="p">},</span>
-<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span><span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>If memory CUs connected to HBM and DDR present in xclbin and if the platform is not NoDMA:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;p2p_nvme&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span>
-          <span class="p">}</span>
-        <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;p2p_nvme&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="p2p-card-json">
-<h3><code class="docutils literal notranslate"><span class="pre">p2p_card.json</span></code><a class="headerlink" href="#p2p-card-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="p2p-card-json">
+<h3><code class="docutils literal notranslate"><span class="pre">p2p_card.json</span></code><a class="headerlink" href="#p2p-card-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test only includes a P2P_CARD testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -947,45 +952,45 @@
 </ul>
 </div></blockquote>
 <p>Add/remove test iteration in <code class="docutils literal notranslate"><span class="pre">test_sequence</span></code>:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;name&gt;&quot;</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>For example, if HBM and DDR are supported, define:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span><span class="p">},</span>
-<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span><span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="p">},</span><span class="w"></span>
+<span class="p">{</span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>If memory CUs connected to HBM and DDR present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;p2p_card&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span>
-          <span class="p">}</span>
-        <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;p2p_card&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="memory-json">
-<h3><code class="docutils literal notranslate"><span class="pre">memory.json</span></code><a class="headerlink" href="#memory-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="memory-json">
+<h3><code class="docutils literal notranslate"><span class="pre">memory.json</span></code><a class="headerlink" href="#memory-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test only includes a memory testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1009,69 +1014,69 @@
 </ul>
 </div></blockquote>
 <p>If memory CUs connected to HBM and DDR present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;DDR&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;HBM&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;memory&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;DDR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;HBM&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="memory-host-json">
-<h3><code class="docutils literal notranslate"><span class="pre">memory_host.json</span></code><a class="headerlink" href="#memory-host-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="memory-host-json">
+<h3><code class="docutils literal notranslate"><span class="pre">memory_host.json</span></code><a class="headerlink" href="#memory-host-json" title="Permalink to this heading">¶</a></h3>
 <p>Same as memory pre-canned test but for <strong>host</strong> memory instead of <strong>on-board</strong> memory.</p>
 <p>File not included if:</p>
 <blockquote>
@@ -1080,46 +1085,46 @@
 </ul>
 </div></blockquote>
 <p>If memory CUs connected to HOST present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;HOST&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;memory&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;HOST&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="power-json">
-<h3><code class="docutils literal notranslate"><span class="pre">power.json</span></code><a class="headerlink" href="#power-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="power-json">
+<h3><code class="docutils literal notranslate"><span class="pre">power.json</span></code><a class="headerlink" href="#power-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test only includes a power testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1134,44 +1139,44 @@
 </div></blockquote>
 <p>Do not edit.</p>
 <p>If power CUs present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;power&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
-            <span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span> <span class="mi">5</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
-            <span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span> <span class="mi">10</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
-            <span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span> <span class="mi">15</span>
-          <span class="p">},</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
-            <span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span> <span class="mi">20</span>
-          <span class="p">}</span>
-        <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;power&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">100</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="gt-mac-json">
-<h3><code class="docutils literal notranslate"><span class="pre">gt_mac.json</span></code><a class="headerlink" href="#gt-mac-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gt-mac-json">
+<h3><code class="docutils literal notranslate"><span class="pre">gt_mac.json</span></code><a class="headerlink" href="#gt-mac-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test only includes a GT_MAC testcase:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1194,102 +1199,102 @@
 </ul>
 </div></blockquote>
 <p>If 2 GT_MAC CUs present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_c74_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_10gbe_c74_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_c74_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_10gbe_c74_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe_c74_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_10gbe_c74_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe_c74_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_10gbe_c74_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="switch-10gbe-json">
-<h3><code class="docutils literal notranslate"><span class="pre">switch_10gbe.json</span></code><a class="headerlink" href="#switch-10gbe-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="switch-10gbe-json">
+<h3><code class="docutils literal notranslate"><span class="pre">switch_10gbe.json</span></code><a class="headerlink" href="#switch-10gbe-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test only includes a GT_MAC testcase:</p>
 <blockquote>
 <div><ul>
@@ -1333,98 +1338,98 @@
 </ul>
 </div></blockquote>
 <p>If 2 GT_MAC CUs present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_10gbe_no_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">1</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">0</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">3</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">2</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_10gbe_no_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">1</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">0</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">3</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">2</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_10gbe_no_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lane_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_10gbe_no_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lane_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="switch-25gbe-json">
-<h3><code class="docutils literal notranslate"><span class="pre">switch_25gbe.json</span></code><a class="headerlink" href="#switch-25gbe-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="switch-25gbe-json">
+<h3><code class="docutils literal notranslate"><span class="pre">switch_25gbe.json</span></code><a class="headerlink" href="#switch-25gbe-json" title="Permalink to this heading">¶</a></h3>
 <p>Same as switch_10gbe pre-canned test but for 25gbe instead of 10gbe.</p>
 <p>GT_MAC CU configured with <code class="docutils literal notranslate"><span class="pre">conf_25gbe_c74_fec</span></code> instead of <code class="docutils literal notranslate"><span class="pre">conf_10gbe_no_fec</span></code>.</p>
 <p>File not included if:</p>
@@ -1434,98 +1439,98 @@
 </ul>
 </div></blockquote>
 <p>If 2 GT_MAC CUs present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_c74_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">1</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">0</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">3</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">2</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_c74_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">1</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">0</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">3</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">2</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe_c74_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lane_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe_c74_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lane_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="gt-mac-lpbk-json">
-<h3><code class="docutils literal notranslate"><span class="pre">gt_mac_lpbk.json</span></code><a class="headerlink" href="#gt-mac-lpbk-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gt-mac-lpbk-json">
+<h3><code class="docutils literal notranslate"><span class="pre">gt_mac_lpbk.json</span></code><a class="headerlink" href="#gt-mac-lpbk-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test only includes GT_MAC and GT_LPBK testcases:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1562,60 +1567,60 @@
 </ul>
 </div></blockquote>
 <p>If 1 GT_MAC CU and 1 GT_LPBK CU present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_no_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;gt_lpbk&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_no_fec&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe_no_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gt_lpbk&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe_no_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="gt-mac-port-to-port-json">
-<h3><code class="docutils literal notranslate"><span class="pre">gt_mac_port_to_port.json</span></code><a class="headerlink" href="#gt-mac-port-to-port-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gt-mac-port-to-port-json">
+<h3><code class="docutils literal notranslate"><span class="pre">gt_mac_port_to_port.json</span></code><a class="headerlink" href="#gt-mac-port-to-port-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test only includes GT_MAC testcases:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1683,93 +1688,93 @@
 </ul>
 </div></blockquote>
 <p>If 2 GT_MAC CUs present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_c74_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;mac_to_mac_connection&quot;</span><span class="p">:</span> <span class="mi">0</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe_c74_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;mac_to_mac_connection&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="gt-prbs-json">
-<h3><code class="docutils literal notranslate"><span class="pre">gt_prbs.json</span></code><a class="headerlink" href="#gt-prbs-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gt-prbs-json">
+<h3><code class="docutils literal notranslate"><span class="pre">gt_prbs.json</span></code><a class="headerlink" href="#gt-prbs-json" title="Permalink to this heading">¶</a></h3>
 <p>If 1 GT_PRBS CU present in xclbin:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;gt_prbs&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;read_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gt_prbs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;read_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="stress-json">
-<h3><code class="docutils literal notranslate"><span class="pre">stress.json</span></code><a class="headerlink" href="#stress-json" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stress-json">
+<h3><code class="docutils literal notranslate"><span class="pre">stress.json</span></code><a class="headerlink" href="#stress-json" title="Permalink to this heading">¶</a></h3>
 <p>This pre-canned test combines memory, power, GT_MAC and GT_PRBS testcases:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1797,121 +1802,121 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">testcases.gt_prbs.1</span></code></p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span>
-  <span class="p">],</span>
-  <span class="nt">&quot;testcases&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;power&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Update toggle rate according to your test environment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span>
-            <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-            <span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span> <span class="mi">10</span>
-          <span class="p">}</span>
-        <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;memory&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;DDR&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">},</span>
-      <span class="nt">&quot;HBM&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;gt_prbs&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;comment&quot;</span><span class="p">:</span> <span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-          <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;conf_25gbe_c74_fec&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_status&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;run&quot;</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-              <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-              <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;check_status&quot;</span>
-            <span class="p">}</span>
-          <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="nt">&quot;lane_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;0&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">1</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">0</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;2&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">3</span>
-          <span class="p">},</span>
-          <span class="nt">&quot;3&quot;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span> <span class="mi">2</span>
-          <span class="p">}</span>
-        <span class="p">}</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;You can use this example as template for your own tests&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Please refer to the User Guide for how to define or add/remove testcases&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="s2">&quot;Comments can be added or removed anywhere in test JSON file&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">],</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;testcases&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;power&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Update toggle rate according to your test environment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;toggle_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;memory&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;DDR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;HBM&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gt_prbs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;gt_mac&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Use comment to detail your test if necessary (you can also remove this comment)&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;match_tx_rx&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;conf_25gbe_c74_fec&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clear_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">},</span><span class="w"></span>
+<span class="w">            </span><span class="p">{</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"></span>
+<span class="w">              </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;check_status&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="p">}</span><span class="w"></span>
+<span class="w">          </span><span class="p">]</span><span class="w"></span>
+<span class="w">        </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;lane_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;2&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="w"></span>
+<span class="w">          </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="nt">&quot;3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">            </span><span class="nt">&quot;tx_mapping&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w"></span>
+<span class="w">          </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -1942,7 +1947,7 @@
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on May 05, 2022.
+        Last updated on June 28, 2022.
       </span>
 
     </p>

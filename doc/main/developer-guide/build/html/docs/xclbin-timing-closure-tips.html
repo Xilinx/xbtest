@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -60,8 +61,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -74,6 +77,8 @@
   <link rel="stylesheet" href="../_static/css/common-ui-all.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/header-footer.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/pro.min.css" media="all" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Select pre-canned tests" href="select-pre-canned-tests.html" />
@@ -350,14 +355,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation hub</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/home/build/html/index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Content</span></p>
+<p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="expected-tasks.html">Expected tasks</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="expected-tasks.html#overview">Overview</a></li>
@@ -635,7 +640,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Other versions</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other versions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
@@ -710,10 +715,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="xclbin-timing-closure-tips">
-<span id="id1"></span><h1>xclbin timing closure tips<a class="headerlink" href="#xclbin-timing-closure-tips" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="xclbin-timing-closure-tips">
+<span id="id1"></span><h1>xclbin timing closure tips<a class="headerlink" href="#xclbin-timing-closure-tips" title="Permalink to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>The two main timing issues you may encounter would be in the power and GT_MAC CUs.
 To solve them, some pblock are needed and potentially an update of Vivado default strategy.</p>
 <p>These can be done by adding some configurations into your <a class="reference internal" href="configure-vitis.html#vpp-options-file"><span class="std std-ref">Vitis options file: vpp.ini</span></a>:</p>
@@ -724,18 +729,18 @@ To solve them, some pblock are needed and potentially an update of Vivado defaul
 </ul>
 </div></blockquote>
 <p>Here is an example:</p>
-<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="k">[vivado]</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=../../vpp_cfg/place_design_pre.tcl</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.strategy=Performance_EarlyBlockPlacement</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true</span>
+<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="k">[vivado]</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=../../vpp_cfg/place_design_pre.tcl</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.strategy=Performance_EarlyBlockPlacement</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true</span><span class="w"></span>
 </pre></div>
 </div>
-<div class="section" id="run-multi-strategy-on-lsf">
-<h3>Run multi-strategy on LSF<a class="headerlink" href="#run-multi-strategy-on-lsf" title="Permalink to this headline">¶</a></h3>
+<section id="run-multi-strategy-on-lsf">
+<h3>Run multi-strategy on LSF<a class="headerlink" href="#run-multi-strategy-on-lsf" title="Permalink to this heading">¶</a></h3>
 <p>If the above options are not enough to close timing, you can also try to run multiple strategies over a cluster:</p>
 <blockquote>
 <div><ul>
@@ -749,31 +754,31 @@ To solve them, some pblock are needed and potentially an update of Vivado defaul
 </li>
 </ul>
 </div></blockquote>
-<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="k">[advanced]</span>
-<span class="c1">#param=compiler.multiStrategiesWaitOnAllRuns=1</span>
-<span class="c1">## only for vivado &gt;=2022.1</span>
-<span class="c1">#param=compiler.errorOnPulseWidthViolation=false</span>
+<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="k">[advanced]</span><span class="w"></span>
+<span class="c1">#param=compiler.multiStrategiesWaitOnAllRuns=1</span><span class="w"></span>
+<span class="c1">## only for vivado &gt;=2022.1</span><span class="w"></span>
+<span class="c1">#param=compiler.errorOnPulseWidthViolation=false</span><span class="w"></span>
 
-<span class="k">[vivado]</span>
-<span class="na">impl.lsf</span><span class="o">=</span><span class="s">{bsub -R &quot;select[(type==X86_64) &amp;&amp; (osdistro=rhel || osdistro=centos) &amp;&amp; (osver == ws7) &amp;&amp; (ossp &gt; 3)] rusage[mem=48000]&quot; -N -q long -W 48:00}</span>
-<span class="na">impl.strategies</span><span class="o">=</span><span class="s">ALL</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.PLACE_DESIGN.TCL.PRE=../../vpp_cfg/place_design_pre.tcl</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.ROUTE_DESIGN.TCL.PRE=../../vpp_cfg/route_design_pre.tcl</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true</span>
+<span class="k">[vivado]</span><span class="w"></span>
+<span class="na">impl.lsf</span><span class="o">=</span><span class="s">{bsub -R &quot;select[(type==X86_64) &amp;&amp; (osdistro=rhel || osdistro=centos) &amp;&amp; (osver == ws7) &amp;&amp; (ossp &gt; 3)] rusage[mem=48000]&quot; -N -q long -W 48:00}</span><span class="w"></span>
+<span class="na">impl.strategies</span><span class="o">=</span><span class="s">ALL</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.PLACE_DESIGN.TCL.PRE=../../vpp_cfg/place_design_pre.tcl</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.ROUTE_DESIGN.TCL.PRE=../../vpp_cfg/route_design_pre.tcl</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.__ALL_IMPL__.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>With vivado 2022.1 (or more recent) and only in multi-strategy, pulse violation timing violation are not ignored. This is a different behaviour compared to a single strategy build. Pulse timing violations in the power CU can be safely ignored.</p>
 </div>
-</div>
-</div>
-<div class="section" id="power-cu">
-<h2>Power CU<a class="headerlink" href="#power-cu" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="power-cu">
+<h2>Power CU<a class="headerlink" href="#power-cu" title="Permalink to this heading">¶</a></h2>
 <p>Although the power CU constraints all FF, DSP, BRAM and URAM, timing closure is not always achieved.
 This could happen if <code class="docutils literal notranslate"><span class="pre">CLOCK_LOW_FANOUT</span></code> constraint set for the <code class="docutils literal notranslate"><span class="pre">clk_throttling</span></code> block of the power CU is ignored.</p>
 <blockquote>
@@ -781,10 +786,12 @@ This could happen if <code class="docutils literal notranslate"><span class="pre
 <li><p>You may have a setup violation between the FF <code class="docutils literal notranslate"><span class="pre">Gate_Fast_d1</span></code> and the <code class="docutils literal notranslate"><span class="pre">CE</span></code> pin of <code class="docutils literal notranslate"><span class="pre">FCLK</span></code> (<code class="docutils literal notranslate"><span class="pre">BUFGCE_DIV</span></code>).</p></li>
 </ul>
 </div></blockquote>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <img alt="../_images/bufgce-div.png" src="../_images/bufgce-div.png" />
-<p class="caption"><span class="caption-text">Clock throttling <code class="docutils literal notranslate"><span class="pre">BUFGCE_DIV</span></code></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Clock throttling <code class="docutils literal notranslate"><span class="pre">BUFGCE_DIV</span></code></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>In this case, we can emulate the effect of <code class="docutils literal notranslate"><span class="pre">CLOCK_LOW_FANOUT</span></code> constraint by creating a pblock and assigning the power CU clock throttle block.</p>
 <p>In <code class="docutils literal notranslate"><span class="pre">place_design_pre.tcl</span></code>, you can add the following constraints (update pblock according to your design).</p>
 <p>Use the same pblock in which you can find <code class="docutils literal notranslate"><span class="pre">GC.FCLK</span></code> clock buffer of the <code class="docutils literal notranslate"><span class="pre">UCS</span></code> IP.</p>
@@ -794,17 +801,19 @@ This could happen if <code class="docutils literal notranslate"><span class="pre
 </pre></div>
 </div>
 <p>Here is how to locate the clock buffer:</p>
-<div class="figure align-center" id="id3">
+<figure class="align-center" id="id3">
 <img alt="../_images/bufgce-div-source.png" src="../_images/bufgce-div-source.png" />
-<p class="caption"><span class="caption-text">Clock throttling <code class="docutils literal notranslate"><span class="pre">BUFGCE_DIV</span></code></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Clock throttling <code class="docutils literal notranslate"><span class="pre">BUFGCE_DIV</span></code></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>It is also recommended to cascade the power CU if you’ve got multiple of them. So only 1 power CU will contain the throttling logic.</p>
 </div>
-</div>
-<div class="section" id="gt-mac-cu">
-<h2>GT_MAC CU<a class="headerlink" href="#gt-mac-cu" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="gt-mac-cu">
+<h2>GT_MAC CU<a class="headerlink" href="#gt-mac-cu" title="Permalink to this heading">¶</a></h2>
 <p>The GT_MAC CU is mainly composed by the <code class="docutils literal notranslate"><span class="pre">xxv_ethernet</span></code>, which is a huge IP (without the RS-FEC it’s still 75k FF and 63k LUT, and a limited quantity of RAMB36).
 There are numerous paths with more than 8 levels of logic/routing.
 Although most of the DRP logic is running at relatively low frequency 75MHz, giving too much room for the <code class="docutils literal notranslate"><span class="pre">xxv_ethernet</span></code>, design could not meet timing.</p>
@@ -813,8 +822,8 @@ Although most of the DRP logic is running at relatively low frequency 75MHz, giv
 <li><p>E.g. <code class="docutils literal notranslate"><span class="pre">system</span> <span class="pre">clock:</span> <span class="pre">rxoutclk_out[0]_9;</span> <span class="pre">slack:</span>&#160; <span class="pre">-0.118</span> <span class="pre">ns</span></code></p></li>
 </ul>
 </div></blockquote>
-<div class="section" id="pblock-usage">
-<h3>Pblock usage<a class="headerlink" href="#pblock-usage" title="Permalink to this headline">¶</a></h3>
+<section id="pblock-usage">
+<h3>Pblock usage<a class="headerlink" href="#pblock-usage" title="Permalink to this heading">¶</a></h3>
 <p>Do <strong>not</strong> let Vivado use the entire SLR and freely place the <code class="docutils literal notranslate"><span class="pre">xxv_ethernet</span></code> IP.
 Use pblock to squeeze instances of <code class="docutils literal notranslate"><span class="pre">xxv_ethernet</span></code>.
 Here are 2 examples of how to pblock 1 or 2 instances of <code class="docutils literal notranslate"><span class="pre">xxv_ethernet</span></code></p>
@@ -841,26 +850,24 @@ Here are 2 examples of how to pblock 1 or 2 instances of <code class="docutils l
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The two pblocks overlap as the GT transceivers are located close to each other on the die and the CLBL/CLBM utilization is at ~ 75%</p>
-<div class="figure align-center" id="id4">
+<figure class="align-center" id="id4">
 <img alt="../_images/gt-pblock-overlap.png" src="../_images/gt-pblock-overlap.png" />
-<p class="caption"><span class="caption-text">GT pblock overlap</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+<figcaption>
+<p><span class="caption-text">GT pblock overlap</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </div>
-</div>
-</div>
-<div class="section" id="force-loc-of-bram">
-<h3>Force LOC of BRAM<a class="headerlink" href="#force-loc-of-bram" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="force-loc-of-bram">
+<h3>Force LOC of BRAM<a class="headerlink" href="#force-loc-of-bram" title="Permalink to this heading">¶</a></h3>
 <p>Unless you use incremental compilation with <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a>, you can try the following to extract some guidelines from a passing timing project and feeding them into the failing on.
 You don’t need to extract the location of each FF, the BRAM forces already a decent repetition of the P&amp;R.</p>
-<div class="section" id="only-gt-brams">
-<h4>Only GT BRAMs<a class="headerlink" href="#only-gt-brams" title="Permalink to this headline">¶</a></h4>
+<section id="only-gt-brams">
+<h4>Only GT BRAMs<a class="headerlink" href="#only-gt-brams" title="Permalink to this heading">¶</a></h4>
 <p>Try first to close timing with only the GT (and maybe with the other CU present in the SLR, e.g. DDR).
 From the timing closed project:</p>
 <table class="docutils align-default" id="id5">
 <caption><span class="caption-text">Force LOC of Only GT BRAMs</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 40%" />
-<col style="width: 60%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Step</p></th>
 <th class="head"><p>Example</p></th>
@@ -908,16 +915,12 @@ but it should make the XDC a bit smaller as it excludes all timing related const
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="all-ulp-brams">
-<h4>All ULP BRAMs<a class="headerlink" href="#all-ulp-brams" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="all-ulp-brams">
+<h4>All ULP BRAMs<a class="headerlink" href="#all-ulp-brams" title="Permalink to this heading">¶</a></h4>
 <p>If only fixing location of GT BRAMs is still not working you need to use a more complex approach to reach timing closure:</p>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">Force LOC of all ULP BRAMs</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 40%" />
-<col style="width: 60%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Step</p></th>
 <th class="head"><p>Description</p></th>
@@ -951,20 +954,14 @@ So, you can see which strategy is closing timing and if lots of strategy are clo
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-</div>
-<div class="section" id="frequency-override">
-<h2>Frequency override<a class="headerlink" href="#frequency-override" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="frequency-override">
+<h2>Frequency override<a class="headerlink" href="#frequency-override" title="Permalink to this heading">¶</a></h2>
 <p>To help timing closure, the frequency of the CU clocks can be overwritten setting the following parameters in <code class="docutils literal notranslate"><span class="pre">wizard_config.json</span></code>.</p>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Clocks description</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 6%" />
-<col style="width: 5%" />
-<col style="width: 68%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Parameter</p></th>
 <th class="head"><p>Range</p></th>
@@ -991,9 +988,9 @@ So, you can see which strategy is closing timing and if lots of strategy are clo
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="enable-clock-scaling">
-<h2>Enable clock scaling<a class="headerlink" href="#enable-clock-scaling" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="enable-clock-scaling">
+<h2>Enable clock scaling<a class="headerlink" href="#enable-clock-scaling" title="Permalink to this heading">¶</a></h2>
 <p>If the frequency override is not enough, clock scaling may be enabled.</p>
 <p><a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> linker run as part of <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow is set to disable auto scaling by default.
 This way the xclbin generation will fail when timing is not met.</p>
@@ -1010,8 +1007,8 @@ This way the xclbin generation will fail when timing is not met.</p>
 <p class="admonition-title">Warning</p>
 <p>If actual frequency of <a class="reference internal" href="configure-xclbin.html#ap-clk"><span class="std std-ref">ap_clk</span></a> and configured frequency (<code class="docutils literal notranslate"><span class="pre">cu_configuration.clock.0.freq</span></code>) are different, BW and latency measurements reported by xbtest are not accurate.</p>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -1042,7 +1039,7 @@ This way the xclbin generation will fail when timing is not met.</p>
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on May 05, 2022.
+        Last updated on June 28, 2022.
       </span>
 
     </p>

@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -60,8 +61,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -74,6 +77,8 @@
   <link rel="stylesheet" href="../_static/css/common-ui-all.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/header-footer.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/pro.min.css" media="all" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Build xclbin" href="build-xclbin.html" />
@@ -350,14 +355,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation hub</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/home/build/html/index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Content</span></p>
+<p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="expected-tasks.html">Expected tasks</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="expected-tasks.html#overview">Overview</a></li>
@@ -635,7 +640,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Other versions</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other versions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
@@ -710,10 +715,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="configure-vitis">
-<span id="id1"></span><h1>Configure Vitis<a class="headerlink" href="#configure-vitis" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="configure-vitis">
+<span id="id1"></span><h1>Configure Vitis<a class="headerlink" href="#configure-vitis" title="Permalink to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>Within <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow, <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> uses different files:</p>
 <blockquote>
 <div><ul>
@@ -750,14 +755,14 @@
 </ul>
 </div></blockquote>
 <p>You should use the templates generated during the initialization phase (see Workflows initialization).</p>
-</div>
-<div class="section" id="required-vitis-tcl-hooks">
-<span id="required-tcl-hooks"></span><h2>Required Vitis TCL hooks<a class="headerlink" href="#required-vitis-tcl-hooks" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="post-system-linker-tcl-hook-postsys-link-tcl">
-<span id="postsys-link-tcl"></span><h3>Post system linker TCL hook: <code class="docutils literal notranslate"><span class="pre">postsys_link.tcl</span></code><a class="headerlink" href="#post-system-linker-tcl-hook-postsys-link-tcl" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="required-vitis-tcl-hooks">
+<span id="required-tcl-hooks"></span><h2>Required Vitis TCL hooks<a class="headerlink" href="#required-vitis-tcl-hooks" title="Permalink to this heading">¶</a></h2>
+<section id="post-system-linker-tcl-hook-postsys-link-tcl">
+<span id="postsys-link-tcl"></span><h3>Post system linker TCL hook: <code class="docutils literal notranslate"><span class="pre">postsys_link.tcl</span></code><a class="headerlink" href="#post-system-linker-tcl-hook-postsys-link-tcl" title="Permalink to this heading">¶</a></h3>
 <p>Updates of <a class="reference internal" href="environment-setup-and-workflows-initialization.html#postsys-link-tcl-template"><span class="std std-ref">Post system linker TCL hook template: postsys_link.tcl</span></a> are done in procedure <code class="docutils literal notranslate"><span class="pre">postsys_link_body</span></code>.</p>
-<div class="section" id="connect-continuous-clock">
-<h4>Connect continuous clock<a class="headerlink" href="#connect-continuous-clock" title="Permalink to this headline">¶</a></h4>
+<section id="connect-continuous-clock">
+<h4>Connect continuous clock<a class="headerlink" href="#connect-continuous-clock" title="Permalink to this heading">¶</a></h4>
 <p>xbtest should be used with a platform created with subsystem v2.0 (or greater).
 This sets of IP’s ensures a standard clocking structure across platform.
 It contains the User Clocking Subsystem (UCS).
@@ -769,8 +774,8 @@ The continuous (non-throttled) version of each clock can be output by the UCS su
 This is done via a <a class="reference internal" href="#postsys-link-tcl"><span class="std std-ref">Post system linker TCL hook: postsys_link.tcl</span></a>.</p>
 <p>If you don’t connect the continuous clocks to the CUs, xbtest SW will report an error.</p>
 <p>As described in following sections, you can use and update the generated <a class="reference internal" href="environment-setup-and-workflows-initialization.html#postsys-link-tcl-template"><span class="std std-ref">Post system linker TCL hook template: postsys_link.tcl</span></a> or alternatively create the commands from scratch.</p>
-<div class="section" id="using-generated-template">
-<h5>Using generated template<a class="headerlink" href="#using-generated-template" title="Permalink to this headline">¶</a></h5>
+<section id="using-generated-template">
+<h5>Using generated template<a class="headerlink" href="#using-generated-template" title="Permalink to this heading">¶</a></h5>
 <p>In <a class="reference internal" href="environment-setup-and-workflows-initialization.html#postsys-link-tcl-template"><span class="std std-ref">Post system linker TCL hook template: postsys_link.tcl</span></a>, update the call to the procedure (<code class="docutils literal notranslate"><span class="pre">connect_continuous_clocks</span></code>) according to:</p>
 <blockquote>
 <div><ul class="simple">
@@ -791,11 +796,6 @@ Update according to your platform.</p>
 <p>The following table describes the supported value of <code class="docutils literal notranslate"><span class="pre">connect_continuous_clocks</span></code> procedure inputs:</p>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">connect_continuous_clocks</span></code> inputs</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 4%" />
-<col style="width: 87%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Input</p></th>
 <th class="head"><p>Value</p></th>
@@ -830,25 +830,29 @@ The CU continuous inputs clock will be connected to Vitis CU clocks.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="create-commands-from-scratch">
-<h5>Create commands from scratch<a class="headerlink" href="#create-commands-from-scratch" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="create-commands-from-scratch">
+<h5>Create commands from scratch<a class="headerlink" href="#create-commands-from-scratch" title="Permalink to this heading">¶</a></h5>
 <p>If you have access to a Vivado project of the platform, you can identify the UCS name, version or simply create the TCL commands to connect continuous clocks from scratch. For example, for UCS subsystem v2:</p>
 <blockquote>
 <div><ol class="arabic">
 <li><p>Open the project.</p></li>
 <li><p>Open block diagram of the dynamic region (called <code class="docutils literal notranslate"><span class="pre">ulp</span></code>).</p></li>
 <li><p>Double-click on the UCS instance to re-customize it. In the following example, the instance is called <code class="docutils literal notranslate"><span class="pre">ulp_ucs</span></code>:</p>
-<div class="figure align-center" id="id5">
+<figure class="align-center" id="id5">
 <img alt="../_images/ulp-ucs-inst.png" src="../_images/ulp-ucs-inst.png" />
-<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">ulp_ucs</span></code> instance</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">ulp_ucs</span></code> instance</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </li>
 <li><p>Enable both <code class="docutils literal notranslate"><span class="pre">kernel</span></code> and <code class="docutils literal notranslate"><span class="pre">kernel2</span></code> continuous clocks:</p>
-<div class="figure align-center" id="id6">
+<figure class="align-center" id="id6">
 <img alt="../_images/ulp-ucs-customize.png" src="../_images/ulp-ucs-customize.png" />
-<p class="caption"><span class="caption-text">Customize <code class="docutils literal notranslate"><span class="pre">ulp_ucs</span></code></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Customize <code class="docutils literal notranslate"><span class="pre">ulp_ucs</span></code></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>This will create two new ports <code class="docutils literal notranslate"><span class="pre">clk_kernel_cont</span></code> and <code class="docutils literal notranslate"><span class="pre">clk_kernel2_cont</span></code>.</p>
 </li>
 <li><p>In the block diagram, connect them <code class="docutils literal notranslate"><span class="pre">ap_clk_cont</span></code> and <code class="docutils literal notranslate"><span class="pre">ap_clk_2_cont</span></code> port of all xbtest IP.</p></li>
@@ -856,10 +860,10 @@ The CU continuous inputs clock will be connected to Vitis CU clocks.</p></td>
 <li><p>Add these commands in your <a class="reference internal" href="#postsys-link-tcl"><span class="std std-ref">Post system linker TCL hook: postsys_link.tcl</span></a>.</p></li>
 </ol>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="overwrite-cascaded-power-cu-connectivity">
-<span id="id2"></span><h4>Overwrite cascaded power CU connectivity<a class="headerlink" href="#overwrite-cascaded-power-cu-connectivity" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="overwrite-cascaded-power-cu-connectivity">
+<span id="id2"></span><h4>Overwrite cascaded power CU connectivity<a class="headerlink" href="#overwrite-cascaded-power-cu-connectivity" title="Permalink to this heading">¶</a></h4>
 <p>By default, when destination power CUs are specified (see <a class="reference internal" href="configure-xclbin.html#cu-configuration-power"><span class="std std-ref">power: Power CU configuration</span></a>), they are automatically connected to the first source power CU found in the <a class="reference internal" href="#generated-vpp-options-file"><span class="std std-ref">Generated Vitis options file: vpp_link.ini</span></a>.</p>
 <p>You can override the default connections in your <a class="reference internal" href="#postsys-link-tcl"><span class="std std-ref">Post system linker TCL hook: postsys_link.tcl</span></a> for any destination power CU:</p>
 <blockquote>
@@ -871,10 +875,6 @@ The CU continuous inputs clock will be connected to Vitis CU clocks.</p></td>
 <p>The following ports of must be connected:</p>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Power CU throttle connections</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 45%" />
-<col style="width: 55%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Source power CU port</p></th>
 <th class="head"><p>Destination power CU port</p></th>
@@ -912,29 +912,29 @@ For example:</p>
 </ul>
 </div></blockquote>
 </div>
-</div>
-</div>
-</div>
-<div class="section" id="optional-tcl-hooks">
-<span id="id3"></span><h2>Optional TCL hooks<a class="headerlink" href="#optional-tcl-hooks" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+</section>
+<section id="optional-tcl-hooks">
+<span id="id3"></span><h2>Optional TCL hooks<a class="headerlink" href="#optional-tcl-hooks" title="Permalink to this heading">¶</a></h2>
 <p>Other TCL hooks may be defined to be used as different steps of the <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> build flow.
 Refer to Vitis documentation for how to define them.</p>
 <p>Examples of <a class="reference internal" href="#place-design-pre-tcl"><span class="std std-ref">Pre-placer TCL hook: place_design_pre.tcl</span></a> and <a class="reference internal" href="#route-design-pre-tcl"><span class="std std-ref">Pre-router TCL hook: route_design_pre.tcl</span></a> used to help meeting timing requirements are provided in <a class="reference internal" href="xclbin-timing-closure-tips.html#xclbin-timing-closure-tips"><span class="std std-ref">xclbin timing closure tips</span></a>.</p>
 <p>Template &amp; place holder <a class="reference internal" href="environment-setup-and-workflows-initialization.html#place-design-pre-tcl-template"><span class="std std-ref">Pre-placer TCL hook template: place_design_pre.tcl</span></a> and <a class="reference internal" href="environment-setup-and-workflows-initialization.html#route-design-pre-tcl-template"><span class="std std-ref">Pre-router TCL hook template: route_design_pre.tcl</span></a> can also be used as reference: see <a class="reference internal" href="environment-setup-and-workflows-initialization.html#templates-description"><span class="std std-ref">Templates description</span></a>.</p>
-<div class="section" id="pre-placer-tcl-hook-place-design-pre-tcl">
-<span id="place-design-pre-tcl"></span><h3>Pre-placer TCL hook: <code class="docutils literal notranslate"><span class="pre">place_design_pre.tcl</span></code><a class="headerlink" href="#pre-placer-tcl-hook-place-design-pre-tcl" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="noc-constraints-versal">
-<h4>NOC Constraints (Versal)<a class="headerlink" href="#noc-constraints-versal" title="Permalink to this headline">¶</a></h4>
+<section id="pre-placer-tcl-hook-place-design-pre-tcl">
+<span id="place-design-pre-tcl"></span><h3>Pre-placer TCL hook: <code class="docutils literal notranslate"><span class="pre">place_design_pre.tcl</span></code><a class="headerlink" href="#pre-placer-tcl-hook-place-design-pre-tcl" title="Permalink to this heading">¶</a></h3>
+<section id="noc-constraints-versal">
+<h4>NOC Constraints (Versal)<a class="headerlink" href="#noc-constraints-versal" title="Permalink to this heading">¶</a></h4>
 <p><strong>TODO</strong></p>
-</div>
-</div>
-<div class="section" id="pre-router-tcl-hook-route-design-pre-tcl">
-<span id="route-design-pre-tcl"></span><h3>Pre-router TCL hook: <code class="docutils literal notranslate"><span class="pre">route_design_pre.tcl</span></code><a class="headerlink" href="#pre-router-tcl-hook-route-design-pre-tcl" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="pre-router-tcl-hook-route-design-pre-tcl">
+<span id="route-design-pre-tcl"></span><h3>Pre-router TCL hook: <code class="docutils literal notranslate"><span class="pre">route_design_pre.tcl</span></code><a class="headerlink" href="#pre-router-tcl-hook-route-design-pre-tcl" title="Permalink to this heading">¶</a></h3>
 <p><strong>TODO</strong></p>
-</div>
-</div>
-<div class="section" id="generated-vitis-options-file-vpp-link-ini">
-<span id="generated-vpp-options-file"></span><h2>Generated Vitis options file: <code class="docutils literal notranslate"><span class="pre">vpp_link.ini</span></code><a class="headerlink" href="#generated-vitis-options-file-vpp-link-ini" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="generated-vitis-options-file-vpp-link-ini">
+<span id="generated-vpp-options-file"></span><h2>Generated Vitis options file: <code class="docutils literal notranslate"><span class="pre">vpp_link.ini</span></code><a class="headerlink" href="#generated-vitis-options-file-vpp-link-ini" title="Permalink to this heading">¶</a></h2>
 <p>This file is automatically generated by the <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow.</p>
 <p>It contains the following Vitis options:</p>
 <blockquote>
@@ -964,9 +964,9 @@ Refer to Vitis documentation for how to define them.</p>
 </ul>
 </div></blockquote>
 </div></blockquote>
-</div>
-<div class="section" id="vitis-options-file-vpp-ini">
-<span id="vpp-options-file"></span><h2>Vitis options file: <code class="docutils literal notranslate"><span class="pre">vpp.ini</span></code><a class="headerlink" href="#vitis-options-file-vpp-ini" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="vitis-options-file-vpp-ini">
+<span id="vpp-options-file"></span><h2>Vitis options file: <code class="docutils literal notranslate"><span class="pre">vpp.ini</span></code><a class="headerlink" href="#vitis-options-file-vpp-ini" title="Permalink to this heading">¶</a></h2>
 <p>You can add extra <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> options via the INI file <a class="reference internal" href="#vpp-options-file"><span class="std std-ref">Vitis options file: vpp.ini</span></a> (see <code class="docutils literal notranslate"><span class="pre">vpp_options_dir</span></code> parameter in <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a>).
 This is passed to Vitis linker with <code class="docutils literal notranslate"><span class="pre">--config</span></code> command line option of v++. You can use and updated generated <a class="reference internal" href="environment-setup-and-workflows-initialization.html#vpp-options-file-template"><span class="std std-ref">Vitis options file template: vpp.ini</span></a>.</p>
 <div class="admonition important">
@@ -995,12 +995,12 @@ Those can be added by the user if needed.</p></li>
 </ul>
 </div></blockquote>
 <p>Refer to Vitis documentation for supported Vitis options.</p>
-<div class="section" id="remote-ip-cache">
-<h3><code class="docutils literal notranslate"><span class="pre">remote_ip_cache</span></code><a class="headerlink" href="#remote-ip-cache" title="Permalink to this headline">¶</a></h3>
+<section id="remote-ip-cache">
+<h3><code class="docutils literal notranslate"><span class="pre">remote_ip_cache</span></code><a class="headerlink" href="#remote-ip-cache" title="Permalink to this heading">¶</a></h3>
 <p><a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> caches intermediate synthesis result.
 In case of successive builds, the synthesis can be speeded up by reusing previous synthesized block.</p>
 <p>Tell Vitis to store the cache under <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/output/&lt;dev_platform&gt;/remote_ip_cache</span></code> folder by adding the following to your <a class="reference internal" href="#vpp-options-file"><span class="std std-ref">Vitis options file: vpp.ini</span></a> (at the top of the file).</p>
-<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="na">remote_ip_cache</span><span class="o">=</span><span class="s">../../../remote_ip_cache/</span>
+<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="na">remote_ip_cache</span><span class="o">=</span><span class="s">../../../remote_ip_cache/</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Where:</p>
@@ -1010,31 +1010,27 @@ In case of successive builds, the synthesis can be speeded up by reusing previou
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>. For example: If <code class="docutils literal notranslate"><span class="pre">path/to/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx_u55c_gen3x16_xdma_3_202210_1</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/hw.xsa</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">hw</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/your/xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch.rpm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch</span></code>.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="relative-paths">
-<h3>Relative Paths<a class="headerlink" href="#relative-paths" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="relative-paths">
+<h3>Relative Paths<a class="headerlink" href="#relative-paths" title="Permalink to this heading">¶</a></h3>
 <p>The <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow copies the files in the configuration directory into the run directory.
 It is recommended to set all paths in the configuration relatively to the <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> output directory so <code class="docutils literal notranslate"><span class="pre">xbtest_wizard</span></code> and <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> can use these local copies instead of the source files directly.</p>
 <p>In <a class="reference internal" href="#vpp-options-file"><span class="std std-ref">Vitis options file: vpp.ini</span></a>, use relative path to run directory: <code class="docutils literal notranslate"><span class="pre">../../</span></code></p>
-<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="k">[advanced]</span>
-<span class="na">param</span><span class="o">=</span><span class="s">compiler.userPostSysLinkOverlayTcl=../../vpp_cfg/postsys_link.tcl</span>
+<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="k">[advanced]</span><span class="w"></span>
+<span class="na">param</span><span class="o">=</span><span class="s">compiler.userPostSysLinkOverlayTcl=../../vpp_cfg/postsys_link.tcl</span><span class="w"></span>
 
-<span class="k">[vivado]</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=../../vpp_cfg/place_design_pre.tcl</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.ROUTE_DESIGN.TCL.PRE=../../vpp_cfg/route_design_pre.tcl</span>
+<span class="k">[vivado]</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=../../vpp_cfg/place_design_pre.tcl</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.ROUTE_DESIGN.TCL.PRE=../../vpp_cfg/route_design_pre.tcl</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="vitis-configuration-examples">
-<h2>Vitis configuration examples<a class="headerlink" href="#vitis-configuration-examples" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="vitis-configuration-examples">
+<h2>Vitis configuration examples<a class="headerlink" href="#vitis-configuration-examples" title="Permalink to this heading">¶</a></h2>
 <p>The following table provides examples of <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> configuration for different platforms:</p>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">Vitis configuration examples</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 56%" />
-<col style="width: 44%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Platform</p></th>
 <th class="head"><p>Examples</p></th>
@@ -1070,8 +1066,8 @@ It is recommended to set all paths in the configuration relatively to the <a cla
 </tr>
 </tbody>
 </table>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -1102,7 +1098,7 @@ It is recommended to set all paths in the configuration relatively to the <a cla
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on May 05, 2022.
+        Last updated on June 28, 2022.
       </span>
 
     </p>

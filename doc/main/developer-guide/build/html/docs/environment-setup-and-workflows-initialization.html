@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -60,8 +61,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -74,6 +77,8 @@
   <link rel="stylesheet" href="../_static/css/common-ui-all.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/header-footer.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/pro.min.css" media="all" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Define power CU floorplan" href="define-power-cu-floorplan.html" />
@@ -350,14 +355,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation hub</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/home/build/html/index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Content</span></p>
+<p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="expected-tasks.html">Expected tasks</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="expected-tasks.html#overview">Overview</a></li>
@@ -635,7 +640,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Other versions</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other versions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
@@ -710,10 +715,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="environment-setup-and-workflows-initialization">
-<span id="id1"></span><h1>Environment setup and workflows initialization<a class="headerlink" href="#environment-setup-and-workflows-initialization" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="environment-setup-and-workflows-initialization">
+<span id="id1"></span><h1>Environment setup and workflows initialization<a class="headerlink" href="#environment-setup-and-workflows-initialization" title="Permalink to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>This page describes the setup of working environment required to build xbtest packages:</p>
 <blockquote>
 <div><ul class="simple">
@@ -727,25 +732,25 @@
 <li><p>Adding configuration and constraint to <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a>.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="xbtest-sources">
-<span id="id2"></span><h2>xbtest sources<a class="headerlink" href="#xbtest-sources" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="xbtest-sources">
+<span id="id2"></span><h2>xbtest sources<a class="headerlink" href="#xbtest-sources" title="Permalink to this heading">¶</a></h2>
 <p>Get xbtest sources and packages using the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/Xilinx/xbtest &lt;xbtest_local_repo&gt;
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/Xilinx/xbtest --branch <span class="m">6</span>.0 &lt;xbtest_local_repo&gt;
 </pre></div>
 </div>
 <p>The HW sources are located in <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_local_repo&gt;/src/hw</span></code>.</p>
 <p>The host application packages are located in <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_local_repo&gt;/pkg/sw</span></code>.</p>
-</div>
-<div class="section" id="platform">
-<h2>Platform<a class="headerlink" href="#platform" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="platform">
+<h2>Platform<a class="headerlink" href="#platform" title="Permalink to this heading">¶</a></h2>
 <p>A <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> development platform XPFM (or HW XSA) is required (see <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>).</p>
 <p>Make sure your platform is supported by xbtest and contains the required metadata (see <a class="reference internal" href="../index.html#developer-guide-prerequisite"><span class="std std-ref">Prerequisites</span></a>).</p>
-</div>
-<div class="section" id="environment-setup">
-<span id="id3"></span><h2>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="vitis-tools">
-<h3>Vitis tools<a class="headerlink" href="#vitis-tools" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="environment-setup">
+<span id="id3"></span><h2>Environment setup<a class="headerlink" href="#environment-setup" title="Permalink to this heading">¶</a></h2>
+<section id="vitis-tools">
+<h3>Vitis tools<a class="headerlink" href="#vitis-tools" title="Permalink to this heading">¶</a></h3>
 <p>You need a standard Unix environment with <a class="reference external" href="https://www.xilinx.com/products/design-tools/vitis/vitis-platform.html">Vitis™</a> tools installed.</p>
 <blockquote>
 <div><ol class="arabic">
@@ -776,9 +781,9 @@ $ which platforminfo
 </li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="dependencies-script">
-<h3>Dependencies script<a class="headerlink" href="#dependencies-script" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="dependencies-script">
+<h3>Dependencies script<a class="headerlink" href="#dependencies-script" title="Permalink to this heading">¶</a></h3>
 <p>Download and install all xbtest workflows dependencies:</p>
 <blockquote>
 <div><ol class="arabic">
@@ -800,12 +805,12 @@ $ which platforminfo
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;</span></code> represents the xbtest build source directory (e.g. <code class="docutils literal notranslate"><span class="pre">path/to/your/xbtest/src/hw/build_source/xbtest_wizard_v6_0/</span></code>).</p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="workflows-initialization">
-<span id="id4"></span><h2>Workflows initialization<a class="headerlink" href="#workflows-initialization" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="goal">
-<h3>Goal<a class="headerlink" href="#goal" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="workflows-initialization">
+<span id="id4"></span><h2>Workflows initialization<a class="headerlink" href="#workflows-initialization" title="Permalink to this heading">¶</a></h2>
+<section id="goal">
+<h3>Goal<a class="headerlink" href="#goal" title="Permalink to this heading">¶</a></h3>
 <p>The goal of this initialization is to generate, based on your platform, templates required in <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow:</p>
 <blockquote>
 <div><ol class="arabic">
@@ -837,12 +842,12 @@ $ which platforminfo
 </div></blockquote>
 <p>Once the initialization is completed, you’ll be able to use and customize generated templates as explained in later in this documentation.</p>
 <p>If the platform metadata is not defined as expected, the content of the templates may be wrong but this documentation explain how to overwrite them if needed.</p>
-</div>
-<div class="section" id="templates-description">
-<span id="id5"></span><h3>Templates description<a class="headerlink" href="#templates-description" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="templates-description">
+<span id="id5"></span><h3>Templates description<a class="headerlink" href="#templates-description" title="Permalink to this heading">¶</a></h3>
 <p>In the initialization, the following templates will be generated.</p>
-<div class="section" id="power-floorplan-templates-pwr-cfg">
-<span id="power-floorplan-templates"></span><h4>Power floorplan templates: <code class="docutils literal notranslate"><span class="pre">pwr_cfg</span></code><a class="headerlink" href="#power-floorplan-templates-pwr-cfg" title="Permalink to this headline">¶</a></h4>
+<section id="power-floorplan-templates-pwr-cfg">
+<span id="power-floorplan-templates"></span><h4>Power floorplan templates: <code class="docutils literal notranslate"><span class="pre">pwr_cfg</span></code><a class="headerlink" href="#power-floorplan-templates-pwr-cfg" title="Permalink to this heading">¶</a></h4>
 <p>The following power floorplan templates are generated:</p>
 <blockquote>
 <div><ul class="simple">
@@ -851,11 +856,11 @@ $ which platforminfo
 <li><p><code class="docutils literal notranslate"><span class="pre">invalid_template.json</span></code>: Templates of optional <a class="reference internal" href="define-power-cu-floorplan.html#invalid-json"><span class="std std-ref">invalid.json</span></a> defining invalid primitives to be excluded: a few sites invalidated as example.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="vitis-configuration-templates-vpp-cfg">
-<span id="vitis-configuration-templates"></span><h4>Vitis configuration templates: <code class="docutils literal notranslate"><span class="pre">vpp_cfg</span></code><a class="headerlink" href="#vitis-configuration-templates-vpp-cfg" title="Permalink to this headline">¶</a></h4>
-<div class="section" id="vitis-options-file-template-vpp-ini">
-<span id="vpp-options-file-template"></span><h5>Vitis options file template: <code class="docutils literal notranslate"><span class="pre">vpp.ini</span></code><a class="headerlink" href="#vitis-options-file-template-vpp-ini" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="vitis-configuration-templates-vpp-cfg">
+<span id="vitis-configuration-templates"></span><h4>Vitis configuration templates: <code class="docutils literal notranslate"><span class="pre">vpp_cfg</span></code><a class="headerlink" href="#vitis-configuration-templates-vpp-cfg" title="Permalink to this heading">¶</a></h4>
+<section id="vitis-options-file-template-vpp-ini">
+<span id="vpp-options-file-template"></span><h5>Vitis options file template: <code class="docutils literal notranslate"><span class="pre">vpp.ini</span></code><a class="headerlink" href="#vitis-options-file-template-vpp-ini" title="Permalink to this heading">¶</a></h5>
 <p>The template of required <a class="reference internal" href="configure-vitis.html#vpp-options-file"><span class="std std-ref">Vitis options file: vpp.ini</span></a>:</p>
 <blockquote>
 <div><ul>
@@ -873,29 +878,29 @@ $ which platforminfo
 </ul>
 </div></blockquote>
 <p>Example/possible content of this template:</p>
-<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="na">remote_ip_cache</span><span class="o">=</span><span class="s">../../../remote_ip_cache</span>
+<div class="highlight-INI notranslate"><div class="highlight"><pre><span></span><span class="na">remote_ip_cache</span><span class="o">=</span><span class="s">../../../remote_ip_cache</span><span class="w"></span>
 
-<span class="c1"># TCL hooks</span>
-<span class="k">[advanced]</span>
-<span class="na">param</span><span class="o">=</span><span class="s">compiler.userPostSysLinkOverlayTcl=../../vpp_cfg/postsys_link.tcl</span>
+<span class="c1"># TCL hooks</span><span class="w"></span>
+<span class="k">[advanced]</span><span class="w"></span>
+<span class="na">param</span><span class="o">=</span><span class="s">compiler.userPostSysLinkOverlayTcl=../../vpp_cfg/postsys_link.tcl</span><span class="w"></span>
 
-<span class="k">[vivado]</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=../../vpp_cfg/place_design_pre.tcl</span>
-<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.ROUTE_DESIGN.TCL.PRE=../../vpp_cfg/route_design_pre.tcl</span>
+<span class="k">[vivado]</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.PLACE_DESIGN.TCL.PRE=../../vpp_cfg/place_design_pre.tcl</span><span class="w"></span>
+<span class="na">prop</span><span class="o">=</span><span class="s">run.impl_1.STEPS.ROUTE_DESIGN.TCL.PRE=../../vpp_cfg/route_design_pre.tcl</span><span class="w"></span>
 
-<span class="c1"># Build strategy/directives</span>
-<span class="k">[vivado]</span>
-<span class="c1"># prop=run.impl_1.strategy=Performance_EarlyBlockPlacement</span>
-<span class="c1"># prop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true</span>
-<span class="c1"># prop=run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore</span>
-<span class="c1"># prop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span>
-<span class="c1"># prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span>
-<span class="c1"># prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true</span>
+<span class="c1"># Build strategy/directives</span><span class="w"></span>
+<span class="k">[vivado]</span><span class="w"></span>
+<span class="c1"># prop=run.impl_1.strategy=Performance_EarlyBlockPlacement</span><span class="w"></span>
+<span class="c1"># prop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED=true</span><span class="w"></span>
+<span class="c1"># prop=run.impl_1.STEPS.ROUTE_DESIGN.ARGS.DIRECTIVE=Explore</span><span class="w"></span>
+<span class="c1"># prop=run.impl_1.STEPS.POST_ROUTE_PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span><span class="w"></span>
+<span class="c1"># prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.ARGS.DIRECTIVE=Explore</span><span class="w"></span>
+<span class="c1"># prop=run.impl_1.STEPS.PHYS_OPT_DESIGN.IS_ENABLED=true</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="post-system-linker-tcl-hook-template-postsys-link-tcl">
-<span id="postsys-link-tcl-template"></span><h5>Post system linker TCL hook template: <code class="docutils literal notranslate"><span class="pre">postsys_link.tcl</span></code><a class="headerlink" href="#post-system-linker-tcl-hook-template-postsys-link-tcl" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="post-system-linker-tcl-hook-template-postsys-link-tcl">
+<span id="postsys-link-tcl-template"></span><h5>Post system linker TCL hook template: <code class="docutils literal notranslate"><span class="pre">postsys_link.tcl</span></code><a class="headerlink" href="#post-system-linker-tcl-hook-template-postsys-link-tcl" title="Permalink to this heading">¶</a></h5>
 <p>This template of required <a class="reference internal" href="configure-vitis.html#postsys-link-tcl"><span class="std std-ref">Post system linker TCL hook: postsys_link.tcl</span></a> includes:</p>
 <blockquote>
 <div><ul class="simple">
@@ -993,18 +998,18 @@ proc connect_power_cu_throttle { src_pwr_cu_name dst_pwr_cu_name } {
 postsys_link_body
 </pre></div>
 </div>
-</div>
-<div class="section" id="pre-placer-tcl-hook-template-place-design-pre-tcl">
-<span id="place-design-pre-tcl-template"></span><h5>Pre-placer TCL hook template: <code class="docutils literal notranslate"><span class="pre">place_design_pre.tcl</span></code><a class="headerlink" href="#pre-placer-tcl-hook-template-place-design-pre-tcl" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="pre-placer-tcl-hook-template-place-design-pre-tcl">
+<span id="place-design-pre-tcl-template"></span><h5>Pre-placer TCL hook template: <code class="docutils literal notranslate"><span class="pre">place_design_pre.tcl</span></code><a class="headerlink" href="#pre-placer-tcl-hook-template-place-design-pre-tcl" title="Permalink to this heading">¶</a></h5>
 <p>The generated template of optional <a class="reference internal" href="configure-vitis.html#place-design-pre-tcl"><span class="std std-ref">Pre-placer TCL hook: place_design_pre.tcl</span></a> is empty. It is given as place holder.</p>
-</div>
-<div class="section" id="pre-router-tcl-hook-template-route-design-pre-tcl">
-<span id="route-design-pre-tcl-template"></span><h5>Pre-router TCL hook template: <code class="docutils literal notranslate"><span class="pre">route_design_pre.tcl</span></code><a class="headerlink" href="#pre-router-tcl-hook-template-route-design-pre-tcl" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="pre-router-tcl-hook-template-route-design-pre-tcl">
+<span id="route-design-pre-tcl-template"></span><h5>Pre-router TCL hook template: <code class="docutils literal notranslate"><span class="pre">route_design_pre.tcl</span></code><a class="headerlink" href="#pre-router-tcl-hook-template-route-design-pre-tcl" title="Permalink to this heading">¶</a></h5>
 <p>The generated template of optional <a class="reference internal" href="configure-vitis.html#route-design-pre-tcl"><span class="std std-ref">Pre-router TCL hook: route_design_pre.tcl</span></a> is empty. It is given as place holder.</p>
-</div>
-</div>
-<div class="section" id="wizard-configuration-json-file-template-wizard-cfg-json">
-<span id="wizard-configuration-json-file-template"></span><h4>Wizard configuration JSON file template: <code class="docutils literal notranslate"><span class="pre">wizard_cfg.json</span></code><a class="headerlink" href="#wizard-configuration-json-file-template-wizard-cfg-json" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="wizard-configuration-json-file-template-wizard-cfg-json">
+<span id="wizard-configuration-json-file-template"></span><h4>Wizard configuration JSON file template: <code class="docutils literal notranslate"><span class="pre">wizard_cfg.json</span></code><a class="headerlink" href="#wizard-configuration-json-file-template-wizard-cfg-json" title="Permalink to this heading">¶</a></h4>
 <p>The template of required <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a> contains</p>
 <blockquote>
 <div><ul>
@@ -1020,35 +1025,35 @@ postsys_link_body
 </ul>
 </div></blockquote>
 <p>Example/possible content:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;default&quot;</span> <span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;build&quot;</span> <span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;pwr_floorplan_dir&quot;</span> <span class="p">:</span> <span class="s2">&quot;../pwr_cfg&quot;</span><span class="p">,</span>
-      <span class="nt">&quot;vpp_options_dir&quot;</span> <span class="p">:</span> <span class="s2">&quot;../vpp_cfg&quot;</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;xbtest_stress&quot;</span> <span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;cu_selection&quot;</span> <span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;power&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
-      <span class="nt">&quot;gt_mac&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span>
-      <span class="nt">&quot;memory&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="s2">&quot;HBM&quot;</span><span class="p">,</span><span class="s2">&quot;HOST&quot;</span><span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;xbtest_power_fp&quot;</span> <span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;build&quot;</span> <span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;display_pwr_floorplan&quot;</span> <span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;cu_selection&quot;</span> <span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;power&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;default&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;build&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;pwr_floorplan_dir&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;../pwr_cfg&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;vpp_options_dir&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;../vpp_cfg&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;xbtest_stress&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cu_selection&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;power&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;gt_mac&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;HBM&quot;</span><span class="p">,</span><span class="s2">&quot;HOST&quot;</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;xbtest_power_fp&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;build&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;display_pwr_floorplan&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;cu_selection&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;power&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="initialize-using-xclbin-generate">
-<span id="id6"></span><h3>Initialize using <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code><a class="headerlink" href="#initialize-using-xclbin-generate" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="initialize-using-xclbin-generate">
+<span id="id6"></span><h3>Initialize using <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code><a class="headerlink" href="#initialize-using-xclbin-generate" title="Permalink to this heading">¶</a></h3>
 <p>In this step, run the <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow as detailed below with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-I"><code class="xref std std-option docutils literal notranslate"><span class="pre">--init</span></code></a>, and save the generated templates in <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/cfg/&lt;dev_platform&gt;</span></code></p>
 <blockquote>
 <div><ul class="simple">
@@ -1145,9 +1150,9 @@ INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> -------------
 </li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="initialize-power-floorplan-sources">
-<span id="id7"></span><h3>Initialize power floorplan sources<a class="headerlink" href="#initialize-power-floorplan-sources" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="initialize-power-floorplan-sources">
+<span id="id7"></span><h3>Initialize power floorplan sources<a class="headerlink" href="#initialize-power-floorplan-sources" title="Permalink to this heading">¶</a></h3>
 <p>The power CU configuration requires 3 files (see <a class="reference internal" href="define-power-cu-floorplan.html#define-power-cu-floorplan"><span class="std std-ref">Define power CU floorplan</span></a>).
 The section explains how to create the templates which you will edit later according to your card power requirements.</p>
 <p>Run provided TCL script <code class="docutils literal notranslate"><span class="pre">gen_dynamic_geometry.tcl</span></code> as detailed below.
@@ -1172,8 +1177,8 @@ The generated templates will be saved in <code class="docutils literal notransla
 </li>
 </ul>
 </div></blockquote>
-<div class="section" id="inputs">
-<h4>Inputs<a class="headerlink" href="#inputs" title="Permalink to this headline">¶</a></h4>
+<section id="inputs">
+<h4>Inputs<a class="headerlink" href="#inputs" title="Permalink to this heading">¶</a></h4>
 <p>The following table describes the script inputs, where:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1183,11 +1188,6 @@ The generated templates will be saved in <code class="docutils literal notransla
 </div></blockquote>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text">Power floorplan initialization inputs</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 33%" />
-<col style="width: 57%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Input</p></th>
 <th class="head"><p>Description</p></th>
@@ -1211,9 +1211,9 @@ Pblock names depend on your platform.</p></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="batch-mode">
-<span id="id8"></span><h4>Batch mode<a class="headerlink" href="#batch-mode" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="batch-mode">
+<span id="id8"></span><h4>Batch mode<a class="headerlink" href="#batch-mode" title="Permalink to this heading">¶</a></h4>
 <p>In this mode, you don’t need to open manually the DCP, the script will do all the steps for you.</p>
 <p>Use the following commands:</p>
 <blockquote>
@@ -1246,9 +1246,9 @@ Pblock names depend on your platform.</p></td>
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>. For example: If <code class="docutils literal notranslate"><span class="pre">path/to/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx_u55c_gen3x16_xdma_3_202210_1</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/hw.xsa</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">hw</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/your/xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch.rpm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch</span></code>.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="interactive-mode">
-<span id="id9"></span><h4>Interactive mode<a class="headerlink" href="#interactive-mode" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="interactive-mode">
+<span id="id9"></span><h4>Interactive mode<a class="headerlink" href="#interactive-mode" title="Permalink to this heading">¶</a></h4>
 <p>If your DCP is already opened, you can use the following commands.</p>
 <p>In the Vivado TCL console:</p>
 <blockquote>
@@ -1282,10 +1282,10 @@ set DCP_OPENED true
 <li><p><code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is provided with command line option <a class="reference internal" href="build-xclbin.html#cmdoption-x"><code class="xref std std-option docutils literal notranslate"><span class="pre">--xpfm</span></code></a>. For example: If <code class="docutils literal notranslate"><span class="pre">path/to/xilinx_u55c_gen3x16_xdma_3_202210_1.xpfm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx_u55c_gen3x16_xdma_3_202210_1</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/hw.xsa</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">hw</span></code>. If <code class="docutils literal notranslate"><span class="pre">path/to/your/xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch.rpm</span></code> is provided, then <code class="docutils literal notranslate"><span class="pre">&lt;dev_platform&gt;</span></code> is set with <code class="docutils literal notranslate"><span class="pre">xilinx-u250-gen3x16-xdma-4.1-202210-1-dev-1-3512975.noarch</span></code>.</p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -1316,7 +1316,7 @@ set DCP_OPENED true
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on May 05, 2022.
+        Last updated on June 28, 2022.
       </span>
 
     </p>

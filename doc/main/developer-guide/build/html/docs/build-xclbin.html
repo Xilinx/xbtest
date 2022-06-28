@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -60,8 +61,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
@@ -74,6 +77,8 @@
   <link rel="stylesheet" href="../_static/css/common-ui-all.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/header-footer.min.css" type="text/css" />
   <link rel="stylesheet" href="../_static/css/pro.min.css" media="all" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="xclbin timing closure tips" href="xclbin-timing-closure-tips.html" />
@@ -350,14 +355,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation hub</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/home/build/html/index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Content</span></p>
+<p class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="expected-tasks.html">Expected tasks</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="expected-tasks.html#overview">Overview</a></li>
@@ -635,7 +640,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Other versions</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other versions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
@@ -710,10 +715,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="build-xclbin">
-<span id="id1"></span><h1>Build xclbin<a class="headerlink" href="#build-xclbin" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+  <section id="build-xclbin">
+<span id="id1"></span><h1>Build xclbin<a class="headerlink" href="#build-xclbin" title="Permalink to this heading">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h2>
 <p>After following the steps specified in previous chapters, you can generate the xclbin using the <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow.</p>
 <p><a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow runs:</p>
 <blockquote>
@@ -726,9 +731,9 @@
 <p>According to your Vitis tools version, a different minor version of xbtest sources might be required.</p>
 <p>Most of <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a> parameters can be auto-configured based on the platform metadata.
 In this case these parameters should not be specified in <a class="reference internal" href="configure-xclbin.html#wizard-configuration-json-file"><span class="std std-ref">Wizard configuration JSON file: wizard_cfg.json</span></a>.</p>
-</div>
-<div class="section" id="xclbin-generate-input-and-output-products">
-<h2><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> input and output products<a class="headerlink" href="#xclbin-generate-input-and-output-products" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="xclbin-generate-input-and-output-products">
+<h2><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> input and output products<a class="headerlink" href="#xclbin-generate-input-and-output-products" title="Permalink to this heading">¶</a></h2>
 <p>The required structure and file naming of the <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow input products and location of output products is detailed in following table where:</p>
 <blockquote>
 <div><ul class="simple">
@@ -739,13 +744,6 @@ In this case these parameters should not be specified in <a class="reference int
 </div></blockquote>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow input and output products</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 23%" />
-<col style="width: 18%" />
-<col style="width: 12%" />
-<col style="width: 6%" />
-<col style="width: 41%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head" colspan="3"><p>File/Directory name</p></th>
 <th class="head" rowspan="2"><p>Required/optional</p></th>
@@ -815,13 +813,13 @@ In this case these parameters should not be specified in <a class="reference int
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="xclbin-generate-workflow-command-line-options">
-<h2><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> Workflow Command Line Options<a class="headerlink" href="#xclbin-generate-workflow-command-line-options" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="xclbin-generate-workflow-command-line-options">
+<h2><code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> Workflow Command Line Options<a class="headerlink" href="#xclbin-generate-workflow-command-line-options" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow supports the following command line options described in next sections.
 You can always refer to the help of the workflow for a quick summary of the various options.
 Each option can be specified fully or in short manner.</p>
-<div class="contents local topic" id="contents">
+<nav class="contents local" id="contents">
 <ul class="simple">
 <li><p><a class="reference internal" href="#h-help-display-help" id="id3">-h, –help: Display help</a></p></li>
 <li><p><a class="reference internal" href="#c-ip-catalog-provide-ip-catalog" id="id4">-c, –ip_catalog: Provide IP catalog</a></p></li>
@@ -840,34 +838,34 @@ Each option can be specified fully or in short manner.</p>
 <li><p><a class="reference internal" href="#r-skip-dcp-gen-skip-dcp-generation" id="id17">-r, –skip_dcp_gen: Skip DCP generation</a></p></li>
 <li><p><a class="reference internal" href="#v-version-display-version" id="id18">-v, –version: Display version</a></p></li>
 </ul>
-</div>
+</nav>
 <hr class="docutils" />
-<div class="section" id="h-help-display-help">
-<span id="xclbin-generate-help"></span><h3><a class="toc-backref" href="#id3">-h, –help: Display help</a><a class="headerlink" href="#h-help-display-help" title="Permalink to this headline">¶</a></h3>
+<section id="h-help-display-help">
+<span id="xclbin-generate-help"></span><h3><a class="toc-backref" href="#id3" role="doc-backlink">-h, –help: Display help</a><a class="headerlink" href="#h-help-display-help" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-h">
-<span id="cmdoption-help"></span><code class="sig-name descname"><span class="pre">-h</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--help</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-h" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-h">
+<span id="cmdoption-help"></span><span class="sig-name descname"><span class="pre">-h</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--help</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-h" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow help message.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="c-ip-catalog-provide-ip-catalog">
-<h3><a class="toc-backref" href="#id4">-c, –ip_catalog: Provide IP catalog</a><a class="headerlink" href="#c-ip-catalog-provide-ip-catalog" title="Permalink to this headline">¶</a></h3>
+<section id="c-ip-catalog-provide-ip-catalog">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">-c, –ip_catalog: Provide IP catalog</a><a class="headerlink" href="#c-ip-catalog-provide-ip-catalog" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-c">
-<span id="cmdoption-ip_catalog"></span><span id="cmdoption-ip-catalog"></span><code class="sig-name descname"><span class="pre">-c</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;xbtest_catalog&gt;</span></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--ip_catalog</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;xbtest_catalog&gt;</span></code><a class="headerlink" href="#cmdoption-c" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-c">
+<span id="cmdoption-ip_catalog"></span><span id="cmdoption-ip-catalog"></span><span class="sig-name descname"><span class="pre">-c</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;xbtest_catalog&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--ip_catalog</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;xbtest_catalog&gt;</span></span><a class="headerlink" href="#cmdoption-c" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mandatory.
 Path to xbtest IP catalog.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="x-xpfm-select-platform-xpfm">
-<h3><a class="toc-backref" href="#id5">-x, –xpfm: Select Platform XPFM</a><a class="headerlink" href="#x-xpfm-select-platform-xpfm" title="Permalink to this headline">¶</a></h3>
+<section id="x-xpfm-select-platform-xpfm">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">-x, –xpfm: Select Platform XPFM</a><a class="headerlink" href="#x-xpfm-select-platform-xpfm" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-x">
-<span id="cmdoption-xpfm"></span><code class="sig-name descname"><span class="pre">-x</span></code><code class="sig-prename descclassname"> <span class="pre">path/to/platform.xpfm</span></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--xpfm</span></code><code class="sig-prename descclassname"> <span class="pre">path/to/platform.xpfm</span></code><a class="headerlink" href="#cmdoption-x" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-x">
+<span id="cmdoption-xpfm"></span><span class="sig-name descname"><span class="pre">-x</span></span><span class="sig-prename descclassname"> <span class="pre">path/to/platform.xpfm</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--xpfm</span></span><span class="sig-prename descclassname"> <span class="pre">path/to/platform.xpfm</span></span><a class="headerlink" href="#cmdoption-x" title="Permalink to this definition">¶</a></dt>
 <dd><p>Mandatory.
 Path to platform XPFM.
 This can be a path to either a:</p>
@@ -882,13 +880,13 @@ This can be a path to either a:</p>
 </div></blockquote>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="i-init-enable-initialization">
-<h3><a class="toc-backref" href="#id6">-I, –init: Enable initialization</a><a class="headerlink" href="#i-init-enable-initialization" title="Permalink to this headline">¶</a></h3>
+<section id="i-init-enable-initialization">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">-I, –init: Enable initialization</a><a class="headerlink" href="#i-init-enable-initialization" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-I">
-<span id="cmdoption-i"></span><span id="cmdoption-init"></span><code class="sig-name descname"><span class="pre">-I</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--init</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-I" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-I">
+<span id="cmdoption-i"></span><span id="cmdoption-init"></span><span class="sig-name descname"><span class="pre">-I</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--init</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-I" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialization of some workflow input products.</p>
 <p>When enabled:</p>
 <blockquote>
@@ -900,13 +898,13 @@ This can be a path to either a:</p>
 <p>See <a class="reference internal" href="environment-setup-and-workflows-initialization.html#workflows-initialization"><span class="std std-ref">Workflows initialization</span></a>.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="d-config-dir-provide-configuration-directory">
-<h3><a class="toc-backref" href="#id7">-d, –config_dir: Provide configuration directory</a><a class="headerlink" href="#d-config-dir-provide-configuration-directory" title="Permalink to this headline">¶</a></h3>
+<section id="d-config-dir-provide-configuration-directory">
+<h3><a class="toc-backref" href="#id7" role="doc-backlink">-d, –config_dir: Provide configuration directory</a><a class="headerlink" href="#d-config-dir-provide-configuration-directory" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-d">
-<span id="cmdoption-config_dir"></span><span id="cmdoption-config-dir"></span><code class="sig-name descname"><span class="pre">-d</span></code><code class="sig-prename descclassname"> <span class="pre">path/to/your/config_dir</span></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--config_dir</span></code><code class="sig-prename descclassname"> <span class="pre">path/to/your/config_dir</span></code><a class="headerlink" href="#cmdoption-d" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-d">
+<span id="cmdoption-config_dir"></span><span id="cmdoption-config-dir"></span><span class="sig-name descname"><span class="pre">-d</span></span><span class="sig-prename descclassname"> <span class="pre">path/to/your/config_dir</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--config_dir</span></span><span class="sig-prename descclassname"> <span class="pre">path/to/your/config_dir</span></span><a class="headerlink" href="#cmdoption-d" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to the configuration directory containing the following folders:</p>
 <blockquote>
 <div><ul class="simple">
@@ -917,58 +915,58 @@ This can be a path to either a:</p>
 </div></blockquote>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="p-project-name-set-project-name">
-<h3><a class="toc-backref" href="#id8">-p, –project_name: Set project name</a><a class="headerlink" href="#p-project-name-set-project-name" title="Permalink to this headline">¶</a></h3>
+<section id="p-project-name-set-project-name">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">-p, –project_name: Set project name</a><a class="headerlink" href="#p-project-name-set-project-name" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-p">
-<span id="cmdoption-project_name"></span><span id="cmdoption-project-name"></span><code class="sig-name descname"><span class="pre">-p</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--project_name</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></code><a class="headerlink" href="#cmdoption-p" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-p">
+<span id="cmdoption-project_name"></span><span id="cmdoption-project-name"></span><span class="sig-name descname"><span class="pre">-p</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--project_name</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></span><a class="headerlink" href="#cmdoption-p" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the name of the project. This value should only contain alphanumeric characters: <code class="docutils literal notranslate"><span class="pre">a-z</span></code>, <code class="docutils literal notranslate"><span class="pre">A-Z</span></code>, <code class="docutils literal notranslate"><span class="pre">0-9</span></code> and <code class="docutils literal notranslate"><span class="pre">_</span></code>.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="l-use-lsf-enable-lsf">
-<h3><a class="toc-backref" href="#id9">-l, –use_lsf: Enable LSF</a><a class="headerlink" href="#l-use-lsf-enable-lsf" title="Permalink to this headline">¶</a></h3>
+<section id="l-use-lsf-enable-lsf">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">-l, –use_lsf: Enable LSF</a><a class="headerlink" href="#l-use-lsf-enable-lsf" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-l">
-<span id="cmdoption-use_lsf"></span><span id="cmdoption-use-lsf"></span><code class="sig-name descname"><span class="pre">-l</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--use_lsf</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-l" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-l">
+<span id="cmdoption-use_lsf"></span><span id="cmdoption-use-lsf"></span><span class="sig-name descname"><span class="pre">-l</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--use_lsf</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-l" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run Vitis on LSF using default LSF command.</p>
 <p>According to your LSF infrastructure, you may have to update the <code class="docutils literal notranslate"><span class="pre">bsub</span></code> command using <a class="reference internal" href="#cmdoption-L"><code class="xref std std-option docutils literal notranslate"><span class="pre">--lsf_cmd</span></code></a> option.</p>
 <p>Use option <a class="reference internal" href="#xclbin-generate-help"><span class="std std-ref">–help</span></a> to get the default LSF command.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="l-lsf-cmd-provide-lsf-command">
-<h3><a class="toc-backref" href="#id10">-L, –lsf_cmd: Provide LSF command</a><a class="headerlink" href="#l-lsf-cmd-provide-lsf-command" title="Permalink to this headline">¶</a></h3>
+<section id="l-lsf-cmd-provide-lsf-command">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">-L, –lsf_cmd: Provide LSF command</a><a class="headerlink" href="#l-lsf-cmd-provide-lsf-command" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-L">
-<span id="cmdoption-lsf_cmd"></span><span id="cmdoption-lsf-cmd"></span><code class="sig-name descname"><span class="pre">-L</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;cmd&gt;</span></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--lsf_cmd</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;cmd&gt;</span></code><a class="headerlink" href="#cmdoption-L" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-L">
+<span id="cmdoption-lsf_cmd"></span><span id="cmdoption-lsf-cmd"></span><span class="sig-name descname"><span class="pre">-L</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;cmd&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--lsf_cmd</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;cmd&gt;</span></span><a class="headerlink" href="#cmdoption-L" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run Vitis on LSF using provided LSF command.
 This overrides default LSF command and you must provide the entire <code class="docutils literal notranslate"><span class="pre">bsub</span></code> command and options.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="n-wizard-config-name-set-wizard-configuration-name">
-<h3><a class="toc-backref" href="#id11">-n, –wizard_config_name: Set wizard configuration name</a><a class="headerlink" href="#n-wizard-config-name-set-wizard-configuration-name" title="Permalink to this headline">¶</a></h3>
+<section id="n-wizard-config-name-set-wizard-configuration-name">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">-n, –wizard_config_name: Set wizard configuration name</a><a class="headerlink" href="#n-wizard-config-name-set-wizard-configuration-name" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-n">
-<span id="cmdoption-wizard_config_name"></span><span id="cmdoption-wizard-config-name"></span><code class="sig-name descname"><span class="pre">-n</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--wizard_config_name</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></code><a class="headerlink" href="#cmdoption-n" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-n">
+<span id="cmdoption-wizard_config_name"></span><span id="cmdoption-wizard-config-name"></span><span class="sig-name descname"><span class="pre">-n</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--wizard_config_name</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;name&gt;</span></span><a class="headerlink" href="#cmdoption-n" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set wizard configuration name.
 Must be defined in wizard configuration JSON file.
 Default: <code class="docutils literal notranslate"><span class="pre">xbtest_stress</span></code>.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="o-output-dir-provide-output-directory">
-<h3><a class="toc-backref" href="#id12">-o, –output_dir: Provide output directory</a><a class="headerlink" href="#o-output-dir-provide-output-directory" title="Permalink to this headline">¶</a></h3>
+<section id="o-output-dir-provide-output-directory">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">-o, –output_dir: Provide output directory</a><a class="headerlink" href="#o-output-dir-provide-output-directory" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-o">
-<span id="cmdoption-output_dir"></span><span id="cmdoption-output-dir"></span><code class="sig-name descname"><span class="pre">-o</span></code><code class="sig-prename descclassname"> <span class="pre">path/to/your/output_dir</span></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--output_dir</span></code><code class="sig-prename descclassname"> <span class="pre">path/to/your/output_dir</span></code><a class="headerlink" href="#cmdoption-o" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-o">
+<span id="cmdoption-output_dir"></span><span id="cmdoption-output-dir"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"> <span class="pre">path/to/your/output_dir</span></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output_dir</span></span><span class="sig-prename descclassname"> <span class="pre">path/to/your/output_dir</span></span><a class="headerlink" href="#cmdoption-o" title="Permalink to this definition">¶</a></dt>
 <dd><p>Path to the output directory.</p>
 <p>Default: <code class="docutils literal notranslate"><span class="pre">./output/&lt;dev_platform&gt;/&lt;project_name&gt;</span></code> where:</p>
 <blockquote>
@@ -979,76 +977,76 @@ Default: <code class="docutils literal notranslate"><span class="pre">xbtest_str
 </dd></dl>
 
 <hr class="docutils" />
-</div>
-<div class="section" id="v-verbose-enable-verbosity">
-<span id="xclbin-generate-verbose"></span><h3><a class="toc-backref" href="#id13">-V, –verbose: Enable verbosity</a><a class="headerlink" href="#v-verbose-enable-verbosity" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="v-verbose-enable-verbosity">
+<span id="xclbin-generate-verbose"></span><h3><a class="toc-backref" href="#id13" role="doc-backlink">-V, –verbose: Enable verbosity</a><a class="headerlink" href="#v-verbose-enable-verbosity" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-V">
-<span id="cmdoption-v"></span><span id="cmdoption-verbose"></span><code class="sig-name descname"><span class="pre">-V</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--verbose</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-V" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-V">
+<span id="cmdoption-v"></span><span id="cmdoption-verbose"></span><span class="sig-name descname"><span class="pre">-V</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-V" title="Permalink to this definition">¶</a></dt>
 <dd><p>Turn on verbosity.
 When enabled, Wizard and Vitis messages will also be reported in the console.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="f-force-force-an-operation">
-<h3><a class="toc-backref" href="#id14">-f, –force: Force an operation</a><a class="headerlink" href="#f-force-force-an-operation" title="Permalink to this headline">¶</a></h3>
+<section id="f-force-force-an-operation">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">-f, –force: Force an operation</a><a class="headerlink" href="#f-force-force-an-operation" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-f">
-<span id="cmdoption-force"></span><code class="sig-name descname"><span class="pre">-f</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--force</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-f" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-f">
+<span id="cmdoption-force"></span><span class="sig-name descname"><span class="pre">-f</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-f" title="Permalink to this definition">¶</a></dt>
 <dd><p>Override output directory if already existing.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="q-skip-xclbin-gen-skip-xclbin-generation">
-<h3><a class="toc-backref" href="#id15">-q, –skip_xclbin_gen: Skip xclbin generation</a><a class="headerlink" href="#q-skip-xclbin-gen-skip-xclbin-generation" title="Permalink to this headline">¶</a></h3>
+<section id="q-skip-xclbin-gen-skip-xclbin-generation">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">-q, –skip_xclbin_gen: Skip xclbin generation</a><a class="headerlink" href="#q-skip-xclbin-gen-skip-xclbin-generation" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-q">
-<span id="cmdoption-skip_xclbin_gen"></span><span id="cmdoption-skip-xclbin-gen"></span><code class="sig-name descname"><span class="pre">-q</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--skip_xclbin_gen</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-q" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-q">
+<span id="cmdoption-skip_xclbin_gen"></span><span id="cmdoption-skip-xclbin-gen"></span><span class="sig-name descname"><span class="pre">-q</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--skip_xclbin_gen</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-q" title="Permalink to this definition">¶</a></dt>
 <dd><p>Skip xclbin generation. Cannot be used with option <a class="reference internal" href="#cmdoption-I"><code class="xref std std-option docutils literal notranslate"><span class="pre">--init</span></code></a>.</p>
 <p>Use this option when creating the power CU floorplan (in tandem with <code class="docutils literal notranslate"><span class="pre">display_pwr_flooplan</span></code>).</p>
 <p>See <a class="reference internal" href="define-power-cu-floorplan.html#define-power-cu-floorplan"><span class="std std-ref">Define power CU floorplan</span></a>.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="q-skip-xo-gen-skip-xo-generation">
-<h3><a class="toc-backref" href="#id16">-Q, –skip_xo_gen: Skip XO generation</a><a class="headerlink" href="#q-skip-xo-gen-skip-xo-generation" title="Permalink to this headline">¶</a></h3>
+<section id="q-skip-xo-gen-skip-xo-generation">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">-Q, –skip_xo_gen: Skip XO generation</a><a class="headerlink" href="#q-skip-xo-gen-skip-xo-generation" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-Q">
-<span id="cmdoption-skip_xo_gen"></span><span id="cmdoption-skip-xo-gen"></span><code class="sig-name descname"><span class="pre">-Q</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--skip_xo_gen</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-Q" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-Q">
+<span id="cmdoption-skip_xo_gen"></span><span id="cmdoption-skip-xo-gen"></span><span class="sig-name descname"><span class="pre">-Q</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--skip_xo_gen</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-Q" title="Permalink to this definition">¶</a></dt>
 <dd><p>Skip XO and xclbin generation.</p>
 <p>This is more a debug option as the workflow generates all Vivado inputs necessary to run the wizard example design but will stop before running Vitis.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="r-skip-dcp-gen-skip-dcp-generation">
-<h3><a class="toc-backref" href="#id17">-r, –skip_dcp_gen: Skip DCP generation</a><a class="headerlink" href="#r-skip-dcp-gen-skip-dcp-generation" title="Permalink to this headline">¶</a></h3>
+<section id="r-skip-dcp-gen-skip-dcp-generation">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">-r, –skip_dcp_gen: Skip DCP generation</a><a class="headerlink" href="#r-skip-dcp-gen-skip-dcp-generation" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-r">
-<span id="cmdoption-skip_dcp_gen"></span><span id="cmdoption-skip-dcp-gen"></span><code class="sig-name descname"><span class="pre">-r</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--skip_dcp_gen</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-r">
+<span id="cmdoption-skip_dcp_gen"></span><span id="cmdoption-skip-dcp-gen"></span><span class="sig-name descname"><span class="pre">-r</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--skip_dcp_gen</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-r" title="Permalink to this definition">¶</a></dt>
 <dd><p>Skip DCP generation. Must be used with option <a class="reference internal" href="#cmdoption-I"><code class="xref std std-option docutils literal notranslate"><span class="pre">--init</span></code></a>.</p>
 <p>Use this option when initialization mode is enabled.</p>
 <p>See <a class="reference internal" href="environment-setup-and-workflows-initialization.html#workflows-initialization"><span class="std std-ref">Workflows initialization</span></a>.</p>
 </dd></dl>
 
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="v-version-display-version">
-<h3><a class="toc-backref" href="#id18">-v, –version: Display version</a><a class="headerlink" href="#v-version-display-version" title="Permalink to this headline">¶</a></h3>
+<section id="v-version-display-version">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">-v, –version: Display version</a><a class="headerlink" href="#v-version-display-version" title="Permalink to this heading">¶</a></h3>
 <dl class="std option">
-<dt id="cmdoption-0">
-<span id="cmdoption-version"></span><code class="sig-name descname"><span class="pre">-v</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--version</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-0" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-0">
+<span id="cmdoption-version"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Display <a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> workflow version.</p>
 </dd></dl>
 
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="run-xclbin-generate-workflow">
-<h2>Run <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow<a class="headerlink" href="#run-xclbin-generate-workflow" title="Permalink to this headline">¶</a></h2>
+<section id="run-xclbin-generate-workflow">
+<h2>Run <code class="docutils literal notranslate"><span class="pre">xclbin_generate</span></code> workflow<a class="headerlink" href="#run-xclbin-generate-workflow" title="Permalink to this heading">¶</a></h2>
 <p><a class="reference internal" href="architecture-and-workflows.html#xclbin-generate"><span class="std std-ref">xclbin_generate</span></a> is a python workflow to run with python3.</p>
 <p>This workflow will create a run directory per xclbin build <code class="docutils literal notranslate"><span class="pre">&lt;xbtest_build&gt;/xclbin_generate/output/&lt;dev_platform&gt;/&lt;project_name&gt;/</span></code></p>
 <blockquote>
@@ -1146,8 +1144,8 @@ INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> <span class="
 INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> --------------------------------------------------------------------------------------
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -1178,7 +1176,7 @@ INFO: <span class="o">[</span>GEN_XCLBIN-8<span class="o">]</span> -------------
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on May 05, 2022.
+        Last updated on June 28, 2022.
       </span>
 
     </p>
