@@ -60,6 +60,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -74,6 +75,8 @@
   <link rel="stylesheet" href="../../_static/css/common-ui-all.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/header-footer.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/pro.min.css" media="all" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Memory test case description" href="memory-test-case-description.html" />
@@ -350,14 +353,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation hub</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/home/build/html/index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Introduction</span></p>
+<p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/overview.html">Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/overview.html#architecture-overview">Architecture overview</a></li>
@@ -387,7 +390,7 @@
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://www.xilinx.com/products/acceleration-solutions/xbtest.html">Download</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Usage</span></p>
+<p class="caption" role="heading"><span class="caption-text">Usage</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../usage/setup-xbtest.html">Set up xbtest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/use-cases.html">Use cases</a><ul>
@@ -468,7 +471,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Pre-canned tests</span></p>
+<p class="caption" role="heading"><span class="caption-text">Pre-canned tests</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html">Pre-canned tests description</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#overview">Overview</a></li>
@@ -491,7 +494,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Test cases</span></p>
+<p class="caption" role="heading"><span class="caption-text">Test cases</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="test-cases-overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="verify-test-case-description.html">Verify</a><ul>
@@ -717,7 +720,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Tasks</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tasks</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/tasks-overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/device-management-task-description.html">Device management</a><ul>
@@ -740,7 +743,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Platform definition</span></p>
+<p class="caption" role="heading"><span class="caption-text">Platform definition</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../platform-definition/platform-definition.html">Platform definition</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../platform-definition/platform-definition.html#platform-definition-json-file">Platform definition JSON file</a></li>
@@ -749,7 +752,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Other versions</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other versions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
@@ -1056,40 +1059,40 @@ More details are provided for each member in the subsequent sections.</p>
 <div class="section" id="basic-examples">
 <h3><a class="toc-backref" href="#id11">Basic Examples</a><a class="headerlink" href="#basic-examples" title="Permalink to this headline">¶</a></h3>
 <p>The following is a basic example of a <a class="reference internal" href="#p2p-nvme-test-case-description"><span class="std std-ref">P2P NVME</span></a> test case targeting all DDR and HBM memories available on the card. All memories are tested serially as source and then as target.</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;p2p_nvme&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span> <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;p2p_nvme&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Some test JSON members can be overwritten for all memories based on memory type using the test JSON member <code class="docutils literal notranslate"><span class="pre">memory_type_config</span></code> which child members are memory type names.</p>
 <p>Following is an example of <a class="reference internal" href="#p2p-nvme-test-case-description"><span class="std std-ref">P2P NVME</span></a> test case where the comparison of the average read and write bandwidths against thresholds is enabled only for all memories of type HBM.</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;p2p_nvme&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;stop_on_error&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span> <span class="p">},</span>
-      <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span> <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;memory_type_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;HBM&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;check_bw&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-      <span class="nt">&quot;hi_thresh_wr&quot;</span><span class="p">:</span> <span class="mi">9000</span><span class="p">,</span>
-      <span class="nt">&quot;hi_thresh_rd&quot;</span><span class="p">:</span> <span class="mi">9000</span><span class="p">,</span>
-      <span class="nt">&quot;lo_thresh_wr&quot;</span><span class="p">:</span> <span class="mi">5000</span><span class="p">,</span>
-      <span class="nt">&quot;lo_thresh_rd&quot;</span><span class="p">:</span> <span class="mi">5000</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;p2p_nvme&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;stop_on_error&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;memory_type_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;HBM&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;check_bw&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;hi_thresh_wr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9000</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;hi_thresh_rd&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">9000</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;lo_thresh_wr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span><span class="p">,</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;lo_thresh_rd&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5000</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -1097,18 +1100,18 @@ More details are provided for each member in the subsequent sections.</p>
 <p>By default, bandwidths are not checked, so <a class="reference internal" href="#p2p-nvme-parameter-check-bw"><span class="std std-ref">check_bw</span></a> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
 </div>
 <p>The following example shows how to run <a class="reference internal" href="#p2p-nvme-test-case-description"><span class="std std-ref">P2P NVME</span></a> test case only for one (identified by memory tag DDR[1]) of the memories of the type named DDR, with card selected only as P2P source, overriding <a class="reference internal" href="#p2p-nvme-parameter-total-size"><span class="std std-ref">total_size</span></a> value to 1GB:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;p2p_nvme&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-      <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[1]&quot;</span> <span class="p">}</span>
-    <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;memory_type_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;DDR&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;total_size&quot;</span> <span class="p">:</span> <span class="mi">1024</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;p2p_nvme&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[1]&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">]</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;memory_type_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;DDR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;total_size&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">1024</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -1216,35 +1219,35 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 <li><p><strong>Single test</strong>:</p>
 <blockquote>
 <div><ul>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[0]&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[0]&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[0]&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[0]&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM[1]&quot;</span><span class="p">,</span> <span class="nt">&quot;buffer_size&quot;</span><span class="p">:</span> <span class="mi">128</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM[1]&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;buffer_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;HBM[1]&quot;</span><span class="p">,</span> <span class="nt">&quot;buffer_size&quot;</span><span class="p">:</span> <span class="mi">128</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HBM[1]&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;buffer_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -1254,24 +1257,24 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 <li><p><strong>Multiple tests</strong>:</p>
 <blockquote>
 <div><ul>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[0]&quot;</span> <span class="p">},</span>
-  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[1]&quot;</span> <span class="p">},</span>
-  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[2]&quot;</span> <span class="p">},</span>
-  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[0]&quot;</span> <span class="p">},</span>
-  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[1]&quot;</span> <span class="p">},</span>
-  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[2]&quot;</span> <span class="p">}</span>
-<span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[0]&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[1]&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[2]&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[0]&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[1]&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[2]&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If, in an <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a>, the memory tags <code class="docutils literal notranslate"><span class="pre">DDR[0]</span></code> and <code class="docutils literal notranslate"><span class="pre">DDR[1]</span></code> are available for the memory type named <code class="docutils literal notranslate"><span class="pre">DDR</span></code>, then the sequence set to:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[0]&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[1]&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[0]&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR[1]&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[0]&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[1]&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[0]&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR[1]&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 <p>is equivalent to the sequence:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span> <span class="p">},</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;target&quot;</span><span class="p">:</span> <span class="s2">&quot;DDR&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;target&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DDR&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -1921,7 +1924,7 @@ containing also a memory type named HBM with the 32 tags associated HBM[0] to HB
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on May 05, 2022.
+        Last updated on September 12, 2022.
       </span>
 
     </p>

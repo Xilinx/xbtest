@@ -60,6 +60,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -74,6 +75,8 @@
   <link rel="stylesheet" href="../../_static/css/common-ui-all.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/header-footer.min.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/css/pro.min.css" media="all" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Power test case description" href="power-test-case-description.html" />
@@ -350,14 +353,14 @@
               
             
             
-              <p class="caption"><span class="caption-text">Documentation hub</span></p>
+              <p class="caption" role="heading"><span class="caption-text">Documentation hub</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/home/build/html/index.html">Home</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/user-guide/build/html/index.html">User guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/developer-guide/build/html/index.html">Developer guide</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://xilinx.github.io/xbtest/doc/main/checklist/build/html/index.html">Checklist</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Introduction</span></p>
+<p class="caption" role="heading"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction/overview.html">Overview</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction/overview.html#architecture-overview">Architecture overview</a></li>
@@ -387,7 +390,7 @@
 </li>
 <li class="toctree-l1"><a class="reference external" href="https://www.xilinx.com/products/acceleration-solutions/xbtest.html">Download</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Usage</span></p>
+<p class="caption" role="heading"><span class="caption-text">Usage</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../usage/setup-xbtest.html">Set up xbtest</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../usage/use-cases.html">Use cases</a><ul>
@@ -468,7 +471,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Pre-canned tests</span></p>
+<p class="caption" role="heading"><span class="caption-text">Pre-canned tests</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html">Pre-canned tests description</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../pre-canned-tests/pre-canned-tests-description.html#overview">Overview</a></li>
@@ -491,7 +494,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Test cases</span></p>
+<p class="caption" role="heading"><span class="caption-text">Test cases</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="test-cases-overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="verify-test-case-description.html">Verify</a><ul>
@@ -717,7 +720,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Tasks</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tasks</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/tasks-overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tasks/device-management-task-description.html">Device management</a><ul>
@@ -740,7 +743,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Platform definition</span></p>
+<p class="caption" role="heading"><span class="caption-text">Platform definition</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../platform-definition/platform-definition.html">Platform definition</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../platform-definition/platform-definition.html#platform-definition-json-file">Platform definition JSON file</a></li>
@@ -749,7 +752,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Other versions</span></p>
+<p class="caption" role="heading"><span class="caption-text">Other versions</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/en-US/ug1361-alveo-card-validation-test-solution">5.0</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://docs.xilinx.com/v/u/4.0-English/ug1361-alveo-card-validation-test-solution">4.0</a></li>
@@ -1442,28 +1445,28 @@ Changing any default settings automatically disables the check of the results ag
 <h3><a class="toc-backref" href="#id60">Target memories on the card</a><a class="headerlink" href="#target-memories-on-the-card" title="Permalink to this headline">¶</a></h3>
 <p>Following is an example of <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test cases targeting all memories of type DDR and HBM available on the card.
 Note that all memories are tested in parallel.</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span> <span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;DDR&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span> <span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;HBM&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span> <span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;DDR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;HBM&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -1471,18 +1474,18 @@ Note that all memories are tested in parallel.</p>
 <div class="section" id="target-memory-on-the-host">
 <h3><a class="toc-backref" href="#id61">Target memory on the host</a><a class="headerlink" href="#target-memory-on-the-host" title="Permalink to this headline">¶</a></h3>
 <p>Following is an example of <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case targeting all memories of type HOST:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span> <span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;HOST&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span> <span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;HOST&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <div class="admonition important">
@@ -1504,21 +1507,21 @@ Note that all memories are tested in parallel.</p>
 <h3><a class="toc-backref" href="#id62">Single-channel override</a><a class="headerlink" href="#single-channel-override" title="Permalink to this headline">¶</a></h3>
 <p>For single-channel memory types, some test JSON members can be overwritten for each tag targeted by the memory CUs using the test JSON member <code class="docutils literal notranslate"><span class="pre">memory_tag_config</span></code>.</p>
 <p>The following example shows how to run a <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case only for one (identified by memory tag <code class="docutils literal notranslate"><span class="pre">DDR[1]</span></code>) of the memories of the single-channel memory type named DDR.</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span> <span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;DDR&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span> <span class="p">}</span>
-      <span class="p">],</span>
-      <span class="nt">&quot;disable_memory&quot;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;memory_tag_config &quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;DDR[1]&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;disable_memory&quot;</span><span class="p">:</span> <span class="kc">false</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;DDR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;disable_memory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;memory_tag_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;DDR[1]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;disable_memory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -1527,21 +1530,21 @@ Note that all memories are tested in parallel.</p>
 <h3><a class="toc-backref" href="#id63">Multi-channel override</a><a class="headerlink" href="#multi-channel-override" title="Permalink to this headline">¶</a></h3>
 <p>For multi-channel memory types, some test JSON members can be overwritten for each channel of the memory CU using the test JSON member <code class="docutils literal notranslate"><span class="pre">memory_channel_config</span></code>.</p>
 <p>The following example shows how to run a <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case only for one (channel <code class="docutils literal notranslate"><span class="pre">12</span></code>) channel of the multi-channel memory type named HBM.</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span> <span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;HBM&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">30</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span> <span class="p">}</span>
-      <span class="p">],</span>
-      <span class="nt">&quot;disable_memory&quot;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;memory_channel_config &quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;12&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;disable_memory&quot;</span><span class="p">:</span> <span class="kc">false</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;HBM&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">],</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;disable_memory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;memory_channel_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;12&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;disable_memory&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 </div>
@@ -1715,23 +1718,23 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 <li><p><strong>Single test</strong>:</p>
 <blockquote>
 <div><ul>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span><span class="p">,</span> <span class="nt">&quot;wr_rate&quot;</span><span class="p">:</span> <span class="mi">25</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="p">,</span> <span class="nt">&quot;wr_rate&quot;</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="nt">&quot;rd_rate&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="nt">&quot;wr_outstanding&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nt">&quot;rd_outstanding&quot;</span><span class="p">:</span> <span class="mi">0</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_outstanding&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_outstanding&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span><span class="p">,</span> <span class="nt">&quot;rd_burst_size&quot;</span><span class="p">:</span> <span class="mi">2048</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_burst_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2048</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="p">,</span> <span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span> <span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span> <span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span> <span class="mi">128</span> <span class="p">}</span> <span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -1741,11 +1744,11 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 <li><p><strong>Multiple tests</strong>:</p>
 <blockquote>
 <div><ul>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span> <span class="p">},</span>
-  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span> <span class="p">},</span>
-  <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span> <span class="p">}</span>
-<span class="p">]</span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -1761,12 +1764,12 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 <blockquote>
 <div><ul>
 <li><p><strong>Valid</strong>:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span><span class="p">,</span> <span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span> <span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span>   <span class="mi">0</span><span class="p">,</span> <span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span> <span class="mi">256</span> <span class="p">}</span> <span class="p">]</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span><span class="w">   </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
 <li><p><strong>Invalid</strong>:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;alternate_wr_rd&quot;</span><span class="p">,</span> <span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span> <span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span> <span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span> <span class="mi">256</span> <span class="p">}</span> <span class="p">]</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;alternate_wr_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -1777,12 +1780,12 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 <blockquote>
 <div><ul>
 <li><p><strong>Valid</strong>:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="p">,</span> <span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span> <span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span> <span class="mi">512</span><span class="p">,</span> <span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span> <span class="mi">256</span> <span class="p">}</span> <span class="p">]</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">512</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
 <li><p><strong>Invalid</strong>:</p>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span> <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="p">,</span> <span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span> <span class="mi">256</span><span class="p">,</span> <span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span> <span class="mi">128</span><span class="p">,</span> <span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span> <span class="mi">256</span> <span class="p">}</span> <span class="p">]</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;simultaneous_wr_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_start_addr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_start_addr&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_block_size&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -1808,24 +1811,24 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 <li><p><code class="docutils literal notranslate"><span class="pre">only_wr</span></code>, then <code class="docutils literal notranslate"><span class="pre">only_rd</span></code> for all other channels.</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span> <span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;HBM&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span> <span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;memory_channel_config &quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;1&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span> <span class="p">}</span>
-        <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;HBM&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;memory_channel_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;1&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <p>The following example shows how to run a <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case of the multi-channel memory type named HBM where <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">Memory test sequence parameters</span></a> is set to:</p>
@@ -1835,24 +1838,24 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 <li><p><code class="docutils literal notranslate"><span class="pre">only_wr</span></code>, then <code class="docutils literal notranslate"><span class="pre">only_rd</span></code> for all other DDR memory banks.</p></li>
 </ul>
 </div></blockquote>
-<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span> <span class="p">:</span> <span class="p">{</span>
-  <span class="nt">&quot;DDR&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;global_config&quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span> <span class="p">},</span>
-        <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_rd&quot;</span> <span class="p">}</span>
-      <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="nt">&quot;memory_tag_config &quot;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&quot;DDR[2]&quot;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span> <span class="p">[</span>
-          <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>  <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span> <span class="p">},</span>
-          <span class="p">{</span> <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span> <span class="nt">&quot;mode&quot;</span><span class="p">:</span> <span class="s2">&quot;only_wr&quot;</span> <span class="p">}</span>
-        <span class="p">]</span>
-      <span class="p">}</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;DDR&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">      </span><span class="p">]</span><span class="w"></span>
+<span class="w">    </span><span class="p">},</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;memory_tag_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">      </span><span class="nt">&quot;DDR[2]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">        </span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">  </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"> </span><span class="p">},</span><span class="w"></span>
+<span class="w">          </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_wr&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">]</span><span class="w"></span>
+<span class="w">      </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
 <hr class="docutils" />
@@ -2497,7 +2500,7 @@ Index of first test is 1.</p></li>
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on May 05, 2022.
+        Last updated on September 12, 2022.
       </span>
 
     </p>

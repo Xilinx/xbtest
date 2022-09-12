@@ -541,7 +541,7 @@ The following example shows how to run a |Memory| test case only for one (identi
           ],
           "disable_memory": true
         },
-        "memory_tag_config ": {
+        "memory_tag_config": {
           "DDR[1]": {
             "disable_memory": false
           }
@@ -569,7 +569,7 @@ The following example shows how to run a |Memory| test case only for one (channe
           ],
           "disable_memory": true
         },
-        "memory_channel_config ": {
+        "memory_channel_config": {
           "12": {
             "disable_memory": false
           }
@@ -808,7 +808,7 @@ The following example shows how to run a |Memory| test case of the multi-channel
             { "duration": 25, "mode": "only_rd" }
           ]
         },
-        "memory_channel_config ": {
+        "memory_channel_config": {
           "1": {
             "test_sequence": [
               { "duration": 15, "mode": "only_rd" },
@@ -834,7 +834,7 @@ The following example shows how to run a |Memory| test case of the multi-channel
             { "duration": 15, "mode": "only_rd" }
           ]
         },
-        "memory_tag_config ": {
+        "memory_tag_config": {
           "DDR[2]": {
             "test_sequence": [
               { "duration": 1,  "mode": "only_wr" },
