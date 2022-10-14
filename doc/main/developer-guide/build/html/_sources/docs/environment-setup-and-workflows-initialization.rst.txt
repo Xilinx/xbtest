@@ -72,7 +72,13 @@ You need a standard Unix environment with |Vitis|_ tools installed.
 
              $ source <Vitis_Installation_Path>/Vitis/<Vitis_Version>/settings64.csh
 
-  2. Check Vitis tools are loaded:
+  2. A license for the AIE compiler is required to successfully build the power CU with AIE.
+
+       * If you have an AIE compiler license, set the environment variable ``XILINXD_LICENSE_FILE`` to include that license before building xbtest xclbin.
+
+       * If you do not have an AIE compiler license, do not use AIE in the power CU by setting ``AIE_UTILIZATION`` to 0 in your ``utilization.json`` configuration.
+
+  3. Check Vitis tools are loaded:
 
      .. code-block:: bash
 

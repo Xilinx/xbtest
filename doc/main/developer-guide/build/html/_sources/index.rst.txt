@@ -55,23 +55,30 @@ xbtest requires:
 
 .. table:: xbtest prerequisites
 
-    +---------------------------------------+----------------------------------------------------------------------------------------------+
-    | Prerequisite                          | Description                                                                                  |
-    +=======================================+==============================================================================================+
-    | Development platform (XPFM or HW XSA) |   * Platform supports PLRAMs.                                                                |
-    |                                       |   * GT defined in platform metadata.                                                         |
-    +---------------------------------------+----------------------------------------------------------------------------------------------+
-    | Vitis/Vivado versions                 |   * 2022.1                                                                                   |
-    |                                       |   * GT MAC CU uses and requires license for |XXV|_.                                          |
-    +---------------------------------------+----------------------------------------------------------------------------------------------+
-    | Deployment server (for testing)       |   * Install your |Alveo|_ card(s), |XRT|_ (required >= 2.13.307) as per their respective UG. |
-    |                                       |   * Validate your card(s):                                                                   |
-    |                                       |                                                                                              |
-    |                                       |     .. code-block:: bash                                                                     |
-    |                                       |                                                                                              |
-    |                                       |         $ xbutil validate                                                                    |
-    |                                       |                                                                                              |
-    +---------------------------------------+----------------------------------------------------------------------------------------------+
+    +---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Prerequisite                          | Description                                                                                                                                                    |
+    +=======================================+================================================================================================================================================================+
+    | Development platform (XPFM or HW XSA) |   * Platform supports PLRAMs.                                                                                                                                  |
+    |                                       |   * GT defined in platform metadata.                                                                                                                           |
+    +---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Vitis/Vivado versions                 |   * 2022.1                                                                                                                                                     |
+    |                                       |   * GT MAC CU uses and requires license for |XXV|_.                                                                                                            |
+    +---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Deployment server (for testing)       |   * Install your |Alveo|_ card(s), |XRT|_ (required >= 2.13.307) as per their respective UG.                                                                   |
+    |                                       |   * Validate your card(s):                                                                                                                                     |
+    |                                       |                                                                                                                                                                |
+    |                                       |     .. code-block:: bash                                                                                                                                       |
+    |                                       |                                                                                                                                                                |
+    |                                       |         $ xbutil validate                                                                                                                                      |
+    |                                       |                                                                                                                                                                |
+    +---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+    | Xilinx AI Engine license              | A license for the AIE compiler is required to successfully build the power CU with AIE.                                                                        |
+    |                                       |                                                                                                                                                                |
+    |                                       |   * If you have an AIE compiler license, set the environment variable ``XILINXD_LICENSE_FILE`` to include that license before building xbtest xclbin.          |
+    |                                       |                                                                                                                                                                |
+    |                                       |   * If you do not have an AIE compiler license, do not use AIE in the power CU by setting ``AIE_UTILIZATION`` to 0 in your ``utilization.json`` configuration. |
+    |                                       |                                                                                                                                                                |
+    +---------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ********************************************************
 What's new in xbtestv6?
@@ -109,6 +116,6 @@ xbtestv6 new main features w.r.t xbtestv5 are:
     |                 |       * ``invalid_template.json``                     |
     +-----------------+-------------------------------------------------------+
 
-    
+
 .. include:: ../../shared/other-versions.rst
 

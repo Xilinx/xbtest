@@ -263,11 +263,8 @@ proc gen_build_xclbin_sh { config_ref } {
         lappend BUILD_XCLBIN_SH "# Environment setup"
         lappend BUILD_XCLBIN_SH "source \${XILINX_VITIS}/settings64.sh"; # => XILINX_HLS
         lappend BUILD_XCLBIN_SH "export XILINX_VITIS_AIETOOLS=\${XILINX_VITIS}/aietools"
-        lappend BUILD_XCLBIN_SH "export LM_LICENSE_FILE=2100@aiengine-eng:\$\{LM_LICENSE_FILE\}"; # TODO check if licence ok for LSF
-        lappend BUILD_XCLBIN_SH "export XILINXD_LICENSE_FILE=2100@aiengine-eng:\$\{XILINXD_LICENSE_FILE\}"; # TODO check if licence ok for LSF
         lappend BUILD_XCLBIN_SH "aiecompiler \\"
         lappend BUILD_XCLBIN_SH "--target=hw \\";                                               # Target how the compiler will build the graph.
-        lappend BUILD_XCLBIN_SH "--verbose \\";                                                 # Verbose output of the aiecompiler
         lappend BUILD_XCLBIN_SH "--enable-ecc-scrubbing \\";
         lappend BUILD_XCLBIN_SH "--include=\${XBTEST_IPDEF}/aie \\";                            # All the include files needed to build the graph
         lappend BUILD_XCLBIN_SH "--include=\${XBTEST_IPDEF}/aie/kernels \\";                    # All the include files needed to build the graph
@@ -281,8 +278,13 @@ proc gen_build_xclbin_sh { config_ref } {
         lappend BUILD_XCLBIN_SH "--platform=$xpfm \\";                                          # Specify path to a platform specification(XPFM) or hardware specification(XSA)
         lappend BUILD_XCLBIN_SH "--constraints=\${XBTEST_RUN_DIR}/$aie_constraints_json \\"; # Specify constraints files in JSON format (zero or more)
         lappend BUILD_XCLBIN_SH "\${XBTEST_IPDEF}/aie/graph.cpp \\"
-        lappend BUILD_XCLBIN_SH " | tee -a \${XBTEST_RUN_DIR}/aie_compile.console.log | grep \": \\\[aiecompiler\""; # Filter the console log. end of command
-        # lappend BUILD_XCLBIN_SH "module switch xilinx/ta/2020.2_daily_latest"
+        lappend BUILD_XCLBIN_SH " | tee -a \${XBTEST_RUN_DIR}/aie_compile.console.log"; # end of command
+
+        # Check the license is set
+        lappend BUILD_XCLBIN_SH "if \[ -z \"\$\{XILINXD_LICENSE_FILE\}\" \]; then"
+        lappend BUILD_XCLBIN_SH "\t[log_message_bash {CRITICAL WARNING} {XBTEST_WIZARD-14} {Environment variable XILINXD_LICENSE_FILE not set for AIE compiler}]"
+        lappend BUILD_XCLBIN_SH "fi"
+
         set     BUILD_XCLBIN_SH [concat $BUILD_XCLBIN_SH [check_ret_code_bash   "aiecompiler"]]
         set     BUILD_XCLBIN_SH [concat $BUILD_XCLBIN_SH [check_file_bash       "\${XBTEST_RUN_DIR}/libadf.a"]]
         set     BUILD_XCLBIN_SH [concat $BUILD_XCLBIN_SH [get_bash_delimiter]]

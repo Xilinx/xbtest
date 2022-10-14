@@ -735,8 +735,8 @@
 <table class="docutils align-default" id="id1">
 <caption><span class="caption-text">xbtest prerequisites</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 29%" />
-<col style="width: 71%" />
+<col style="width: 20%" />
+<col style="width: 80%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Prerequisite</p></th>
@@ -767,6 +767,16 @@
 </div>
 </li>
 </ul>
+</td>
+</tr>
+<tr class="row-odd"><td><p>Xilinx AI Engine license</p></td>
+<td><p>A license for the AIE compiler is required to successfully build the power CU with AIE.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>If you have an AIE compiler license, set the environment variable <code class="docutils literal notranslate"><span class="pre">XILINXD_LICENSE_FILE</span></code> to include that license before building xbtest xclbin.</p></li>
+<li><p>If you do not have an AIE compiler license, do not use AIE in the power CU by setting <code class="docutils literal notranslate"><span class="pre">AIE_UTILIZATION</span></code> to 0 in your <code class="docutils literal notranslate"><span class="pre">utilization.json</span></code> configuration.</p></li>
+</ul>
+</div></blockquote>
 </td>
 </tr>
 </tbody>
@@ -873,7 +883,7 @@
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on June 28, 2022.
+        Last updated on October 14, 2022.
       </span>
 
     </p>
