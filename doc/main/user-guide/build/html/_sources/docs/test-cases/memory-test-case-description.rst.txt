@@ -726,7 +726,7 @@ For example:
 
       * .. code-block:: JSON
 
-            "test_sequence": [ { "duration": 60, "mode": "only_rd", "wr_rate": 25 } ]
+            "test_sequence": [ { "duration": 60, "mode": "only_rd", "rd_rate": 25 } ]
 
       * .. code-block:: JSON
 
@@ -793,7 +793,7 @@ The :ref:`memory-parameter-test_sequence` can be overwritten for each channel of
   * The number of tests in all :ref:`memory-parameter-test_sequence` parameters specified for a memory type must be the same.
   * The |memory-duration| of a test must be the same in all :ref:`memory-parameter-test_sequence`.
 
-The following example shows how to run a |Memory| test case of the multi-channel memory type named HBM where :ref:`memory-parameter-test_sequence-mode` is set to:
+The following example shows how to run a |Memory| test case of the multi-channel memory type named HBM where |memory-mode| is set to:
 
   * ``only_rd``, then ``only_wr`` for channel ``1``.
   * ``only_wr``, then ``only_rd`` for all other channels.
@@ -819,7 +819,7 @@ The following example shows how to run a |Memory| test case of the multi-channel
       }
     }
 
-The following example shows how to run a |Memory| test case of the multi-channel memory type named HBM where :ref:`memory-parameter-test_sequence-mode` is set to:
+The following example shows how to run a |Memory| test case of the multi-channel memory type named HBM where |memory-mode| is set to:
 
   * ``only_wr`` only for channel ``DDR[2]``.
   * ``only_wr``, then ``only_rd`` for all other DDR memory banks.

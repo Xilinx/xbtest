@@ -1722,7 +1722,7 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;wr_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
+<li><div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;test_sequence&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;duration&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">60</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;only_rd&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;rd_rate&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">]</span><span class="w"></span>
 </pre></div>
 </div>
 </li>
@@ -1804,7 +1804,7 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 <li><p>The <a class="reference internal" href="#memory-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> of a test must be the same in all <a class="reference internal" href="#memory-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a>.</p></li>
 </ul>
 </div></blockquote>
-<p>The following example shows how to run a <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case of the multi-channel memory type named HBM where <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">Memory test sequence parameters</span></a> is set to:</p>
+<p>The following example shows how to run a <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case of the multi-channel memory type named HBM where <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a> is set to:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">only_rd</span></code>, then <code class="docutils literal notranslate"><span class="pre">only_wr</span></code> for channel <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p></li>
@@ -1831,7 +1831,7 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-<p>The following example shows how to run a <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case of the multi-channel memory type named HBM where <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">Memory test sequence parameters</span></a> is set to:</p>
+<p>The following example shows how to run a <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case of the multi-channel memory type named HBM where <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a> is set to:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">only_wr</span></code> only for channel <code class="docutils literal notranslate"><span class="pre">DDR[2]</span></code>.</p></li>
@@ -2500,7 +2500,7 @@ Index of first test is 1.</p></li>
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on September 12, 2022.
+        Last updated on October 17, 2022.
       </span>
 
     </p>
