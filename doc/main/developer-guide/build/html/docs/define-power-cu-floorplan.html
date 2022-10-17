@@ -891,7 +891,7 @@ A utilization is defined for each site type and for each clock region.</p>
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PL_UTILIZATION</span></code></p></td>
 <td><p>Utilization of PL sites is defined
-per clock region (<code class="docutils literal notranslate"><span class="pre">&lt;CR</span> <span class="pre">X&gt;</span></code>,``&lt;CR Y&gt;``) and
+per clock region (<code class="docutils literal notranslate"><span class="pre">&lt;CR</span> <span class="pre">X&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;CR</span> <span class="pre">Y&gt;</span></code>) and
 per site type,
 in percentage [0;100] of
 (number of valid locations in dynamic geometry
@@ -974,7 +974,7 @@ Placing power CU logic next to the static region may impeach of both routing (co
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">invalid.json</span></code> definition</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
 <colgroup>
 <col style="width: 7%" />
-<col style="width: 64%" />
+<col style="width: 65%" />
 <col style="width: 29%" />
 </colgroup>
 <thead>
@@ -986,7 +986,7 @@ Placing power CU logic next to the static region may impeach of both routing (co
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PL_INVALID</span></code></p></td>
 <td><p>Locations of sites not used in power CU floorplan (<code class="docutils literal notranslate"><span class="pre">PL_INVALID</span></code>) are defined per site type and per SLR <code class="docutils literal notranslate"><span class="pre">&lt;SLR</span> <span class="pre">idx&gt;</span></code>.</p>
-<p>Provide a single site (<code class="docutils literal notranslate"><span class="pre">&lt;x0&gt;</span></code>,``&lt;y0&gt;``) or a site rectangle defined by bottom left (<code class="docutils literal notranslate"><span class="pre">&lt;x1&gt;</span></code>,``&lt;y1&gt;``) and top right (<code class="docutils literal notranslate"><span class="pre">&lt;x2&gt;</span></code>,``&lt;y2&gt;``) corners.</p>
+<p>Provide a single site (<code class="docutils literal notranslate"><span class="pre">&lt;x0&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;y0&gt;</span></code>) or a site rectangle defined by bottom left (<code class="docutils literal notranslate"><span class="pre">&lt;x1&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;y1&gt;</span></code>) and top right (<code class="docutils literal notranslate"><span class="pre">&lt;x2&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;y2&gt;</span></code>) corners.</p>
 <p>See <code class="docutils literal notranslate"><span class="pre">dynamic_geometry</span></code> for supported <code class="docutils literal notranslate"><span class="pre">&lt;site_type&gt;</span></code>:</p>
 </td>
 <td><p>Dictionary:</p>
@@ -1084,7 +1084,7 @@ Placing power CU logic next to the static region may impeach of both routing (co
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CLOCK_REGIONS</span></code></p></td>
 <td><p>Clock Regions definition:</p>
-<p>List of all the Clock Region indexes (<code class="docutils literal notranslate"><span class="pre">&lt;CR</span> <span class="pre">X&gt;</span></code>,``&lt;CR Y&gt;``) per SLR <code class="docutils literal notranslate"><span class="pre">&lt;SLR</span> <span class="pre">index&gt;</span></code> in the FPGA.</p>
+<p>List of all the Clock Region indexes (<code class="docutils literal notranslate"><span class="pre">&lt;CR</span> <span class="pre">X&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;CR</span> <span class="pre">Y&gt;</span></code>) per SLR <code class="docutils literal notranslate"><span class="pre">&lt;SLR</span> <span class="pre">index&gt;</span></code> in the FPGA.</p>
 </td>
 <td><p>Dictionary:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">SLR</span> <span class="n">index</span><span class="o">&gt;</span> <span class="p">:</span> <span class="p">{</span>
@@ -1111,8 +1111,8 @@ Placing power CU logic next to the static region may impeach of both routing (co
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">PL_DYNAMIC_GEOMETRY</span></code></p></td>
 <td><p>PL sites definition:</p>
-<p>List of all site <code class="docutils literal notranslate"><span class="pre">&lt;Site</span> <span class="pre">key&gt;</span></code> locations (<code class="docutils literal notranslate"><span class="pre">&lt;Site</span> <span class="pre">X&gt;</span></code>,``&lt;Site Y&gt;``)
-found in pblocks per CR (<code class="docutils literal notranslate"><span class="pre">&lt;CR</span> <span class="pre">X&gt;</span></code>,``&lt;CR Y&gt;``) per SLR <code class="docutils literal notranslate"><span class="pre">&lt;SLR</span> <span class="pre">index&gt;</span></code>.</p>
+<p>List of all site <code class="docutils literal notranslate"><span class="pre">&lt;Site</span> <span class="pre">key&gt;</span></code> locations (<code class="docutils literal notranslate"><span class="pre">&lt;Site</span> <span class="pre">X&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;Site</span> <span class="pre">Y&gt;</span></code>)
+found in pblocks per CR (<code class="docutils literal notranslate"><span class="pre">&lt;CR</span> <span class="pre">X&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;CR</span> <span class="pre">Y&gt;</span></code>) per SLR <code class="docutils literal notranslate"><span class="pre">&lt;SLR</span> <span class="pre">index&gt;</span></code>.</p>
 </td>
 <td><p>Dictionary:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">Site</span> <span class="n">key</span><span class="o">&gt;</span> <span class="p">:</span> <span class="p">{</span>
@@ -1129,7 +1129,7 @@ found in pblocks per CR (<code class="docutils literal notranslate"><span class=
 </td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">AIE_GEOMETRY</span></code></p></td>
-<td><p>AIE sites definition: List of all AIE locations (<code class="docutils literal notranslate"><span class="pre">&lt;Site</span> <span class="pre">X&gt;</span></code>,``&lt;Site Y&gt;``)
+<td><p>AIE sites definition: List of all AIE locations (<code class="docutils literal notranslate"><span class="pre">&lt;Site</span> <span class="pre">X&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;Site</span> <span class="pre">Y&gt;</span></code>)
 found per <code class="docutils literal notranslate"><span class="pre">&lt;SLR</span> <span class="pre">index&gt;</span></code>.</p>
 <p>Not present if AIE not supported.</p>
 </td>
@@ -1848,7 +1848,7 @@ For example, set u50 board part:</p>
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 14, 2022.
+        Last updated on October 17, 2022.
       </span>
 
     </p>

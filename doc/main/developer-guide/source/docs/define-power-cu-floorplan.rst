@@ -145,7 +145,7 @@ Utilization guidelines are provided further down this page.
     | Node                | Description                                                                   | Format                                                                |
     +=====================+===============================================================================+=======================================================================+
     | ``PL_UTILIZATION``  | Utilization of PL sites is defined                                            | Dictionary                                                            |
-    |                     | per clock region (``<CR X>``,``<CR Y>``) and                                  |                                                                       |
+    |                     | per clock region (``<CR X>``, ``<CR Y>``) and                                 |                                                                       |
     |                     | per site type,                                                                | .. code-block::                                                       |
     |                     | in percentage [0;100] of                                                      |                                                                       |
     |                     | (number of valid locations in dynamic geometry                                |     SLR_<SLR idx> : {                                                 |
@@ -209,18 +209,18 @@ It may necessary to disable some sites: e.g. close to static region or I/Os to e
 
 .. table:: ``invalid.json`` definition
 
-    +----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
-    | Node           | Description                                                                                                                                         | Format                                                            |
-    +================+=====================================================================================================================================================+===================================================================+
-    | ``PL_INVALID`` | Locations of sites not used in power CU floorplan (``PL_INVALID``) are defined per site type and per SLR ``<SLR idx>``.                             | Dictionary:                                                       |
-    |                |                                                                                                                                                     |                                                                   |
-    |                | Provide a single site (``<x0>``,``<y0>``) or a site rectangle defined by bottom left (``<x1>``,``<y1>``) and top right (``<x2>``,``<y2>``) corners. | .. code-block::                                                   |
-    |                |                                                                                                                                                     |                                                                   |
-    |                | See ``dynamic_geometry`` for supported ``<site_type>``:                                                                                             |     SLR_<SLR idx> : [                                             |
-    |                |                                                                                                                                                     |       { location: <site_type>_X<x0>Y<y0> },                       |
-    |                |                                                                                                                                                     |       { location: <site_type>_X<x1>Y<y1>:<site_type>_X<x2>Y<y2> } |
-    |                |                                                                                                                                                     |     ]                                                             |
-    +----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+    +----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
+    | Node           | Description                                                                                                                                            | Format                                                            |
+    +================+========================================================================================================================================================+===================================================================+
+    | ``PL_INVALID`` | Locations of sites not used in power CU floorplan (``PL_INVALID``) are defined per site type and per SLR ``<SLR idx>``.                                | Dictionary:                                                       |
+    |                |                                                                                                                                                        |                                                                   |
+    |                | Provide a single site (``<x0>``, ``<y0>``) or a site rectangle defined by bottom left (``<x1>``, ``<y1>``) and top right (``<x2>``, ``<y2>``) corners. | .. code-block::                                                   |
+    |                |                                                                                                                                                        |                                                                   |
+    |                | See ``dynamic_geometry`` for supported ``<site_type>``:                                                                                                |     SLR_<SLR idx> : [                                             |
+    |                |                                                                                                                                                        |       { location: <site_type>_X<x0>Y<y0> },                       |
+    |                |                                                                                                                                                        |       { location: <site_type>_X<x1>Y<y1>:<site_type>_X<x2>Y<y2> } |
+    |                |                                                                                                                                                        |     ]                                                             |
+    +----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------+
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ``invalid.json`` - Examples
@@ -282,7 +282,7 @@ The valid sites (available primitives in platform dynamic region) which can be s
     +-------------------------+-----------------------------------------------------------------------------------------------------+-------------------------------------+
     | ``CLOCK_REGIONS``       |  Clock Regions definition:                                                                          | Dictionary:                         |
     |                         |                                                                                                     |                                     |
-    |                         |  List of all the Clock Region indexes (``<CR X>``,``<CR Y>``) per SLR ``<SLR index>`` in the FPGA.  | .. code-block::                     |
+    |                         |  List of all the Clock Region indexes (``<CR X>``, ``<CR Y>``) per SLR ``<SLR index>`` in the FPGA. | .. code-block::                     |
     |                         |                                                                                                     |                                     |
     |                         |                                                                                                     |     <SLR index> : {                 |
     |                         |                                                                                                     |       <CR Y> : [ <CR X> ]           |
@@ -297,8 +297,8 @@ The valid sites (available primitives in platform dynamic region) which can be s
     +-------------------------+-----------------------------------------------------------------------------------------------------+-------------------------------------+
     | ``PL_DYNAMIC_GEOMETRY`` | PL sites definition:                                                                                | Dictionary:                         |
     |                         |                                                                                                     |                                     |
-    |                         | List of all site ``<Site key>`` locations (``<Site X>``,``<Site Y>``)                               | .. code-block::                     |
-    |                         | found in pblocks per CR (``<CR X>``,``<CR Y>``) per SLR ``<SLR index>``.                            |                                     |
+    |                         | List of all site ``<Site key>`` locations (``<Site X>``, ``<Site Y>``)                              | .. code-block::                     |
+    |                         | found in pblocks per CR (``<CR X>``, ``<CR Y>``) per SLR ``<SLR index>``.                           |                                     |
     |                         |                                                                                                     |    <Site key> : {                   |
     |                         |                                                                                                     |       <SLR index> : {               |
     |                         |                                                                                                     |         <CR Y> : {                  |
@@ -309,7 +309,7 @@ The valid sites (available primitives in platform dynamic region) which can be s
     |                         |                                                                                                     |       }                             |
     |                         |                                                                                                     |    }                                |
     +-------------------------+-----------------------------------------------------------------------------------------------------+-------------------------------------+
-    | ``AIE_GEOMETRY``        | AIE sites definition: List of all AIE locations (``<Site X>``,``<Site Y>``)                         | Dictionary:                         |
+    | ``AIE_GEOMETRY``        | AIE sites definition: List of all AIE locations (``<Site X>``, ``<Site Y>``)                        | Dictionary:                         |
     |                         | found per ``<SLR index>``.                                                                          |                                     |
     |                         |                                                                                                     | .. code-block::                     |
     |                         | Not present if AIE not supported.                                                                   |                                     |
