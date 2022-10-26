@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -829,8 +832,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="result-directory">
-<span id="id1"></span><h1>Result directory<a class="headerlink" href="#result-directory" title="Permalink to this headline">¶</a></h1>
+  <section id="result-directory">
+<span id="id1"></span><h1>Result directory<a class="headerlink" href="#result-directory" title="Permalink to this heading">¶</a></h1>
 <p>With any display that is used, xbtest stores all <a class="reference internal" href="../test-cases/test-cases-overview.html#test-cases-overview"><span class="std std-ref">test cases</span></a> specific result files into one directory, in which xbtest also stores all messages into two log files:</p>
 <blockquote>
 <div><ul>
@@ -854,8 +857,8 @@
 </div></blockquote>
 <p>The result directory can be specified using command line option <a class="reference internal" href="command-line-options.html#cmdoption-l"><code class="xref std std-option docutils literal notranslate"><span class="pre">-l</span></code></a> or disabled using <a class="reference internal" href="command-line-options.html#cmdoption-L"><code class="xref std std-option docutils literal notranslate"><span class="pre">-L</span></code></a>.
 By default, each xbtest run creates its own result directory in the current working directory.</p>
-<div class="section" id="multi-tests-result-directory">
-<span id="id2"></span><h2>Multi tests result directory<a class="headerlink" href="#multi-tests-result-directory" title="Permalink to this headline">¶</a></h2>
+<section id="multi-tests-result-directory">
+<span id="id2"></span><h2>Multi tests result directory<a class="headerlink" href="#multi-tests-result-directory" title="Permalink to this heading">¶</a></h2>
 <p>In this use case, the result directory is named by default <code class="docutils literal notranslate"><span class="pre">./xbtest_logs/&lt;DATE&gt;_&lt;TIME&gt;</span></code>, where the sub-directory is named with the following, separated with an underscore “_”:</p>
 <blockquote>
 <div><ul class="simple">
@@ -892,8 +895,8 @@ By default, each xbtest run creates its own result directory in the current work
 └── 004_my_test/
 </pre></div>
 </div>
-<div class="section" id="card-status-csv-output-file">
-<h3>Card status CSV output file<a class="headerlink" href="#card-status-csv-output-file" title="Permalink to this headline">¶</a></h3>
+<section id="card-status-csv-output-file">
+<h3>Card status CSV output file<a class="headerlink" href="#card-status-csv-output-file" title="Permalink to this heading">¶</a></h3>
 <p>This results file is generated when multiple tests are run
 It contains card and test status for all targeted cards.
 There is one line of result for every second of each test.</p>
@@ -914,10 +917,10 @@ There is one line of result for every second of each test.</p>
 </li>
 </ul>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="single-test-result-directory">
-<span id="id3"></span><h2>Single test result directory<a class="headerlink" href="#single-test-result-directory" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="single-test-result-directory">
+<span id="id3"></span><h2>Single test result directory<a class="headerlink" href="#single-test-result-directory" title="Permalink to this heading">¶</a></h2>
 <p>In this use case, the result directory is named by default <code class="docutils literal notranslate"><span class="pre">./xbtest_logs/&lt;DATE&gt;_&lt;TIME&gt;_&lt;BDF&gt;</span></code>, where the sub-directory is named with the following, separated with an underscore “_”:</p>
 <blockquote>
 <div><ul class="simple">
@@ -927,8 +930,8 @@ There is one line of result for every second of each test.</p>
 </ul>
 </div></blockquote>
 <p>For example, the default logging directory can be: <code class="docutils literal notranslate"><span class="pre">./xbtest_logs/2022-01-06_13-50-55_0000-5e-00-1</span></code>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -959,7 +962,7 @@ There is one line of result for every second of each test.</p>
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

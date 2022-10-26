@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -827,9 +830,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="p2p-card-test-case-description">
-<span id="id1"></span><h1>P2P CARD test case description<a class="headerlink" href="#p2p-card-test-case-description" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="table-of-contents">
+  <section id="p2p-card-test-case-description">
+<span id="id1"></span><h1>P2P CARD test case description<a class="headerlink" href="#p2p-card-test-case-description" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="table-of-contents">
 <p class="topic-title">Table of contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#test-parameters" id="id7">Test parameters</a></p></li>
@@ -853,7 +856,7 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <p>The goal of this test case is to check P2P communication and available bandwidth between memories available on two <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html">Alveo™</a> cards (for example: DDR/HBM) through the PCIe.
 Data integrity and write/read bandwidths are measured.</p>
 <p>The <a class="reference internal" href="#p2p-card-test-case-description"><span class="std std-ref">P2P CARD</span></a> test case consists of writing and reading back data to and from the entire range of the memory under test over and over during a certain period.
@@ -889,8 +892,8 @@ When not specified, <a class="reference internal" href="#p2p-card-parameter-tota
 <p class="admonition-title">Important</p>
 <p>NoDMA platforms can only be used as P2P target, selected with option <a class="reference internal" href="../usage/command-line-options.html#cmdoption-T"><code class="xref std std-option docutils literal notranslate"><span class="pre">-T</span></code></a> in the <a class="reference internal" href="#p2p-card-test-case-description"><span class="std std-ref">P2P CARD</span></a> test case as P2P transfers are initiated by the DMA engine of the source card.</p>
 </div>
-<div class="section" id="test-parameters">
-<h2><a class="toc-backref" href="#id7">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this headline">¶</a></h2>
+<section id="test-parameters">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this heading">¶</a></h2>
 <p>The mandatory test configuration parameters are listed below.
 For more information, see <a class="reference internal" href="#p2p-card-test-json-members"><span class="std std-ref">P2P CARD test JSON members</span></a>.</p>
 <blockquote>
@@ -906,9 +909,9 @@ For more information, see <a class="reference internal" href="#p2p-card-test-jso
 <li><p><a class="reference internal" href="#p2p-card-parameter-test-sequence-buffer-size"><span class="std std-ref">buffer_size</span></a>: Write/read buffer size.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="main-test-steps">
-<h2><a class="toc-backref" href="#id8">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="main-test-steps">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this heading">¶</a></h2>
 <p>For each test configuration, the following steps are repeated:</p>
 <blockquote>
 <div><ol class="arabic">
@@ -948,21 +951,15 @@ If <a class="reference internal" href="#p2p-card-parameter-stop-on-error"><span 
 <li><p>Release all host and card buffers.</p></li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="p2p-card-test-json-members">
-<span id="id2"></span><h2><a class="toc-backref" href="#id9">P2P CARD test JSON members</a><a class="headerlink" href="#p2p-card-test-json-members" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="definition">
-<h3><a class="toc-backref" href="#id10">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="p2p-card-test-json-members">
+<span id="id2"></span><h2><a class="toc-backref" href="#id9" role="doc-backlink">P2P CARD test JSON members</a><a class="headerlink" href="#p2p-card-test-json-members" title="Permalink to this heading">¶</a></h2>
+<section id="definition">
+<h3><a class="toc-backref" href="#id10" role="doc-backlink">Definition</a><a class="headerlink" href="#definition" title="Permalink to this heading">¶</a></h3>
 <p>The following table shows all members available for this test case.
 More details are provided for each member in the subsequent sections.</p>
 <table class="docutils align-default" id="id3">
 <caption><span class="caption-text">P2P CARD test case members</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 24%" />
-<col style="width: 13%" />
-<col style="width: 13%" />
-<col style="width: 51%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Memory type override</p></th>
@@ -1007,10 +1004,10 @@ More details are provided for each member in the subsequent sections.</p>
 </tr>
 </tbody>
 </table>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="basic-examples">
-<h3><a class="toc-backref" href="#id11">Basic examples</a><a class="headerlink" href="#basic-examples" title="Permalink to this headline">¶</a></h3>
+<section id="basic-examples">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Basic examples</a><a class="headerlink" href="#basic-examples" title="Permalink to this heading">¶</a></h3>
 <p>The following is a basic example of a <a class="reference internal" href="#p2p-card-test-case-description"><span class="std std-ref">P2P CARD</span></a> test case targeting all DDR and HBM memories available on the card.
 All memories are tested serially.</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;p2p_card&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1065,9 +1062,9 @@ All memories are tested serially.</p>
 </pre></div>
 </div>
 <hr class="docutils" />
-</div>
-<div class="section" id="test-sequence">
-<span id="p2p-card-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id12"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="test-sequence">
+<span id="p2p-card-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id12" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this heading">¶</a></h3>
 <p>Mandatory. Describes the sequence of tests to perform.
 Tests are performed serially, and a failure in one test does not stop the sequence (the next test will be launched).
 There is no limitation to the length of the test sequence.</p>
@@ -1075,11 +1072,6 @@ There is no limitation to the length of the test sequence.</p>
 <p>The following table defines the parameters supported in the P2P CARD test sequence:</p>
 <span id="p2p-card-parameter-test-sequence-buffer-size"></span><span id="p2p-card-parameter-test-sequence-target"></span><span id="p2p-card-parameter-test-sequence-source"></span><span id="p2p-card-parameter-test-sequence-duration"></span><table class="docutils align-default" id="id4">
 <caption><span class="caption-text">P2P CARD Test Sequence Parameters</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 10%" />
-<col style="width: 81%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Mandatory / optional</p></th>
@@ -1229,9 +1221,9 @@ and the memory tags <code class="docutils literal notranslate"><span class="pre"
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="check-bw">
-<span id="p2p-card-parameter-check-bw"></span><h3><a class="toc-backref" href="#id13"><code class="docutils literal notranslate"><span class="pre">check_bw</span></code></a><a class="headerlink" href="#check-bw" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="check-bw">
+<span id="p2p-card-parameter-check-bw"></span><h3><a class="toc-backref" href="#id13" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">check_bw</span></code></a><a class="headerlink" href="#check-bw" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">false</span></code> or <code class="docutils literal notranslate"><span class="pre">true</span></code>;
@@ -1247,9 +1239,9 @@ When set to <code class="docutils literal notranslate"><span class="pre">false</
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="stop-on-error">
-<span id="p2p-card-parameter-stop-on-error"></span><h3><a class="toc-backref" href="#id14"><code class="docutils literal notranslate"><span class="pre">stop_on_error</span></code></a><a class="headerlink" href="#stop-on-error" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="stop-on-error">
+<span id="p2p-card-parameter-stop-on-error"></span><h3><a class="toc-backref" href="#id14" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">stop_on_error</span></code></a><a class="headerlink" href="#stop-on-error" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">false</span></code> or <code class="docutils literal notranslate"><span class="pre">true</span></code>;
@@ -1257,9 +1249,9 @@ Default        : <code class="docutils literal notranslate"><span class="pre">fa
 <p>By default, the write-read-check cycles are always executed during the entire test <a class="reference internal" href="#p2p-card-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> even if errors occurred during a cycle.
 By setting this member to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the <a class="reference internal" href="#p2p-card-test-case-description"><span class="std std-ref">P2P CARD</span></a> test case will stop in case of write / read transfer or data integrity error.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="hi-thresh-wr-hi-thresh-rd">
-<span id="p2p-card-parameter-hi-thresh-rd"></span><span id="p2p-card-parameter-hi-thresh-wr"></span><span id="p2p-card-parameter-hi-thresh-wr-rd"></span><h3><a class="toc-backref" href="#id15"><code class="docutils literal notranslate"><span class="pre">hi_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_rd</span></code></a><a class="headerlink" href="#hi-thresh-wr-hi-thresh-rd" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="hi-thresh-wr-hi-thresh-rd">
+<span id="p2p-card-parameter-hi-thresh-rd"></span><span id="p2p-card-parameter-hi-thresh-wr"></span><span id="p2p-card-parameter-hi-thresh-wr-rd"></span><h3><a class="toc-backref" href="#id15" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">hi_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_rd</span></code></a><a class="headerlink" href="#hi-thresh-wr-hi-thresh-rd" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : integer;
 Possible values: from 1 to 2<sup>32</sup>-1;
@@ -1267,9 +1259,9 @@ Default        : specified in the <a class="reference internal" href="../platfor
 <p>Overwrite high threshold of the P2P write/read bandwidth (MB/s) specified in the <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a> for specified memory type.
 After all bandwidth measurements made during the test <a class="reference internal" href="#p2p-card-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> are complete, if the measured bandwidth is greater than this threshold, the test fails.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="lo-thresh-wr-lo-thresh-rd">
-<span id="p2p-card-parameter-lo-thresh-rd"></span><span id="p2p-card-parameter-lo-thresh-wr"></span><span id="p2p-card-parameter-lo-thresh-wr-rd"></span><h3><a class="toc-backref" href="#id16"><code class="docutils literal notranslate"><span class="pre">lo_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_rd</span></code></a><a class="headerlink" href="#lo-thresh-wr-lo-thresh-rd" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="lo-thresh-wr-lo-thresh-rd">
+<span id="p2p-card-parameter-lo-thresh-rd"></span><span id="p2p-card-parameter-lo-thresh-wr"></span><span id="p2p-card-parameter-lo-thresh-wr-rd"></span><h3><a class="toc-backref" href="#id16" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">lo_thresh_wr</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_rd</span></code></a><a class="headerlink" href="#lo-thresh-wr-lo-thresh-rd" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type   : integer;
 Range  : [1, 2<sup>32</sup>-1];
@@ -1278,9 +1270,9 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 After all bandwidth measurements made during the test <a class="reference internal" href="#p2p-card-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> are complete, if the measured bandwidth is lower than this threshold, the test fails.
 Low threshold must be lower than high threshold.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="total-size">
-<span id="p2p-card-parameter-total-size"></span><h3><a class="toc-backref" href="#id17"><code class="docutils literal notranslate"><span class="pre">total_size</span></code></a><a class="headerlink" href="#total-size" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="total-size">
+<span id="p2p-card-parameter-total-size"></span><h3><a class="toc-backref" href="#id17" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">total_size</span></code></a><a class="headerlink" href="#total-size" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : integer;
 Possible values: from minimum buffer size to memory size;
@@ -1288,11 +1280,11 @@ Default        : memory size.</p>
 <p>Override the total amount of data (in MB) per transfer cycle for specified memory type.
 When not specified, it defaults to the memory size.
 This must be a multiple of the <a class="reference internal" href="#p2p-card-parameter-test-sequence-buffer-size"><span class="std std-ref">buffer_size</span></a> parameter for all tests in the <a class="reference internal" href="#p2p-card-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a>.</p>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="output-files">
-<h2><a class="toc-backref" href="#id18">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
+<section id="output-files">
+<h2><a class="toc-backref" href="#id18" role="doc-backlink">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this heading">¶</a></h2>
 <p>All P2P measurements are stored in output CSV files which are generated in xbtest logging directory.
 The values are stored in CSV type format with one column for each information type.</p>
 <div class="admonition important">
@@ -1307,8 +1299,8 @@ They are named with the following convention:</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">p2p_card_result.csv</span></code></p></li>
 </ul>
 </div></blockquote>
-<div class="section" id="p2p-card-detail-csv-output-file">
-<h3><a class="toc-backref" href="#id19"><code class="docutils literal notranslate"><span class="pre">p2p_card_detail.csv</span></code> output file</a><a class="headerlink" href="#p2p-card-detail-csv-output-file" title="Permalink to this headline">¶</a></h3>
+<section id="p2p-card-detail-csv-output-file">
+<h3><a class="toc-backref" href="#id19" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">p2p_card_detail.csv</span></code> output file</a><a class="headerlink" href="#p2p-card-detail-csv-output-file" title="Permalink to this heading">¶</a></h3>
 <p>This file contains all intermediate bandwidth measurements for all memory types available on the card (for example: DDR/HBM).
 There is one line of result for every write-read-check cycle of each test of the <a class="reference internal" href="#p2p-card-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a>.
 The following table summarizes the content of this file, where the following columns represent groups of columns present in the file for a platform
@@ -1320,16 +1312,6 @@ containing also a memory type named HBM with the 32 tags associated: HBM[0] to H
 </ul>
 <table class="docutils align-default" id="id5">
 <caption><span class="caption-text">Example: <code class="docutils literal notranslate"><span class="pre">p2p_card_detail.csv</span></code></span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 5%" />
-<col style="width: 16%" />
-<col style="width: 16%" />
-<col style="width: 15%" />
-<col style="width: 9%" />
-<col style="width: 14%" />
-<col style="width: 13%" />
-<col style="width: 12%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test</p></th>
 <th class="head"><p>source memory tag</p></th>
@@ -1474,9 +1456,9 @@ containing also a memory type named HBM with the 32 tags associated: HBM[0] to H
 </li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="p2p-card-result-csv-output-file">
-<h3><a class="toc-backref" href="#id20"><code class="docutils literal notranslate"><span class="pre">p2p_card_result.csv</span></code> output file</a><a class="headerlink" href="#p2p-card-result-csv-output-file" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="p2p-card-result-csv-output-file">
+<h3><a class="toc-backref" href="#id20" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">p2p_card_result.csv</span></code> output file</a><a class="headerlink" href="#p2p-card-result-csv-output-file" title="Permalink to this heading">¶</a></h3>
 <p>For each test of the <a class="reference internal" href="#p2p-card-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a>, a new row containing the test configuration and results computed is present in this file.
 The following table summarizes the content of this file, where the following columns represent groups of columns present in the file (see description below) for a platform
 containing a memory type named DDR with the two tags DDR[0] and DDR[1] associated and
@@ -1490,17 +1472,6 @@ containing also a memory type named HBM with the 32 tags associated HBM[0] to HB
 </div></blockquote>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">Example: <code class="docutils literal notranslate"><span class="pre">p2p_card_result.csv</span></code></span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 4%" />
-<col style="width: 14%" />
-<col style="width: 14%" />
-<col style="width: 11%" />
-<col style="width: 11%" />
-<col style="width: 13%" />
-<col style="width: 12%" />
-<col style="width: 11%" />
-<col style="width: 10%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test</p></th>
 <th class="head"><p>source memory tag</p></th>
@@ -1614,9 +1585,9 @@ containing also a memory type named HBM with the 32 tags associated HBM[0] to HB
 </li>
 </ul>
 </div></blockquote>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -1647,7 +1618,7 @@ containing also a memory type named HBM with the 32 tags associated HBM[0] to HB
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

@@ -12,7 +12,7 @@ GT test cases description
 
    GT MAC <./gt-mac-test-case-description.rst>
    GT PRBS <./gt-prbs-test-case-description.rst>
-   GT LPNK <./gt-lpbk-test-case-description.rst>
+   GT LPBK <./gt-lpbk-test-case-description.rst>
 
 GTs are tested by sending and receiving traffic at 10GbE and 25GbE rate. The simplest test consists of looping back each individual lane to themselves (Tx to Rx).
 Although all CU are designed to test the 4 lanes simultaneously, each lane can be configured (or disabled) individually.

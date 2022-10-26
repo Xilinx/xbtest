@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -827,19 +830,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="test-cases-overview">
-<span id="id1"></span><h1>Test cases overview<a class="headerlink" href="#test-cases-overview" title="Permalink to this headline">¶</a></h1>
+  <section id="test-cases-overview">
+<span id="id1"></span><h1>Test cases overview<a class="headerlink" href="#test-cases-overview" title="Permalink to this heading">¶</a></h1>
 <p>Different test cases can be run by xbtest depending on the deployment platform and the <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> capabilities.
 A failure in a test case does not stop other test cases.</p>
 <p>Apart from the <a class="reference internal" href="verify-test-case-description.html#verify-test-case-description"><span class="std std-ref">Verify</span></a> test case, a test case is composed of, at minimum, a test sequence which contains the duration and some configuration parameters.</p>
 <p>The following tables provides an overview of the supported test cases:</p>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text">Test cases overview</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 67%" />
-<col style="width: 27%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test case</p></th>
 <th class="head"><p>Overview</p></th>
@@ -876,9 +874,11 @@ A failure in a test case does not stop other test cases.</p>
 <p>The <a class="reference internal" href="dma-test-case-description.html#dma-test-case-description"><span class="std std-ref">DMA</span></a> test case does not use any CUs, but it requires an <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> with connection to the memory under test.</p>
 </div>
 </td>
-<td><div class="figure align-center" id="id3">
-<img alt="../../_images/test-case-dma.svg" src="../../_images/test-case-dma.svg" /><p class="caption"><span class="caption-text">DMA test case</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id3">
+<img alt="../../_images/test-case-dma.svg" src="../../_images/test-case-dma.svg" /><figcaption>
+<p><span class="caption-text">DMA test case</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="p2p-card-test-case-description.html#p2p-card-test-case-description"><span class="std std-ref">P2P CARD</span></a></p></td>
@@ -896,9 +896,11 @@ A failure in a test case does not stop other test cases.</p>
 <p>The P2P CARD test case does not use any CUs, but it requires an <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> with connection to the memory under test.</p>
 </div>
 </td>
-<td><div class="figure align-center" id="id4">
-<img alt="../../_images/test-case-p2p-card.svg" src="../../_images/test-case-p2p-card.svg" /><p class="caption"><span class="caption-text">P2P CARD test case</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id4">
+<img alt="../../_images/test-case-p2p-card.svg" src="../../_images/test-case-p2p-card.svg" /><figcaption>
+<p><span class="caption-text">P2P CARD test case</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="p2p-nvme-test-case-description.html#p2p-nvme-test-case-description"><span class="std std-ref">P2P NVME</span></a></p></td>
@@ -916,9 +918,11 @@ A failure in a test case does not stop other test cases.</p>
 <p>The P2P CARD test case does not use any CUs, but it requires an <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> with connection to the memory under test.</p>
 </div>
 </td>
-<td><div class="figure align-center" id="id5">
-<img alt="../../_images/test-case-p2p-nvme.svg" src="../../_images/test-case-p2p-nvme.svg" /><p class="caption"><span class="caption-text">P2P NVME test case</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id5">
+<img alt="../../_images/test-case-p2p-nvme.svg" src="../../_images/test-case-p2p-nvme.svg" /><figcaption>
+<p><span class="caption-text">P2P NVME test case</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="memory-test-case-description.html#memory-test-case-description"><span class="std std-ref">Memory</span></a></p></td>
@@ -939,9 +943,11 @@ A failure in a test case does not stop other test cases.</p>
 </ul>
 </div></blockquote>
 </td>
-<td><div class="figure align-center" id="id6">
-<img alt="../../_images/test-case-memory.svg" src="../../_images/test-case-memory.svg" /><p class="caption"><span class="caption-text">Memory test case</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id6">
+<img alt="../../_images/test-case-memory.svg" src="../../_images/test-case-memory.svg" /><figcaption>
+<p><span class="caption-text">Memory test case</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="power-test-case-description.html#power-test-case-description"><span class="std std-ref">Power</span></a></p></td>
@@ -987,9 +993,11 @@ With the last method, the traffic flows between GT MAC CU instances</p>
 </ul>
 </div></blockquote>
 </td>
-<td><div class="figure align-center" id="id7">
-<img alt="../../_images/test-case-gt-mac.svg" src="../../_images/test-case-gt-mac.svg" /><p class="caption"><span class="caption-text">GT MAC test case</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id7">
+<img alt="../../_images/test-case-gt-mac.svg" src="../../_images/test-case-gt-mac.svg" /><figcaption>
+<p><span class="caption-text">GT MAC test case</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="gt-prbs-test-case-description.html#gt-prbs-test-case-description"><span class="std std-ref">GT PRBS</span></a></p></td>
@@ -1000,9 +1008,11 @@ With the last method, the traffic flows between GT MAC CU instances</p>
 </ul>
 </div></blockquote>
 </td>
-<td><div class="figure align-center" id="id8">
-<img alt="../../_images/test-case-gt-prbs.svg" src="../../_images/test-case-gt-prbs.svg" /><p class="caption"><span class="caption-text">GT PRBS test case</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id8">
+<img alt="../../_images/test-case-gt-prbs.svg" src="../../_images/test-case-gt-prbs.svg" /><figcaption>
+<p><span class="caption-text">GT PRBS test case</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-lpbk-test-case-description"><span class="std std-ref">GT LPBK</span></a></p></td>
@@ -1017,14 +1027,16 @@ With the last method, the traffic flows between GT MAC CU instances</p>
 <p>This CU requires a 25GbE traffic source which could be GT MAC CU.</p>
 </div>
 </td>
-<td><div class="figure align-center" id="id9">
-<img alt="../../_images/test-case-gt-lpbk.svg" src="../../_images/test-case-gt-lpbk.svg" /><p class="caption"><span class="caption-text">GT LPBK test case</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id9">
+<img alt="../../_images/test-case-gt-lpbk.svg" src="../../_images/test-case-gt-lpbk.svg" /><figcaption>
+<p><span class="caption-text">GT LPBK test case</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
+</section>
 
 
            </div>
@@ -1055,7 +1067,7 @@ With the last method, the traffic flows between GT MAC CU instances</p>
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

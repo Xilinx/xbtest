@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -829,8 +832,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="result-visualisation">
-<h1>Result visualisation<a class="headerlink" href="#result-visualisation" title="Permalink to this headline">¶</a></h1>
+  <section id="result-visualisation">
+<h1>Result visualisation<a class="headerlink" href="#result-visualisation" title="Permalink to this heading">¶</a></h1>
 <p>Most of the <a class="reference internal" href="../test-cases/test-cases-overview.html#test-cases-overview"><span class="std std-ref">test cases</span></a> produce csv file, you can use it to create figures and graphs according to your need.
 xbtest produces another set of files which can be used directly by Vitis Analyzer in order to create default graphs.  Default graphs depends on the test case run but they could be:</p>
 <ul class="simple">
@@ -896,51 +899,51 @@ xbtest produces another set of files which can be used directly by Vitis Analyze
 </div></blockquote>
 </li>
 </ul>
-<div class="section" id="vitis-analyzer">
-<h2>Vitis analyzer<a class="headerlink" href="#vitis-analyzer" title="Permalink to this headline">¶</a></h2>
+<section id="vitis-analyzer">
+<h2>Vitis analyzer<a class="headerlink" href="#vitis-analyzer" title="Permalink to this heading">¶</a></h2>
 <p>You need to access to Vitis Analyzer version 2022.1 (or more recent).  Once Vitis Analyser opened, from the <strong>File</strong> Drop menu, click on <strong>Open Summary</strong>. Select the <code class="docutils literal notranslate"><span class="pre">xbtest.run_summary</span></code> present in the <code class="docutils literal notranslate"><span class="pre">VA</span></code> folder of the logging directory corresponding to the xbtest run that you want to analyse and display the results.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="../../_images/VA_open_summary.jpg" src="../../_images/VA_open_summary.jpg" />
-</div>
+</figure>
 <p>Whatever the test type (single or multi card), Vitis Analyzer allows you to select 3 kinds of reports</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="../../_images/VA_result_selection.jpg" src="../../_images/VA_result_selection.jpg" />
-</div>
+</figure>
 <p>The following sections are available:</p>
 <ul class="simple">
 <li><p>Summary: date, card, duration …</p></li>
 <li><p>Profile Summary: plots and table of results</p></li>
 <li><p>Log: xbtest log file</p></li>
 </ul>
-<div class="section" id="profile-summary">
-<h3>Profile summary<a class="headerlink" href="#profile-summary" title="Permalink to this headline">¶</a></h3>
+<section id="profile-summary">
+<h3>Profile summary<a class="headerlink" href="#profile-summary" title="Permalink to this heading">¶</a></h3>
 <p>With single card test, based on the test case run, you can have different plots (+ table of results)</p>
 <ul class="simple">
 <li><p>DMA: bandwidth.</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="../../_images/VA_single_card_dma.jpg" src="../../_images/VA_single_card_dma.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Memory: Bandwidth and latency for single-channel memory (typically DDR) or Multi Channel (HBM).</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="../../_images/VA_single_card_single_channel.jpg" src="../../_images/VA_single_card_single_channel.jpg" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>Device Measurements: power and temperature (&amp; toggle rate).</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="../../_images/VA_single_card_device_meas.jpg" src="../../_images/VA_single_card_device_meas.jpg" />
-</div>
+</figure>
 <p>With multi card test, there is only type of plot: power and temperature.
 You can select via the BDF which card you want to display. By default, there are all displayed.</p>
-<div class="figure align-left">
+<figure class="align-left">
 <img alt="../../_images/VA_multi_card_profile_summary.jpg" src="../../_images/VA_multi_card_profile_summary.jpg" />
-</div>
-</div>
-</div>
-</div>
+</figure>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -971,7 +974,7 @@ You can select via the BDF which card you want to display. By default, there are
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

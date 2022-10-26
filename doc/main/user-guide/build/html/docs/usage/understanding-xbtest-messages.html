@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -829,18 +832,13 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="understanding-xbtest-messages">
-<span id="id1"></span><h1>Understanding xbtest messages<a class="headerlink" href="#understanding-xbtest-messages" title="Permalink to this headline">¶</a></h1>
+  <section id="understanding-xbtest-messages">
+<span id="id1"></span><h1>Understanding xbtest messages<a class="headerlink" href="#understanding-xbtest-messages" title="Permalink to this heading">¶</a></h1>
 <p>The <a class="reference internal" href="../introduction/overview.html#application-software"><span class="std std-ref">Application software</span></a> outputs messages into log files.
 Each message is generated with the format <code class="docutils literal notranslate"><span class="pre">&lt;severity&gt;</span> <span class="pre">::</span> <span class="pre">&lt;ID&gt;</span> <span class="pre">::</span> <span class="pre">&lt;headers&gt;</span> <span class="pre">::</span> <span class="pre">&lt;message&gt;</span></code>.
 The following table describes these message fields, separated by “<code class="docutils literal notranslate"><span class="pre">::</span></code>”.</p>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text">Message fields</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 6%" />
-<col style="width: 14%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Field</p></th>
 <th class="head"><p>Example</p></th>
@@ -960,7 +958,7 @@ During a test, these sections will be replaced by actual value related to the te
 This is only applicable for the message with the following severity levels: <code class="docutils literal notranslate"><span class="pre">WARNING</span></code>, <code class="docutils literal notranslate"><span class="pre">CRIT_WARN</span></code>, <code class="docutils literal notranslate"><span class="pre">ERROR</span></code> and <code class="docutils literal notranslate"><span class="pre">FAILURE</span></code>.</p></li>
 </ul>
 </div></blockquote>
-</div>
+</section>
 
 
            </div>
@@ -991,7 +989,7 @@ This is only applicable for the message with the following severity levels: <cod
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

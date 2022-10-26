@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -829,9 +832,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="gt-prbs-test-case-description">
-<span id="id1"></span><h1>GT PRBS test case description<a class="headerlink" href="#gt-prbs-test-case-description" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="table-of-contents">
+  <section id="gt-prbs-test-case-description">
+<span id="id1"></span><h1>GT PRBS test case description<a class="headerlink" href="#gt-prbs-test-case-description" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="table-of-contents">
 <p class="topic-title">Table of contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#gt-test-set-up" id="id9">GT test set up</a></p></li>
@@ -853,7 +856,7 @@
 </li>
 <li><p><a class="reference internal" href="#output-file" id="id20">Output file</a></p></li>
 </ul>
-</div>
+</nav>
 <p>The goal of this test case is to allow verification of GT transceivers on <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html">Alveo™</a> cards at 25GbE lane rates. The 4 lanes of the GT transceiver are tested simultaneously.</p>
 <p>This compute unit (CU) is composed by PRBS-31 generator &amp; checker which sends &amp; verifies 66b data at 25GbE rate. It’s possible to inject a single error any lane.
 The PRBS checker compares the incoming 66b to a newly created 66b PRBS based on the previous data received.</p>
@@ -861,11 +864,13 @@ The PRBS checker compares the incoming 66b to a newly created 66b PRBS based on 
 This reference PRBS is synced with the incoming data if there are less than 10% of error during the comparison.
 If there are more than 6 errors between the reference PRBS and the received 66b of data, the reference PRBS is resync to the data.
 The SW can disable the usage the reference PRBS.</p>
-<div class="figure align-center" id="id5">
-<img alt="../../_images/gt_prbs-block_diagram.svg" src="../../_images/gt_prbs-block_diagram.svg" /><p class="caption"><span class="caption-text">GT PRBS CU block diagram</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-<span class="target" id="gt-prbs-test-set-up"></span><div class="section" id="gt-test-set-up">
-<h2><a class="toc-backref" href="#id9">GT test set up</a><a class="headerlink" href="#gt-test-set-up" title="Permalink to this headline">¶</a></h2>
+<figure class="align-center" id="id5">
+<img alt="../../_images/gt_prbs-block_diagram.svg" src="../../_images/gt_prbs-block_diagram.svg" /><figcaption>
+<p><span class="caption-text">GT PRBS CU block diagram</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<span class="target" id="gt-prbs-test-set-up"></span><section id="gt-test-set-up">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">GT test set up</a><a class="headerlink" href="#gt-test-set-up" title="Permalink to this heading">¶</a></h2>
 <p>GT testing can be achieved by using one of the following methods:</p>
 <blockquote>
 <div><ul>
@@ -894,9 +899,9 @@ The module must be compatible with the traffic rate being tested.</p>
 This is the most complex method of connection as not only will the interfaces require validation with the GTs, the RX and TX paths will be independent.</p></li>
 </ul>
 </div></blockquote>
-<span class="target" id="gt-prbs-gt-settings"></span></div>
-<div class="section" id="gt-settings">
-<h2><a class="toc-backref" href="#id10">GT settings</a><a class="headerlink" href="#gt-settings" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="gt-prbs-gt-settings"></span></section>
+<section id="gt-settings">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">GT settings</a><a class="headerlink" href="#gt-settings" title="Permalink to this heading">¶</a></h2>
 <p>As there are multiple ways to connect to the GTs, two default configurations have been defined:</p>
 <blockquote>
 <div><ul class="simple">
@@ -927,9 +932,9 @@ It’s possible to overwrite these settings for all lanes (included into <code c
 <p>When connected to switch, using a wrong setting for one single lane might result in traffic interruption on all lanes.
 The switch might try to reset its whole module because it sees that a link is down.</p>
 </div>
-</div>
-<div class="section" id="main-test-steps">
-<h2><a class="toc-backref" href="#id11">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="main-test-steps">
+<h2><a class="toc-backref" href="#id11" role="doc-backlink">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this heading">¶</a></h2>
 <p>A test is generally composed of four steps and a definition of the hardware environment (see <a class="reference internal" href="#gt-prbs-test-json-members"><span class="std std-ref">GT PRBS test JSON members</span></a>).
 The following are typical test steps:</p>
 <blockquote>
@@ -940,8 +945,8 @@ The following are typical test steps:</p>
 <li><p>Report/check status.</p></li>
 </ol>
 </div></blockquote>
-<div class="section" id="test-parameters">
-<h3><a class="toc-backref" href="#id12">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this headline">¶</a></h3>
+<section id="test-parameters">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this heading">¶</a></h3>
 <p>The mandatory test configuration parameters are listed below.
 For more information, see <a class="reference internal" href="#gt-prbs-test-json-members"><span class="std std-ref">GT PRBS test JSON members</span></a>.</p>
 <blockquote>
@@ -950,10 +955,10 @@ For more information, see <a class="reference internal" href="#gt-prbs-test-json
 <li><p><a class="reference internal" href="#gt-prbs-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>: Mode of the compute unit.</p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="status">
-<h2><a class="toc-backref" href="#id13">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="status">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Status</a><a class="headerlink" href="#status" title="Permalink to this heading">¶</a></h2>
 <p>GT PRBS CU provides per lane the following status:</p>
 <blockquote>
 <div><ul>
@@ -969,14 +974,14 @@ For more information, see <a class="reference internal" href="#gt-prbs-test-json
 <li><p>Null PRBS seed used during PRBS generation.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="gt-prbs-test-json-members">
-<span id="id3"></span><h2><a class="toc-backref" href="#id14">GT PRBS test JSON members</a><a class="headerlink" href="#gt-prbs-test-json-members" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="gt-prbs-test-json-members">
+<span id="id3"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink">GT PRBS test JSON members</a><a class="headerlink" href="#gt-prbs-test-json-members" title="Permalink to this heading">¶</a></h2>
 <p>Here is an example of GT PRBS test cases.
 Some test JSON members can be overwritten for each lane using the test JSON member <code class="docutils literal notranslate"><span class="pre">lane_config</span></code> which child members are lane indexes.</p>
 <hr class="docutils" />
-<div class="section" id="electrical-optical-loopback-example">
-<h3><a class="toc-backref" href="#id15">Electrical/optical loopback example</a><a class="headerlink" href="#electrical-optical-loopback-example" title="Permalink to this headline">¶</a></h3>
+<section id="electrical-optical-loopback-example">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Electrical/optical loopback example</a><a class="headerlink" href="#electrical-optical-loopback-example" title="Permalink to this heading">¶</a></h3>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;gt_prbs&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;0&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -991,20 +996,14 @@ Some test JSON members can be overwritten for each lane using the test JSON memb
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="definition">
-<h3><a class="toc-backref" href="#id16">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<section id="definition">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Definition</a><a class="headerlink" href="#definition" title="Permalink to this heading">¶</a></h3>
 <p>The following table shows all members available for this test case.
 More details are provided for each member in the subsequent sections.</p>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">GT PRBS test JSON members</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 35%" />
-<col style="width: 10%" />
-<col style="width: 15%" />
-<col style="width: 39%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Lane override</p></th>
@@ -1068,9 +1067,9 @@ See <a class="reference internal" href="#gt-prbs-parameter-gt-settings-json-memb
 </tbody>
 </table>
 <hr class="docutils" />
-</div>
-<div class="section" id="test-sequence">
-<span id="gt-prbs-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id17"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="test-sequence">
+<span id="gt-prbs-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id17" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this heading">¶</a></h3>
 <p>Mandatory. Describes the sequence of tests to perform.
 Tests are performed serially, and a failure in one test does not stop the sequence (the next test will be launched).
 There is no limitation to the length of the test sequence.</p>
@@ -1078,11 +1077,6 @@ There is no limitation to the length of the test sequence.</p>
 <p>The following table defines the parameters supported in the GT MAC test sequence:</p>
 <span id="gt-prbs-parameter-test-sequence-mode"></span><span id="gt-prbs-parameter-test-sequence-duration"></span><table class="docutils align-default" id="id7">
 <caption><span class="caption-text">GT MAC test sequence parameters</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 21%" />
-<col style="width: 62%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Mandatory / optional</p></th>
@@ -1102,10 +1096,6 @@ There is no limitation to the length of the test sequence.</p>
 </table>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">mode</span></code> possible values</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 74%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Possible value</p></th>
 <th class="head"><p>Description</p></th>
@@ -1153,9 +1143,9 @@ If an error is detected the overall test will be flagged as a fail.</p></td>
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="disable-ref-prbs">
-<span id="gt-prbs-parameter-disable-ref-prbs"></span><h3><a class="toc-backref" href="#id18"><code class="docutils literal notranslate"><span class="pre">disable_ref_prbs</span></code></a><a class="headerlink" href="#disable-ref-prbs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="disable-ref-prbs">
+<span id="gt-prbs-parameter-disable-ref-prbs"></span><h3><a class="toc-backref" href="#id18" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">disable_ref_prbs</span></code></a><a class="headerlink" href="#disable-ref-prbs" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
@@ -1164,9 +1154,9 @@ Default        : <code class="docutils literal notranslate"><span class="pre">fa
 <p>When <code class="docutils literal notranslate"><span class="pre">false</span></code> the reference free running PRBS will be used to compare with incoming data (once locked and if error rate is below 10%).</p>
 <p>When <code class="docutils literal notranslate"><span class="pre">true</span></code> the reference PRBS is never used and incomings data is always used to predict the next one.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-settings-test-json-members">
-<span id="gt-prbs-parameter-gt-settings-json-members"></span><h3><a class="toc-backref" href="#id19">GT settings test JSON members</a><a class="headerlink" href="#gt-settings-test-json-members" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gt-settings-test-json-members">
+<span id="gt-prbs-parameter-gt-settings-json-members"></span><h3><a class="toc-backref" href="#id19" role="doc-backlink">GT settings test JSON members</a><a class="headerlink" href="#gt-settings-test-json-members" title="Permalink to this heading">¶</a></h3>
 <p>For the 3 types of GT test cases, the GT settings can be defined in a similar manner</p>
 <ul>
 <li><p>For the 4 lanes simultaneously: part of the <code class="docutils literal notranslate"><span class="pre">global_config</span></code></p>
@@ -1210,8 +1200,8 @@ Here is an example with global selection, but it also includes global and per-la
 <p>More info can be found here: <a class="reference internal" href="#gt-prbs-gt-settings"><span class="std std-ref">GT Settings</span></a>.
 Further details on each of settings can be found in <a class="reference external" href="https://www.xilinx.com/support/documentation/user_guides/ug578-ultrascale-gty-transceivers.pdf">UltraScale architecture GTY transceivers user guide (UG578)</a>.</p>
 <hr class="docutils" />
-<div class="section" id="gt-prbs-parameter-gt-settings">
-<span id="id4"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_settings</span></code><a class="headerlink" href="#gt-prbs-parameter-gt-settings" title="Permalink to this headline">¶</a></h4>
+<section id="gt-prbs-parameter-gt-settings">
+<span id="id4"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_settings</span></code><a class="headerlink" href="#gt-prbs-parameter-gt-settings" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">module</span></code> or <code class="docutils literal notranslate"><span class="pre">cable</span></code>;
@@ -1219,36 +1209,36 @@ Default        : <code class="docutils literal notranslate"><span class="pre">mo
 <p>It selects the GT configuration from the platform definition file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).
 This configuration applies to all lanes of the GT.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-tx-diffctrl">
-<span id="gt-prbs-parameter-gt-tx-diffctrl"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_diffctrl</span></code><a class="headerlink" href="#gt-tx-diffctrl" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-tx-diffctrl">
+<span id="gt-prbs-parameter-gt-tx-diffctrl"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_diffctrl</span></code><a class="headerlink" href="#gt-tx-diffctrl" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : integer;
 Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;
 Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
 <p>This parameter sets the <code class="docutils literal notranslate"><span class="pre">TXDIFFCTRL</span></code> input to transmitter.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-tx-pre-emph">
-<span id="gt-prbs-parameter-gt-tx-pre-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_pre_emph</span></code><a class="headerlink" href="#gt-tx-pre-emph" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-tx-pre-emph">
+<span id="gt-prbs-parameter-gt-tx-pre-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_pre_emph</span></code><a class="headerlink" href="#gt-tx-pre-emph" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : integer;
 Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;
 Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
 <p>This parameter sets the <code class="docutils literal notranslate"><span class="pre">TXPRECURSOR</span></code> input to transmitter.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-tx-post-emph">
-<span id="gt-prbs-parameter-gt-tx-post-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_post_emph</span></code><a class="headerlink" href="#gt-tx-post-emph" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-tx-post-emph">
+<span id="gt-prbs-parameter-gt-tx-post-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_post_emph</span></code><a class="headerlink" href="#gt-tx-post-emph" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : integer;
 Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;
 Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
 <p>This parameter sets the <code class="docutils literal notranslate"><span class="pre">TXPOSTCURSOR</span></code> input to transmitter.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-tx-polarity">
-<span id="gt-prbs-parameter-gt-tx-polarity"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_polarity</span></code><a class="headerlink" href="#gt-tx-polarity" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-tx-polarity">
+<span id="gt-prbs-parameter-gt-tx-polarity"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_polarity</span></code><a class="headerlink" href="#gt-tx-polarity" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">normal</span></code> or <code class="docutils literal notranslate"><span class="pre">inverted</span></code>;
@@ -1256,9 +1246,9 @@ Default        : <code class="docutils literal notranslate"><span class="pre">no
 <p>When set to <code class="docutils literal notranslate"><span class="pre">normal</span></code>, TXP is positive, and TXN is negative.</p>
 <p>When set to <code class="docutils literal notranslate"><span class="pre">inverted</span></code>, TXP is negative, and TXN is positive.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-rx-use-lpm">
-<span id="gt-prbs-parameter-gt-rx-use-lpm"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_rx_use_lpm</span></code><a class="headerlink" href="#gt-rx-use-lpm" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-rx-use-lpm">
+<span id="gt-prbs-parameter-gt-rx-use-lpm"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_rx_use_lpm</span></code><a class="headerlink" href="#gt-rx-use-lpm" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">false</span></code> or <code class="docutils literal notranslate"><span class="pre">true</span></code>;
@@ -1266,23 +1256,23 @@ Default        : defined in the platform definition JSON file (see <a class="ref
 <p>When set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the GTY transceiver to use the DFE receive equalizer.</p>
 <p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the GTY transceiver to use the LPM receive equalizer.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-loopback">
-<span id="gt-prbs-parameter-gt-loopback"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_loopback</span></code><a class="headerlink" href="#gt-loopback" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-loopback">
+<span id="gt-prbs-parameter-gt-loopback"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_loopback</span></code><a class="headerlink" href="#gt-loopback" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">disable</span></code>, <code class="docutils literal notranslate"><span class="pre">near</span> <span class="pre">end</span> <span class="pre">pma</span></code> or <code class="docutils literal notranslate"><span class="pre">near</span> <span class="pre">end</span> <span class="pre">pcs</span></code>;
 Default        : <code class="docutils literal notranslate"><span class="pre">disable</span></code>.</p>
 <p>This controls the GT internal loopback.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="output-file">
-<h2><a class="toc-backref" href="#id20">Output file</a><a class="headerlink" href="#output-file" title="Permalink to this headline">¶</a></h2>
+<section id="output-file">
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Output file</a><a class="headerlink" href="#output-file" title="Permalink to this heading">¶</a></h2>
 <p>No result file is created by the GT PRBS test case.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -1313,7 +1303,7 @@ Default        : <code class="docutils literal notranslate"><span class="pre">di
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

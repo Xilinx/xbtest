@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -827,8 +830,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="gt-test-cases-description">
-<h1>GT test cases description<a class="headerlink" href="#gt-test-cases-description" title="Permalink to this headline">¶</a></h1>
+  <section id="gt-test-cases-description">
+<h1>GT test cases description<a class="headerlink" href="#gt-test-cases-description" title="Permalink to this heading">¶</a></h1>
 <div class="toctree-wrapper compound">
 </div>
 <p>GTs are tested by sending and receiving traffic at 10GbE and 25GbE rate. The simplest test consists of looping back each individual lane to themselves (Tx to Rx).
@@ -881,10 +884,12 @@ E.g. Lane[i] of one GT MAC CU receives and sends traffic to Lane[i] of the other
 </li>
 </ul>
 </div></blockquote>
-<div class="figure align-left" id="id1">
-<img alt="../../_images/gt_test-interconnections.svg" src="../../_images/gt_test-interconnections.svg" /><p class="caption"><span class="caption-text">GT MAC CU interconnections</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-</div>
+<figure class="align-left" id="id1">
+<img alt="../../_images/gt_test-interconnections.svg" src="../../_images/gt_test-interconnections.svg" /><figcaption>
+<p><span class="caption-text">GT MAC CU interconnections</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
 
 
            </div>
@@ -915,7 +920,7 @@ E.g. Lane[i] of one GT MAC CU receives and sends traffic to Lane[i] of the other
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -829,8 +832,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="display-modes">
-<span id="id1"></span><h1>Display modes<a class="headerlink" href="#display-modes" title="Permalink to this headline">¶</a></h1>
+  <section id="display-modes">
+<span id="id1"></span><h1>Display modes<a class="headerlink" href="#display-modes" title="Permalink to this heading">¶</a></h1>
 <p>An execution of xbtest will typically contain the following messages:</p>
 <blockquote>
 <div><ul>
@@ -872,8 +875,8 @@
 <p>By default, the console dynamically displays xbtest messages.
 Regularly, the entire console is cleared, and its content is refreshed.
 At the end of xbtest execution, the console returns to the initial state, and the last content displayed in the dynamic mode is repeated.</p>
-<div class="section" id="multi-tests-display">
-<h2>Multi tests display<a class="headerlink" href="#multi-tests-display" title="Permalink to this headline">¶</a></h2>
+<section id="multi-tests-display">
+<h2>Multi tests display<a class="headerlink" href="#multi-tests-display" title="Permalink to this heading">¶</a></h2>
 <p>In this use case, the content displayed in the console contains the following:</p>
 <blockquote>
 <div><ul>
@@ -898,10 +901,12 @@ At the end of xbtest execution, the console returns to the initial state, and th
 <li><p><strong>Message history</strong>: 10 last important messages (warning, error, and failure).</p></li>
 </ul>
 </div></blockquote>
-<div class="figure align-center" id="id2">
+<figure class="align-center" id="id2">
 <img alt="../../_images/multi-dynamic-display-mode.png" src="../../_images/multi-dynamic-display-mode.png" />
-<p class="caption"><span class="caption-text">Example of information available in dynamic display mode for multi tests</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Example of information available in dynamic display mode for multi tests</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Legend:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -912,9 +917,9 @@ At the end of xbtest execution, the console returns to the initial state, and th
 <li><p>Elapsed time.</p></li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="single-test-display">
-<h2>Single test display<a class="headerlink" href="#single-test-display" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="single-test-display">
+<h2>Single test display<a class="headerlink" href="#single-test-display" title="Permalink to this heading">¶</a></h2>
 <p>In this use case, the content displayed in the console contains the following:</p>
 <blockquote>
 <div><ul>
@@ -939,10 +944,12 @@ At the end of xbtest execution, the console returns to the initial state, and th
 <li><p><strong>Message history</strong>: 10 last important messages (warning, error, and failure).</p></li>
 </ul>
 </div></blockquote>
-<div class="figure align-center" id="id3">
+<figure class="align-center" id="id3">
 <img alt="../../_images/single-dynamic-display-mode.png" src="../../_images/single-dynamic-display-mode.png" />
-<p class="caption"><span class="caption-text">Example of information available in dynamic display mode for single test</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Example of information available in dynamic display mode for single test</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Legend:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -954,9 +961,9 @@ At the end of xbtest execution, the console returns to the initial state, and th
 <li><p>Elapsed time.</p></li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="disable-dynamic-display">
-<h2>Disable dynamic display<a class="headerlink" href="#disable-dynamic-display" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="disable-dynamic-display">
+<h2>Disable dynamic display<a class="headerlink" href="#disable-dynamic-display" title="Permalink to this heading">¶</a></h2>
 <p>When using command line option <a class="reference internal" href="command-line-options.html#cmdoption-F"><code class="xref std std-option docutils literal notranslate"><span class="pre">-F</span></code></a>, all messages are displayed consecutively, and the console is never cleared.</p>
 <p>The information displayed in this mode is the same as the information available in:</p>
 <blockquote>
@@ -965,8 +972,8 @@ At the end of xbtest execution, the console returns to the initial state, and th
 <li><p><code class="docutils literal notranslate"><span class="pre">summary.log</span></code> when running a single test.</p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -997,7 +1004,7 @@ At the end of xbtest execution, the console returns to the initial state, and th
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

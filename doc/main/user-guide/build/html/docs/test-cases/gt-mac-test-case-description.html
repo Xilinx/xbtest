@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -829,9 +832,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="gt-mac-test-case-description">
-<span id="id1"></span><h1>GT MAC test case description<a class="headerlink" href="#gt-mac-test-case-description" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="table-of-contents">
+  <section id="gt-mac-test-case-description">
+<span id="id1"></span><h1>GT MAC test case description<a class="headerlink" href="#gt-mac-test-case-description" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="table-of-contents">
 <p class="topic-title">Table of contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#gt-test-set-up" id="id13">GT test set up</a></p>
@@ -876,7 +879,7 @@
 </li>
 <li><p><a class="reference internal" href="#output-files" id="id41">Output files</a></p></li>
 </ul>
-</div>
+</nav>
 <p>The goal of this test case is to allow verification of GT transceivers on <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html">Alveo™</a> cards at 10GbE and 25GbE lane rates.
 Each GT transceiver supports 4 lanes.</p>
 <p>This compute unit (CU) instantiates the 10G/25G High Speed Ethernet Subsystem IP core and allows the core to be configured from a Test JSON file
@@ -893,11 +896,13 @@ GT MAC traffic is layer 2 type traffic:</p>
 <p>The CU includes a packet generator, which allows a card with simple electrical or optical loopback cables to generate packets.
 The CU also verify that the generated packets have been received back, error free. The packet generator can be configured for each lane individually.</p>
 <p>The CU also includes a sets of packet counters, which counts, per lane, the quantity of packets and bytes transmitted and received with the expected source and destination MAC addresses.</p>
-<div class="figure align-center" id="id5">
-<img alt="../../_images/gt_mac-block_diagram.svg" src="../../_images/gt_mac-block_diagram.svg" /><p class="caption"><span class="caption-text">GT MAC CU block diagram</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
-</div>
-<div class="section" id="gt-test-set-up">
-<span id="gt-mac-test-set-up"></span><h2><a class="toc-backref" href="#id13">GT test set up</a><a class="headerlink" href="#gt-test-set-up" title="Permalink to this headline">¶</a></h2>
+<figure class="align-center" id="id5">
+<img alt="../../_images/gt_mac-block_diagram.svg" src="../../_images/gt_mac-block_diagram.svg" /><figcaption>
+<p><span class="caption-text">GT MAC CU block diagram</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<section id="gt-test-set-up">
+<span id="gt-mac-test-set-up"></span><h2><a class="toc-backref" href="#id13" role="doc-backlink">GT test set up</a><a class="headerlink" href="#gt-test-set-up" title="Permalink to this heading">¶</a></h2>
 <p>GT testing can be achieved by using one of the following methods.</p>
 <blockquote>
 <div><ul>
@@ -932,8 +937,8 @@ The test JSON file needs to be modified to reflect that the RX and TX packet/byt
 <p class="admonition-title">Warning</p>
 <p>The configuration of the <a class="reference internal" href="#gt-mac-test-case-description"><span class="std std-ref">GT MAC</span></a> test case depends on the set up (see <a class="reference internal" href="#gt-mac-test-json-members"><span class="std std-ref">GT MAC test JSON members</span></a>).</p>
 </div>
-<div class="section" id="switch-set-up">
-<h3><a class="toc-backref" href="#id14">Switch set up</a><a class="headerlink" href="#switch-set-up" title="Permalink to this headline">¶</a></h3>
+<section id="switch-set-up">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Switch set up</a><a class="headerlink" href="#switch-set-up" title="Permalink to this heading">¶</a></h3>
 <p>xbtest has been validated with the following Cisco hardware:</p>
 <blockquote>
 <div><ul>
@@ -962,10 +967,6 @@ $ interface breakout module <span class="m">1</span> port <span class="m">17</sp
 </div>
 <table class="docutils align-default" id="id6">
 <caption><span class="caption-text">Example of switch port configuration</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>10GbE Port 1</p></th>
 <th class="head"><p>25GbE Port 17</p></th>
@@ -1015,9 +1016,9 @@ $ interface breakout module <span class="m">1</span> port <span class="m">17</sp
 <p class="admonition-title">Note</p>
 <p>The switch port should be on their own VLAN to avoid traffic leak/broadcast.</p>
 </div>
-</div>
-<div class="section" id="source-mac-address">
-<h3><a class="toc-backref" href="#id15">Source MAC address</a><a class="headerlink" href="#source-mac-address" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="source-mac-address">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Source MAC address</a><a class="headerlink" href="#source-mac-address" title="Permalink to this heading">¶</a></h3>
 <p>The source MAC addresses of the card can be obtained via the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>xbutil examine --device &lt;BDF&gt; --report platform
 </pre></div>
@@ -1026,10 +1027,6 @@ $ interface breakout module <span class="m">1</span> port <span class="m">17</sp
 If multiple GT MAC CUs are present in the <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a>, they’ll split all valid MAC addresses in a round robin manner over all lanes of all GT MAC CU’s.</p>
 <table class="docutils align-default" id="id7">
 <caption><span class="caption-text">Source MAC address round robin selection</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 56%" />
-<col style="width: 44%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>MAC address index</p></th>
 <th class="head"><p>GT/lane index</p></th>
@@ -1060,9 +1057,9 @@ If multiple GT MAC CUs are present in the <a class="reference internal" href="..
 In the table above, if MAC address index 4 is the last one available, GT[0] lane 3 and GT[1] lanes 2/3 will be disabled.
 It’s possible to re-organize the MAC address distribution of the GT via the <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a> option.
 Source MAC addresses are displayed with message ID <code class="docutils literal notranslate"><span class="pre">ETH_031</span></code>.</p>
-</div>
-<div class="section" id="destination-mac-address-lane-mapping">
-<h3><a class="toc-backref" href="#id16">Destination MAC address - Lane mapping</a><a class="headerlink" href="#destination-mac-address-lane-mapping" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="destination-mac-address-lane-mapping">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Destination MAC address - Lane mapping</a><a class="headerlink" href="#destination-mac-address-lane-mapping" title="Permalink to this heading">¶</a></h3>
 <p>The destination MAC addresses are defined via the lane mapping.
 By default, each lane is configured loop back to itself.
 So, per lane, the destination MAC address is identical to the Source MAC address.
@@ -1072,13 +1069,6 @@ Destination MAC addresses are displayed with message ID <code class="docutils li
 xbtest only supports paired mapping lanes in order to compare RX status with TX status.</p>
 <table class="docutils align-default" id="id8">
 <caption><span class="caption-text">Supported lane mapping</span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 15%" />
-<col style="width: 29%" />
-<col style="width: 19%" />
-<col style="width: 19%" />
-<col style="width: 19%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head" rowspan="2"><p>Source</p></th>
 <th class="head"><p>Loopback module</p></th>
@@ -1139,9 +1129,9 @@ xbtest only supports paired mapping lanes in order to compare RX status with TX 
 <p>When connected to switch, the lane mapping must be defined in pair in order to be able to cross check RX and TX status counters.</p>
 </div>
 <p>Although destination addresses are automatically selected based on <a class="reference internal" href="#gt-mac-parameter-tx-mapping"><span class="std std-ref">tx_mapping</span></a>, it’s possible to overwrite it with <a class="reference internal" href="#gt-mac-parameter-dest-addr"><span class="std std-ref">dest_addr</span></a> member.</p>
-</div>
-<div class="section" id="lane-enabling">
-<h3><a class="toc-backref" href="#id17">Lane enabling</a><a class="headerlink" href="#lane-enabling" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="lane-enabling">
+<h3><a class="toc-backref" href="#id17" role="doc-backlink">Lane enabling</a><a class="headerlink" href="#lane-enabling" title="Permalink to this heading">¶</a></h3>
 <p>For a lane to be used/enabled, it must have valid source and destination addresses:</p>
 <ul class="simple">
 <li><p>When the lane is looped back to itself, this means that only one valid address is required.</p></li>
@@ -1154,16 +1144,16 @@ So, if e.g. Lane[0] and Lane[3] are paired but only 1 lane gets a valid address,
 <p class="admonition-title">Note</p>
 <p>When you get un-expected disabled lanes, check MAC address reported by xbtest and their lane attribution (alongside the lane pairing).</p>
 </div>
-</div>
-<div class="section" id="gt-mac-cu-to-gt-mac-cu-connection">
-<h3><a class="toc-backref" href="#id18">GT MAC CU to GT MAC CU connection</a><a class="headerlink" href="#gt-mac-cu-to-gt-mac-cu-connection" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gt-mac-cu-to-gt-mac-cu-connection">
+<h3><a class="toc-backref" href="#id18" role="doc-backlink">GT MAC CU to GT MAC CU connection</a><a class="headerlink" href="#gt-mac-cu-to-gt-mac-cu-connection" title="Permalink to this heading">¶</a></h3>
 <p>When the same <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> contains 2 GT MAC CUs, they can be connected via cable (or optical fibre).
 In this case, only one GT MAC CU must have its <a class="reference internal" href="#gt-mac-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a> defined, while the other one must use <a class="reference internal" href="#gt-mac-parameter-mac-to-mac-connection"><span class="std std-ref">mac_to_mac_connection</span></a> and point it to other one index.</p>
 <p>See <a class="reference internal" href="#gt-mac-gt-mac-interconnections"><span class="std std-ref">GT MAC to GT MAC connection example</span></a> for usage example.</p>
-<span class="target" id="gt-mac-gt-settings"></span></div>
-</div>
-<div class="section" id="gt-settings">
-<h2><a class="toc-backref" href="#id19">GT settings</a><a class="headerlink" href="#gt-settings" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="gt-mac-gt-settings"></span></section>
+</section>
+<section id="gt-settings">
+<h2><a class="toc-backref" href="#id19" role="doc-backlink">GT settings</a><a class="headerlink" href="#gt-settings" title="Permalink to this heading">¶</a></h2>
 <p>As there are multiple ways to connect to the GTs, two default configurations have been defined:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1194,9 +1184,9 @@ It’s possible to overwrite these settings for all lanes (included into <code c
 <p>When connected to switch, using a wrong setting for one single lane might result in traffic interruption on all lanes.
 The switch might try to reset its whole module because it sees that a link is down.</p>
 </div>
-</div>
-<div class="section" id="main-test-steps">
-<h2><a class="toc-backref" href="#id20">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="main-test-steps">
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this heading">¶</a></h2>
 <p>A test is generally composed of four steps and a definition of the hardware environment (see <a class="reference internal" href="#gt-mac-test-json-members"><span class="std std-ref">GT MAC test JSON members</span></a>). The following are typical test steps:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -1217,8 +1207,8 @@ The switch might try to reset its whole module because it sees that a link is do
 <li><p>When the test sequence is over, the GT MAC CU continues to send traffic as per its last configuration.</p></li>
 </ul>
 </div>
-<div class="section" id="test-parameters">
-<h3><a class="toc-backref" href="#id21">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this headline">¶</a></h3>
+<section id="test-parameters">
+<h3><a class="toc-backref" href="#id21" role="doc-backlink">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this heading">¶</a></h3>
 <p>The mandatory test configuration parameters are listed below.
 For more information, see <a class="reference internal" href="#gt-mac-test-json-members"><span class="std std-ref">GT MAC test JSON members</span></a>.</p>
 <blockquote>
@@ -1227,10 +1217,10 @@ For more information, see <a class="reference internal" href="#gt-mac-test-json-
 <li><p><a class="reference internal" href="#gt-mac-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>: Mode of the compute unit.</p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
-<div class="section" id="status">
-<span id="id2"></span><h2><a class="toc-backref" href="#id22">Status</a><a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="status">
+<span id="id2"></span><h2><a class="toc-backref" href="#id22" role="doc-backlink">Status</a><a class="headerlink" href="#status" title="Permalink to this heading">¶</a></h2>
 <p>GT MAC CU provides 3 kind of status/counters:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1239,8 +1229,8 @@ For more information, see <a class="reference internal" href="#gt-mac-test-json-
 <li><p>A comparison between the quantity of packets and bytes sent by a lane and received by its destination lane. Per lane, the packet receiver checks the source and destination MAC address for each packet received. This is only enabled when <a class="reference internal" href="#gt-mac-parameter-match-tx-rx"><span class="std std-ref">match_tx_rx</span></a> is set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p></li>
 </ul>
 </div></blockquote>
-<div class="section" id="matching-tx-rx">
-<h3><a class="toc-backref" href="#id23">Matching TX RX</a><a class="headerlink" href="#matching-tx-rx" title="Permalink to this headline">¶</a></h3>
+<section id="matching-tx-rx">
+<h3><a class="toc-backref" href="#id23" role="doc-backlink">Matching TX RX</a><a class="headerlink" href="#matching-tx-rx" title="Permalink to this heading">¶</a></h3>
 <p>The optional parameter <a class="reference internal" href="#gt-mac-parameter-match-tx-rx"><span class="std std-ref">match_tx_rx</span></a> causes comparison between some registers of the 10G/25G High Speed Ethernet Subsystem IP core:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1250,9 +1240,9 @@ For more information, see <a class="reference internal" href="#gt-mac-test-json-
 </div></blockquote>
 <p>The packet receiver also compares the quantity of packets and bytes sent (<code class="docutils literal notranslate"><span class="pre">TX_TOTAL_PACKETS</span></code>, <code class="docutils literal notranslate"><span class="pre">TX_TOTAL_BYTES</span></code>) with their respective received quantities when source and destination MAC addresses are matching. <a class="reference internal" href="#gt-mac-parameter-tx-mapping"><span class="std std-ref">tx_mapping</span></a> option defines which lane values are compared together.</p>
 <p>In addition, if the <code class="docutils literal notranslate"><span class="pre">RX_TOTAL_GOOD_PACKETS</span></code> count is equal to 0, then an error message ID <code class="docutils literal notranslate"><span class="pre">ETH_007</span></code> is reported to inform that no good packets were received, and the test will fail.</p>
-</div>
-<div class="section" id="mac-stat-status-registers-description">
-<h3><a class="toc-backref" href="#id24">MAC_STAT status registers description</a><a class="headerlink" href="#mac-stat-status-registers-description" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mac-stat-status-registers-description">
+<h3><a class="toc-backref" href="#id24" role="doc-backlink">MAC_STAT status registers description</a><a class="headerlink" href="#mac-stat-status-registers-description" title="Permalink to this heading">¶</a></h3>
 <p>Each time the <code class="docutils literal notranslate"><span class="pre">check_status</span></code> command is executed, the following registers are read from the MAC hardware for each active MAC lane.
 All registers are stored in hardware using 48 bits and extended to 64 bits when read by software.</p>
 <div class="admonition note">
@@ -1269,11 +1259,6 @@ All registers are stored in hardware using 48 bits and extended to 64 bits when 
 </div></blockquote>
 <table class="docutils align-default" id="id9">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">MAC_STAT</span></code> status description</span><a class="headerlink" href="#id9" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 9%" />
-<col style="width: 72%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Register name</p></th>
 <th class="head"><p>Register type</p></th>
@@ -1479,15 +1464,15 @@ This value is only non-zero when a packet is received completely and contains no
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="gt-mac-test-json-members">
-<span id="id3"></span><h2><a class="toc-backref" href="#id25">GT MAC test JSON members</a><a class="headerlink" href="#gt-mac-test-json-members" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="gt-mac-test-json-members">
+<span id="id3"></span><h2><a class="toc-backref" href="#id25" role="doc-backlink">GT MAC test JSON members</a><a class="headerlink" href="#gt-mac-test-json-members" title="Permalink to this heading">¶</a></h2>
 <p>Following are examples of <a class="reference internal" href="#gt-mac-test-case-description"><span class="std std-ref">GT MAC</span></a> test cases.
 Some test JSON members can be overwritten for each lane using the test JSON member <code class="docutils literal notranslate"><span class="pre">lane_config</span></code> which child members are lane indexes.</p>
 <hr class="docutils" />
-<div class="section" id="electrical-optical-loopback-example">
-<h3><a class="toc-backref" href="#id26">Electrical/optical loopback example</a><a class="headerlink" href="#electrical-optical-loopback-example" title="Permalink to this headline">¶</a></h3>
+<section id="electrical-optical-loopback-example">
+<h3><a class="toc-backref" href="#id26" role="doc-backlink">Electrical/optical loopback example</a><a class="headerlink" href="#electrical-optical-loopback-example" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The default TX/RX lane mapping is used with loopback module.</p>
@@ -1507,10 +1492,10 @@ Some test JSON members can be overwritten for each lane using the test JSON memb
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="switch-example">
-<h3><a class="toc-backref" href="#id27">Switch example</a><a class="headerlink" href="#switch-example" title="Permalink to this headline">¶</a></h3>
+<section id="switch-example">
+<h3><a class="toc-backref" href="#id27" role="doc-backlink">Switch example</a><a class="headerlink" href="#switch-example" title="Permalink to this heading">¶</a></h3>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Lane pairing must be used when connected to a switch.</p>
@@ -1578,9 +1563,9 @@ Some test JSON members can be overwritten for each lane using the test JSON memb
 </pre></div>
 </div>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-mac-to-gt-mac-connection-example">
-<span id="gt-mac-gt-mac-interconnections"></span><h3><a class="toc-backref" href="#id28">GT MAC to GT MAC connection example</a><a class="headerlink" href="#gt-mac-to-gt-mac-connection-example" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gt-mac-to-gt-mac-connection-example">
+<span id="gt-mac-gt-mac-interconnections"></span><h3><a class="toc-backref" href="#id28" role="doc-backlink">GT MAC to GT MAC connection example</a><a class="headerlink" href="#gt-mac-to-gt-mac-connection-example" title="Permalink to this heading">¶</a></h3>
 <p>Here is an example of GT MAC interconnection. Both CU must be in the same <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a>. gt_mac[1] is connected linked to gt_mac[0] via <a class="reference internal" href="#gt-mac-parameter-mac-to-mac-connection"><span class="std std-ref">mac_to_mac_connection</span></a>.</p>
 <p>In this example:</p>
 <blockquote>
@@ -1664,20 +1649,14 @@ Some test JSON members can be overwritten for each lane using the test JSON memb
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="definition">
-<h3><a class="toc-backref" href="#id29">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<section id="definition">
+<h3><a class="toc-backref" href="#id29" role="doc-backlink">Definition</a><a class="headerlink" href="#definition" title="Permalink to this heading">¶</a></h3>
 <p>The following table shows all members available for this test case.
 More details are provided for each member in the subsequent sections.</p>
 <table class="docutils align-default" id="id10">
 <caption><span class="caption-text">GT MAC Test JSON members</span><a class="headerlink" href="#id10" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 34%" />
-<col style="width: 10%" />
-<col style="width: 15%" />
-<col style="width: 42%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Lane override</p></th>
@@ -1780,9 +1759,9 @@ See <a class="reference internal" href="#gt-mac-parameter-gt-settings-json-membe
 </tbody>
 </table>
 <hr class="docutils" />
-</div>
-<div class="section" id="test-sequence">
-<span id="gt-mac-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id30"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="test-sequence">
+<span id="gt-mac-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id30" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this heading">¶</a></h3>
 <p>Mandatory. Describes the sequence of tests to perform.
 Tests are performed serially, and a failure in one test does not stop the sequence (the next test will be launched).
 There is no limitation to the length of the test sequence.</p>
@@ -1790,11 +1769,6 @@ There is no limitation to the length of the test sequence.</p>
 <p>The following table defines the parameters supported in the GT MAC test sequence:</p>
 <span id="gt-mac-parameter-test-sequence-mode"></span><span id="gt-mac-parameter-test-sequence-duration"></span><table class="docutils align-default" id="id11">
 <caption><span class="caption-text">GT MAC test sequence parameters</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 18%" />
-<col style="width: 21%" />
-<col style="width: 62%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Mandatory / optional</p></th>
@@ -1814,10 +1788,6 @@ There is no limitation to the length of the test sequence.</p>
 </table>
 <table class="docutils align-default" id="id12">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">mode</span></code> possible values</span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 90%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Possible value</p></th>
 <th class="head"><p>Description</p></th>
@@ -1920,9 +1890,9 @@ Possible values of <code class="docutils literal notranslate"><span class="pre">
 <li><p>Wait for 1 second before reading the status registers and check the results. Then, clear the status registers, stop the packet generator and exit.</p></li>
 </ul>
 <hr class="docutils" />
-</div>
-<div class="section" id="tx-mapping">
-<span id="gt-mac-parameter-tx-mapping"></span><h3><a class="toc-backref" href="#id31"><code class="docutils literal notranslate"><span class="pre">tx_mapping</span></code></a><a class="headerlink" href="#tx-mapping" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tx-mapping">
+<span id="gt-mac-parameter-tx-mapping"></span><h3><a class="toc-backref" href="#id31" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">tx_mapping</span></code></a><a class="headerlink" href="#tx-mapping" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : integer;
 Possible values: 0 to 3;
@@ -1930,9 +1900,9 @@ Default        : <code class="docutils literal notranslate"><span class="pre">n<
 <p>Specifies the lane index of the <code class="docutils literal notranslate"><span class="pre">n</span></code><sup>th</sup> TX which will be checked against RX status.</p>
 <p>This configuration can only be applied individually to one or more of the four lanes connected to the individual transceivers at the <code class="docutils literal notranslate"><span class="pre">lane_config</span></code> level.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="disable-lane">
-<span id="gt-mac-parameter-disable-lane"></span><h3><a class="toc-backref" href="#id32"><code class="docutils literal notranslate"><span class="pre">disable_lane</span></code></a><a class="headerlink" href="#disable-lane" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="disable-lane">
+<span id="gt-mac-parameter-disable-lane"></span><h3><a class="toc-backref" href="#id32" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">disable_lane</span></code></a><a class="headerlink" href="#disable-lane" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
@@ -1945,9 +1915,9 @@ Default        : <code class="docutils literal notranslate"><span class="pre">fa
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="source-addr">
-<span id="gt-mac-parameter-source-addr"></span><h3><a class="toc-backref" href="#id33"><code class="docutils literal notranslate"><span class="pre">source_addr</span></code></a><a class="headerlink" href="#source-addr" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="source-addr">
+<span id="gt-mac-parameter-source-addr"></span><h3><a class="toc-backref" href="#id33" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">source_addr</span></code></a><a class="headerlink" href="#source-addr" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">board_mac_addr_&lt;i&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">&lt;i&gt;</span></code> represents the index of an available board MAC address.</p>
@@ -1976,8 +1946,8 @@ INFO :: ETH_036 :: GT_MAC<span class="o">[</span><span class="m">0</span><span c
 <p>There is no mechanism to insert any MAC address (spoofing protection).
 These modes allow to re-enable a lane normally disabled to due missing or invalid MAC addresses.</p>
 <hr class="docutils" />
-<div class="section" id="test-address">
-<span id="gt-mac-parameter-source-addr-test-address"></span><h4><code class="docutils literal notranslate"><span class="pre">test_address</span></code><a class="headerlink" href="#test-address" title="Permalink to this headline">¶</a></h4>
+<section id="test-address">
+<span id="gt-mac-parameter-source-addr-test-address"></span><h4><code class="docutils literal notranslate"><span class="pre">test_address</span></code><a class="headerlink" href="#test-address" title="Permalink to this heading">¶</a></h4>
 <p>When setting <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a> to <code class="docutils literal notranslate"><span class="pre">test_address</span></code>, the source MAC address is always <code class="docutils literal notranslate"><span class="pre">06-bbcc-dd-ee-&lt;X&gt;&lt;Y&gt;</span></code> where:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1994,9 +1964,9 @@ If multiple instances of xbtest are running simultaneously with <code class="doc
 <p>MAC addresses beginning with <code class="docutils literal notranslate"><span class="pre">02</span></code>, <code class="docutils literal notranslate"><span class="pre">06</span></code>, <code class="docutils literal notranslate"><span class="pre">0A</span></code> or <code class="docutils literal notranslate"><span class="pre">0E</span></code> are locally administered.</p>
 </div>
 <hr class="docutils" />
-</div>
-<div class="section" id="alveo-random-address">
-<span id="gt-mac-parameter-source-addr-alveo-random-address"></span><h4><code class="docutils literal notranslate"><span class="pre">alveo_random_address</span></code><a class="headerlink" href="#alveo-random-address" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="alveo-random-address">
+<span id="gt-mac-parameter-source-addr-alveo-random-address"></span><h4><code class="docutils literal notranslate"><span class="pre">alveo_random_address</span></code><a class="headerlink" href="#alveo-random-address" title="Permalink to this heading">¶</a></h4>
 <p>Alveo cards MAC addresses are taken from 2 pools of addresses when setting <a class="reference internal" href="#gt-mac-parameter-source-addr"><span class="std std-ref">source_addr</span></a> to <code class="docutils literal notranslate"><span class="pre">alveo_random_address</span></code>:</p>
 <blockquote>
 <div><ol class="arabic simple">
@@ -2009,10 +1979,10 @@ Each xbtest run will result in different addresses.
 This mode allows to run multiple cards/lanes without having to worry about conflicting MAC addresses.
 This overcomes the limitation of the <a class="reference internal" href="#gt-mac-parameter-source-addr-test-address"><span class="std std-ref">test_address</span></a> mode.</p>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="dest-addr">
-<span id="gt-mac-parameter-dest-addr"></span><h3><a class="toc-backref" href="#id34"><code class="docutils literal notranslate"><span class="pre">dest_addr</span></code></a><a class="headerlink" href="#dest-addr" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="dest-addr">
+<span id="gt-mac-parameter-dest-addr"></span><h3><a class="toc-backref" href="#id34" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">dest_addr</span></code></a><a class="headerlink" href="#dest-addr" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">board_mac_addr_&lt;i&gt;</span></code> where <code class="docutils literal notranslate"><span class="pre">&lt;i&gt;</span></code> represents the index of an available board MAC address, or any valid six-octet value (for example: <code class="docutils literal notranslate"><span class="pre">01:0A:BC:DE:F0:20</span></code>).</p>
@@ -2047,9 +2017,9 @@ The address only depends on the GT and the lane used. If multiple instances of x
 the switch will detect multiple lanes with identical MAC addresses and it won’t be able to route the traffic correctly.</p>
 <p>As the addresses are predictable, it may help to debug traffic issues at the switch.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="utilisation">
-<span id="gt-mac-parameter-utilisation"></span><h3><a class="toc-backref" href="#id35"><code class="docutils literal notranslate"><span class="pre">utilisation</span></code></a><a class="headerlink" href="#utilisation" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="utilisation">
+<span id="gt-mac-parameter-utilisation"></span><h3><a class="toc-backref" href="#id35" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">utilisation</span></code></a><a class="headerlink" href="#utilisation" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : integer;
 Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">100</span></code>;
@@ -2068,9 +2038,9 @@ The parameter is used to set the approximate link utilisation for the packet gen
 The switch also sends some maintenance packets which will take priority over any traffic, resulting in lost packets.</p>
 </div>
 <hr class="docutils" />
-</div>
-<div class="section" id="traffic-type">
-<span id="gt-mac-parameter-traffic-type"></span><h3><a class="toc-backref" href="#id36"><code class="docutils literal notranslate"><span class="pre">traffic_type</span></code></a><a class="headerlink" href="#traffic-type" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="traffic-type">
+<span id="gt-mac-parameter-traffic-type"></span><h3><a class="toc-backref" href="#id36" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">traffic_type</span></code></a><a class="headerlink" href="#traffic-type" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">0x00</span></code>, <code class="docutils literal notranslate"><span class="pre">0xff</span></code>, <code class="docutils literal notranslate"><span class="pre">count</span></code> or <code class="docutils literal notranslate"><span class="pre">pattern</span></code>;
@@ -2087,9 +2057,9 @@ The byte following Ethertype will be <code class="docutils literal notranslate">
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="packet-cfg">
-<span id="gt-mac-parameter-packet-cfg"></span><h3><a class="toc-backref" href="#id37"><code class="docutils literal notranslate"><span class="pre">packet_cfg</span></code></a><a class="headerlink" href="#packet-cfg" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="packet-cfg">
+<span id="gt-mac-parameter-packet-cfg"></span><h3><a class="toc-backref" href="#id37" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">packet_cfg</span></code></a><a class="headerlink" href="#packet-cfg" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">sweep</span></code> or value from <code class="docutils literal notranslate"><span class="pre">64</span></code> to <code class="docutils literal notranslate"><span class="pre">1535</span></code> or from <code class="docutils literal notranslate"><span class="pre">9000</span></code> to <code class="docutils literal notranslate"><span class="pre">10000</span></code>;
@@ -2120,9 +2090,9 @@ Default        : <code class="docutils literal notranslate"><span class="pre">sw
 </div></blockquote>
 </div>
 <hr class="docutils" />
-</div>
-<div class="section" id="match-tx-rx">
-<span id="gt-mac-parameter-match-tx-rx"></span><h3><a class="toc-backref" href="#id38"><code class="docutils literal notranslate"><span class="pre">match_tx_rx</span></code></a><a class="headerlink" href="#match-tx-rx" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="match-tx-rx">
+<span id="gt-mac-parameter-match-tx-rx"></span><h3><a class="toc-backref" href="#id38" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">match_tx_rx</span></code></a><a class="headerlink" href="#match-tx-rx" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
@@ -2137,18 +2107,18 @@ then the transmitted packet and byte counts are expected to exactly match the eq
 </div></blockquote>
 <p>When set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the comparison of TX and RX counters is not included in the overall pass/fail assessment of the link.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="mac-to-mac-connection">
-<span id="gt-mac-parameter-mac-to-mac-connection"></span><h3><a class="toc-backref" href="#id39"><code class="docutils literal notranslate"><span class="pre">mac_to_mac_connection</span></code></a><a class="headerlink" href="#mac-to-mac-connection" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="mac-to-mac-connection">
+<span id="gt-mac-parameter-mac-to-mac-connection"></span><h3><a class="toc-backref" href="#id39" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">mac_to_mac_connection</span></code></a><a class="headerlink" href="#mac-to-mac-connection" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type: integer;
 Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;</p>
 <p>Enable GT MAC cross connections. Contains the index of the GT MAC CU to which is connected the CU.</p>
 <p>See <a class="reference internal" href="#gt-mac-gt-mac-interconnections"><span class="std std-ref">GT MAC to GT MAC connection example</span></a> for syntax example.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-settings-test-json-members">
-<span id="gt-mac-parameter-gt-settings-json-members"></span><h3><a class="toc-backref" href="#id40">GT settings test JSON members</a><a class="headerlink" href="#gt-settings-test-json-members" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="gt-settings-test-json-members">
+<span id="gt-mac-parameter-gt-settings-json-members"></span><h3><a class="toc-backref" href="#id40" role="doc-backlink">GT settings test JSON members</a><a class="headerlink" href="#gt-settings-test-json-members" title="Permalink to this heading">¶</a></h3>
 <p>For the 3 types of GT test cases, the GT settings can be defined in a similar manner</p>
 <ul>
 <li><p>For the 4 lanes simultaneously: part of the <code class="docutils literal notranslate"><span class="pre">global_config</span></code></p>
@@ -2192,8 +2162,8 @@ Here is an example with global selection, but it also includes global and per-la
 <p>More info can be found here: <a class="reference internal" href="#gt-mac-gt-settings"><span class="std std-ref">GT Settings</span></a>.
 Further details on each of settings can be found in <a class="reference external" href="https://www.xilinx.com/support/documentation/user_guides/ug578-ultrascale-gty-transceivers.pdf">UltraScale architecture GTY transceivers user guide (UG578)</a>.</p>
 <hr class="docutils" />
-<div class="section" id="gt-mac-parameter-gt-settings">
-<span id="id4"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_settings</span></code><a class="headerlink" href="#gt-mac-parameter-gt-settings" title="Permalink to this headline">¶</a></h4>
+<section id="gt-mac-parameter-gt-settings">
+<span id="id4"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_settings</span></code><a class="headerlink" href="#gt-mac-parameter-gt-settings" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">module</span></code> or <code class="docutils literal notranslate"><span class="pre">cable</span></code>;
@@ -2201,36 +2171,36 @@ Default        : <code class="docutils literal notranslate"><span class="pre">mo
 <p>It selects the GT configuration from the platform definition file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).
 This configuration applies to all lanes of the GT.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-tx-diffctrl">
-<span id="gt-mac-parameter-gt-tx-diffctrl"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_diffctrl</span></code><a class="headerlink" href="#gt-tx-diffctrl" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-tx-diffctrl">
+<span id="gt-mac-parameter-gt-tx-diffctrl"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_diffctrl</span></code><a class="headerlink" href="#gt-tx-diffctrl" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : integer;
 Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;
 Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
 <p>This parameter sets the <code class="docutils literal notranslate"><span class="pre">TXDIFFCTRL</span></code> input to transmitter.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-tx-pre-emph">
-<span id="gt-mac-parameter-gt-tx-pre-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_pre_emph</span></code><a class="headerlink" href="#gt-tx-pre-emph" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-tx-pre-emph">
+<span id="gt-mac-parameter-gt-tx-pre-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_pre_emph</span></code><a class="headerlink" href="#gt-tx-pre-emph" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : integer;
 Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;
 Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
 <p>This parameter sets the <code class="docutils literal notranslate"><span class="pre">TXPRECURSOR</span></code> input to transmitter.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-tx-post-emph">
-<span id="gt-mac-parameter-gt-tx-post-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_post_emph</span></code><a class="headerlink" href="#gt-tx-post-emph" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-tx-post-emph">
+<span id="gt-mac-parameter-gt-tx-post-emph"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_post_emph</span></code><a class="headerlink" href="#gt-tx-post-emph" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : integer;
 Possible values: from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">31</span></code>;
 Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
 <p>This parameter sets the <code class="docutils literal notranslate"><span class="pre">TXPOSTCURSOR</span></code> input to transmitter.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-tx-polarity">
-<span id="gt-mac-parameter-gt-tx-polarity"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_polarity</span></code><a class="headerlink" href="#gt-tx-polarity" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-tx-polarity">
+<span id="gt-mac-parameter-gt-tx-polarity"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_tx_polarity</span></code><a class="headerlink" href="#gt-tx-polarity" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">normal</span></code> or <code class="docutils literal notranslate"><span class="pre">inverted</span></code>;
@@ -2238,21 +2208,21 @@ Default        : <code class="docutils literal notranslate"><span class="pre">no
 <p>When set to <code class="docutils literal notranslate"><span class="pre">normal</span></code>, TXP is positive, and TXN is negative.</p>
 <p>When set to <code class="docutils literal notranslate"><span class="pre">inverted</span></code>, TXP is negative, and TXN is positive.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="gt-rx-use-lpm">
-<span id="gt-mac-parameter-gt-rx-use-lpm"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_rx_use_lpm</span></code><a class="headerlink" href="#gt-rx-use-lpm" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="gt-rx-use-lpm">
+<span id="gt-mac-parameter-gt-rx-use-lpm"></span><h4><code class="docutils literal notranslate"><span class="pre">gt_rx_use_lpm</span></code><a class="headerlink" href="#gt-rx-use-lpm" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">false</span></code> or <code class="docutils literal notranslate"><span class="pre">true</span></code>;
 Default        : defined in the platform definition JSON file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
 <p>When set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the GTY transceiver to use the DFE receive equalizer.</p>
 <p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the GTY transceiver to use the LPM receive equalizer.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="output-files">
-<h2><a class="toc-backref" href="#id41">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
+<section id="output-files">
+<h2><a class="toc-backref" href="#id41" role="doc-backlink">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this heading">¶</a></h2>
 <p>All GT measurements are stored in an output CSV file generated in xbtest logging directory.
 The values are stored in CSV type format with one column for each information type.</p>
 <div class="admonition important">
@@ -2275,8 +2245,8 @@ All columns present in the file are defined as:</p>
 <li><p><strong>Status</strong>: This group of columns is composed of one column for each status registers (see <a class="reference internal" href="#status"><span class="std std-ref">Status</span></a>).</p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -2307,7 +2277,7 @@ All columns present in the file are defined as:</p>
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

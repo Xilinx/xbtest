@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -827,9 +830,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="table-of-contents">
+  <section id="overview">
+<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="table-of-contents">
 <p class="topic-title">Table of contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#architecture-overview" id="id3">Architecture overview</a></p></li>
@@ -837,9 +840,9 @@
 <li><p><a class="reference internal" href="#platform-specific-libraries-overview" id="id5">Platform specific libraries overview</a></p></li>
 <li><p><a class="reference internal" href="#software-overview" id="id6">Software overview</a></p></li>
 </ul>
-</div>
-<div class="section" id="architecture-overview">
-<h2><a class="toc-backref" href="#id3">Architecture overview</a><a class="headerlink" href="#architecture-overview" title="Permalink to this headline">¶</a></h2>
+</nav>
+<section id="architecture-overview">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Architecture overview</a><a class="headerlink" href="#architecture-overview" title="Permalink to this heading">¶</a></h2>
 <p>The solution comprises:</p>
 <blockquote>
 <div><ul class="simple">
@@ -850,16 +853,18 @@ Includes compute units (CUs): verify, power, memory, and/or GT (GT MAC, GT PRBS,
 </div></blockquote>
 <p>The following block diagram shows an <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html">Alveo™</a> card with an example of deployment platform and CUs (part of the xclbin).
 Per CU type (power, memory and GT), the presence and the quantity of available CUs depends on card and platform capabilities (refer to the respective documentation).</p>
-<div class="figure align-center" id="id1">
-<img alt="../../_images/alveo-card-block-diagram.svg" src="../../_images/alveo-card-block-diagram.svg" /><p class="caption"><span class="caption-text">Alveo card block diagram</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id1">
+<img alt="../../_images/alveo-card-block-diagram.svg" src="../../_images/alveo-card-block-diagram.svg" /><figcaption>
+<p><span class="caption-text">Alveo card block diagram</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>Application software and xclbin are used in conjunction to test on-board memories (for example DDR, HBM) and GTs while the card is consuming a programmable amount of power.</p>
 <p>xbtest is common for all supported platforms.
 Multiple Alveo cards can be tested simultaneously.</p>
 <p>Host memory can also be tested separately if slave bridge feature is available.</p>
-</div>
-<div class="section" id="hardware-overview">
-<span id="xclbin"></span><h2><a class="toc-backref" href="#id4">Hardware overview</a><a class="headerlink" href="#hardware-overview" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="hardware-overview">
+<span id="xclbin"></span><h2><a class="toc-backref" href="#id4" role="doc-backlink">Hardware overview</a><a class="headerlink" href="#hardware-overview" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#xclbin"><span class="std std-ref">xclbin</span></a> includes the following CU types which test different areas of the card hardware:</p>
 <blockquote>
 <div><ul class="simple">
@@ -888,9 +893,9 @@ Slower clock will affect test results.</p></li>
 <p>Watchdog status and clock throttling detection are monitored on a regular basis during test execution.</p>
 </div>
 <p>The xclbin is packaged in <a class="reference internal" href="#platform-specific-libraries"><span class="std std-ref">Platform specific libraries</span></a>.</p>
-</div>
-<div class="section" id="platform-specific-libraries-overview">
-<span id="platform-specific-libraries"></span><h2><a class="toc-backref" href="#id5">Platform specific libraries overview</a><a class="headerlink" href="#platform-specific-libraries-overview" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="platform-specific-libraries-overview">
+<span id="platform-specific-libraries"></span><h2><a class="toc-backref" href="#id5" role="doc-backlink">Platform specific libraries overview</a><a class="headerlink" href="#platform-specific-libraries-overview" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#application-software"><span class="std std-ref">Application software</span></a> supports heterogeneous <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html">Alveo™</a> card installation by the addition of xbtest <a class="reference internal" href="#platform-specific-libraries"><span class="std std-ref">Platform specific libraries</span></a>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -907,13 +912,15 @@ See <a class="reference internal" href="../pre-canned-tests/pre-canned-tests-des
 </ul>
 </div></blockquote>
 <p>These files are automatically selected by the application software.</p>
-</div>
-<div class="section" id="software-overview">
-<span id="test-software"></span><span id="common-software"></span><span id="application-software"></span><h2><a class="toc-backref" href="#id6">Software overview</a><a class="headerlink" href="#software-overview" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="software-overview">
+<span id="test-software"></span><span id="common-software"></span><span id="application-software"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink">Software overview</a><a class="headerlink" href="#software-overview" title="Permalink to this heading">¶</a></h2>
 <p>The <a class="reference internal" href="#application-software"><span class="std std-ref">Application software</span></a> automatically detects the number and type of CUs present in the <a class="reference internal" href="#xclbin"><span class="std std-ref">xclbin</span></a> (power, memory, or GT MAC).</p>
-<div class="figure align-center" id="id2">
-<img alt="../../_images/software-model.svg" src="../../_images/software-model.svg" /><p class="caption"><span class="caption-text">Software model</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id2">
+<img alt="../../_images/software-model.svg" src="../../_images/software-model.svg" /><figcaption>
+<p><span class="caption-text">Software model</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 <p>To enable simultaneous support for multiple versions of the software, xbtest application software is split into two different applications:</p>
 <blockquote>
 <div><ul>
@@ -967,8 +974,8 @@ See <a class="reference internal" href="../pre-canned-tests/pre-canned-tests-des
 </div></blockquote>
 <p>The <a class="reference internal" href="#test-software"><span class="std std-ref">Test software</span></a> also manages the watchdog present in the different CUs and checks that the Alveo card is not in use by another instance of the application.</p>
 <p>A sensor thread can be customized (see <a class="reference internal" href="../tasks/device-management-task-description.html#device-management-task-description"><span class="std std-ref">Device management task description</span></a>).</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -999,7 +1006,7 @@ See <a class="reference internal" href="../pre-canned-tests/pre-canned-tests-des
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

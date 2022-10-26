@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -827,23 +830,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="test-json-file-structure">
-<span id="id1"></span><h1>Test JSON file structure<a class="headerlink" href="#test-json-file-structure" title="Permalink to this headline">¶</a></h1>
+  <section id="test-json-file-structure">
+<span id="id1"></span><h1>Test JSON file structure<a class="headerlink" href="#test-json-file-structure" title="Permalink to this heading">¶</a></h1>
 <div class="admonition caution">
 <p class="admonition-title">Caution</p>
 <p>Test JSON files from previous versions of xbtest are not compatible with this version.
 Contact <a class="reference external" href="https://www.xilinx.com/support.html">Xilinx support</a> for information on how to convert a <a class="reference internal" href="#test-json-file-structure"><span class="std std-ref">Test JSON file</span></a> from previous xbtest version.</p>
 </div>
-<div class="section" id="test-environment-members">
-<h2>Test environment members<a class="headerlink" href="#test-environment-members" title="Permalink to this headline">¶</a></h2>
+<section id="test-environment-members">
+<h2>Test environment members<a class="headerlink" href="#test-environment-members" title="Permalink to this heading">¶</a></h2>
 <p>The test JSON file allows to provide various schemas defining the configuration of the tasks and the <a class="reference internal" href="../test-cases/test-cases-overview.html#test-cases-overview"><span class="std std-ref">test cases</span></a> to be run.</p>
 <table class="docutils align-default" id="id2">
 <caption><span class="caption-text">Test environment members</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 15%" />
-<col style="width: 74%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Mandatory/optional</p></th>
@@ -914,9 +912,9 @@ Note that tasks are performed in parallel with each of the <a class="reference i
 </li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="test-json-file-example">
-<h2>Test JSON file example<a class="headerlink" href="#test-json-file-example" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="test-json-file-example">
+<h2>Test JSON file example<a class="headerlink" href="#test-json-file-example" title="Permalink to this heading">¶</a></h2>
 <p>The following is a test JSON file example.</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;comment&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;This is an example of test JSON file&quot;</span><span class="p">,</span><span class="w"></span>
@@ -1006,8 +1004,8 @@ Note that tasks are performed in parallel with each of the <a class="reference i
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -1038,7 +1036,7 @@ Note that tasks are performed in parallel with each of the <a class="reference i
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

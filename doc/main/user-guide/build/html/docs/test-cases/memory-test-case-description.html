@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -827,9 +830,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="memory-test-case-description">
-<span id="id1"></span><h1>Memory test case description<a class="headerlink" href="#memory-test-case-description" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="table-of-contents">
+  <section id="memory-test-case-description">
+<span id="id1"></span><h1>Memory test case description<a class="headerlink" href="#memory-test-case-description" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="table-of-contents">
 <p class="topic-title">Table of contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#test-parameters" id="id43">Test parameters</a></p></li>
@@ -882,7 +885,7 @@
 </ul>
 </li>
 </ul>
-</div>
+</nav>
 <p>The goal of this test case is to check communications between the memory CUs and memories available:</p>
 <blockquote>
 <div><ul>
@@ -921,8 +924,8 @@ and is not usable in the <a class="reference internal" href="#memory-test-case-d
 <li><p>Multiple AXI ID threads can be supported by the memory CU depending on the platform.</p></li>
 </ul>
 </div></blockquote>
-<div class="section" id="test-parameters">
-<h2><a class="toc-backref" href="#id43">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this headline">¶</a></h2>
+<section id="test-parameters">
+<h2><a class="toc-backref" href="#id43" role="doc-backlink">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this heading">¶</a></h2>
 <p>The mandatory test configuration parameters are listed below.
 For more information, see <a class="reference internal" href="#memory-test-json-members"><span class="std std-ref">Memory Test JSON Members</span></a>.</p>
 <blockquote>
@@ -958,9 +961,9 @@ defining at least one <code class="docutils literal notranslate"><span class="pr
 Your server/workstation may reboot or xbtest may be interrupted if you try to use a high write or read data transfer rates.
 Nominal write and read data transfer rates are specified in platform definition file (see <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>).</p>
 </div>
-</div>
-<div class="section" id="main-test-steps">
-<h2><a class="toc-backref" href="#id44">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="main-test-steps">
+<h2><a class="toc-backref" href="#id44" role="doc-backlink">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this heading">¶</a></h2>
 <p>For each test configuration, the following steps are repeated:</p>
 <blockquote>
 <div><ol class="arabic">
@@ -978,9 +981,9 @@ The entire range of the memory is always checked, meaning that, if needed, the t
 Bandwidths and latencies are also checked against thresholds under some conditions (see <a class="reference internal" href="#bandwidth-and-latency-check-conditions"><span class="std std-ref">Bandwidth and latency check conditions</span></a>).</p></li>
 </ol>
 </div></blockquote>
-</div>
-<div class="section" id="measurements">
-<h2><a class="toc-backref" href="#id45">Measurements</a><a class="headerlink" href="#measurements" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="measurements">
+<h2><a class="toc-backref" href="#id45" role="doc-backlink">Measurements</a><a class="headerlink" href="#measurements" title="Permalink to this heading">¶</a></h2>
 <p>The memory CUs computes burst time and latency.
 The bandwidth is computed every second by the <code class="docutils literal notranslate"><span class="pre">Test</span></code> software after requesting measurements from the CU.</p>
 <div class="admonition warning">
@@ -994,17 +997,12 @@ If the clock throttling has been activated while doing a memory test, the memory
 </ul>
 </div></blockquote>
 </div>
-<div class="section" id="burst-time">
-<h3><a class="toc-backref" href="#id46">Burst time</a><a class="headerlink" href="#burst-time" title="Permalink to this headline">¶</a></h3>
+<section id="burst-time">
+<h3><a class="toc-backref" href="#id46" role="doc-backlink">Burst time</a><a class="headerlink" href="#burst-time" title="Permalink to this heading">¶</a></h3>
 <p>The following sections describes the start and end point for burst time measurement, which are similar in the write and read directions.
 The <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case reports minimum, average and maximum burst time, which are not check against any thresholds.</p>
 <table class="docutils align-default" id="id11">
 <caption><span class="caption-text">Burst time</span><a class="headerlink" href="#id11" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 48%" />
-<col style="width: 42%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Burst time</p></th>
 <th class="head"><p>Description</p></th>
@@ -1022,10 +1020,12 @@ The <a class="reference internal" href="#memory-test-case-description"><span cla
 </div></blockquote>
 </td>
 <td><p>The following figure represents the write burst time measurement:</p>
-<div class="figure align-center" id="id12">
+<figure class="align-center" id="id12">
 <img alt="../../_images/write-burst-time.png" src="../../_images/write-burst-time.png" />
-<p class="caption"><span class="caption-text">Write burst time</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Write burst time</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p>Read</p></td>
@@ -1038,36 +1038,33 @@ The <a class="reference internal" href="#memory-test-case-description"><span cla
 </div></blockquote>
 </td>
 <td><p>The following figure represents the read burst time measurement:</p>
-<div class="figure align-center" id="id13">
+<figure class="align-center" id="id13">
 <img alt="../../_images/read-burst-time.png" src="../../_images/read-burst-time.png" />
-<p class="caption"><span class="caption-text">Read burst time</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Read burst time</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="bandwidth">
-<span id="id2"></span><h3><a class="toc-backref" href="#id47">Bandwidth</a><a class="headerlink" href="#bandwidth" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="bandwidth">
+<span id="id2"></span><h3><a class="toc-backref" href="#id47" role="doc-backlink">Bandwidth</a><a class="headerlink" href="#bandwidth" title="Permalink to this heading">¶</a></h3>
 <p>The average write/read bandwidth is computed as write/read burst size divided by average write/read burst time.
 The measured average bandwidth can be checked against thresholds when enabled.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>The bandwidth checks are disabled by default when the host memory is targeted.</p>
 </div>
-</div>
-<div class="section" id="latency">
-<span id="id3"></span><h3><a class="toc-backref" href="#id48">Latency</a><a class="headerlink" href="#latency" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="latency">
+<span id="id3"></span><h3><a class="toc-backref" href="#id48" role="doc-backlink">Latency</a><a class="headerlink" href="#latency" title="Permalink to this heading">¶</a></h3>
 <p>The following sections describes the start and end point for latency measurement.
 The <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case reports minimum, average and maximum burst latency.
 The measured average latency can be checked against thresholds when enabled.</p>
 <table class="docutils align-default" id="id14">
 <caption><span class="caption-text">Latency</span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 11%" />
-<col style="width: 48%" />
-<col style="width: 41%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Latency</p></th>
 <th class="head"><p>Description</p></th>
@@ -1085,10 +1082,12 @@ The measured average latency can be checked against thresholds when enabled.</p>
 </div></blockquote>
 </td>
 <td><p>The following figure represents the write latency measurement:</p>
-<div class="figure align-center" id="id15">
+<figure class="align-center" id="id15">
 <img alt="../../_images/write-burst-latency.png" src="../../_images/write-burst-latency.png" />
-<p class="caption"><span class="caption-text">Write burst latency</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Write burst latency</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p>Read</p></td>
@@ -1101,17 +1100,19 @@ The measured average latency can be checked against thresholds when enabled.</p>
 </div></blockquote>
 </td>
 <td><p>The following figure represents the read latency measurement.</p>
-<div class="figure align-center" id="id16">
+<figure class="align-center" id="id16">
 <img alt="../../_images/read-burst-latency.png" src="../../_images/read-burst-latency.png" />
-<p class="caption"><span class="caption-text">Read burst latency</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">Read burst latency</span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="bandwidth-and-latency-check-conditions">
-<span id="id4"></span><h3><a class="toc-backref" href="#id49">Bandwidth and latency check conditions</a><a class="headerlink" href="#bandwidth-and-latency-check-conditions" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="bandwidth-and-latency-check-conditions">
+<span id="id4"></span><h3><a class="toc-backref" href="#id49" role="doc-backlink">Bandwidth and latency check conditions</a><a class="headerlink" href="#bandwidth-and-latency-check-conditions" title="Permalink to this heading">¶</a></h3>
 <p>The average read/write bandwidth and latency are checked against thresholds only when the following parameters are set to their nominal values:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1122,10 +1123,10 @@ The measured average latency can be checked against thresholds when enabled.</p>
 </div></blockquote>
 <p>These nominal values are used by default. If any of them is overwritten, the check of the bandwidth and latency are disabled and a warning (<code class="docutils literal notranslate"><span class="pre">MEM_050</span></code>) is reported.
 This can be overruled by setting <a class="reference internal" href="#memory-parameter-check-bw"><span class="std std-ref">check_bw</span></a> or <a class="reference internal" href="#memory-parameter-check-latency"><span class="std std-ref">check_latency</span></a> if it is still required.</p>
-</div>
-</div>
-<div class="section" id="memory-cu-types">
-<span id="id5"></span><h2><a class="toc-backref" href="#id50">Memory CU types</a><a class="headerlink" href="#memory-cu-types" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="memory-cu-types">
+<span id="id5"></span><h2><a class="toc-backref" href="#id50" role="doc-backlink">Memory CU types</a><a class="headerlink" href="#memory-cu-types" title="Permalink to this heading">¶</a></h2>
 <p>Different Alveo™ cards support various memory types of different sizes (for example, multiple 16 GB of DDR, 8 GB of HBM, 2 GB of PL-DDR, and/or 4 GB of PS-DDR) which are automatically detected by xbtest during the verify test case.
 Each of these memories is tested with either of these different types of memory CU:</p>
 <blockquote>
@@ -1157,11 +1158,6 @@ use the following command (see <a class="reference internal" href="../usage/comm
 <p>More information on the configuration is also available in <code class="docutils literal notranslate"><span class="pre">xbtest.log</span></code>, with message ID <code class="docutils literal notranslate"><span class="pre">ITF_058</span></code> for each memory type and message ID <code class="docutils literal notranslate"><span class="pre">ITF_100</span></code> for each CU.</p>
 <table class="docutils align-default" id="id17">
 <caption><span class="caption-text">Memory CU types</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 9%" />
-<col style="width: 60%" />
-<col style="width: 31%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Memory CU type</p></th>
 <th class="head"><p>Description</p></th>
@@ -1171,37 +1167,45 @@ use the following command (see <a class="reference internal" href="../usage/comm
 <tbody>
 <tr class="row-even"><td><p>32-channel HBM</p></td>
 <td><p>One 32-channel memory CU, with each channel targets a different HBM PC (different memory tags).</p></td>
-<td><div class="figure align-center" id="id18">
-<img alt="../../_images/32-channel-hbm-memory-cu-type.svg" src="../../_images/32-channel-hbm-memory-cu-type.svg" /><p class="caption"><span class="caption-text">32-channel HBM memory CU type</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id18">
+<img alt="../../_images/32-channel-hbm-memory-cu-type.svg" src="../../_images/32-channel-hbm-memory-cu-type.svg" /><figcaption>
+<p><span class="caption-text">32-channel HBM memory CU type</span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p>16-channel HBM</p></td>
 <td><p>One 16-channel memory CU, with each channel targeting a different series of two HBM PCs (different memory tags).</p></td>
-<td><div class="figure align-center" id="id19">
-<img alt="../../_images/16-channel-hbm-memory-cu-type.svg" src="../../_images/16-channel-hbm-memory-cu-type.svg" /><p class="caption"><span class="caption-text">16-channel HBM memory CU type</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id19">
+<img alt="../../_images/16-channel-hbm-memory-cu-type.svg" src="../../_images/16-channel-hbm-memory-cu-type.svg" /><figcaption>
+<p><span class="caption-text">16-channel HBM memory CU type</span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-even"><td><p>DDR</p></td>
 <td><p>Four single-channel memory CUs, with each CU targeting a different DDR.</p></td>
-<td><div class="figure align-center" id="id20">
-<img alt="../../_images/ddr-memory-cu-type.svg" src="../../_images/ddr-memory-cu-type.svg" /><p class="caption"><span class="caption-text">DDR memory CU type</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id20">
+<img alt="../../_images/ddr-memory-cu-type.svg" src="../../_images/ddr-memory-cu-type.svg" /><figcaption>
+<p><span class="caption-text">DDR memory CU type</span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p>PS_DDR</p></td>
 <td><p>One 4-channel memory CU, with each channel targeting a different area of the same memory (same memory tag).</p></td>
-<td><div class="figure align-center" id="id21">
-<img alt="../../_images/ps-ddr-memory-cu-type.svg" src="../../_images/ps-ddr-memory-cu-type.svg" /><p class="caption"><span class="caption-text">PS_DDR memory CU type</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
-</div>
+<td><figure class="align-center" id="id21">
+<img alt="../../_images/ps-ddr-memory-cu-type.svg" src="../../_images/ps-ddr-memory-cu-type.svg" /><figcaption>
+<p><span class="caption-text">PS_DDR memory CU type</span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="write-and-read-ranges-blocks">
-<h2><a class="toc-backref" href="#id51">Write and read ranges/blocks</a><a class="headerlink" href="#write-and-read-ranges-blocks" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="write-and-read-ranges-blocks">
+<h2><a class="toc-backref" href="#id51" role="doc-backlink">Write and read ranges/blocks</a><a class="headerlink" href="#write-and-read-ranges-blocks" title="Permalink to this heading">¶</a></h2>
 <p>Data is transferred from/to the memory via multiple AXI bursts, which address linearly the entire range of the memory.
 By default, the entire range of the memory is tested. When the memory CU is:</p>
 <blockquote>
@@ -1232,17 +1236,12 @@ By default, the entire range of the memory is tested. When the memory CU is:</p>
 <p>When a block of data is fully read/written, the memory CU repeats the transfer of data during the entire <a class="reference internal" href="#memory-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a>, but the memory range is always entirely transferred.
 The <a class="reference internal" href="#memory-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> of the test is automatically increased accordingly, meaning that the reading/writing of a block is never interrupted.</p>
 </div>
-</div>
-<div class="section" id="test-modes">
-<h2><a class="toc-backref" href="#id52">Test modes</a><a class="headerlink" href="#test-modes" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="test-modes">
+<h2><a class="toc-backref" href="#id52" role="doc-backlink">Test modes</a><a class="headerlink" href="#test-modes" title="Permalink to this heading">¶</a></h2>
 <p>The memory CUs can be configured to write and/or read data to/from the targeted memory in four different modes set with parameter <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>.</p>
 <table class="docutils align-default" id="id22">
 <caption><span class="caption-text">Test modes</span><a class="headerlink" href="#id22" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 52%" />
-<col style="width: 39%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test mode</p></th>
 <th class="head"><p>Description</p></th>
@@ -1254,9 +1253,11 @@ The <a class="reference internal" href="#memory-parameter-test-sequence-duration
 <td><p>The memory range (block) is fully written over and over
 during the entire <a class="reference internal" href="#memory-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> of the test.</p></td>
 <td><p>The following figure represents the blocks transferred during an <code class="docutils literal notranslate"><span class="pre">only_wr</span></code> test.</p>
-<div class="figure align-center" id="id23">
-<img alt="../../_images/only-wr-test-mode-operations.svg" src="../../_images/only-wr-test-mode-operations.svg" /><p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">only_wr</span></code> test mode operations</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id23">
+<img alt="../../_images/only-wr-test-mode-operations.svg" src="../../_images/only-wr-test-mode-operations.svg" /><figcaption>
+<p><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">only_wr</span></code> test mode operations</span><a class="headerlink" href="#id23" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">only_rd</span></code></p></td>
@@ -1264,9 +1265,11 @@ during the entire <a class="reference internal" href="#memory-parameter-test-seq
 during the entire <a class="reference internal" href="#memory-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> of the test.
 A single preliminary write (with known PRBS31 data) of the memory is performed prior starting the reading.</p></td>
 <td><p>The following figure represents the blocks transferred during an <code class="docutils literal notranslate"><span class="pre">only_rd</span></code> test.</p>
-<div class="figure align-center" id="id24">
-<img alt="../../_images/only-rd-test-mode-operations.svg" src="../../_images/only-rd-test-mode-operations.svg" /><p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">only_rd</span></code> test mode operations</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id24">
+<img alt="../../_images/only-rd-test-mode-operations.svg" src="../../_images/only-rd-test-mode-operations.svg" /><figcaption>
+<p><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">only_rd</span></code> test mode operations</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">simultaneous_wr_rd</span></code></p></td>
@@ -1275,35 +1278,34 @@ A single preliminary write (with known PRBS31 data) of the second half of the me
 The following figure represents the blocks transferred during a <code class="docutils literal notranslate"><span class="pre">simultaneous_wr_rd</span></code> test.
 In this <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>, a block represents half of the memory range.</p></td>
 <td><p>The following figure represents the blocks transferred during a <code class="docutils literal notranslate"><span class="pre">simultaneous_wr_rd</span></code> test.</p>
-<div class="figure align-center" id="id25">
-<img alt="../../_images/simultaneous-wr-rd-test-mode-operations.svg" src="../../_images/simultaneous-wr-rd-test-mode-operations.svg" /><p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">simultaneous_wr_rd</span></code> test mode operations</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id25">
+<img alt="../../_images/simultaneous-wr-rd-test-mode-operations.svg" src="../../_images/simultaneous-wr-rd-test-mode-operations.svg" /><figcaption>
+<p><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">simultaneous_wr_rd</span></code> test mode operations</span><a class="headerlink" href="#id25" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">alternate_wr_rd</span></code></p></td>
 <td><p>The full range of the memory is written, then fully read, over and over
 during the entire <a class="reference internal" href="#memory-parameter-test-sequence-duration"><span class="std std-ref">duration</span></a> of the test.</p></td>
 <td><p>The following figure represents the blocks transferred during an <code class="docutils literal notranslate"><span class="pre">alternate_wr_rd</span></code> test.</p>
-<div class="figure align-center" id="id26">
-<img alt="../../_images/alternate-wr-rd-test-mode-operations.svg" src="../../_images/alternate-wr-rd-test-mode-operations.svg" /><p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">alternate_wr_rd</span></code> test mode operations</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id26">
+<img alt="../../_images/alternate-wr-rd-test-mode-operations.svg" src="../../_images/alternate-wr-rd-test-mode-operations.svg" /><figcaption>
+<p><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">alternate_wr_rd</span></code> test mode operations</span><a class="headerlink" href="#id26" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="axi-bursts">
-<h2><a class="toc-backref" href="#id53">AXI bursts</a><a class="headerlink" href="#axi-bursts" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="axi-bursts">
+<h2><a class="toc-backref" href="#id53" role="doc-backlink">AXI bursts</a><a class="headerlink" href="#axi-bursts" title="Permalink to this heading">¶</a></h2>
 <p>The memory CU communicates with the memory via one or more AXI interfaces (channels).
 The size of the AXI burst is typically 4 kB.
 For more information about AXI protocol, refer to Vivado Design Suite: <a class="reference external" href="https://www.xilinx.com/support/documentation/ip_documentation/axi_ref_guide/latest/ug1037-vivado-axi-reference-guide.pdf">AXI reference guide (UG1037)</a>.</p>
 <table class="docutils align-default" id="id27">
 <caption><span class="caption-text">AXI data size vs. AXI beat</span><a class="headerlink" href="#id27" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 37%" />
-<col style="width: 28%" />
-<col style="width: 35%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>AXI data size (in bits)</p></th>
 <th class="head"><p>AXI beat quantity</p></th>
@@ -1326,14 +1328,14 @@ For more information about AXI protocol, refer to Vivado Design Suite: <a class=
 </tbody>
 </table>
 <p>The <a class="reference internal" href="#memory-parameter-test-sequence-wr-burst-size"><span class="std std-ref">wr_burst_size</span></a> and <a class="reference internal" href="#memory-parameter-test-sequence-rd-burst-size"><span class="std std-ref">rd_burst_size</span></a> can be overwritten.</p>
-</div>
-<div class="section" id="maximum-number-of-outstanding-transactions">
-<span id="memory-test-number-outstanding"></span><h2><a class="toc-backref" href="#id54">Maximum number of outstanding transactions</a><a class="headerlink" href="#maximum-number-of-outstanding-transactions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="maximum-number-of-outstanding-transactions">
+<span id="memory-test-number-outstanding"></span><h2><a class="toc-backref" href="#id54" role="doc-backlink">Maximum number of outstanding transactions</a><a class="headerlink" href="#maximum-number-of-outstanding-transactions" title="Permalink to this heading">¶</a></h2>
 <p>The memory CUs can be configured to limit the number of outstanding write and/or read transaction to/from the targeted memory.</p>
 <p>The maximum number of outstanding transaction impact the <a class="reference internal" href="#bandwidth"><span class="std std-ref">Bandwidth</span></a> and <a class="reference internal" href="#latency"><span class="std std-ref">Latency</span></a> measurements.</p>
 <p>The <a class="reference internal" href="#memory-parameter-test-sequence-wr-outstanding"><span class="std std-ref">wr_outstanding</span></a> and <a class="reference internal" href="#memory-parameter-test-sequence-rd-outstanding"><span class="std std-ref">rd_outstanding</span></a> can be overwritten.</p>
-<div class="section" id="maximum-number-of-outstanding-writes">
-<h3><a class="toc-backref" href="#id55">Maximum number of outstanding writes</a><a class="headerlink" href="#maximum-number-of-outstanding-writes" title="Permalink to this headline">¶</a></h3>
+<section id="maximum-number-of-outstanding-writes">
+<h3><a class="toc-backref" href="#id55" role="doc-backlink">Maximum number of outstanding writes</a><a class="headerlink" href="#maximum-number-of-outstanding-writes" title="Permalink to this heading">¶</a></h3>
 <p>An outstanding write transaction is defined as:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1343,10 +1345,6 @@ For more information about AXI protocol, refer to Vivado Design Suite: <a class=
 </div></blockquote>
 <table class="docutils align-default" id="id28">
 <caption><span class="caption-text">Maximum Number of Outstanding Writes</span><a class="headerlink" href="#id28" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 74%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Maximum number of outstanding writes</p></th>
 <th class="head"><p>Illustration</p></th>
@@ -1355,30 +1353,36 @@ For more information about AXI protocol, refer to Vivado Design Suite: <a class=
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
 <td><p>The following figure represents the AXI bursts when the number of outstanding writes is limited to 1.</p>
-<div class="figure align-center" id="id29">
-<img alt="../../_images/wr-outstanding-1.svg" src="../../_images/wr-outstanding-1.svg" /><p class="caption"><span class="caption-text">Outstanding writes limited to 1.</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id29">
+<img alt="../../_images/wr-outstanding-1.svg" src="../../_images/wr-outstanding-1.svg" /><figcaption>
+<p><span class="caption-text">Outstanding writes limited to 1.</span><a class="headerlink" href="#id29" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>The following figure represents the AXI bursts when the maximum number of outstanding writes is set to 2.</p>
-<div class="figure align-center" id="id30">
-<img alt="../../_images/wr-outstanding-2.svg" src="../../_images/wr-outstanding-2.svg" /><p class="caption"><span class="caption-text">Outstanding writes limited to 2</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id30">
+<img alt="../../_images/wr-outstanding-2.svg" src="../../_images/wr-outstanding-2.svg" /><figcaption>
+<p><span class="caption-text">Outstanding writes limited to 2</span><a class="headerlink" href="#id30" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-even"><td><p>0 (not limited)</p></td>
 <td><p>The following figure represents the AXI bursts when the number of outstanding writes is not limited.</p>
-<div class="figure align-center" id="id31">
-<img alt="../../_images/wr-outstanding-0.svg" src="../../_images/wr-outstanding-0.svg" /><p class="caption"><span class="caption-text">Outstanding writes not limited</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id31">
+<img alt="../../_images/wr-outstanding-0.svg" src="../../_images/wr-outstanding-0.svg" /><figcaption>
+<p><span class="caption-text">Outstanding writes not limited</span><a class="headerlink" href="#id31" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-<div class="section" id="maximum-number-of-outstanding-reads">
-<h3><a class="toc-backref" href="#id56">Maximum number of outstanding reads</a><a class="headerlink" href="#maximum-number-of-outstanding-reads" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="maximum-number-of-outstanding-reads">
+<h3><a class="toc-backref" href="#id56" role="doc-backlink">Maximum number of outstanding reads</a><a class="headerlink" href="#maximum-number-of-outstanding-reads" title="Permalink to this heading">¶</a></h3>
 <p>An outstanding read transaction is defined as:</p>
 <blockquote>
 <div><ul class="simple">
@@ -1388,10 +1392,6 @@ For more information about AXI protocol, refer to Vivado Design Suite: <a class=
 </div></blockquote>
 <table class="docutils align-default" id="id32">
 <caption><span class="caption-text">Maximum number of outstanding reads</span><a class="headerlink" href="#id32" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 26%" />
-<col style="width: 74%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Maximum number of outstanding reads</p></th>
 <th class="head"><p>Illustration</p></th>
@@ -1400,49 +1400,55 @@ For more information about AXI protocol, refer to Vivado Design Suite: <a class=
 <tbody>
 <tr class="row-even"><td><p>1</p></td>
 <td><p>The following figure represents the AXI bursts when the number of outstanding reads is limited to 1.</p>
-<div class="figure align-center" id="id33">
-<img alt="../../_images/rd-outstanding-1.svg" src="../../_images/rd-outstanding-1.svg" /><p class="caption"><span class="caption-text">Outstanding reads limited to 1.</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id33">
+<img alt="../../_images/rd-outstanding-1.svg" src="../../_images/rd-outstanding-1.svg" /><figcaption>
+<p><span class="caption-text">Outstanding reads limited to 1.</span><a class="headerlink" href="#id33" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-odd"><td><p>2</p></td>
 <td><p>The following figure represents the AXI bursts when the maximum number of outstanding reads is set to 2.</p>
-<div class="figure align-center" id="id34">
-<img alt="../../_images/rd-outstanding-2.svg" src="../../_images/rd-outstanding-2.svg" /><p class="caption"><span class="caption-text">Outstanding reads limited to 2.</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id34">
+<img alt="../../_images/rd-outstanding-2.svg" src="../../_images/rd-outstanding-2.svg" /><figcaption>
+<p><span class="caption-text">Outstanding reads limited to 2.</span><a class="headerlink" href="#id34" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 <tr class="row-even"><td><p>0 (not limited)</p></td>
 <td><p>The following figure represents the AXI bursts when the number of outstanding reads is not limited.</p>
-<div class="figure align-center" id="id35">
-<img alt="../../_images/rd-outstanding-0.svg" src="../../_images/rd-outstanding-0.svg" /><p class="caption"><span class="caption-text">Outstanding reads not limited</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
-</div>
+<figure class="align-center" id="id35">
+<img alt="../../_images/rd-outstanding-0.svg" src="../../_images/rd-outstanding-0.svg" /><figcaption>
+<p><span class="caption-text">Outstanding reads not limited</span><a class="headerlink" href="#id35" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
 </td>
 </tr>
 </tbody>
 </table>
-</div>
-</div>
-<div class="section" id="axi-id-threads">
-<h2><a class="toc-backref" href="#id57">AXI ID threads</a><a class="headerlink" href="#axi-id-threads" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="axi-id-threads">
+<h2><a class="toc-backref" href="#id57" role="doc-backlink">AXI ID threads</a><a class="headerlink" href="#axi-id-threads" title="Permalink to this heading">¶</a></h2>
 <p>The memory CU can be configured to support multiple AXI ID threads (see <a class="reference external" href="https://www.xilinx.com/support/documentation/ip_documentation/axi_ref_guide/latest/ug1037-vivado-axi-reference-guide.pdf">AXI reference guide (UG1037)</a>).
 The maximum number of AXI ID threads supported by the memory CU is reported by the host application in messages <code class="docutils literal notranslate"><span class="pre">ITF_058</span></code>.</p>
 <p>By default, the memory CU will transfer data to/from the memory using the maximum number of ID thread.
 When the parameter <a class="reference internal" href="#memory-parameter-single-axi-thread"><span class="std std-ref">single_axi_thread</span></a> is set, the memory CU will only use a constant ID for all AXI transactions.</p>
 <p>When multiple AXI ID threads are enabled, the memory CU will generate each consecutive AXI burst request with a different, rotating AXI ID.
 For example, if the number of AXI ID threads is 4, then the AXI ID of the consecutive requests will be: 0, 1, 2, 3, 0, 1, 2, 3, 0, etc.</p>
-</div>
-<div class="section" id="quality-of-service-qos-rate-control">
-<h2><a class="toc-backref" href="#id58">Quality of Service (QoS) - Rate control</a><a class="headerlink" href="#quality-of-service-qos-rate-control" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="quality-of-service-qos-rate-control">
+<h2><a class="toc-backref" href="#id58" role="doc-backlink">Quality of Service (QoS) - Rate control</a><a class="headerlink" href="#quality-of-service-qos-rate-control" title="Permalink to this heading">¶</a></h2>
 <p>Depending on the memory (or DMA and Slave bridge) controller built time settings, you may notice that write and read bandwidths are not even (or balanced) during <code class="docutils literal notranslate"><span class="pre">simultaneous_wr_rd</span></code> test. Although it may not change the total bandwidth available, you may want to change the way write and read bandwidths are shared. This can be achieved by using rate control, <code class="docutils literal notranslate"><span class="pre">wr/rd_rate</span></code> (see <a class="reference internal" href="#memory-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a>).</p>
 <p>By controlling individually <code class="docutils literal notranslate"><span class="pre">wr_rate</span></code> and <code class="docutils literal notranslate"><span class="pre">rd_rate</span></code>, you’ll be able to slow down (or accelerate) the quantity of write or read requests created by the memory CU. This rate control is still subject to <a class="reference internal" href="#memory-test-number-outstanding"><span class="std std-ref">Maximum number of outstanding transactions</span></a>. So, you may need to increase or simply disable them to achieve the expected results.</p>
 <p>All default settings are defined in <a class="reference internal" href="../platform-definition/platform-definition.html#ug-platform-definition"><span class="std std-ref">Platform definition</span></a>.
 Changing any default settings automatically disables the check of the results against thresholds (when applicable), see <a class="reference internal" href="#bandwidth-and-latency-check-conditions"><span class="std std-ref">Bandwidth and latency check conditions</span></a>. If it’s not the desired behaviour, you’ll need to enable manually these checks in your test JSON file by using <a class="reference internal" href="#memory-parameter-check-bw"><span class="std std-ref">check_bw</span></a> or <a class="reference internal" href="#memory-parameter-check-latency"><span class="std std-ref">check_latency</span></a>.</p>
-</div>
-<div class="section" id="memory-test-json-members">
-<span id="id6"></span><h2><a class="toc-backref" href="#id59">Memory Test JSON Members</a><a class="headerlink" href="#memory-test-json-members" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="target-memories-on-the-card">
-<h3><a class="toc-backref" href="#id60">Target memories on the card</a><a class="headerlink" href="#target-memories-on-the-card" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="memory-test-json-members">
+<span id="id6"></span><h2><a class="toc-backref" href="#id59" role="doc-backlink">Memory Test JSON Members</a><a class="headerlink" href="#memory-test-json-members" title="Permalink to this heading">¶</a></h2>
+<section id="target-memories-on-the-card">
+<h3><a class="toc-backref" href="#id60" role="doc-backlink">Target memories on the card</a><a class="headerlink" href="#target-memories-on-the-card" title="Permalink to this heading">¶</a></h3>
 <p>Following is an example of <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test cases targeting all memories of type DDR and HBM available on the card.
 Note that all memories are tested in parallel.</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1469,10 +1475,10 @@ Note that all memories are tested in parallel.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="target-memory-on-the-host">
-<h3><a class="toc-backref" href="#id61">Target memory on the host</a><a class="headerlink" href="#target-memory-on-the-host" title="Permalink to this headline">¶</a></h3>
+<section id="target-memory-on-the-host">
+<h3><a class="toc-backref" href="#id61" role="doc-backlink">Target memory on the host</a><a class="headerlink" href="#target-memory-on-the-host" title="Permalink to this heading">¶</a></h3>
 <p>Following is an example of <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case targeting all memories of type HOST:</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;HOST&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1501,10 +1507,10 @@ Note that all memories are tested in parallel.</p>
 </ul>
 </div></blockquote>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="single-channel-override">
-<h3><a class="toc-backref" href="#id62">Single-channel override</a><a class="headerlink" href="#single-channel-override" title="Permalink to this headline">¶</a></h3>
+<section id="single-channel-override">
+<h3><a class="toc-backref" href="#id62" role="doc-backlink">Single-channel override</a><a class="headerlink" href="#single-channel-override" title="Permalink to this heading">¶</a></h3>
 <p>For single-channel memory types, some test JSON members can be overwritten for each tag targeted by the memory CUs using the test JSON member <code class="docutils literal notranslate"><span class="pre">memory_tag_config</span></code>.</p>
 <p>The following example shows how to run a <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case only for one (identified by memory tag <code class="docutils literal notranslate"><span class="pre">DDR[1]</span></code>) of the memories of the single-channel memory type named DDR.</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1524,10 +1530,10 @@ Note that all memories are tested in parallel.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="multi-channel-override">
-<h3><a class="toc-backref" href="#id63">Multi-channel override</a><a class="headerlink" href="#multi-channel-override" title="Permalink to this headline">¶</a></h3>
+<section id="multi-channel-override">
+<h3><a class="toc-backref" href="#id63" role="doc-backlink">Multi-channel override</a><a class="headerlink" href="#multi-channel-override" title="Permalink to this heading">¶</a></h3>
 <p>For multi-channel memory types, some test JSON members can be overwritten for each channel of the memory CU using the test JSON member <code class="docutils literal notranslate"><span class="pre">memory_channel_config</span></code>.</p>
 <p>The following example shows how to run a <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case only for one (channel <code class="docutils literal notranslate"><span class="pre">12</span></code>) channel of the multi-channel memory type named HBM.</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;memory&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -1547,20 +1553,15 @@ Note that all memories are tested in parallel.</p>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="definition">
-<h3><a class="toc-backref" href="#id64">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<section id="definition">
+<h3><a class="toc-backref" href="#id64" role="doc-backlink">Definition</a><a class="headerlink" href="#definition" title="Permalink to this heading">¶</a></h3>
 <p>In the <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case, valid test JSON members depend on the configuration of the memory CUs (see <a class="reference internal" href="#memory-cu-types"><span class="std std-ref">Memory CU types</span></a>), which are automatically detected by the <a class="reference internal" href="../introduction/overview.html#application-software"><span class="std std-ref">Application software</span></a> during the verify test case.
 The following table shows all members available for this test case.
 More details are provided for each member in the subsequent sections:</p>
 <table class="docutils align-default" id="id36">
 <caption><span class="caption-text">Memory test case members</span><a class="headerlink" href="#id36" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 14%" />
-<col style="width: 58%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Mandatory / optional</p></th>
@@ -1650,9 +1651,9 @@ before any <code class="docutils literal notranslate"><span class="pre">only_rd<
 </tbody>
 </table>
 <hr class="docutils" />
-</div>
-<div class="section" id="test-sequence">
-<span id="memory-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id65"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="test-sequence">
+<span id="memory-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id65" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this heading">¶</a></h3>
 <p>Mandatory. Describes the sequence of tests to perform.
 Tests are performed serially, and a failure in one test does not stop the sequence (the next test will be launched).
 There is no limitation to the length of the test sequence.</p>
@@ -1660,11 +1661,6 @@ There is no limitation to the length of the test sequence.</p>
 <p>The following table defines the parameters supported in the Memory test sequence:</p>
 <span id="memory-parameter-test-sequence-rd-start-addr"></span><span id="memory-parameter-test-sequence-wr-start-addr"></span><span id="memory-parameter-test-sequence-rd-block-size"></span><span id="memory-parameter-test-sequence-wr-block-size"></span><span id="memory-parameter-test-sequence-rd-outstanding"></span><span id="memory-parameter-test-sequence-wr-outstanding"></span><span id="memory-parameter-test-sequence-rd-burst-size"></span><span id="memory-parameter-test-sequence-wr-burst-size"></span><span id="memory-parameter-test-sequence-rd-rate"></span><span id="memory-parameter-test-sequence-wr-rate"></span><span id="memory-parameter-test-sequence-mode"></span><span id="memory-parameter-test-sequence-duration"></span><table class="docutils align-default" id="id37">
 <caption><span class="caption-text">Memory test sequence parameters</span><a class="headerlink" href="#id37" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 10%" />
-<col style="width: 10%" />
-<col style="width: 80%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Mandatory / optional</p></th>
@@ -1795,8 +1791,8 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-<div class="section" id="override-test-sequence">
-<span id="id7"></span><h4>Override <code class="docutils literal notranslate"><span class="pre">test_sequence</span></code><a class="headerlink" href="#override-test-sequence" title="Permalink to this headline">¶</a></h4>
+<section id="override-test-sequence">
+<span id="id7"></span><h4>Override <code class="docutils literal notranslate"><span class="pre">test_sequence</span></code><a class="headerlink" href="#override-test-sequence" title="Permalink to this heading">¶</a></h4>
 <p>The <a class="reference internal" href="#memory-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a> can be overwritten for each channel of the  multi-channel memory CU or for each memory tag targeted by the single-channel memory CUs.</p>
 <blockquote>
 <div><ul class="simple">
@@ -1859,10 +1855,10 @@ Range depends on <a class="reference internal" href="#memory-parameter-test-sequ
 </pre></div>
 </div>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="check-bw">
-<span id="memory-parameter-check-bw"></span><h3><a class="toc-backref" href="#id66"><code class="docutils literal notranslate"><span class="pre">check_bw</span></code></a><a class="headerlink" href="#check-bw" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="check-bw">
+<span id="memory-parameter-check-bw"></span><h3><a class="toc-backref" href="#id66" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">check_bw</span></code></a><a class="headerlink" href="#check-bw" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
@@ -1884,9 +1880,9 @@ When set to <code class="docutils literal notranslate"><span class="pre">true</s
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="hi-thresh-alt-wr-bw-hi-thresh-alt-rd-bw-hi-thresh-only-wr-bw-hi-thresh-only-rd-bw-hi-thresh-simul-wr-bw-hi-thresh-simul-rd-bw">
-<span id="memory-parameter-hi-thresh-simul-rd-bw"></span><span id="memory-parameter-hi-thresh-simul-wr-bw"></span><span id="memory-parameter-hi-thresh-only-rd-bw"></span><span id="memory-parameter-hi-thresh-only-wr-bw"></span><span id="memory-parameter-hi-thresh-alt-rd-bw"></span><span id="memory-parameter-hi-thresh-alt-wr-bw"></span><span id="memory-parameter-hi-thresh-alt-only-simul-wr-rd-bw"></span><h3><a class="toc-backref" href="#id67"><code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_rd_bw</span></code></a><a class="headerlink" href="#hi-thresh-alt-wr-bw-hi-thresh-alt-rd-bw-hi-thresh-only-wr-bw-hi-thresh-only-rd-bw-hi-thresh-simul-wr-bw-hi-thresh-simul-rd-bw" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="hi-thresh-alt-wr-bw-hi-thresh-alt-rd-bw-hi-thresh-only-wr-bw-hi-thresh-only-rd-bw-hi-thresh-simul-wr-bw-hi-thresh-simul-rd-bw">
+<span id="memory-parameter-hi-thresh-simul-rd-bw"></span><span id="memory-parameter-hi-thresh-simul-wr-bw"></span><span id="memory-parameter-hi-thresh-only-rd-bw"></span><span id="memory-parameter-hi-thresh-only-wr-bw"></span><span id="memory-parameter-hi-thresh-alt-rd-bw"></span><span id="memory-parameter-hi-thresh-alt-wr-bw"></span><span id="memory-parameter-hi-thresh-alt-only-simul-wr-rd-bw"></span><h3><a class="toc-backref" href="#id67" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_rd_bw</span></code></a><a class="headerlink" href="#hi-thresh-alt-wr-bw-hi-thresh-alt-rd-bw-hi-thresh-only-wr-bw-hi-thresh-only-rd-bw-hi-thresh-simul-wr-bw-hi-thresh-simul-rd-bw" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type   : integer;
 Range  : [1, 2<sup>32</sup>-1];
@@ -1896,11 +1892,6 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 <p>The following table gives the write and read bandwidth high thresholds based on <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>:</p>
 <table class="docutils align-default" id="id38">
 <caption><span class="caption-text">Bandwidth high thresholds</span><a class="headerlink" href="#id38" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 36%" />
-<col style="width: 36%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test mode</p></th>
 <th class="head"><p>Write BW threshold</p></th>
@@ -1927,9 +1918,9 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 </tbody>
 </table>
 <hr class="docutils" />
-</div>
-<div class="section" id="lo-thresh-alt-wr-bw-lo-thresh-alt-rd-bw-lo-thresh-only-wr-bw-lo-thresh-only-rd-bw-lo-thresh-simul-wr-bw-lo-thresh-simul-rd-bw">
-<span id="memory-parameter-lo-thresh-simul-rd-bw"></span><span id="memory-parameter-lo-thresh-simul-wr-bw"></span><span id="memory-parameter-lo-thresh-only-rd-bw"></span><span id="memory-parameter-lo-thresh-only-wr-bw"></span><span id="memory-parameter-lo-thresh-alt-rd-bw"></span><span id="memory-parameter-lo-thresh-alt-wr-bw"></span><span id="memory-parameter-lo-thresh-alt-only-simul-wr-rd-bw"></span><h3><a class="toc-backref" href="#id68"><code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_rd_bw</span></code></a><a class="headerlink" href="#lo-thresh-alt-wr-bw-lo-thresh-alt-rd-bw-lo-thresh-only-wr-bw-lo-thresh-only-rd-bw-lo-thresh-simul-wr-bw-lo-thresh-simul-rd-bw" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="lo-thresh-alt-wr-bw-lo-thresh-alt-rd-bw-lo-thresh-only-wr-bw-lo-thresh-only-rd-bw-lo-thresh-simul-wr-bw-lo-thresh-simul-rd-bw">
+<span id="memory-parameter-lo-thresh-simul-rd-bw"></span><span id="memory-parameter-lo-thresh-simul-wr-bw"></span><span id="memory-parameter-lo-thresh-only-rd-bw"></span><span id="memory-parameter-lo-thresh-only-wr-bw"></span><span id="memory-parameter-lo-thresh-alt-rd-bw"></span><span id="memory-parameter-lo-thresh-alt-wr-bw"></span><span id="memory-parameter-lo-thresh-alt-only-simul-wr-rd-bw"></span><h3><a class="toc-backref" href="#id68" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_rd_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_wr_bw</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_rd_bw</span></code></a><a class="headerlink" href="#lo-thresh-alt-wr-bw-lo-thresh-alt-rd-bw-lo-thresh-only-wr-bw-lo-thresh-only-rd-bw-lo-thresh-simul-wr-bw-lo-thresh-simul-rd-bw" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type   : integer;
 Range  : [1, 2<sup>32</sup>-1];
@@ -1939,11 +1930,6 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 <p>Low threshold must be lower than high threshold. The following table gives the write and read bandwidth low thresholds based on <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>:</p>
 <table class="docutils align-default" id="id39">
 <caption><span class="caption-text">Bandwidth low thresholds</span><a class="headerlink" href="#id39" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 36%" />
-<col style="width: 36%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test mode</p></th>
 <th class="head"><p>Write BW threshold</p></th>
@@ -1970,9 +1956,9 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 </tbody>
 </table>
 <hr class="docutils" />
-</div>
-<div class="section" id="check-latency">
-<span id="memory-parameter-check-latency"></span><h3><a class="toc-backref" href="#id69"><code class="docutils literal notranslate"><span class="pre">check_latency</span></code></a><a class="headerlink" href="#check-latency" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="check-latency">
+<span id="memory-parameter-check-latency"></span><h3><a class="toc-backref" href="#id69" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">check_latency</span></code></a><a class="headerlink" href="#check-latency" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
@@ -1994,9 +1980,9 @@ When set to <code class="docutils literal notranslate"><span class="pre">true</s
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="hi-thresh-alt-wr-lat-hi-thresh-alt-rd-lat-hi-thresh-only-wr-lat-hi-thresh-only-rd-lat-hi-thresh-simul-wr-lat-hi-thresh-simul-rd-lat">
-<span id="memory-parameter-hi-thresh-simul-rd-lat"></span><span id="memory-parameter-hi-thresh-simul-wr-lat"></span><span id="memory-parameter-hi-thresh-only-rd-lat"></span><span id="memory-parameter-hi-thresh-only-wr-lat"></span><span id="memory-parameter-hi-thresh-alt-rd-lat"></span><span id="memory-parameter-hi-thresh-alt-wr-lat"></span><span id="memory-parameter-hi-thresh-alt-only-simul-wr-rd-lat"></span><h3><a class="toc-backref" href="#id70"><code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_rd_lat</span></code></a><a class="headerlink" href="#hi-thresh-alt-wr-lat-hi-thresh-alt-rd-lat-hi-thresh-only-wr-lat-hi-thresh-only-rd-lat-hi-thresh-simul-wr-lat-hi-thresh-simul-rd-lat" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="hi-thresh-alt-wr-lat-hi-thresh-alt-rd-lat-hi-thresh-only-wr-lat-hi-thresh-only-rd-lat-hi-thresh-simul-wr-lat-hi-thresh-simul-rd-lat">
+<span id="memory-parameter-hi-thresh-simul-rd-lat"></span><span id="memory-parameter-hi-thresh-simul-wr-lat"></span><span id="memory-parameter-hi-thresh-only-rd-lat"></span><span id="memory-parameter-hi-thresh-only-wr-lat"></span><span id="memory-parameter-hi-thresh-alt-rd-lat"></span><span id="memory-parameter-hi-thresh-alt-wr-lat"></span><span id="memory-parameter-hi-thresh-alt-only-simul-wr-rd-lat"></span><h3><a class="toc-backref" href="#id70" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_alt_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_only_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">hi_thresh_simul_rd_lat</span></code></a><a class="headerlink" href="#hi-thresh-alt-wr-lat-hi-thresh-alt-rd-lat-hi-thresh-only-wr-lat-hi-thresh-only-rd-lat-hi-thresh-simul-wr-lat-hi-thresh-simul-rd-lat" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type   : integer;
 Range  : [1, 2<sup>32</sup>-1];
@@ -2006,11 +1992,6 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 <p>The following table gives the write and read latency high thresholds based on <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>:</p>
 <table class="docutils align-default" id="id40">
 <caption><span class="caption-text">Latency high thresholds</span><a class="headerlink" href="#id40" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 37%" />
-<col style="width: 37%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test mode</p></th>
 <th class="head"><p>Write latency threshold</p></th>
@@ -2037,9 +2018,9 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 </tbody>
 </table>
 <hr class="docutils" />
-</div>
-<div class="section" id="lo-thresh-alt-wr-lat-lo-thresh-alt-rd-lat-lo-thresh-only-wr-lat-lo-thresh-only-rd-lat-lo-thresh-simul-wr-lat-lo-thresh-simul-rd-lat">
-<span id="memory-parameter-lo-thresh-simul-rd-lat"></span><span id="memory-parameter-lo-thresh-simul-wr-lat"></span><span id="memory-parameter-lo-thresh-only-rd-lat"></span><span id="memory-parameter-lo-thresh-only-wr-lat"></span><span id="memory-parameter-lo-thresh-alt-rd-lat"></span><span id="memory-parameter-lo-thresh-alt-wr-lat"></span><span id="memory-parameter-lo-thresh-alt-only-simul-wr-rd-lat"></span><h3><a class="toc-backref" href="#id71"><code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_rd_lat</span></code></a><a class="headerlink" href="#lo-thresh-alt-wr-lat-lo-thresh-alt-rd-lat-lo-thresh-only-wr-lat-lo-thresh-only-rd-lat-lo-thresh-simul-wr-lat-lo-thresh-simul-rd-lat" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="lo-thresh-alt-wr-lat-lo-thresh-alt-rd-lat-lo-thresh-only-wr-lat-lo-thresh-only-rd-lat-lo-thresh-simul-wr-lat-lo-thresh-simul-rd-lat">
+<span id="memory-parameter-lo-thresh-simul-rd-lat"></span><span id="memory-parameter-lo-thresh-simul-wr-lat"></span><span id="memory-parameter-lo-thresh-only-rd-lat"></span><span id="memory-parameter-lo-thresh-only-wr-lat"></span><span id="memory-parameter-lo-thresh-alt-rd-lat"></span><span id="memory-parameter-lo-thresh-alt-wr-lat"></span><span id="memory-parameter-lo-thresh-alt-only-simul-wr-rd-lat"></span><h3><a class="toc-backref" href="#id71" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_alt_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_only_rd_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_wr_lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lo_thresh_simul_rd_lat</span></code></a><a class="headerlink" href="#lo-thresh-alt-wr-lat-lo-thresh-alt-rd-lat-lo-thresh-only-wr-lat-lo-thresh-only-rd-lat-lo-thresh-simul-wr-lat-lo-thresh-simul-rd-lat" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type   : integer;
 Range  : [1, 2<sup>32</sup>-1];
@@ -2050,11 +2031,6 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 <p>The following table gives the write and read latency high thresholds based on <a class="reference internal" href="#memory-parameter-test-sequence-mode"><span class="std std-ref">mode</span></a>:</p>
 <table class="docutils align-default" id="id41">
 <caption><span class="caption-text">Latency low thresholds</span><a class="headerlink" href="#id41" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 27%" />
-<col style="width: 37%" />
-<col style="width: 37%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Test mode</p></th>
 <th class="head"><p>Write latency threshold</p></th>
@@ -2081,9 +2057,9 @@ Default: specified in the <a class="reference internal" href="../platform-defini
 </tbody>
 </table>
 <hr class="docutils" />
-</div>
-<div class="section" id="disable-prewrite">
-<span id="memory-parameter-disable-prewrite"></span><h3><a class="toc-backref" href="#id72"><code class="docutils literal notranslate"><span class="pre">disable_prewrite</span></code></a><a class="headerlink" href="#disable-prewrite" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="disable-prewrite">
+<span id="memory-parameter-disable-prewrite"></span><h3><a class="toc-backref" href="#id72" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">disable_prewrite</span></code></a><a class="headerlink" href="#disable-prewrite" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
@@ -2096,18 +2072,18 @@ The presence of valid PRBS data in the memory can be managed manually within you
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="disable-memory">
-<span id="memory-parameter-disable-memory"></span><h3><a class="toc-backref" href="#id73"><code class="docutils literal notranslate"><span class="pre">disable_memory</span></code></a><a class="headerlink" href="#disable-memory" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="disable-memory">
+<span id="memory-parameter-disable-memory"></span><h3><a class="toc-backref" href="#id73" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">disable_memory</span></code></a><a class="headerlink" href="#disable-memory" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
 Default        : <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
 <p>By default, for all memory CUs, all channels are enabled and the associated memory is checked.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="single-axi-thread">
-<span id="memory-parameter-single-axi-thread"></span><h3><a class="toc-backref" href="#id74"><code class="docutils literal notranslate"><span class="pre">single_axi_thread</span></code></a><a class="headerlink" href="#single-axi-thread" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="single-axi-thread">
+<span id="memory-parameter-single-axi-thread"></span><h3><a class="toc-backref" href="#id74" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">single_axi_thread</span></code></a><a class="headerlink" href="#single-axi-thread" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
@@ -2119,11 +2095,11 @@ Default        : <code class="docutils literal notranslate"><span class="pre">fa
 </ul>
 </div></blockquote>
 <p>This parameter is supported only if the memory type supports multiple AXI ID threads.</p>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="output-files">
-<h2><a class="toc-backref" href="#id75">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
+<section id="output-files">
+<h2><a class="toc-backref" href="#id75" role="doc-backlink">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this heading">¶</a></h2>
 <p>All memory measurements are stored in output CSV files which are generated in xbtest logging directory.
 The values are stored in CSV type format with one column for each information type.</p>
 <div class="admonition important">
@@ -2133,11 +2109,6 @@ The values are stored in CSV type format with one column for each information ty
 <p>In the <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case, different CSV files are used to store all <a class="reference internal" href="#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case results:</p>
 <table class="docutils align-default" id="id42">
 <caption><span class="caption-text">memory test case output files</span><a class="headerlink" href="#id42" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 17%" />
-<col style="width: 47%" />
-<col style="width: 36%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Output file</p></th>
 <th class="head"><p>Description</p></th>
@@ -2229,8 +2200,8 @@ where <code class="docutils literal notranslate"><span class="pre">&lt;type&gt;<
 </li>
 </ul>
 </div></blockquote>
-<div class="section" id="results-csv-output-files">
-<span id="id8"></span><h3><a class="toc-backref" href="#id76">Results CSV output files</a><a class="headerlink" href="#results-csv-output-files" title="Permalink to this headline">¶</a></h3>
+<section id="results-csv-output-files">
+<span id="id8"></span><h3><a class="toc-backref" href="#id76" role="doc-backlink">Results CSV output files</a><a class="headerlink" href="#results-csv-output-files" title="Permalink to this heading">¶</a></h3>
 <p>For each test of the <a class="reference internal" href="#memory-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a>, a new row containing the test configuration and results computed is present in this file.
 All columns present in the file are defined as:</p>
 <blockquote>
@@ -2289,9 +2260,9 @@ These columns are set to <code class="docutils literal notranslate"><span class=
 </ul>
 </div></blockquote>
 </div>
-</div>
-<div class="section" id="detail-csv-output-files">
-<span id="id9"></span><h3><a class="toc-backref" href="#id77">Detail CSV output files</a><a class="headerlink" href="#detail-csv-output-files" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="detail-csv-output-files">
+<span id="id9"></span><h3><a class="toc-backref" href="#id77" role="doc-backlink">Detail CSV output files</a><a class="headerlink" href="#detail-csv-output-files" title="Permalink to this heading">¶</a></h3>
 <p>This file contains all intermediate bandwidths computed every second, based on information retrieved from the memory CU.
 There is one line of result for every second of each test of the <a class="reference internal" href="#memory-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a>.
 All columns present in the file are defined as:</p>
@@ -2382,9 +2353,9 @@ These columns are set to <code class="docutils literal notranslate"><span class=
 </ul>
 </div></blockquote>
 </div>
-</div>
-<div class="section" id="multi-channel-summary-csv-output-files">
-<span id="mc-summary-csv-output-files"></span><h3><a class="toc-backref" href="#id78">Multi-channel Summary CSV output files</a><a class="headerlink" href="#multi-channel-summary-csv-output-files" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="multi-channel-summary-csv-output-files">
+<span id="mc-summary-csv-output-files"></span><h3><a class="toc-backref" href="#id78" role="doc-backlink">Multi-channel Summary CSV output files</a><a class="headerlink" href="#multi-channel-summary-csv-output-files" title="Permalink to this heading">¶</a></h3>
 <p>For each test of the <a class="reference internal" href="#memory-parameter-test-sequence"><span class="std std-ref">test_sequence</span></a>, a new row containing the test configuration and results computed is present in this file.
 All columns present in the file are defined as:</p>
 <blockquote>
@@ -2445,9 +2416,9 @@ These columns for write and for read results are set to <code class="docutils li
 </ul>
 </div></blockquote>
 </div>
-</div>
-<div class="section" id="power-csv-output-files">
-<span id="id10"></span><h3><a class="toc-backref" href="#id79">Power CSV output files</a><a class="headerlink" href="#power-csv-output-files" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="power-csv-output-files">
+<span id="id10"></span><h3><a class="toc-backref" href="#id79" role="doc-backlink">Power CSV output files</a><a class="headerlink" href="#power-csv-output-files" title="Permalink to this heading">¶</a></h3>
 <p>In this file, the test configuration and all power measurements are stored.
 A new line is written in this file every time the memory CU status are available.
 At a minimum, the following values are recorded:</p>
@@ -2467,9 +2438,9 @@ Index of first test is 1.</p></li>
 </ul>
 </div></blockquote>
 <p>See <a class="reference internal" href="../tasks/device-management-task-description.html#sensor-source-definition"><span class="std std-ref">Sensor source definition</span></a> for more information on the sensor sources monitored by xbtest.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
@@ -2500,7 +2471,7 @@ Index of first test is 1.</p></li>
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

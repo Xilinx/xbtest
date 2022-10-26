@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../test-cases/gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -827,9 +830,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="device-management-task-description">
-<span id="id1"></span><h1>Device management task description<a class="headerlink" href="#device-management-task-description" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="table-of-contents">
+  <section id="device-management-task-description">
+<span id="id1"></span><h1>Device management task description<a class="headerlink" href="#device-management-task-description" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="table-of-contents">
 <p class="topic-title">Table of contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#sensor-source-definition" id="id6">Sensor source definition</a></p></li>
@@ -843,7 +846,7 @@
 </li>
 <li><p><a class="reference internal" href="#output-files" id="id12">Output files</a></p></li>
 </ul>
-</div>
+</nav>
 <p>The goal of the <a class="reference internal" href="#device-management-task-description"><span class="std std-ref">Device Management</span></a> task is to:</p>
 <blockquote>
 <div><ul>
@@ -879,18 +882,12 @@ Xbtest SW resets the HW watchdog on a regular basis (half the HW duration).</p><
 So, there is no need to include it inside your test JSON file unless you want to modify the default behaviour.
 For more information, see <a class="reference internal" href="#device-management-test-json-members"><span class="std std-ref">Device management test JSON members</span></a>.</p>
 </div>
-<div class="section" id="sensor-source-definition">
-<span id="id2"></span><h2><a class="toc-backref" href="#id6">Sensor source definition</a><a class="headerlink" href="#sensor-source-definition" title="Permalink to this headline">¶</a></h2>
+<section id="sensor-source-definition">
+<span id="id2"></span><h2><a class="toc-backref" href="#id6" role="doc-backlink">Sensor source definition</a><a class="headerlink" href="#sensor-source-definition" title="Permalink to this heading">¶</a></h2>
 <p>A sensor source is defined by a type and an ID.</p>
 <p>The following table presents the different types of sensor that can monitored by xbtest and for each type, the ID of the sources monitored by default:</p>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Sensor Source Definition</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 8%" />
-<col style="width: 40%" />
-<col style="width: 10%" />
-<col style="width: 42%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Sensor type</p></th>
 <th class="head"><p>Description</p></th>
@@ -946,9 +943,9 @@ Other sources can be monitored when specified using <a class="reference internal
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ xbtest -d &lt;BDF&gt; -g device_mgmt
 </pre></div>
 </div>
-</div>
-<div class="section" id="device-management-test-json-members">
-<span id="id3"></span><h2><a class="toc-backref" href="#id7">Device management test JSON members</a><a class="headerlink" href="#device-management-test-json-members" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="device-management-test-json-members">
+<span id="id3"></span><h2><a class="toc-backref" href="#id7" role="doc-backlink">Device management test JSON members</a><a class="headerlink" href="#device-management-test-json-members" title="Permalink to this heading">¶</a></h2>
 <p>The following is an example of a device management task parameter definition:</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;tasks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="nt">&quot;device_mgmt&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -976,20 +973,12 @@ Other sources can be monitored when specified using <a class="reference internal
 </pre></div>
 </div>
 <hr class="docutils" />
-<div class="section" id="definition">
-<h3><a class="toc-backref" href="#id8">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<section id="definition">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Definition</a><a class="headerlink" href="#definition" title="Permalink to this heading">¶</a></h3>
 <p>The following table shows all members available for this task.
 More details are provided for each member in the subsequent sections.</p>
 <table class="docutils align-default" id="id5">
 <caption><span class="caption-text">Device management task members</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 19%" />
-<col style="width: 22%" />
-<col style="width: 10%" />
-<col style="width: 5%" />
-<col style="width: 26%" />
-<col style="width: 17%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head" colspan="3"><p>Member</p></th>
 <th class="head"><p>JSON format</p></th>
@@ -1153,98 +1142,98 @@ provided</p></li>
 </tbody>
 </table>
 <hr class="docutils" />
-</div>
-<div class="section" id="sensor">
-<span id="device-management-parameter-sensor"></span><h3><a class="toc-backref" href="#id9"><code class="docutils literal notranslate"><span class="pre">sensor</span></code></a><a class="headerlink" href="#sensor" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="sensor">
+<span id="device-management-parameter-sensor"></span><h3><a class="toc-backref" href="#id9" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">sensor</span></code></a><a class="headerlink" href="#sensor" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type: List of objects.</p>
 <p>Define list of sensors definitions (JSON objects). Override existing sensor definition or define new sensor sources.</p>
 <hr class="docutils" />
-<div class="section" id="type">
-<span id="device-management-parameter-sensor-type"></span><h4><code class="docutils literal notranslate"><span class="pre">type</span></code><a class="headerlink" href="#type" title="Permalink to this headline">¶</a></h4>
+<section id="type">
+<span id="device-management-parameter-sensor-type"></span><h4><code class="docutils literal notranslate"><span class="pre">type</span></code><a class="headerlink" href="#type" title="Permalink to this heading">¶</a></h4>
 <p>Mandatory if <a class="reference internal" href="#device-management-parameter-sensor"><span class="std std-ref">sensor</span></a> was provided;
 Type           : string;
 Possible values: <code class="docutils literal notranslate"><span class="pre">mechanical</span></code>, <code class="docutils literal notranslate"><span class="pre">thermal</span></code> or <code class="docutils literal notranslate"><span class="pre">electrical</span></code>;</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="device-management-parameter-sensor-id">
-<span id="id"></span><h4><code class="docutils literal notranslate"><span class="pre">id</span></code><a class="headerlink" href="#device-management-parameter-sensor-id" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="device-management-parameter-sensor-id">
+<span id="id"></span><h4><code class="docutils literal notranslate"><span class="pre">id</span></code><a class="headerlink" href="#device-management-parameter-sensor-id" title="Permalink to this heading">¶</a></h4>
 <p>Mandatory if <a class="reference internal" href="#device-management-parameter-sensor"><span class="std std-ref">sensor</span></a> was provided;
 Type           : string;
 Possible values: depend on targeted platform;</p>
 <p>ID of the sensor source to monitor. See <a class="reference internal" href="#sensor-source-definition"><span class="std std-ref">Sensor source definition</span></a> for more information on the supported sensor sources.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="warning-threshold">
-<span id="device-management-parameter-sensor-warning-threshold"></span><h4><code class="docutils literal notranslate"><span class="pre">warning_threshold</span></code><a class="headerlink" href="#warning-threshold" title="Permalink to this headline">¶</a></h4>
+</section>
+<section id="warning-threshold">
+<span id="device-management-parameter-sensor-warning-threshold"></span><h4><code class="docutils literal notranslate"><span class="pre">warning_threshold</span></code><a class="headerlink" href="#warning-threshold" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type: Object.</p>
 <p>Warning limits: if measurement is out of range, a critical warning is displayed (once), the <a class="reference internal" href="../test-cases/test-cases-overview.html#test-cases-overview"><span class="std std-ref">test cases</span></a> are not stopped and global result is pass.</p>
-<div class="section" id="warning-threshold-min">
-<span id="device-management-parameter-sensor-warning-threshold-min"></span><h5><code class="docutils literal notranslate"><span class="pre">warning_threshold.min</span></code><a class="headerlink" href="#warning-threshold-min" title="Permalink to this headline">¶</a></h5>
+<section id="warning-threshold-min">
+<span id="device-management-parameter-sensor-warning-threshold-min"></span><h5><code class="docutils literal notranslate"><span class="pre">warning_threshold.min</span></code><a class="headerlink" href="#warning-threshold-min" title="Permalink to this heading">¶</a></h5>
 <p>Optional;
 Type           : double;
 Possible values: any double value provided as <a class="reference internal" href="#device-management-parameter-sensor-warning-threshold-max"><span class="std std-ref">max</span></a> &gt; <a class="reference internal" href="#device-management-parameter-sensor-warning-threshold-min"><span class="std std-ref">min</span></a>.</p>
 <p>Minimum warning limit.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="warning-threshold-max">
-<span id="device-management-parameter-sensor-warning-threshold-max"></span><h5><code class="docutils literal notranslate"><span class="pre">warning_threshold.max</span></code><a class="headerlink" href="#warning-threshold-max" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="warning-threshold-max">
+<span id="device-management-parameter-sensor-warning-threshold-max"></span><h5><code class="docutils literal notranslate"><span class="pre">warning_threshold.max</span></code><a class="headerlink" href="#warning-threshold-max" title="Permalink to this heading">¶</a></h5>
 <p>Optional;
 Type           : double;
 Possible values: any double value provided as <a class="reference internal" href="#device-management-parameter-sensor-warning-threshold-max"><span class="std std-ref">max</span></a> &gt; <a class="reference internal" href="#device-management-parameter-sensor-warning-threshold-min"><span class="std std-ref">min</span></a>.</p>
 <p>Maximum warning limit.</p>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="error-threshold">
-<span id="device-management-parameter-sensor-error-threshold"></span><h4><code class="docutils literal notranslate"><span class="pre">error_threshold</span></code><a class="headerlink" href="#error-threshold" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="error-threshold">
+<span id="device-management-parameter-sensor-error-threshold"></span><h4><code class="docutils literal notranslate"><span class="pre">error_threshold</span></code><a class="headerlink" href="#error-threshold" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type: Object.</p>
 <p>Error limits: if measurement is out of range, an error is displayed (once), the <a class="reference internal" href="../test-cases/test-cases-overview.html#test-cases-overview"><span class="std std-ref">test cases</span></a> are not stopped and global result is failure.</p>
 <hr class="docutils" />
-<div class="section" id="error-threshold-min">
-<span id="device-management-parameter-sensor-error-threshold-min"></span><h5><code class="docutils literal notranslate"><span class="pre">error_threshold.min</span></code><a class="headerlink" href="#error-threshold-min" title="Permalink to this headline">¶</a></h5>
+<section id="error-threshold-min">
+<span id="device-management-parameter-sensor-error-threshold-min"></span><h5><code class="docutils literal notranslate"><span class="pre">error_threshold.min</span></code><a class="headerlink" href="#error-threshold-min" title="Permalink to this heading">¶</a></h5>
 <p>Optional;
 Type           : double;
 Possible values: any double value provided as <a class="reference internal" href="#device-management-parameter-sensor-error-threshold-max"><span class="std std-ref">max</span></a> &gt; <a class="reference internal" href="#device-management-parameter-sensor-error-threshold-min"><span class="std std-ref">min</span></a>.</p>
 <p>Minimum error limit.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="error-threshold-max">
-<span id="device-management-parameter-sensor-error-threshold-max"></span><h5><code class="docutils literal notranslate"><span class="pre">error_threshold.max</span></code><a class="headerlink" href="#error-threshold-max" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="error-threshold-max">
+<span id="device-management-parameter-sensor-error-threshold-max"></span><h5><code class="docutils literal notranslate"><span class="pre">error_threshold.max</span></code><a class="headerlink" href="#error-threshold-max" title="Permalink to this heading">¶</a></h5>
 <p>Optional;
 Type           : double;
 Possible values: any double value provided as <a class="reference internal" href="#device-management-parameter-sensor-error-threshold-max"><span class="std std-ref">max</span></a> &gt; <a class="reference internal" href="#device-management-parameter-sensor-error-threshold-min"><span class="std std-ref">min</span></a>.</p>
 <p>Maximum error limit.</p>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="abort-threshold">
-<span id="device-management-parameter-sensor-abort-threshold"></span><h4><code class="docutils literal notranslate"><span class="pre">abort_threshold</span></code><a class="headerlink" href="#abort-threshold" title="Permalink to this headline">¶</a></h4>
+</section>
+</section>
+<section id="abort-threshold">
+<span id="device-management-parameter-sensor-abort-threshold"></span><h4><code class="docutils literal notranslate"><span class="pre">abort_threshold</span></code><a class="headerlink" href="#abort-threshold" title="Permalink to this heading">¶</a></h4>
 <p>Optional;
 Type: Object.</p>
 <p>Abort limits: if measurement is out of range, a failure is displayed (once), all <a class="reference internal" href="../test-cases/test-cases-overview.html#test-cases-overview"><span class="std std-ref">test cases</span></a> are stopped and global result is failure.</p>
-<div class="section" id="abort-threshold-min">
-<span id="device-management-parameter-sensor-abort-threshold-min"></span><h5><code class="docutils literal notranslate"><span class="pre">abort_threshold.min</span></code><a class="headerlink" href="#abort-threshold-min" title="Permalink to this headline">¶</a></h5>
+<section id="abort-threshold-min">
+<span id="device-management-parameter-sensor-abort-threshold-min"></span><h5><code class="docutils literal notranslate"><span class="pre">abort_threshold.min</span></code><a class="headerlink" href="#abort-threshold-min" title="Permalink to this heading">¶</a></h5>
 <p>Optional;
 Type           : double;
 Possible values: any double value provided as <a class="reference internal" href="#device-management-parameter-sensor-abort-threshold-max"><span class="std std-ref">max</span></a> &gt; <a class="reference internal" href="#device-management-parameter-sensor-abort-threshold-min"><span class="std std-ref">min</span></a>.</p>
 <p>Minimum abort limit.</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="abort-threshold-max">
-<span id="device-management-parameter-sensor-abort-threshold-max"></span><h5><code class="docutils literal notranslate"><span class="pre">abort_threshold.max</span></code><a class="headerlink" href="#abort-threshold-max" title="Permalink to this headline">¶</a></h5>
+</section>
+<section id="abort-threshold-max">
+<span id="device-management-parameter-sensor-abort-threshold-max"></span><h5><code class="docutils literal notranslate"><span class="pre">abort_threshold.max</span></code><a class="headerlink" href="#abort-threshold-max" title="Permalink to this heading">¶</a></h5>
 <p>Optional;
 Type           : double;
 Possible values: any double value provided as <a class="reference internal" href="#device-management-parameter-sensor-abort-threshold-max"><span class="std std-ref">max</span></a> &gt; <a class="reference internal" href="#device-management-parameter-sensor-abort-threshold-min"><span class="std std-ref">min</span></a>.</p>
 <p>Maximum abort limit.</p>
 <hr class="docutils" />
-</div>
-</div>
-</div>
-<div class="section" id="use-output-file">
-<span id="device-management-parameter-use-output-file"></span><h3><a class="toc-backref" href="#id10"><code class="docutils literal notranslate"><span class="pre">use_output_file</span></code></a><a class="headerlink" href="#use-output-file" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+</section>
+<section id="use-output-file">
+<span id="device-management-parameter-use-output-file"></span><h3><a class="toc-backref" href="#id10" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">use_output_file</span></code></a><a class="headerlink" href="#use-output-file" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>.</p>
@@ -1258,18 +1247,18 @@ Possible values: <code class="docutils literal notranslate"><span class="pre">tr
 </div></blockquote>
 <p>The <a class="reference internal" href="#device-management-task-description"><span class="std std-ref">Device Management</span></a> can store all measurements in an output CSV file (see <a class="reference internal" href="#device-management-output-file"><span class="std std-ref">Output files</span></a>).</p>
 <hr class="docutils" />
-</div>
-<div class="section" id="watchdog-duration">
-<span id="device-management-parameter-watchdog"></span><h3><a class="toc-backref" href="#id11"><code class="docutils literal notranslate"><span class="pre">watchdog_duration</span></code></a><a class="headerlink" href="#watchdog-duration" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="watchdog-duration">
+<span id="device-management-parameter-watchdog"></span><h3><a class="toc-backref" href="#id11" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">watchdog_duration</span></code></a><a class="headerlink" href="#watchdog-duration" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : integer;
 Possible values: <code class="docutils literal notranslate"><span class="pre">0</span></code> (disable),  <code class="docutils literal notranslate"><span class="pre">16</span></code> (default), <code class="docutils literal notranslate"><span class="pre">32</span></code>, <code class="docutils literal notranslate"><span class="pre">64</span></code> and <code class="docutils literal notranslate"><span class="pre">128</span></code>.</p>
 <p>Controls the HW watchdog duration.</p>
 <hr class="docutils" />
-</div>
-</div>
-<div class="section" id="output-files">
-<span id="device-management-output-file"></span><h2><a class="toc-backref" href="#id12">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="output-files">
+<span id="device-management-output-file"></span><h2><a class="toc-backref" href="#id12" role="doc-backlink">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this heading">¶</a></h2>
 <p>All sensor measurements are stored in output CSV file named <code class="docutils literal notranslate"><span class="pre">sensor.csv</span></code> which is generated in xbtest logging directory.
 The values are stored in CSV type format with one column for each information type. By default, this file is not generated.</p>
 <div class="admonition important">
@@ -1291,8 +1280,8 @@ This value is rounded, for example a value of 0 means that the XRT Device APIs c
 </ul>
 </div></blockquote>
 <p>See <a class="reference internal" href="#sensor-source-definition"><span class="std std-ref">Sensor source definition</span></a> for more information on the sensor sources monitored by xbtest.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -1323,7 +1312,7 @@ This value is rounded, for example a value of 0 means that the XRT Device APIs c
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>

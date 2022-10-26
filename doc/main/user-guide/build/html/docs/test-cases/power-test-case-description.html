@@ -6,7 +6,8 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 	<head>
 		<meta charset="utf-8">
-		
+		<meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 		<link rel="stylesheet" href="https://static.cloud.coveo.com/searchui/v2.4382/css/CoveoFullSearch.css"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -63,7 +64,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -699,7 +702,7 @@
 <li class="toctree-l3"><a class="reference internal" href="gt-prbs-test-case-description.html#output-file">Output file</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPNK</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gt-lpbk-test-case-description.html">GT LPBK</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-test-set-up">GT test set up</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#gt-settings">GT settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gt-lpbk-test-case-description.html#main-test-steps">Main test steps</a><ul>
@@ -827,9 +830,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="power-test-case-description">
-<span id="id1"></span><h1>Power test case description<a class="headerlink" href="#power-test-case-description" title="Permalink to this headline">¶</a></h1>
-<div class="contents local topic" id="table-of-contents">
+  <section id="power-test-case-description">
+<span id="id1"></span><h1>Power test case description<a class="headerlink" href="#power-test-case-description" title="Permalink to this heading">¶</a></h1>
+<nav class="contents local" id="table-of-contents">
 <p class="topic-title">Table of contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#test-parameters" id="id6">Test parameters</a></p></li>
@@ -854,12 +857,12 @@
 </li>
 <li><p><a class="reference internal" href="#output-files" id="id20">Output files</a></p></li>
 </ul>
-</div>
+</nav>
 <p>The goal of this test case is to allow the control of the card power consumption.
 This is achieved by adjusting the <a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a> of the clock, which drives all flip-flops, DSPs, block RAMs, UltraRAMs and AIEs of the <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> present in the power CU.
 Sensor values (power, temperature, power rails current/voltage and fan speed) are read every second using <a class="reference external" href="https://xilinx.github.io/XRT/master/html/xrt_native.main.html#device-apis">Xilinx® Runtime (XRT) native library C++ device APIs</a>.</p>
-<div class="section" id="test-parameters">
-<h2><a class="toc-backref" href="#id6">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this headline">¶</a></h2>
+<section id="test-parameters">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Test parameters</a><a class="headerlink" href="#test-parameters" title="Permalink to this heading">¶</a></h2>
 <p>The mandatory test configuration parameters are listed below.
 For more information, see <a class="reference internal" href="#power-test-json-members"><span class="std std-ref">Power test JSON members</span></a>.</p>
 <blockquote>
@@ -868,9 +871,9 @@ For more information, see <a class="reference internal" href="#power-test-json-m
 <li><p><a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a>: The toggle rate, specified in %, driving the sites of the <a class="reference internal" href="../introduction/overview.html#xclbin"><span class="std std-ref">xclbin</span></a> present in the power CU.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="main-test-steps">
-<h2><a class="toc-backref" href="#id7">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="main-test-steps">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Main test steps</a><a class="headerlink" href="#main-test-steps" title="Permalink to this heading">¶</a></h2>
 <p>The measurement of the card rest power, which lasts a few seconds, is always performed when the <a class="reference internal" href="#power-test-case-description"><span class="std std-ref">Power</span></a> test case starts.
 For each test configuration, the following steps are repeated:</p>
 <blockquote>
@@ -894,9 +897,9 @@ You might damage your card and cause your server/workstation to reboot if you tr
 <p class="admonition-title">Important</p>
 <p>xbtest reports the entire power consumed by the card (for active card, fan speed is also reported).</p>
 </div>
-</div>
-<div class="section" id="power-and-temperature-limits">
-<h2><a class="toc-backref" href="#id8">Power and temperature limits</a><a class="headerlink" href="#power-and-temperature-limits" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="power-and-temperature-limits">
+<h2><a class="toc-backref" href="#id8" role="doc-backlink">Power and temperature limits</a><a class="headerlink" href="#power-and-temperature-limits" title="Permalink to this heading">¶</a></h2>
 <p>To limit potential damage to the <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html">Alveo™</a> card in cases of accidental misuse or demanding test environmental conditions, the following basic safety mechanisms are in place.</p>
 <blockquote>
 <div><ul class="simple">
@@ -906,9 +909,9 @@ You might damage your card and cause your server/workstation to reboot if you tr
 </div></blockquote>
 <p>Temperature and power limits are defined in the platform definition JSON.</p>
 <p>The list of sensors monitored is available in the <a class="reference internal" href="../tasks/device-management-task-description.html#device-management-task-description"><span class="std std-ref">Device management task description</span></a>.</p>
-</div>
-<div class="section" id="power-budget-and-calibration">
-<h2><a class="toc-backref" href="#id9">Power budget and calibration</a><a class="headerlink" href="#power-budget-and-calibration" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="power-budget-and-calibration">
+<h2><a class="toc-backref" href="#id9" role="doc-backlink">Power budget and calibration</a><a class="headerlink" href="#power-budget-and-calibration" title="Permalink to this heading">¶</a></h2>
 <p>To establish the relationship between <a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a> and power, a simple calibration method can be used.
 An example of calibration is starting from 0%, increasing the <a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a> by 5 %, and for each <a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a> step, letting the power and temperature stabilize for two minutes.
 There are numerous considerations to consider when creating this relationship.</p>
@@ -919,14 +922,14 @@ There are numerous considerations to consider when creating this relationship.</
 <li><p>Ensure that the environmental conditions (for example, temperature) used during calibration are similar to the conditions used in testing.</p></li>
 </ul>
 </div>
-<div class="section" id="toggle-rate-step-requirement">
-<span id="id2"></span><h3><a class="toc-backref" href="#id10">Toggle rate step requirement</a><a class="headerlink" href="#toggle-rate-step-requirement" title="Permalink to this headline">¶</a></h3>
+<section id="toggle-rate-step-requirement">
+<span id="id2"></span><h3><a class="toc-backref" href="#id10" role="doc-backlink">Toggle rate step requirement</a><a class="headerlink" href="#toggle-rate-step-requirement" title="Permalink to this heading">¶</a></h3>
 <p>By default, xbtest limits the toggle rate steps to 10 % per second as most of the power regulators (&amp; the FPGA) have a step load requirement.</p>
 <p>For example, if the <a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a> is initially set to 25 %, it will take 4 seconds to set a new target <a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a> of 65 % as the actual toggle rate will gradually increase every second: 35 %, 45 %, 55 % and finally 65 %.</p>
 <p>This ramp can be disabled using the parameter <a class="reference internal" href="#power-parameter-disable-toggle-ramp"><span class="std std-ref">disable_toggle_ramp</span></a>. When disabled, ensure that <a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a> never steps (down or up) by more than around 20 % per second.</p>
-</div>
-<div class="section" id="actual-power-available">
-<h3><a class="toc-backref" href="#id11">Actual power available</a><a class="headerlink" href="#actual-power-available" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="actual-power-available">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">Actual power available</a><a class="headerlink" href="#actual-power-available" title="Permalink to this heading">¶</a></h3>
 <p>The distribution of the power across the various regulators also limits which power is available for xbtest to control.
 For example, on an Alveo U50 card, although the power budget of the card is 75W, up to 10W are reserved for the HBM.
 This means that Power CU can only control up to 65W. It also means that the Memory CU must be in use to have a card power consumption higher than 65W.</p>
@@ -934,18 +937,18 @@ This means that Power CU can only control up to 65W. It also means that the Memo
 The actual power available would be impacted by the efficiency and current limitation of the various regulators.
 For information about various sensors and power rails limits, refer to the specific <a class="reference external" href="https://www.xilinx.com/products/boards-and-kits/alveo.html#cards">documentation for your card</a>.
 With the same example (U50 card), the actual power thresholds will be lower than 65W and 10W.</p>
-</div>
-<div class="section" id="components-present-on-the-card">
-<h3><a class="toc-backref" href="#id12">Components present on the card</a><a class="headerlink" href="#components-present-on-the-card" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="components-present-on-the-card">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">Components present on the card</a><a class="headerlink" href="#components-present-on-the-card" title="Permalink to this heading">¶</a></h3>
 <p>The card might be fitted with other ICs (such as co-processor, memories, and so forth) on which xbtest has no control.
 During calibration, ensure these components behave like similarly to normal test operations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>xbtest can only control power of memory directly connected to the FPGA.</p>
 </div>
-</div>
-<div class="section" id="tests-running">
-<h3><a class="toc-backref" href="#id13">Tests running</a><a class="headerlink" href="#tests-running" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="tests-running">
+<h3><a class="toc-backref" href="#id13" role="doc-backlink">Tests running</a><a class="headerlink" href="#tests-running" title="Permalink to this heading">¶</a></h3>
 <p>Other test cases, like memory (DDR or HBM) and GT MAC, have a significant impact on the power consumed.
 Make sure that the calibration is done while using these other feature as per nominal load.</p>
 <blockquote>
@@ -964,12 +967,12 @@ Make sure that the calibration is done while using these other feature as per no
 For example, power varies when the memory test changes from <code class="docutils literal notranslate"><span class="pre">only_rd</span></code> to <code class="docutils literal notranslate"><span class="pre">only_wr</span></code> mode.
 Power will decrease when a <a class="reference internal" href="memory-test-case-description.html#memory-test-case-description"><span class="std std-ref">Memory</span></a> test case ends.
 <code class="docutils literal notranslate"><span class="pre">simultaneous_wr_rd</span></code> mode is usually the memory test mode consuming the most power.</p>
-</div>
-</div>
-<div class="section" id="power-test-json-members">
-<span id="id3"></span><h2><a class="toc-backref" href="#id14">Power test JSON members</a><a class="headerlink" href="#power-test-json-members" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="example">
-<h3><a class="toc-backref" href="#id15">Example</a><a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="power-test-json-members">
+<span id="id3"></span><h2><a class="toc-backref" href="#id14" role="doc-backlink">Power test JSON members</a><a class="headerlink" href="#power-test-json-members" title="Permalink to this heading">¶</a></h2>
+<section id="example">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Example</a><a class="headerlink" href="#example" title="Permalink to this heading">¶</a></h3>
 <p>The following is an example of a <a class="reference internal" href="#power-test-case-description"><span class="std std-ref">Power</span></a> test case running for 60 seconds at a <a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a> of 15 %.</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;power&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="nt">&quot;global_config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -978,19 +981,14 @@ Power will decrease when a <a class="reference internal" href="memory-test-case-
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
-</div>
+</section>
 <hr class="docutils" />
-<div class="section" id="definition">
-<h3><a class="toc-backref" href="#id16">Definition</a><a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h3>
+<section id="definition">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Definition</a><a class="headerlink" href="#definition" title="Permalink to this heading">¶</a></h3>
 <p>The following table shows all members available for this test case.
 More details are provided for each member in the subsequent sections.</p>
 <table class="docutils align-default" id="id4">
 <caption><span class="caption-text">Power test case members</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 29%" />
-<col style="width: 15%" />
-<col style="width: 56%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Mandatory / optional</p></th>
@@ -1037,9 +1035,9 @@ A test is defined by the following values:</p>
 </tbody>
 </table>
 <hr class="docutils" />
-</div>
-<div class="section" id="test-sequence">
-<span id="power-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id17"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="test-sequence">
+<span id="power-parameter-test-sequence"></span><h3><a class="toc-backref" href="#id17" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">test_sequence</span></code></a><a class="headerlink" href="#test-sequence" title="Permalink to this heading">¶</a></h3>
 <p>Mandatory. Describes the sequence of tests to perform.
 Tests are performed serially, and a failure in one test does not stop the sequence (the next test will be launched).
 There is no limitation to the length of the test sequence.</p>
@@ -1047,11 +1045,6 @@ There is no limitation to the length of the test sequence.</p>
 <p>The following table defines the parameters supported in the Power test sequence:</p>
 <span id="power-parameter-test-sequence-toggle-rate"></span><span id="power-parameter-test-sequence-duration"></span><table class="docutils align-default" id="id5">
 <caption><span class="caption-text">Power test sequence parameters</span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
-<colgroup>
-<col style="width: 14%" />
-<col style="width: 16%" />
-<col style="width: 70%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Member</p></th>
 <th class="head"><p>Mandatory / optional</p></th>
@@ -1104,9 +1097,9 @@ There is no limitation to the length of the test sequence.</p>
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="disable-reg-disable-dsp-disable-bram-disable-uram-disable-aie">
-<span id="power-parameter-disable-aie"></span><span id="power-parameter-disable-uram"></span><span id="power-parameter-disable-bram"></span><span id="power-parameter-disable-dsp"></span><span id="power-parameter-disable-reg"></span><span id="power-parameter-disable-reg-dsp-bram-uram-aie"></span><h3><a class="toc-backref" href="#id18"><code class="docutils literal notranslate"><span class="pre">disable_reg</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_dsp</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_bram</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_uram</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_aie</span></code></a><a class="headerlink" href="#disable-reg-disable-dsp-disable-bram-disable-uram-disable-aie" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="disable-reg-disable-dsp-disable-bram-disable-uram-disable-aie">
+<span id="power-parameter-disable-aie"></span><span id="power-parameter-disable-uram"></span><span id="power-parameter-disable-bram"></span><span id="power-parameter-disable-dsp"></span><span id="power-parameter-disable-reg"></span><span id="power-parameter-disable-reg-dsp-bram-uram-aie"></span><h3><a class="toc-backref" href="#id18" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">disable_reg</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_dsp</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_bram</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_uram</span></code>, <code class="docutils literal notranslate"><span class="pre">disable_aie</span></code></a><a class="headerlink" href="#disable-reg-disable-dsp-disable-bram-disable-uram-disable-aie" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
@@ -1122,9 +1115,9 @@ Default        : <code class="docutils literal notranslate"><span class="pre">fa
 </ul>
 </div></blockquote>
 <hr class="docutils" />
-</div>
-<div class="section" id="disable-toggle-ramp">
-<span id="power-parameter-disable-toggle-ramp"></span><h3><a class="toc-backref" href="#id19"><code class="docutils literal notranslate"><span class="pre">disable_toggle_ramp</span></code></a><a class="headerlink" href="#disable-toggle-ramp" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="disable-toggle-ramp">
+<span id="power-parameter-disable-toggle-ramp"></span><h3><a class="toc-backref" href="#id19" role="doc-backlink"><code class="docutils literal notranslate"><span class="pre">disable_toggle_ramp</span></code></a><a class="headerlink" href="#disable-toggle-ramp" title="Permalink to this heading">¶</a></h3>
 <p>Optional;
 Type           : boolean;
 Possible values: <code class="docutils literal notranslate"><span class="pre">true</span></code> or <code class="docutils literal notranslate"><span class="pre">false</span></code>;
@@ -1135,11 +1128,11 @@ Default        : <code class="docutils literal notranslate"><span class="pre">fa
 <li><p>When set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the target <a class="reference internal" href="#power-parameter-test-sequence-toggle-rate"><span class="std std-ref">toggle_rate</span></a> will be set directly to the power CU.</p></li>
 </ul>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 <hr class="docutils" />
-<div class="section" id="output-files">
-<h2><a class="toc-backref" href="#id20">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this headline">¶</a></h2>
+<section id="output-files">
+<h2><a class="toc-backref" href="#id20" role="doc-backlink">Output files</a><a class="headerlink" href="#output-files" title="Permalink to this heading">¶</a></h2>
 <p>All power measurements are stored in an output CSV file named <code class="docutils literal notranslate"><span class="pre">power.csv</span></code> which is generated in xbtest logging directory.
 The values are stored in CSV type format with one column for each information type.</p>
 <div class="admonition important">
@@ -1178,8 +1171,8 @@ Timestamp of first measurement is 0 for a given test within the <a class="refere
 </ul>
 </div></blockquote>
 <p>See <a class="reference internal" href="../tasks/device-management-task-description.html#device-management-task-description"><span class="std std-ref">Device management task description</span></a> for more information on the sensor sources monitored by xbtest.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
@@ -1210,7 +1203,7 @@ Timestamp of first measurement is 0 for a given test within the <a class="refere
   <div role="contentinfo" class="copyright">
     <p class="footerinfo">
       <span class="lastupdated">
-        Last updated on October 17, 2022.
+        Last updated on October 26, 2022.
       </span>
 
     </p>
